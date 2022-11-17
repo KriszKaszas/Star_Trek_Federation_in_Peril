@@ -1,0 +1,41 @@
+\hypertarget{star__map_8h_source}{}\doxysection{star\+\_\+map.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef STAR\_MAP\_H\_INCLUDED}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define STAR\_MAP\_H\_INCLUDED}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}random\_number\_in\_interval.h"{}}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}debugmalloc.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{14 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structstarcolor}{starcolor}}\{}
+\DoxyCodeLine{15     \textcolor{keywordtype}{int} \mbox{\hyperlink{structstarcolor_aefede47104c131935808345385b7a015}{r}};  }
+\DoxyCodeLine{16     \textcolor{keywordtype}{int} \mbox{\hyperlink{structstarcolor_acea705d181fe8905d1e3e03165a5f344}{g}};  }
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} \mbox{\hyperlink{structstarcolor_a7682c01d8055e5d0731feb490d0e0d91}{b}};  }
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} \mbox{\hyperlink{structstarcolor_aa12187dfccfbae05ba13e817e6389873}{a}};  }
+\DoxyCodeLine{19 \}\mbox{\hyperlink{structstarcolor}{StarColor}};}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{27 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structstar}{star}}\{}
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} \mbox{\hyperlink{structstar_adb7eb39260c046c58ee68eedc672eedc}{y\_coor}}; }
+\DoxyCodeLine{29     \textcolor{keywordtype}{int} \mbox{\hyperlink{structstar_ae6a5a8df17bf24c7094fc4d424b0d693}{x\_coor}}; }
+\DoxyCodeLine{30     \textcolor{keywordtype}{int} \mbox{\hyperlink{structstar_a18b7804d5a5acf0b3c3dfae6b3eae9e8}{radius}}; }
+\DoxyCodeLine{31 \}\mbox{\hyperlink{structstar}{Star}};}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{38 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structstarmap}{starmap}}\{}
+\DoxyCodeLine{39     \textcolor{keywordtype}{int} \mbox{\hyperlink{structstarmap_a5f602294ad2a765ab9d1450ae82ff90d}{length}};         }
+\DoxyCodeLine{40     \mbox{\hyperlink{structstar}{Star}} *\mbox{\hyperlink{structstarmap_aa2231becef792db953d7c45341faf935}{stars}};        }
+\DoxyCodeLine{41     \mbox{\hyperlink{structstarcolor}{StarColor}} \mbox{\hyperlink{structstarmap_a3a782d398a8c94910548edc7e983ec0a}{color}};    }
+\DoxyCodeLine{42 \}\mbox{\hyperlink{structstarmap}{StarMap}};}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \mbox{\hyperlink{structstarmap}{StarMap}} *\mbox{\hyperlink{star__map_8c_a32b3a598cba5b55286a3b0314969fb9d}{starmap\_init}}(\textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} height);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{keywordtype}{void} \mbox{\hyperlink{star__map_8c_ae29c5329d8a51be3ddb8b1d2e666c643}{advance\_starmap\_frame}}(\mbox{\hyperlink{structstarmap}{StarMap}} *sm, \textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} height);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{keywordtype}{void} \mbox{\hyperlink{star__map_8c_a56dd9145ac7a31a4afae9d2e81c07360}{free\_starmap}}(\mbox{\hyperlink{structstarmap}{StarMap}} *sm);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// STAR\_MAP\_H\_INCLUDED}}
+
+\end{DoxyCode}

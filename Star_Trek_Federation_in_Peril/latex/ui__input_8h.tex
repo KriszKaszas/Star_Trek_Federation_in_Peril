@@ -1,0 +1,39 @@
+\hypertarget{ui__input_8h}{}\doxysection{ui\+\_\+input.\+h File Reference}
+\label{ui__input_8h}\index{ui\_input.h@{ui\_input.h}}
+{\ttfamily \#include \char`\"{}input\+\_\+state\+\_\+interface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}keymap.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}SDL\+\_\+timer.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$SDL.\+h$>$}\newline
+{\ttfamily \#include $<$SDL2\+\_\+gfx\+Primitives.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}debugmalloc.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ui__input_8h_af86d0f39b859b3a37e076e14172d1720}{user\+\_\+input}} (\mbox{\hyperlink{input__state__interface_8h_a0a026e1c12a075aa7c96342ea8e09599}{Input\+State\+Interface}} $\ast$isi, \mbox{\hyperlink{keymap_8h_a67bcadc7303913977859ac9fc12e7543}{Key\+Map}} $\ast$key\+\_\+map, SDL\+\_\+\+Timer\+ID id)
+\begin{DoxyCompactList}\small\item\em user\+\_\+input \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ui__input_8h_af86d0f39b859b3a37e076e14172d1720}\label{ui__input_8h_af86d0f39b859b3a37e076e14172d1720}} 
+\index{ui\_input.h@{ui\_input.h}!user\_input@{user\_input}}
+\index{user\_input@{user\_input}!ui\_input.h@{ui\_input.h}}
+\doxysubsubsection{\texorpdfstring{user\_input()}{user\_input()}}
+{\footnotesize\ttfamily void user\+\_\+input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{input__state__interface_8h_a0a026e1c12a075aa7c96342ea8e09599}{Input\+State\+Interface}} $\ast$}]{isi,  }\item[{\mbox{\hyperlink{keymap_8h_a67bcadc7303913977859ac9fc12e7543}{Key\+Map}} $\ast$}]{key\+\_\+map,  }\item[{SDL\+\_\+\+Timer\+ID}]{id }\end{DoxyParamCaption})}
+
+
+
+user\+\_\+input 
+
+A felhasznalotol erkezo billentyuparancsokat ertelmezi, es egy interface-\/n keresztel adja at a program tobbi reszenek 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em isi} & a jatek Input\+State\+Interface-\/re mutato pointer. Ezen keresztul kommunikalnak egymassal a vezerlomodulok. \\
+\hline
+\mbox{\texttt{ in}}  & {\em key\+\_\+map} & ez a vezerlo Key\+Map interfacen keresztul hasonlitja ossze a bejovo billentyuparancsokat a valid vezerlo gombokkal. \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & egy SDL\+\_\+\+Timer\+ID tipusu idozito. Feladata, hogy general egy SDL\+\_\+\+USEREVENTet, amennyiben az idozito lejartaval nincs beerkezo esemeny/parancs (enelkul a vezerlo blokkolna a program futasat, nem mukodne a hatter animacio, es semmi nem tortenne, amig nincs felhasznaloi interakcio). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

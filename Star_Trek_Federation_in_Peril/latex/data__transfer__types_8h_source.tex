@@ -1,0 +1,23 @@
+\hypertarget{data__transfer__types_8h_source}{}\doxysection{data\+\_\+transfer\+\_\+types.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef DATA\_TRANSFER\_TYPES\_H\_INCLUDED}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define DATA\_TRANSFER\_TYPES\_H\_INCLUDED}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 }
+\DoxyCodeLine{9 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structshipdtt}{shipdtt}}\{}
+\DoxyCodeLine{10     \textcolor{keywordtype}{int} speed; }
+\DoxyCodeLine{11     \textcolor{keywordtype}{int} health; }
+\DoxyCodeLine{12     \textcolor{keywordtype}{int} damage; }
+\DoxyCodeLine{13 \}\mbox{\hyperlink{structshipdtt}{ShipDTT}};}
+\DoxyCodeLine{14 }
+\DoxyCodeLine{19 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structleveldtt}{leveldtt}}\{}
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} number\_of\_waves; }
+\DoxyCodeLine{21     \textcolor{keywordtype}{int} number\_of\_squadrons; }
+\DoxyCodeLine{22     \mbox{\hyperlink{structshipdtt}{ShipDTT}} **shiptypes\_per\_squadron; }
+\DoxyCodeLine{23     \textcolor{keywordtype}{int} *ships\_per\_squadron; }
+\DoxyCodeLine{24 \}\mbox{\hyperlink{structleveldtt}{LevelDTT}};}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// DATA\_TRANSFER\_TYPES\_H\_INCLUDED}}
+
+\end{DoxyCode}

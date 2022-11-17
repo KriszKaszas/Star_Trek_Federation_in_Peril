@@ -1,0 +1,34 @@
+\hypertarget{player__ship_8h_source}{}\doxysection{player\+\_\+ship.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef PLAYER\_SHIP\_H\_INCLUDED}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define PLAYER\_SHIP\_H\_INCLUDED}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}input\_state\_interface.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}texture\_data.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}player\_ship.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}phaser.h"{}}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}debugmalloc.h"{}}}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{17 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structplayership}{playership}}\{}
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} y\_coor; }
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} x\_coor; }
+\DoxyCodeLine{20     \mbox{\hyperlink{structtexturedata}{TextureData}} texture\_data; }
+\DoxyCodeLine{21     \mbox{\hyperlink{structphaserbeam}{PhaserBeam}} *phaser\_blast; }
+\DoxyCodeLine{22     \textcolor{keywordtype}{int} phaser\_timer; }
+\DoxyCodeLine{23     \textcolor{keywordtype}{int} health; }
+\DoxyCodeLine{24     \textcolor{keywordtype}{int} speed; }
+\DoxyCodeLine{25 \}\mbox{\hyperlink{structplayership}{PlayerShip}};}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \mbox{\hyperlink{structplayership}{PlayerShip}} *\mbox{\hyperlink{player__ship_8c_a90d63bce7e82fe1b4b99865d1744dcbe}{init\_player\_ship}}(\textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} height, \mbox{\hyperlink{structtexturedata}{TextureData}} texture\_data, \textcolor{keywordtype}{int} health, \textcolor{keywordtype}{int} speed);}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keywordtype}{void} \mbox{\hyperlink{player__ship_8c_a0ed16d153d51417395057b6c7771d476}{move\_player\_ship}}(\mbox{\hyperlink{structplayership}{PlayerShip}} *ps, \mbox{\hyperlink{structinputstateinterface}{InputStateInterface}} *isi, \textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} height);}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{keywordtype}{void} \mbox{\hyperlink{player__ship_8c_ad44ea45b686653f44ace99ee89011e75}{free\_player\_ship}}(\mbox{\hyperlink{structplayership}{PlayerShip}} *ps);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// PLAYER\_SHIP\_H\_INCLUDED}}
+
+\end{DoxyCode}

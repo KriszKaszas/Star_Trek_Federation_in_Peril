@@ -1,0 +1,260 @@
+\hypertarget{game__engine_8c}{}\doxysection{game\+\_\+engine.\+c File Reference}
+\label{game__engine_8c}\index{game\_engine.c@{game\_engine.c}}
+{\ttfamily \#include \char`\"{}game\+\_\+engine.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Uint32 \mbox{\hyperlink{game__engine_8c_a39a9437444db494b69c1e31d38ae1e6e}{input\+\_\+timer}} (Uint32 ms, void $\ast$param)
+\begin{DoxyCompactList}\small\item\em input\+\_\+timer \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structgameassets}{Game\+Assets}} $\ast$ \mbox{\hyperlink{game__engine_8c_af25f757c1aa139fe40ecf1c6cfad218b}{init\+\_\+game\+\_\+assets}} (\mbox{\hyperlink{structgameattributes}{Game\+Attributes}} $\ast$game\+\_\+attributes)
+\begin{DoxyCompactList}\small\item\em init\+\_\+game\+\_\+assets \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structgameattributes}{Game\+Attributes}} $\ast$ \mbox{\hyperlink{game__engine_8c_a07673d83ffaafdb10251b6e7a33410c6}{init\+\_\+game\+\_\+attributes}} ()
+\begin{DoxyCompactList}\small\item\em init\+\_\+game\+\_\+attributes \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structkeymap}{Key\+Map}} $\ast$ \mbox{\hyperlink{game__engine_8c_a356a85048bfc3eecb60488280340604c}{default\+\_\+keymap\+\_\+init}} ()
+\begin{DoxyCompactList}\small\item\em default\+\_\+keymap\+\_\+init \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__engine_8c_af4ef5a3caf77ed1732d422833e1d30bb}{clear\+\_\+graphics}} (\mbox{\hyperlink{structgameassets}{Game\+Assets}} $\ast$game\+\_\+assets)
+\begin{DoxyCompactList}\small\item\em clear\+\_\+graphics \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__engine_8c_a03b186e5886065177cbd10732bd419c1}{draw\+\_\+graphics}} (int player\+\_\+ship\+\_\+time, \mbox{\hyperlink{structgameassets}{Game\+Assets}} $\ast$game\+\_\+assets, \mbox{\hyperlink{structgameattributes}{Game\+Attributes}} $\ast$game\+\_\+attributes)
+\begin{DoxyCompactList}\small\item\em draw\+\_\+graphics \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__engine_8c_a9e95a7c2550325968e83b5651bc15710}{calculate\+\_\+game\+\_\+assets}} (\mbox{\hyperlink{structgameassets}{Game\+Assets}} $\ast$game\+\_\+assets, \mbox{\hyperlink{structgameattributes}{Game\+Attributes}} $\ast$game\+\_\+attributes, int enemy\+\_\+ship\+\_\+time)
+\begin{DoxyCompactList}\small\item\em calculate\+\_\+game\+\_\+assets \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__engine_8c_ad5d2b3eb990dbf08b96ee0749eb74036}{free\+\_\+assets}} (\mbox{\hyperlink{structgameassets}{Game\+Assets}} $\ast$game\+\_\+assets)
+\begin{DoxyCompactList}\small\item\em free\+\_\+assets \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__engine_8c_af3869635a24314c71394374d7a233bda}{free\+\_\+components}} (\mbox{\hyperlink{structgameassets}{Game\+Assets}} $\ast$game\+\_\+assets, \mbox{\hyperlink{structgameattributes}{Game\+Attributes}} $\ast$game\+\_\+attributes)
+\begin{DoxyCompactList}\small\item\em free\+\_\+components \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__engine_8c_ace01161d58c629fd8b9b2d62da7a2dda}{keep\+\_\+player\+\_\+time}} ()
+\begin{DoxyCompactList}\small\item\em keep\+\_\+player\+\_\+time \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{game__engine_8c_a7d0a8e52166e59f1aeb9faab9240caff}{keep\+\_\+enemy\+\_\+time}} ()
+\begin{DoxyCompactList}\small\item\em keep\+\_\+enemy\+\_\+time \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__engine_8c_af0f1fd3db6fc60a3c3adb3ec3a38e010}{game\+\_\+loop}} (\mbox{\hyperlink{structgameassets}{Game\+Assets}} $\ast$game\+\_\+assets, \mbox{\hyperlink{structkeymap}{Key\+Map}} $\ast$key\+\_\+map, \mbox{\hyperlink{structgameattributes}{Game\+Attributes}} $\ast$game\+\_\+attributes)
+\begin{DoxyCompactList}\small\item\em game\+\_\+loop \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__engine_8c_ad6161d1d71502a1da8488badbacc057a}{runtime}} ()
+\begin{DoxyCompactList}\small\item\em game \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{game__engine_8c_a9e95a7c2550325968e83b5651bc15710}\label{game__engine_8c_a9e95a7c2550325968e83b5651bc15710}} 
+\index{game\_engine.c@{game\_engine.c}!calculate\_game\_assets@{calculate\_game\_assets}}
+\index{calculate\_game\_assets@{calculate\_game\_assets}!game\_engine.c@{game\_engine.c}}
+\doxysubsubsection{\texorpdfstring{calculate\_game\_assets()}{calculate\_game\_assets()}}
+{\footnotesize\ttfamily void calculate\+\_\+game\+\_\+assets (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgameassets}{Game\+Assets}} $\ast$}]{game\+\_\+assets,  }\item[{\mbox{\hyperlink{structgameattributes}{Game\+Attributes}} $\ast$}]{game\+\_\+attributes,  }\item[{int}]{enemy\+\_\+ship\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+calculate\+\_\+game\+\_\+assets 
+
+a jatek assetek mozgasat es mukodeset vezerlo szamitasok aggregalo fuggvenye 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em game\+\_\+assets} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em game\+\_\+attributes} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em enemy\+\_\+ship\+\_\+time} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__engine_8c_af4ef5a3caf77ed1732d422833e1d30bb}\label{game__engine_8c_af4ef5a3caf77ed1732d422833e1d30bb}} 
+\index{game\_engine.c@{game\_engine.c}!clear\_graphics@{clear\_graphics}}
+\index{clear\_graphics@{clear\_graphics}!game\_engine.c@{game\_engine.c}}
+\doxysubsubsection{\texorpdfstring{clear\_graphics()}{clear\_graphics()}}
+{\footnotesize\ttfamily void clear\+\_\+graphics (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgameassets}{Game\+Assets}} $\ast$}]{game\+\_\+assets }\end{DoxyParamCaption})}
+
+
+
+clear\+\_\+graphics 
+
+kirajzoltatas elott mindent torol a kepernyorol. 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}$\,$\mbox{]}} & game\+\_\+assets \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__engine_8c_a356a85048bfc3eecb60488280340604c}\label{game__engine_8c_a356a85048bfc3eecb60488280340604c}} 
+\index{game\_engine.c@{game\_engine.c}!default\_keymap\_init@{default\_keymap\_init}}
+\index{default\_keymap\_init@{default\_keymap\_init}!game\_engine.c@{game\_engine.c}}
+\doxysubsubsection{\texorpdfstring{default\_keymap\_init()}{default\_keymap\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structkeymap}{Key\+Map}} $\ast$ default\+\_\+keymap\+\_\+init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+default\+\_\+keymap\+\_\+init 
+
+az iranyitashoz hasznalt alapertelmezett billentyuket inicializalja egy Key\+Map tipusba \begin{DoxyReturn}{Returns}
+Key\+Map 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__engine_8c_a03b186e5886065177cbd10732bd419c1}\label{game__engine_8c_a03b186e5886065177cbd10732bd419c1}} 
+\index{game\_engine.c@{game\_engine.c}!draw\_graphics@{draw\_graphics}}
+\index{draw\_graphics@{draw\_graphics}!game\_engine.c@{game\_engine.c}}
+\doxysubsubsection{\texorpdfstring{draw\_graphics()}{draw\_graphics()}}
+{\footnotesize\ttfamily void draw\+\_\+graphics (\begin{DoxyParamCaption}\item[{int}]{player\+\_\+ship\+\_\+time,  }\item[{\mbox{\hyperlink{structgameassets}{Game\+Assets}} $\ast$}]{game\+\_\+assets,  }\item[{\mbox{\hyperlink{structgameattributes}{Game\+Attributes}} $\ast$}]{game\+\_\+attributes }\end{DoxyParamCaption})}
+
+
+
+draw\+\_\+graphics 
+
+az osszes asset kirajzolasaert felel 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em player\+\_\+ship\+\_\+time} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em game\+\_\+assets} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em game\+\_\+attributes} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__engine_8c_ad5d2b3eb990dbf08b96ee0749eb74036}\label{game__engine_8c_ad5d2b3eb990dbf08b96ee0749eb74036}} 
+\index{game\_engine.c@{game\_engine.c}!free\_assets@{free\_assets}}
+\index{free\_assets@{free\_assets}!game\_engine.c@{game\_engine.c}}
+\doxysubsubsection{\texorpdfstring{free\_assets()}{free\_assets()}}
+{\footnotesize\ttfamily void free\+\_\+assets (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgameassets}{Game\+Assets}} $\ast$}]{game\+\_\+assets }\end{DoxyParamCaption})}
+
+
+
+free\+\_\+assets 
+
+felszabaditja a jatek asseteket a jatek bezarasa elott. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em game\+\_\+assets} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__engine_8c_af3869635a24314c71394374d7a233bda}\label{game__engine_8c_af3869635a24314c71394374d7a233bda}} 
+\index{game\_engine.c@{game\_engine.c}!free\_components@{free\_components}}
+\index{free\_components@{free\_components}!game\_engine.c@{game\_engine.c}}
+\doxysubsubsection{\texorpdfstring{free\_components()}{free\_components()}}
+{\footnotesize\ttfamily void free\+\_\+components (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgameassets}{Game\+Assets}} $\ast$}]{game\+\_\+assets,  }\item[{\mbox{\hyperlink{structgameattributes}{Game\+Attributes}} $\ast$}]{game\+\_\+attributes }\end{DoxyParamCaption})}
+
+
+
+free\+\_\+components 
+
+az osszes jatekkomponens felszabaditasaert felel. 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}$\,$\mbox{]}} & game\+\_\+assets \\
+\hline
+{\em \mbox{[}$\,$\mbox{]}} & game\+\_\+attributes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__engine_8c_af0f1fd3db6fc60a3c3adb3ec3a38e010}\label{game__engine_8c_af0f1fd3db6fc60a3c3adb3ec3a38e010}} 
+\index{game\_engine.c@{game\_engine.c}!game\_loop@{game\_loop}}
+\index{game\_loop@{game\_loop}!game\_engine.c@{game\_engine.c}}
+\doxysubsubsection{\texorpdfstring{game\_loop()}{game\_loop()}}
+{\footnotesize\ttfamily void game\+\_\+loop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgameassets}{Game\+Assets}} $\ast$}]{game\+\_\+assets,  }\item[{\mbox{\hyperlink{structkeymap}{Key\+Map}} $\ast$}]{key\+\_\+map,  }\item[{\mbox{\hyperlink{structgameattributes}{Game\+Attributes}} $\ast$}]{game\+\_\+attributes }\end{DoxyParamCaption})}
+
+
+
+game\+\_\+loop 
+
+a jatek fo vezerlesi logikaja 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}$\,$\mbox{]}} & game\+\_\+assets \\
+\hline
+{\em \mbox{[}$\,$\mbox{]}} & key\+\_\+map \\
+\hline
+{\em \mbox{[}$\,$\mbox{]}} & game\+\_\+attributes \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__engine_8c_af25f757c1aa139fe40ecf1c6cfad218b}\label{game__engine_8c_af25f757c1aa139fe40ecf1c6cfad218b}} 
+\index{game\_engine.c@{game\_engine.c}!init\_game\_assets@{init\_game\_assets}}
+\index{init\_game\_assets@{init\_game\_assets}!game\_engine.c@{game\_engine.c}}
+\doxysubsubsection{\texorpdfstring{init\_game\_assets()}{init\_game\_assets()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structgameassets}{Game\+Assets}} $\ast$ init\+\_\+game\+\_\+assets (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structgameattributes}{Game\+Attributes}} $\ast$}]{game\+\_\+attributes }\end{DoxyParamCaption})}
+
+
+
+init\+\_\+game\+\_\+assets 
+
+inicializalja az osszes jatekhoz szukseges assetet. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em game\+\_\+attributes} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Game\+Assets 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__engine_8c_a07673d83ffaafdb10251b6e7a33410c6}\label{game__engine_8c_a07673d83ffaafdb10251b6e7a33410c6}} 
+\index{game\_engine.c@{game\_engine.c}!init\_game\_attributes@{init\_game\_attributes}}
+\index{init\_game\_attributes@{init\_game\_attributes}!game\_engine.c@{game\_engine.c}}
+\doxysubsubsection{\texorpdfstring{init\_game\_attributes()}{init\_game\_attributes()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structgameattributes}{Game\+Attributes}} $\ast$ init\+\_\+game\+\_\+attributes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+init\+\_\+game\+\_\+attributes 
+
+inicializalja a jatek attributumait, amelyeket aztan a vezerles hasznal \begin{DoxyReturn}{Returns}
+Game\+Attributes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__engine_8c_a39a9437444db494b69c1e31d38ae1e6e}\label{game__engine_8c_a39a9437444db494b69c1e31d38ae1e6e}} 
+\index{game\_engine.c@{game\_engine.c}!input\_timer@{input\_timer}}
+\index{input\_timer@{input\_timer}!game\_engine.c@{game\_engine.c}}
+\doxysubsubsection{\texorpdfstring{input\_timer()}{input\_timer()}}
+{\footnotesize\ttfamily Uint32 input\+\_\+timer (\begin{DoxyParamCaption}\item[{Uint32}]{ms,  }\item[{void $\ast$}]{param }\end{DoxyParamCaption})}
+
+
+
+input\+\_\+timer 
+
+az inputok beolvasasanak idoziteseert felel 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ms} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em param} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Uint32 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__engine_8c_a7d0a8e52166e59f1aeb9faab9240caff}\label{game__engine_8c_a7d0a8e52166e59f1aeb9faab9240caff}} 
+\index{game\_engine.c@{game\_engine.c}!keep\_enemy\_time@{keep\_enemy\_time}}
+\index{keep\_enemy\_time@{keep\_enemy\_time}!game\_engine.c@{game\_engine.c}}
+\doxysubsubsection{\texorpdfstring{keep\_enemy\_time()}{keep\_enemy\_time()}}
+{\footnotesize\ttfamily int keep\+\_\+enemy\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+keep\+\_\+enemy\+\_\+time 
+
+az ellenseges hajok idozitesehez szukseges szamitast vegzi el \begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__engine_8c_ace01161d58c629fd8b9b2d62da7a2dda}\label{game__engine_8c_ace01161d58c629fd8b9b2d62da7a2dda}} 
+\index{game\_engine.c@{game\_engine.c}!keep\_player\_time@{keep\_player\_time}}
+\index{keep\_player\_time@{keep\_player\_time}!game\_engine.c@{game\_engine.c}}
+\doxysubsubsection{\texorpdfstring{keep\_player\_time()}{keep\_player\_time()}}
+{\footnotesize\ttfamily int keep\+\_\+player\+\_\+time (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+keep\+\_\+player\+\_\+time 
+
+a jatekos hajo idozitesehez szukseges szamitast vegzi el \begin{DoxyReturn}{Returns}
+int 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__engine_8c_ad6161d1d71502a1da8488badbacc057a}\label{game__engine_8c_ad6161d1d71502a1da8488badbacc057a}} 
+\index{game\_engine.c@{game\_engine.c}!runtime@{runtime}}
+\index{runtime@{runtime}!game\_engine.c@{game\_engine.c}}
+\doxysubsubsection{\texorpdfstring{runtime()}{runtime()}}
+{\footnotesize\ttfamily void runtime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+game 
+
+aggregalja az osszes jatek mukodesehez szukseges logikai fuggvenyt. Amikor a game\+\_\+loop kilep a ciklusabol felszabadit mindent es kilep az SDL2bol. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

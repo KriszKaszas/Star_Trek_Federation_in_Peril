@@ -1,0 +1,41 @@
+\hypertarget{graphics_8h_source}{}\doxysection{graphics.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef GRAPHICS\_H\_INCLUDED}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define GRAPHICS\_H\_INCLUDED}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}star\_map.h"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}player\_ship.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}enemy\_ship.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}input\_state\_interface.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}phaser.h"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}torpedo.h"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <SDL.h>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <SDL\_image.h>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <SDL2\_gfxPrimitives.h>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}debugmalloc.h"{}}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{20 \textcolor{keywordtype}{void} \mbox{\hyperlink{graphics_8c_ae6d34d621a77a361f39a82ad0ac088c5}{create\_window}}(\textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} height);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{22 \textcolor{keywordtype}{void} \mbox{\hyperlink{graphics_8c_ab3e8f9f85719ae564f2c1eba55cf0c94}{draw\_background}}(\mbox{\hyperlink{structstarmap}{StarMap}} *sm);}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24 \textcolor{keywordtype}{void} clear\_background(\mbox{\hyperlink{structstarmap}{StarMap}} *sm);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{26 \textcolor{keywordtype}{void} \mbox{\hyperlink{graphics_8c_acba6da1444148970c94e99db3c1f27a3}{draw\_player\_ship}}(\mbox{\hyperlink{structplayership}{PlayerShip}} *ps);}
+\DoxyCodeLine{27 }
+\DoxyCodeLine{28 \textcolor{keywordtype}{void} clear\_player\_ship(\mbox{\hyperlink{structplayership}{PlayerShip}} *ps);}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keywordtype}{void} draw\_enemy\_ship(\mbox{\hyperlink{structenemyarmada}{EnemyArmada}} *armada);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keywordtype}{void} clear\_enemy\_ship(\mbox{\hyperlink{structenemyarmada}{EnemyArmada}} *armad);}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keywordtype}{void} \mbox{\hyperlink{graphics_8c_a1fe7644e8b3c5b2e7d630d2178935c3f}{render\_screen}}();}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// GRAPHICS\_H\_INCLUDED}}
+
+\end{DoxyCode}

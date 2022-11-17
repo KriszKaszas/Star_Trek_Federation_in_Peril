@@ -1,0 +1,33 @@
+\hypertarget{ui__input_8c}{}\doxysection{ui\+\_\+input.\+c File Reference}
+\label{ui__input_8c}\index{ui\_input.c@{ui\_input.c}}
+{\ttfamily \#include \char`\"{}ui\+\_\+input.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{ui__input_8c_af86d0f39b859b3a37e076e14172d1720}{user\+\_\+input}} (\mbox{\hyperlink{structinputstateinterface}{Input\+State\+Interface}} $\ast$isi, \mbox{\hyperlink{structkeymap}{Key\+Map}} $\ast$key\+\_\+map, SDL\+\_\+\+Timer\+ID id)
+\begin{DoxyCompactList}\small\item\em user\+\_\+input \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{ui__input_8c_af86d0f39b859b3a37e076e14172d1720}\label{ui__input_8c_af86d0f39b859b3a37e076e14172d1720}} 
+\index{ui\_input.c@{ui\_input.c}!user\_input@{user\_input}}
+\index{user\_input@{user\_input}!ui\_input.c@{ui\_input.c}}
+\doxysubsubsection{\texorpdfstring{user\_input()}{user\_input()}}
+{\footnotesize\ttfamily void user\+\_\+input (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structinputstateinterface}{Input\+State\+Interface}} $\ast$}]{isi,  }\item[{\mbox{\hyperlink{structkeymap}{Key\+Map}} $\ast$}]{key\+\_\+map,  }\item[{SDL\+\_\+\+Timer\+ID}]{id }\end{DoxyParamCaption})}
+
+
+
+user\+\_\+input 
+
+A felhasznalotol erkezo billentyuparancsokat ertelmezi, es egy interface-\/n keresztel adja at a program tobbi reszenek 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em isi} & a jatek Input\+State\+Interface-\/re mutato pointer. Ezen keresztul kommunikalnak egymassal a vezerlomodulok. \\
+\hline
+\mbox{\texttt{ in}}  & {\em key\+\_\+map} & ez a vezerlo Key\+Map interfacen keresztul hasonlitja ossze a bejovo billentyuparancsokat a valid vezerlo gombokkal. \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & egy SDL\+\_\+\+Timer\+ID tipusu idozito. Feladata, hogy general egy SDL\+\_\+\+USEREVENTet, amennyiben az idozito lejartaval nincs beerkezo esemeny/parancs (enelkul a vezerlo blokkolna a program futasat, nem mukodne a hatter animacio, es semmi nem tortenne, amig nincs felhasznaloi interakcio). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

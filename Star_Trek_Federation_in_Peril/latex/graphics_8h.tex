@@ -1,0 +1,130 @@
+\hypertarget{graphics_8h}{}\doxysection{graphics.\+h File Reference}
+\label{graphics_8h}\index{graphics.h@{graphics.h}}
+{\ttfamily \#include \char`\"{}star\+\_\+map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}player\+\_\+ship.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}enemy\+\_\+ship.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}input\+\_\+state\+\_\+interface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}phaser.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}torpedo.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$SDL.\+h$>$}\newline
+{\ttfamily \#include $<$SDL\+\_\+image.\+h$>$}\newline
+{\ttfamily \#include $<$SDL2\+\_\+gfx\+Primitives.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}debugmalloc.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{graphics_8h_ae6d34d621a77a361f39a82ad0ac088c5}{create\+\_\+window}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em create\+\_\+window \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_ab3e8f9f85719ae564f2c1eba55cf0c94}{draw\+\_\+background}} (\mbox{\hyperlink{star__map_8h_a3dad93d50adb0f98296e405699140dca}{Star\+Map}} $\ast$sm)
+\begin{DoxyCompactList}\small\item\em draw\+\_\+background \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_ac7ceedc378f786a7c69a99efa52e0fa6}{clear\+\_\+background}} (\mbox{\hyperlink{star__map_8h_a3dad93d50adb0f98296e405699140dca}{Star\+Map}} $\ast$sm)
+\item 
+void \mbox{\hyperlink{graphics_8h_acba6da1444148970c94e99db3c1f27a3}{draw\+\_\+player\+\_\+ship}} (\mbox{\hyperlink{player__ship_8h_ae80ac0734ac95e44ab8537e0dc298f95}{Player\+Ship}} $\ast$ps)
+\begin{DoxyCompactList}\small\item\em draw\+\_\+player\+\_\+ship \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_a2abe8ac6d2134c100cdae163e83816eb}{clear\+\_\+player\+\_\+ship}} (\mbox{\hyperlink{player__ship_8h_ae80ac0734ac95e44ab8537e0dc298f95}{Player\+Ship}} $\ast$ps)
+\item 
+void \mbox{\hyperlink{graphics_8h_a3553602d5a74368578cdd9154c92764c}{draw\+\_\+enemy\+\_\+ship}} (\mbox{\hyperlink{enemy__ship_8h_afcc28b89bd7472d3809f70ce14041a5f}{Enemy\+Armada}} $\ast$armada)
+\item 
+void \mbox{\hyperlink{graphics_8h_a6619f20a88706576aee84a170c664cbf}{clear\+\_\+enemy\+\_\+ship}} (\mbox{\hyperlink{enemy__ship_8h_afcc28b89bd7472d3809f70ce14041a5f}{Enemy\+Armada}} $\ast$armad)
+\item 
+void \mbox{\hyperlink{graphics_8h_a1fe7644e8b3c5b2e7d630d2178935c3f}{render\+\_\+screen}} ()
+\begin{DoxyCompactList}\small\item\em render\+\_\+screen \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{graphics_8h_ac7ceedc378f786a7c69a99efa52e0fa6}\label{graphics_8h_ac7ceedc378f786a7c69a99efa52e0fa6}} 
+\index{graphics.h@{graphics.h}!clear\_background@{clear\_background}}
+\index{clear\_background@{clear\_background}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{clear\_background()}{clear\_background()}}
+{\footnotesize\ttfamily void clear\+\_\+background (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{star__map_8h_a3dad93d50adb0f98296e405699140dca}{Star\+Map}} $\ast$}]{sm }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{graphics_8h_a6619f20a88706576aee84a170c664cbf}\label{graphics_8h_a6619f20a88706576aee84a170c664cbf}} 
+\index{graphics.h@{graphics.h}!clear\_enemy\_ship@{clear\_enemy\_ship}}
+\index{clear\_enemy\_ship@{clear\_enemy\_ship}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{clear\_enemy\_ship()}{clear\_enemy\_ship()}}
+{\footnotesize\ttfamily void clear\+\_\+enemy\+\_\+ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enemy__ship_8h_afcc28b89bd7472d3809f70ce14041a5f}{Enemy\+Armada}} $\ast$}]{armad }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{graphics_8h_a2abe8ac6d2134c100cdae163e83816eb}\label{graphics_8h_a2abe8ac6d2134c100cdae163e83816eb}} 
+\index{graphics.h@{graphics.h}!clear\_player\_ship@{clear\_player\_ship}}
+\index{clear\_player\_ship@{clear\_player\_ship}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{clear\_player\_ship()}{clear\_player\_ship()}}
+{\footnotesize\ttfamily void clear\+\_\+player\+\_\+ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player__ship_8h_ae80ac0734ac95e44ab8537e0dc298f95}{Player\+Ship}} $\ast$}]{ps }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{graphics_8h_ae6d34d621a77a361f39a82ad0ac088c5}\label{graphics_8h_ae6d34d621a77a361f39a82ad0ac088c5}} 
+\index{graphics.h@{graphics.h}!create\_window@{create\_window}}
+\index{create\_window@{create\_window}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{create\_window()}{create\_window()}}
+{\footnotesize\ttfamily void create\+\_\+window (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+create\+\_\+window 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}$\,$\mbox{]}} & width \\
+\hline
+{\em \mbox{[}$\,$\mbox{]}} & height \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphics_8h_ab3e8f9f85719ae564f2c1eba55cf0c94}\label{graphics_8h_ab3e8f9f85719ae564f2c1eba55cf0c94}} 
+\index{graphics.h@{graphics.h}!draw\_background@{draw\_background}}
+\index{draw\_background@{draw\_background}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_background()}{draw\_background()}}
+{\footnotesize\ttfamily void draw\+\_\+background (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{star__map_8h_a3dad93d50adb0f98296e405699140dca}{Star\+Map}} $\ast$}]{sm }\end{DoxyParamCaption})}
+
+
+
+draw\+\_\+background 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}$\,$\mbox{]}} & sm \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphics_8h_a3553602d5a74368578cdd9154c92764c}\label{graphics_8h_a3553602d5a74368578cdd9154c92764c}} 
+\index{graphics.h@{graphics.h}!draw\_enemy\_ship@{draw\_enemy\_ship}}
+\index{draw\_enemy\_ship@{draw\_enemy\_ship}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_enemy\_ship()}{draw\_enemy\_ship()}}
+{\footnotesize\ttfamily void draw\+\_\+enemy\+\_\+ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enemy__ship_8h_afcc28b89bd7472d3809f70ce14041a5f}{Enemy\+Armada}} $\ast$}]{armada }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{graphics_8h_acba6da1444148970c94e99db3c1f27a3}\label{graphics_8h_acba6da1444148970c94e99db3c1f27a3}} 
+\index{graphics.h@{graphics.h}!draw\_player\_ship@{draw\_player\_ship}}
+\index{draw\_player\_ship@{draw\_player\_ship}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_player\_ship()}{draw\_player\_ship()}}
+{\footnotesize\ttfamily void draw\+\_\+player\+\_\+ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player__ship_8h_ae80ac0734ac95e44ab8537e0dc298f95}{Player\+Ship}} $\ast$}]{ps }\end{DoxyParamCaption})}
+
+
+
+draw\+\_\+player\+\_\+ship 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}$\,$\mbox{]}} & ps \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphics_8h_a1fe7644e8b3c5b2e7d630d2178935c3f}\label{graphics_8h_a1fe7644e8b3c5b2e7d630d2178935c3f}} 
+\index{graphics.h@{graphics.h}!render\_screen@{render\_screen}}
+\index{render\_screen@{render\_screen}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{render\_screen()}{render\_screen()}}
+{\footnotesize\ttfamily void render\+\_\+screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+render\+\_\+screen 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

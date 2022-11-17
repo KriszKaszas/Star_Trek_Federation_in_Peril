@@ -1,0 +1,107 @@
+\hypertarget{player__ship_8c}{}\doxysection{player\+\_\+ship.\+c File Reference}
+\label{player__ship_8c}\index{player\_ship.c@{player\_ship.c}}
+{\ttfamily \#include \char`\"{}player\+\_\+ship.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structplayership}{Player\+Ship}} $\ast$ \mbox{\hyperlink{player__ship_8c_a90d63bce7e82fe1b4b99865d1744dcbe}{init\+\_\+player\+\_\+ship}} (int width, int height, \mbox{\hyperlink{structtexturedata}{Texture\+Data}} texture\+\_\+data, int health, int speed)
+\begin{DoxyCompactList}\small\item\em init\+\_\+player\+\_\+ship \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{player__ship_8c_a0ed16d153d51417395057b6c7771d476}{move\+\_\+player\+\_\+ship}} (\mbox{\hyperlink{structplayership}{Player\+Ship}} $\ast$ps, \mbox{\hyperlink{structinputstateinterface}{Input\+State\+Interface}} $\ast$isi, int width, int height)
+\begin{DoxyCompactList}\small\item\em move\+\_\+player\+\_\+ship \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{player__ship_8c_ad41047371b3547f113dd14dc222ce2fd}{fire\+\_\+phaser}} (\mbox{\hyperlink{structinputstateinterface}{Input\+State\+Interface}} $\ast$isi, \mbox{\hyperlink{structplayership}{Player\+Ship}} $\ast$ps, int elapsed\+\_\+interval)
+\begin{DoxyCompactList}\small\item\em fire\+\_\+phaser \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{player__ship_8c_ad44ea45b686653f44ace99ee89011e75}{free\+\_\+player\+\_\+ship}} (\mbox{\hyperlink{structplayership}{Player\+Ship}} $\ast$ps)
+\begin{DoxyCompactList}\small\item\em move\+\_\+player\+\_\+ship \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{player__ship_8c_ad41047371b3547f113dd14dc222ce2fd}\label{player__ship_8c_ad41047371b3547f113dd14dc222ce2fd}} 
+\index{player\_ship.c@{player\_ship.c}!fire\_phaser@{fire\_phaser}}
+\index{fire\_phaser@{fire\_phaser}!player\_ship.c@{player\_ship.c}}
+\doxysubsubsection{\texorpdfstring{fire\_phaser()}{fire\_phaser()}}
+{\footnotesize\ttfamily void fire\+\_\+phaser (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structinputstateinterface}{Input\+State\+Interface}} $\ast$}]{isi,  }\item[{\mbox{\hyperlink{structplayership}{Player\+Ship}} $\ast$}]{ps,  }\item[{int}]{elapsed\+\_\+interval }\end{DoxyParamCaption})}
+
+
+
+fire\+\_\+phaser 
+
+Kilo egy fezersugarat. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em isi} & pointer to an Input\+State\+Interface type \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em ps} & pointer to a Player\+Ship type \\
+\hline
+\mbox{\texttt{ in}}  & {\em elapsed\+\_\+interval} & marker of elapsed ticks since program started \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player__ship_8c_ad44ea45b686653f44ace99ee89011e75}\label{player__ship_8c_ad44ea45b686653f44ace99ee89011e75}} 
+\index{player\_ship.c@{player\_ship.c}!free\_player\_ship@{free\_player\_ship}}
+\index{free\_player\_ship@{free\_player\_ship}!player\_ship.c@{player\_ship.c}}
+\doxysubsubsection{\texorpdfstring{free\_player\_ship()}{free\_player\_ship()}}
+{\footnotesize\ttfamily void free\+\_\+player\+\_\+ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structplayership}{Player\+Ship}} $\ast$}]{ps }\end{DoxyParamCaption})}
+
+
+
+move\+\_\+player\+\_\+ship 
+
+felszabaditja a jatekos hajojat 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}$\,$\mbox{]}} & ps \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player__ship_8c_a90d63bce7e82fe1b4b99865d1744dcbe}\label{player__ship_8c_a90d63bce7e82fe1b4b99865d1744dcbe}} 
+\index{player\_ship.c@{player\_ship.c}!init\_player\_ship@{init\_player\_ship}}
+\index{init\_player\_ship@{init\_player\_ship}!player\_ship.c@{player\_ship.c}}
+\doxysubsubsection{\texorpdfstring{init\_player\_ship()}{init\_player\_ship()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structplayership}{Player\+Ship}} $\ast$ init\+\_\+player\+\_\+ship (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height,  }\item[{\mbox{\hyperlink{structtexturedata}{Texture\+Data}}}]{texture\+\_\+data,  }\item[{int}]{health,  }\item[{int}]{speed }\end{DoxyParamCaption})}
+
+
+
+init\+\_\+player\+\_\+ship 
+
+inicializalja a jatekos hajojat 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}$\,$\mbox{]}} & width \\
+\hline
+{\em \mbox{[}$\,$\mbox{]}} & height \\
+\hline
+{\em \mbox{[}$\,$\mbox{]}} & texture\+\_\+data \\
+\hline
+{\em \mbox{[}$\,$\mbox{]}} & health \\
+\hline
+{\em \mbox{[}$\,$\mbox{]}} & speed \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Player\+Ship 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player__ship_8c_a0ed16d153d51417395057b6c7771d476}\label{player__ship_8c_a0ed16d153d51417395057b6c7771d476}} 
+\index{player\_ship.c@{player\_ship.c}!move\_player\_ship@{move\_player\_ship}}
+\index{move\_player\_ship@{move\_player\_ship}!player\_ship.c@{player\_ship.c}}
+\doxysubsubsection{\texorpdfstring{move\_player\_ship()}{move\_player\_ship()}}
+{\footnotesize\ttfamily void move\+\_\+player\+\_\+ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structplayership}{Player\+Ship}} $\ast$}]{ps,  }\item[{\mbox{\hyperlink{structinputstateinterface}{Input\+State\+Interface}} $\ast$}]{isi,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+move\+\_\+player\+\_\+ship 
+
+a jatekos hajojanak mozgasaert felelos szamitasokat vegzi 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}$\,$\mbox{]}} & ps \\
+\hline
+{\em \mbox{[}$\,$\mbox{]}} & isi \\
+\hline
+{\em \mbox{[}$\,$\mbox{]}} & width \\
+\hline
+{\em \mbox{[}$\,$\mbox{]}} & height \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

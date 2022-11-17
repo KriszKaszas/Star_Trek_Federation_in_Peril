@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Star_Trek_Federation_in_Peril" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Star_Trek_Federation_in_Peril" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Star_Trek_Federation_in_Peril" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add directory="$(#sdl2.include)/SDL2" />
+		</Compiler>
+		<Linker>
+			<Add library="mingw32" />
+			<Add library="SDL2main" />
+			<Add library="SDL2" />
+			<Add library="SDL2_gfx" />
+			<Add library="SDL2_image" />
+			<Add library="SDL2_mixer" />
+			<Add library="SDL2_ttf" />
+			<Add library="user32" />
+			<Add library="gdi32" />
+			<Add library="winmm" />
+			<Add library="dxguid" />
+			<Add directory="$(#sdl2.lib)" />
+		</Linker>
+		<Unit filename="data_transfer_types.h" />
+		<Unit filename="debugmalloc.h" />
+		<Unit filename="enemy_ship.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="enemy_ship.h" />
+		<Unit filename="file_management.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="file_management.h" />
+		<Unit filename="game_assets.h" />
+		<Unit filename="game_attributes.h" />
+		<Unit filename="game_engine.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="game_engine.h" />
+		<Unit filename="graphics.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="graphics.h" />
+		<Unit filename="hit_management.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="hit_management.h" />
+		<Unit filename="input_state_interface.h" />
+		<Unit filename="keymap.h" />
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="phaser.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="phaser.h" />
+		<Unit filename="player_ship.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="player_ship.h" />
+		<Unit filename="random_number_in_interval.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="random_number_in_interval.h" />
+		<Unit filename="star_map.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="star_map.h" />
+		<Unit filename="string_operations.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="string_operations.h" />
+		<Unit filename="texture_data.h" />
+		<Unit filename="torpedo.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="torpedo.h" />
+		<Unit filename="ui_input.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ui_input.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

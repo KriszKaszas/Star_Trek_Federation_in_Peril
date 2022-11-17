@@ -1,0 +1,75 @@
+\hypertarget{star__map_8c}{}\doxysection{star\+\_\+map.\+c File Reference}
+\label{star__map_8c}\index{star\_map.c@{star\_map.c}}
+{\ttfamily \#include \char`\"{}star\+\_\+map.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{star__map_8c_ae29c5329d8a51be3ddb8b1d2e666c643}{advance\+\_\+starmap\+\_\+frame}} (\mbox{\hyperlink{structstarmap}{Star\+Map}} $\ast$sm, int width, int height)
+\begin{DoxyCompactList}\small\item\em advance\+\_\+starmap\+\_\+frame \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structstarmap}{Star\+Map}} $\ast$ \mbox{\hyperlink{star__map_8c_a32b3a598cba5b55286a3b0314969fb9d}{starmap\+\_\+init}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em starmap\+\_\+init \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{star__map_8c_a56dd9145ac7a31a4afae9d2e81c07360}{free\+\_\+starmap}} (\mbox{\hyperlink{structstarmap}{Star\+Map}} $\ast$sm)
+\begin{DoxyCompactList}\small\item\em free\+\_\+starmap \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{star__map_8c_ae29c5329d8a51be3ddb8b1d2e666c643}\label{star__map_8c_ae29c5329d8a51be3ddb8b1d2e666c643}} 
+\index{star\_map.c@{star\_map.c}!advance\_starmap\_frame@{advance\_starmap\_frame}}
+\index{advance\_starmap\_frame@{advance\_starmap\_frame}!star\_map.c@{star\_map.c}}
+\doxysubsubsection{\texorpdfstring{advance\_starmap\_frame()}{advance\_starmap\_frame()}}
+{\footnotesize\ttfamily void advance\+\_\+starmap\+\_\+frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstarmap}{Star\+Map}} $\ast$}]{sm,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+advance\+\_\+starmap\+\_\+frame 
+
+a csillagterkepet eloremozditja egy kockaval. Vegigmegy a csillagokat tartalmazo dinamikus listan, es mindnek egyel noveli az y koordinatajat, amennyiben az nem 10-\/el nagyobb az ablak magassaganal. Amennyiben ennel az erteknel magasabb az adott csillag y erteke, ugy az y koordinatat 0-\/ra, az x koordinatat pedig egy, a kepernyo szelessegeben talalhato random ertekre allitja. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em sm} & egy Star\+Map tipusu pointer, a jatek Star\+Map tipusaban tarolt csillagok koordinatait tarolja. \\
+\hline
+\mbox{\texttt{ in}}  & {\em width} & a kepernyo szelessege. Erre a random szam generalasahoz van szukseg. \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & a kepernyo magassaga. Erre a csillag y koordinatajanak ellenorzesehez van szukseg. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{star__map_8c_a56dd9145ac7a31a4afae9d2e81c07360}\label{star__map_8c_a56dd9145ac7a31a4afae9d2e81c07360}} 
+\index{star\_map.c@{star\_map.c}!free\_starmap@{free\_starmap}}
+\index{free\_starmap@{free\_starmap}!star\_map.c@{star\_map.c}}
+\doxysubsubsection{\texorpdfstring{free\_starmap()}{free\_starmap()}}
+{\footnotesize\ttfamily void free\+\_\+starmap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structstarmap}{Star\+Map}} $\ast$}]{sm }\end{DoxyParamCaption})}
+
+
+
+free\+\_\+starmap 
+
+Ez a fuggveny a parameterkent kapott csillagterkep csillagainak listajat, majd magat a csillagterkepet szabaditja fel. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em sm} & a felszabaditando csillagterkep pointer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{star__map_8c_a32b3a598cba5b55286a3b0314969fb9d}\label{star__map_8c_a32b3a598cba5b55286a3b0314969fb9d}} 
+\index{star\_map.c@{star\_map.c}!starmap\_init@{starmap\_init}}
+\index{starmap\_init@{starmap\_init}!star\_map.c@{star\_map.c}}
+\doxysubsubsection{\texorpdfstring{starmap\_init()}{starmap\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structstarmap}{Star\+Map}} $\ast$ starmap\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+starmap\+\_\+init 
+
+Ez a fuggveny inicializalja a Star\+Map csillagterkep listajat. letrehoz egy, a csillagok vart szamanak megfelelo hosszusagu dinamikus tombot, majd abban elhelyezi a sorban generalt csillagokat. Visszateresi erteke egy csillagterkep. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em width} & a kepernyo szelessege. Erre a csillagok x koordinatajanak generalasahoz van szukseg. \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & a kepernyo magassaga. Erre a csillagok y koordinatajanak generalasahoz van szukseg. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Star\+Map 
+\end{DoxyReturn}

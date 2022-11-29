@@ -20,6 +20,7 @@ SDL_Texture *load_sdl_texture(char* img_name){
     SDL_Texture *texture = IMG_LoadTexture(renderer, img_name);
     if (texture == NULL) {
         SDL_Log("Cannot open image file: %s", IMG_GetError());
+        return NULL;
     }
     return texture;
 }
@@ -128,8 +129,8 @@ void draw_crosshair(int x_coor, int y_coor){
 *@param [] armada
 *@return void
 */
-void draw_enemy_ships(EnemyArmada *armada){
-    for(int i = 0; i < armada->number_of_squadrons; i++){
+void draw_enemy_ships(EnemyShip *enemy_armada){
+    /*for(int i = 0; i < armada->number_of_squadrons; i++){
         EnemySquadronShip *tmp = armada->enemy_armada[i];
         while(tmp != NULL){
             if(en_ship != NULL){
@@ -138,14 +139,18 @@ void draw_enemy_ships(EnemyArmada *armada){
                                     tmp->ship.texture_data.width, tmp->ship.texture_data.height};
                 SDL_RenderCopy(renderer, en_ship, &src, &dest);
             }
-            else{
-                filledCircleRGBA(renderer, tmp->ship.x_coor,
-                                tmp->ship.y_coor, 30, 46, 204, 113, 255);
-            }
-            tmp = tmp->next_ship;
+            else{*/
+
+
+        while(enemy_armada != NULL)
+        {
+            filledCircleRGBA(renderer, enemy_armada->x_coor,
+                            enemy_armada->y_coor, 30, 46, 204, 113, 255);
+            enemy_armada=enemy_armada->next_ship;
         }
-    }
+
 }
+
 
 /**
 *@brief draw_phaser
@@ -168,9 +173,15 @@ void draw_phaser(PhaserBeam *phaser){
 *@param [] torpedoes
 *@return void
 */
+        /*if(tmp == 0x4B4B4B4B4B4B4B4Bull)
+        {
+            printf("megvagy geci");
+        }*/
 void draw_torpedo(TorpedoShot *torpedoes){
     TorpedoShot *tmp = torpedoes;
-    while(tmp != NULL){
+        //printf("before while: %p\n", tmp);
+    while(tmp != NULL)
+    {
         filledCircleRGBA(renderer, tmp->x_coor, tmp->y_coor, 15,
                          tmp->colors.outter_ring.r, tmp->colors.outter_ring.g, tmp->colors.outter_ring.b, tmp->colors.outter_ring.a);
         filledCircleRGBA(renderer, tmp->x_coor, tmp->y_coor, 10,
@@ -178,6 +189,8 @@ void draw_torpedo(TorpedoShot *torpedoes){
         filledCircleRGBA(renderer, tmp->x_coor, tmp->y_coor, 5,
                          tmp->colors.center.r, tmp->colors.center.g, tmp->colors.center.b, tmp->colors.center.a);
         tmp = tmp->next_torpedo;
+        //printf("after while:  %p\n", tmp);
+
     }
 }
 

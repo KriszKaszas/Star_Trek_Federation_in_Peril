@@ -25,6 +25,9 @@ PlayerShip *init_player_ship(int width, int height, TextureData texture_data, in
     ps->texture_data = texture_data;
     ps->texture_data.texture_center_x = ps->x_coor - (ps->texture_data.width/2);
     ps->texture_data.texture_center_y = ps->y_coor - (ps->texture_data.height/2);
+    ps->centerline_x_beg_coor = ps->x_coor - (texture_data.width/2);
+    ps->centerline_x_end_coor = ps->x_coor + (texture_data.width/2);
+    ps->centerline_y_coor = ps->y_coor;
     ps->health = health;
     ps->speed = speed;
     ps->phaser_timer = 0;

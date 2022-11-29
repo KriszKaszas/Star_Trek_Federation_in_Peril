@@ -528,10 +528,10 @@
 1667471794 source:c:\users\krisz\desktop\nagy_házi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\player_ship.c
 	"player_ship.h"
 
-1667471021 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\graphics.c
+1669502695 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\graphics.c
 	"graphics.h"
 
-1667471068 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\graphics.h
+1669372719 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\graphics.h
 	"star_map.h"
 	"player_ship.h"
 	"enemy_ship.h"
@@ -563,7 +563,7 @@
 	<process.h>
 	<unistd.h>
 
-1667471869 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\player_ship.h
+1669390275 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\player_ship.h
 	"input_state_interface.h"
 	"texture_data.h"
 	"player_ship.h"
@@ -574,37 +574,39 @@
 1667471530 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\input_state_interface.h
 	<stdbool.h>
 
-1667472500 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\texture_data.h
+1669390688 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\texture_data.h
 	"debugmalloc.h"
 
 1667471716 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\phaser.h
 	"input_state_interface.h"
 	"debugmalloc.h"
 
-1667470326 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\enemy_ship.h
+1669397493 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\enemy_ship.h
 	"game_attributes.h"
 	"data_transfer_types.h"
 	"random_number_in_interval.h"
 	"texture_data.h"
 	<stdlib.h>
 	<stdbool.h>
+	<math.h>
 	"debugmalloc.h"
 
 1667470981 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\game_attributes.h
 	"input_state_interface.h"
 	<SDL.h>
 
-1667469894 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\data_transfer_types.h
+1669373419 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\data_transfer_types.h
 
-1667472587 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\torpedo.h
+1669494162 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\torpedo.h
 	"game_attributes.h"
+	<stdio.h>
 	<stdbool.h>
 	"debugmalloc.h"
 
-1667471344 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\hit_management.c
+1669723918 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\hit_management.c
 	"hit_management.h"
 
-1667471385 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\hit_management.h
+1669674402 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\hit_management.h
 	"game_assets.h"
 	"game_attributes.h"
 	"torpedo.h"
@@ -612,7 +614,7 @@
 	<stdbool.h>
 	"debugmalloc.h"
 
-1667470936 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\game_assets.h
+1669375580 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\game_assets.h
 	"star_map.h"
 	"player_ship.h"
 	"enemy_ship.h"
@@ -659,34 +661,37 @@
 	<stdio.h>
 	"debugmalloc.h"
 
-1667471651 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\phaser.c
+1668378167 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\phaser.c
 	"phaser.h"
 
-1667472024 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\random_number_in_interval.c
+1668378808 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\random_number_in_interval.c
 	"random_number_in_interval.h"
 
-1667472379 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\string_operations.c
+1668379123 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\string_operations.c
 	"string_operations.h"
 
 1667472460 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\string_operations.h
 	<string.h>
 	"debugmalloc.h"
 
-1667472562 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\torpedo.c
+1669562286 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\torpedo.c
 	"torpedo.h"
 
-1667472743 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\ui_input.c
+1668379289 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\ui_input.c
 	"ui_input.h"
 
-1668376498 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\enemy_ship.c
+1669669989 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\enemy_ship.c
 	"enemy_ship.h"
 
 1668375368 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\file_management.c
 	"file_management.h"
 
-1668376227 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\player_ship.c
+1669390686 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\player_ship.c
 	"player_ship.h"
 
-1668376234 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\star_map.c
+1668379437 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\star_map.c
 	"star_map.h"
+
+1669674266 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\game_engine.c
+	"game_engine.h"
 

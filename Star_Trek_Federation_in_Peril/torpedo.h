@@ -2,6 +2,7 @@
 #define TORPEDO_H_INCLUDED
 
 #include "game_attributes.h"
+#include <stdio.h>
 
 #include <stdbool.h>
 

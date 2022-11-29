@@ -10,4 +10,6 @@
 
 #include "debugmalloc.h"
 
+void explode_torpedo(TorpedoShot **player_torpedo, TorpedoShot **pt);
+
 #endif // HIT_MANAGEMENT_H_INCLUDED

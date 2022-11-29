@@ -8,6 +8,7 @@
 
 #include <stdlib.h>
 #include <stdbool.h>
+#include <math.h>
 
 #include "debugmalloc.h"
 
@@ -18,34 +19,17 @@
 typedef struct enemyship{
     int y_coor; ///<
     int x_coor; ///<
+    int hitbox_beg_coor; ///<
+    int hitbox_end_coor; ///<
+    int centerline_y_coor; ///<
     TextureData texture_data; ///<
     int speed; ///<
     int health; ///<
     int damage; ///<
+    int score_value;
+    struct enemyship *next_ship; ///<
+    struct enemyship *prev_ship; ///<
 }EnemyShip;
 
-/**
-*@brief EnemySquadronShip
-*@details
-*/
-typedef struct enemysquadronship{
-    EnemyShip ship; ///<
-    struct enemysquadronship *next_ship; ///<
-    struct enemysquadronship *prev_ship; ///<
-}EnemySquadronShip;
-
-/**
-*@brief EnemyArmada
-*@details
-*/
-typedef struct enemyarmada{
-    int number_of_squadrons; ///<
-    int *no_of_ships_per_sq; ///<
-    EnemySquadronShip **enemy_armada; ///<
-    int *squadron_dirs; ///<
-    int *squadron_heights; ///<
-    bool *entry_finished_per_squadron; ///<
-    bool ready_to_move; ///<
-}EnemyArmada;
 
 #endif // ENEMY_SHIP_H_INCLUDED

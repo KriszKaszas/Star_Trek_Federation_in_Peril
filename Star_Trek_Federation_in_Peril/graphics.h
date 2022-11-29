@@ -26,11 +26,11 @@ void clear_background(StarMap *sm);
 void draw_player_ship(PlayerShip *ps);
 
 void clear_player_ship(PlayerShip *ps);
-
+/*
 void draw_enemy_ship(EnemyArmada *armada);
 
 void clear_enemy_ship(EnemyArmada *armad);
-
+*/
 void render_screen();
 
 #endif // GRAPHICS_H_INCLUDED

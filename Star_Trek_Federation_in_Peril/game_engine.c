@@ -26,31 +26,19 @@ Uint32  input_timer(Uint32 ms, void *param) {
 */
 GameAssets *init_game_assets(GameAttributes *game_attributes){
 
-
-    ShipDTT **squadrons = import_ship_dtt("enemy_ship.txt");
-    LevelDTT level_dtt;
-    level_dtt.number_of_waves = 1;
-    level_dtt.number_of_squadrons = 3;
-    level_dtt.shiptypes_per_squadron = squadrons;
-    level_dtt.ships_per_squadron = (int*) malloc(3* sizeof(int));
-    level_dtt.ships_per_squadron[0] = 3;
-    level_dtt.ships_per_squadron[1] = 4;
-    level_dtt.ships_per_squadron[2] = 5;
-
+    ///MOCK DATA TYPES
+    ///TODO: read from file
+    ShipDTT ship_dtt = {5, 10, 1};
     TextureData fed_texture_data = {46, 130};
-    TextureData enemy_texture_data = {111, 120};
-
+    TextureData enemy_texture_data = {60, 60};
+    ///
     GameAssets *game_assets = (GameAssets*) malloc(sizeof(GameAssets));
     game_assets->star_map = starmap_init(game_attributes->width, game_attributes->height);
     game_assets->player_ship = init_player_ship(game_attributes->width, game_attributes->height, fed_texture_data, 100, 1);
-    game_assets->enemy_armada = init_enemy_armada(level_dtt, enemy_texture_data, game_attributes);
+    game_assets->enemy_armada = init_enemy_armada(enemy_texture_data, ship_dtt, game_attributes);
     game_assets->player_torpedo = NULL;
     game_assets->quantum_torpedo = NULL;
     game_assets->enemy_torpedo = NULL;
-    for(int i = 0; i < game_assets->enemy_armada->number_of_squadrons; i++){
-        free(level_dtt.shiptypes_per_squadron[i]);
-    }
-    free(level_dtt.shiptypes_per_squadron);
 
     return game_assets;
 }
@@ -151,30 +139,6 @@ void calculate_game_assets(GameAssets *game_assets, GameAttributes *game_attribu
     int static shot_time = 0;
     move_player_ship(game_assets->player_ship, &game_attributes->isi, game_attributes->width, game_attributes->height);
     advance_starmap_frame(game_assets->star_map, game_attributes->width, game_attributes->height);
-    if(enemy_ship_time*2 > time){
-        if(!game_assets->enemy_armada->ready_to_move){
-            for(int i = 0; i < game_assets->enemy_armada->number_of_squadrons; i++){
-                game_assets->enemy_armada->entry_finished_per_squadron[i] = enemy_armada_entry_animation(game_assets->enemy_armada->enemy_armada[i],
-                                                                                                         game_attributes, game_assets->enemy_armada->squadron_dirs[i]);
-
-            }
-            int squardon_in_place_ctr = 0;
-            for(int i = 0; i < game_assets->enemy_armada->number_of_squadrons; i++){
-                if(game_assets->enemy_armada->entry_finished_per_squadron[i]){
-                    squardon_in_place_ctr++;
-                }
-            }
-            if(squardon_in_place_ctr == game_assets->enemy_armada->number_of_squadrons){
-                game_assets->enemy_armada->ready_to_move = true;
-                modify_enemy_dir(game_assets->enemy_armada);
-            }
-        }
-        else if(game_assets->enemy_armada->ready_to_move){
-            move_enemy_armada(game_assets->enemy_armada, game_attributes);
-        }
-
-        time = enemy_ship_time*2;
-    }
     if(game_attributes->isi.torpedo){
         game_assets->player_torpedo = add_torpedo_shot(game_assets->player_torpedo, 5, 2,
                          game_assets->player_ship->x_coor, game_assets->player_ship->y_coor, false, false);
@@ -182,28 +146,9 @@ void calculate_game_assets(GameAssets *game_assets, GameAttributes *game_attribu
     }
     if(game_assets->player_torpedo != NULL){
         move_torpedoes(&game_assets->player_torpedo, game_attributes);
-    }
-    if(game_assets->enemy_armada->ready_to_move && enemy_ship_time > shot_time){
+        manage_player_hits(&game_assets->enemy_armada, &game_assets->player_torpedo, game_attributes);
 
-        for(int i = random_number_in_range(0, game_assets->enemy_armada->number_of_squadrons-1); i < random_number_in_range(1, game_assets->enemy_armada->number_of_squadrons); i++){
-            EnemySquadronShip *tmp = game_assets->enemy_armada->enemy_armada[i];
-            int ctr = 0;
-            int ctr_threshold = random_number_in_range(0, game_assets->enemy_armada->no_of_ships_per_sq[i]);
-            while(tmp != NULL){
-               if(ctr == ctr_threshold){
-                    game_assets->enemy_torpedo = add_torpedo_shot(game_assets->enemy_torpedo,
-                                                              tmp->ship.damage, 2, tmp->ship.x_coor, tmp->ship.y_coor, true, false);
 
-                }
-                tmp = tmp->next_ship;
-                ctr++;
-            }
-            ctr_threshold = random_number_in_range(0, game_assets->enemy_armada->no_of_ships_per_sq[i]);
-        }
-        shot_time += 50;
-    }
-     if(game_assets->enemy_torpedo != NULL){
-        move_torpedoes(&game_assets->enemy_torpedo, game_attributes);
     }
 }
 
@@ -264,13 +209,7 @@ int keep_enemy_time(){
 void game_loop(GameAssets *game_assets, KeyMap *key_map, GameAttributes *game_attributes){
     int player_ship_time = 0;
     int enemy_ship_time = 0;
-    for(int i = 0; i < game_assets->enemy_armada->number_of_squadrons; i++){
-        position_enemy_armada(game_assets->enemy_armada->enemy_armada[i], game_attributes, game_assets->enemy_armada->squadron_dirs[i]);
-    }
     while(!game_attributes->isi.quit){
-        if(game_assets->player_torpedo != NULL || game_assets->enemy_torpedo != NULL || game_assets->quantum_torpedo != NULL){
-            manage_hits(game_assets, game_attributes);
-        }
         player_ship_time = keep_player_time();
         enemy_ship_time = keep_enemy_time();
         user_input(&game_attributes->isi, key_map, game_attributes->id);

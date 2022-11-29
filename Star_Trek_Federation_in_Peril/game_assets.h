@@ -13,7 +13,7 @@
 typedef struct gameassets{
     StarMap *star_map; ///<
     PlayerShip *player_ship; ///<
-    EnemyArmada *enemy_armada; ///<
+    EnemyShip *enemy_armada; ///<
     TorpedoShot *player_torpedo; ///<
     TorpedoShot *quantum_torpedo; ///<
     TorpedoShot *enemy_torpedo; ///<

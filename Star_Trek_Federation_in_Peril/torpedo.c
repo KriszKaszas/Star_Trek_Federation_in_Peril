@@ -59,7 +59,7 @@ TorpedoShot *add_torpedo_shot(TorpedoShot *torpedoes, int damage, int speed, int
     torpedo->y_coor = y_coor;
     torpedo->damage = damage;
     torpedo->speed = speed;
-    if(!is_enemy_torpedo && !is_quantum_torpedo){
+    if(!is_enemy_torpedo){
         torpedo->dir = -1;
     }
     else{
@@ -84,46 +84,55 @@ TorpedoShot *add_torpedo_shot(TorpedoShot *torpedoes, int damage, int speed, int
 void move_torpedoes(TorpedoShot **torpedo, GameAttributes *game_attributes){
     TorpedoShot *tmp = (*torpedo);
     while(tmp != NULL){
-        if((*torpedo)->y_coor > game_attributes->height + 10 || (*torpedo)->y_coor < - 10){
+        /*if((*torpedo)->y_coor > game_attributes->height + 10 || (*torpedo)->y_coor < -10){
                 tmp = (*torpedo)->next_torpedo;
-                remove_torpedo_shot(torpedo);
+                pop_torpedo_shot(torpedo);
                 (*torpedo) = tmp;
         }
-        else{
+        else{*/
         tmp->y_coor += tmp->dir;
         tmp = tmp->next_torpedo;
-        }
+        //}
     }
 }
 
 /**
-*@brief remove_torpedo_shot
+*@brief pop_torpedo_shot
 *@details amennyiben a torpedo eltalal valamit, vagy kimegy a jatekterbol, torli azt.
 *@param [] torpedo
 *@return void
 */
-void remove_torpedo_shot(TorpedoShot **torpedo){
+void pop_torpedo_shot(TorpedoShot **torpedo)
+{
     TorpedoShot *tmp = (*torpedo);
-    if((*torpedo)->prev_torpedo == NULL && (*torpedo)->next_torpedo == NULL){
-        (*torpedo) = NULL;
-        free(tmp);
-    }else if((*torpedo)->prev_torpedo == NULL){
-        if((*torpedo)->next_torpedo != NULL){
+    if(tmp != NULL)
+    {
+        if((*torpedo)->prev_torpedo == NULL && (*torpedo)->next_torpedo == NULL)
+        {
+            (*torpedo) = NULL;
+            free(tmp);
+        }
+        else if((*torpedo)->prev_torpedo == NULL)
+        {
+            printf("anyad\n");
             (*torpedo) = tmp->next_torpedo;
+            (*torpedo)->prev_torpedo = NULL;
+            free(tmp);
         }
-        free(tmp);
-        (*torpedo)->prev_torpedo = NULL;
-    }
-    else if((*torpedo)->next_torpedo == NULL){
-        if((*torpedo)->prev_torpedo != NULL){
+        else if((*torpedo)->next_torpedo == NULL)
+        {
             (*torpedo)->prev_torpedo->next_torpedo = NULL;
+            (*torpedo) = (*torpedo)->prev_torpedo;
+            free(tmp);
         }
-        free(tmp);
-    }
-    else{
-        (*torpedo)->prev_torpedo->next_torpedo = (*torpedo)->next_torpedo;
-        (*torpedo)->next_torpedo->prev_torpedo = (*torpedo)->prev_torpedo;
-        free((*torpedo));
+        else
+        {
+            printf("picsaja\n");
+            (*torpedo)->prev_torpedo->next_torpedo = (*torpedo)->next_torpedo;
+            (*torpedo)->next_torpedo->prev_torpedo = (*torpedo)->prev_torpedo;
+            (*torpedo) = (*torpedo)->next_torpedo;
+            free(tmp);
+        }
     }
 }
 
@@ -137,7 +146,7 @@ void free_torpedoes(TorpedoShot *torpedoes){
     TorpedoShot *tmp = torpedoes;
     while(tmp != NULL){
         tmp = torpedoes->next_torpedo;
-        remove_torpedo_shot(&torpedoes);
+        pop_torpedo_shot(&torpedoes);
         torpedoes = tmp;
     }
     torpedoes = NULL;

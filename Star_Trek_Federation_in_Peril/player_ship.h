@@ -17,6 +17,9 @@
 typedef struct playership{
     int y_coor; ///<
     int x_coor; ///<
+    int centerline_x_beg_coor; ///<
+    int centerline_x_end_coor; ///<
+    int centerline_y_coor; ///<
     TextureData texture_data; ///<
     PhaserBeam *phaser_blast; ///<
     int phaser_timer; ///<

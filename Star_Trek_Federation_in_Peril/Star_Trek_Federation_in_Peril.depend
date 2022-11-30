@@ -603,7 +603,7 @@
 	<stdbool.h>
 	"debugmalloc.h"
 
-1669723918 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\hit_management.c
+1669765594 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\hit_management.c
 	"hit_management.h"
 
 1669674402 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\hit_management.h
@@ -674,13 +674,13 @@
 	<string.h>
 	"debugmalloc.h"
 
-1669562286 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\torpedo.c
+1669756394 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\torpedo.c
 	"torpedo.h"
 
 1668379289 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\ui_input.c
 	"ui_input.h"
 
-1669669989 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\enemy_ship.c
+1669755484 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\enemy_ship.c
 	"enemy_ship.h"
 
 1668375368 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\file_management.c

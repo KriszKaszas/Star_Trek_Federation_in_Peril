@@ -178,30 +178,33 @@ void move_enemy_armada(EnemyArmada *armada, GameAttributes *game_attributes){
 void pop_enemy_ship(EnemyShip **enemy_ship)
 {
     EnemyShip *tmp = (*enemy_ship);
-    if((*enemy_ship)->prev_ship == NULL && (*enemy_ship)->next_ship == NULL)
+    if(tmp != NULL)
     {
-        (*enemy_ship) = NULL;
-        free(tmp);
-    }
-    else if((*enemy_ship)->prev_ship == NULL)
-    {
+        if((*enemy_ship)->prev_ship == NULL && (*enemy_ship)->next_ship == NULL)
+        {
+            (*enemy_ship) = NULL;
+            free(tmp);
+        }
+        else if((*enemy_ship)->prev_ship == NULL)
+        {
 
-        (*enemy_ship) = tmp->next_ship;
-        (*enemy_ship)->prev_ship = NULL;
-        free(tmp);
-    }
-    else if((*enemy_ship)->next_ship == NULL)
-    {
-        (*enemy_ship)->prev_ship->next_ship = NULL;
-        (*enemy_ship) = (*enemy_ship)->prev_ship;
-        free(tmp);
-    }
-    else
-    {
-        (*enemy_ship)->prev_ship->next_ship = (*enemy_ship)->next_ship;
-        (*enemy_ship)->next_ship->prev_ship = (*enemy_ship)->prev_ship;
-        (*enemy_ship) = (*enemy_ship)->next_ship;
-        free((*enemy_ship));
+            (*enemy_ship) = tmp->next_ship;
+            (*enemy_ship)->prev_ship = NULL;
+            free(tmp);
+        }
+        else if((*enemy_ship)->next_ship == NULL)
+        {
+            (*enemy_ship)->prev_ship->next_ship = NULL;
+            (*enemy_ship) = (*enemy_ship)->prev_ship;
+            free(tmp);
+        }
+        else
+        {
+            (*enemy_ship)->prev_ship->next_ship = (*enemy_ship)->next_ship;
+            (*enemy_ship)->next_ship->prev_ship = (*enemy_ship)->prev_ship;
+            (*enemy_ship) = (*enemy_ship)->next_ship;
+            free(tmp);
+        }
     }
 }
 

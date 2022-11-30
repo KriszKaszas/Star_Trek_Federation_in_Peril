@@ -84,15 +84,8 @@ TorpedoShot *add_torpedo_shot(TorpedoShot *torpedoes, int damage, int speed, int
 void move_torpedoes(TorpedoShot **torpedo, GameAttributes *game_attributes){
     TorpedoShot *tmp = (*torpedo);
     while(tmp != NULL){
-        /*if((*torpedo)->y_coor > game_attributes->height + 10 || (*torpedo)->y_coor < -10){
-                tmp = (*torpedo)->next_torpedo;
-                pop_torpedo_shot(torpedo);
-                (*torpedo) = tmp;
-        }
-        else{*/
         tmp->y_coor += tmp->dir;
         tmp = tmp->next_torpedo;
-        //}
     }
 }
 
@@ -114,7 +107,6 @@ void pop_torpedo_shot(TorpedoShot **torpedo)
         }
         else if((*torpedo)->prev_torpedo == NULL)
         {
-            printf("anyad\n");
             (*torpedo) = tmp->next_torpedo;
             (*torpedo)->prev_torpedo = NULL;
             free(tmp);
@@ -127,7 +119,6 @@ void pop_torpedo_shot(TorpedoShot **torpedo)
         }
         else
         {
-            printf("picsaja\n");
             (*torpedo)->prev_torpedo->next_torpedo = (*torpedo)->next_torpedo;
             (*torpedo)->next_torpedo->prev_torpedo = (*torpedo)->prev_torpedo;
             (*torpedo) = (*torpedo)->next_torpedo;

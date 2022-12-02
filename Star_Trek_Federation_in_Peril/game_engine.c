@@ -146,9 +146,8 @@ void calculate_game_assets(GameAssets *game_assets, GameAttributes *game_attribu
     }
     if(game_assets->player_torpedo != NULL){
         move_torpedoes(&game_assets->player_torpedo, game_attributes);
+        remove_torpedo_if_out_of_bounds(&game_assets->player_torpedo, game_attributes);
         manage_player_hits(&game_assets->enemy_armada, &game_assets->player_torpedo, game_attributes);
-
-
     }
 }
 

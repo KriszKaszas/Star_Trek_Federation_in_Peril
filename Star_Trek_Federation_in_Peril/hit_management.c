@@ -42,13 +42,11 @@ void manage_player_hits(EnemyShip **enemy_armada, TorpedoShot **player_torpedo, 
 {
     EnemyShip *temp_ship = (*enemy_armada);
     TorpedoShot *temp_torpedo = (*player_torpedo);
-    ///TODO fix this, move it to its own function, this is awful
-    remove_torpedo_if_out_of_bounds(player_torpedo, &temp_torpedo, &game_assets);
     while(((*enemy_armada) != NULL) && ((*player_torpedo) != NULL))
     {
         while((*player_torpedo) != NULL)
         {
-            explode_enemy_ship_and_torpedo_if_hit_detected(enemy_armada, &temp_ship, player_torpedo, &temp_torpedo);
+            manage_enemy_ship_and_torpedo_if_hit_detected(enemy_armada, &temp_ship, player_torpedo, &temp_torpedo);
             advance_torpedo_list_if_not_NULL(player_torpedo);
         }
         reset_player_torpedo_pointer(player_torpedo, &temp_torpedo);
@@ -65,7 +63,7 @@ void manage_player_hits(EnemyShip **enemy_armada, TorpedoShot **player_torpedo, 
 *@return void
 */
 
-void explode_enemy_ship_and_torpedo_if_hit_detected(EnemyShip **enemy_armada,
+void manage_enemy_ship_and_torpedo_if_hit_detected(EnemyShip **enemy_armada,
                                                     EnemyShip **temp_ship,
                                                     TorpedoShot **player_torpedo,
                                                     TorpedoShot **temp_torpedo)
@@ -335,12 +333,18 @@ bool is_torpedo_out_of_bounds(TorpedoShot **torpedo, GameAttributes *game_attrib
 *@return void
 */
 
-void remove_torpedo_if_out_of_bounds(TorpedoShot **torpedo, TorpedoShot **temp_torpedo, GameAttributes *game_attributes)
+void remove_torpedo_if_out_of_bounds(TorpedoShot **torpedo, GameAttributes *game_attributes)
 {
-    if(is_torpedo_out_of_bounds(torpedo, game_attributes))
+    TorpedoShot *temp_torpedo = (*torpedo);
+    while((*torpedo) != NULL)
     {
-        explode_torpedo(torpedo, temp_torpedo);
+        if(is_torpedo_out_of_bounds(torpedo, game_attributes))
+        {
+            explode_torpedo(torpedo, &temp_torpedo);
+        }
+        advance_torpedo_list_if_not_NULL(torpedo);
     }
+    reset_player_torpedo_pointer(torpedo, &temp_torpedo);
 }
 
 /**

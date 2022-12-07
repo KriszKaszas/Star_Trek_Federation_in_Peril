@@ -1,3 +1,7 @@
+/**
+*@file enemy_hit_management.c
+*/
+
 #include "enemy_hit_management.h"
 
 
@@ -38,6 +42,13 @@ void explode_enemy_ship_if_dead(EnemyShip **enemy_ship, EnemyShip **temp_ship, G
 
 static void explode_enemy_ship(EnemyShip **enemy_ship, EnemyShip **temp_ship, GameAttributes *game_attributes)
 {
+    bool is_ship_null = (*enemy_ship) == NULL;
+
+    if(is_ship_null)
+    {
+        return;
+    }
+
     bool is_first_ship = (*enemy_ship)->prev_ship == NULL;
     bool is_last_ship = (*enemy_ship)->next_ship == NULL;
     bool is_only_ship = is_first_ship && is_last_ship;

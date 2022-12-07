@@ -4,6 +4,13 @@
 
 #include "enemy_ship.h"
 
+static void pop_only_ship(EnemyShip **enemy_ship, EnemyShip *temp_ship);
+
+static void pop_first_ship(EnemyShip **enemy_ship, EnemyShip *temp_ship);
+
+static void pop_last_ship(EnemyShip **enemy_ship, EnemyShip *temp_ship);
+
+static void pop_in_between_ship(EnemyShip **enemy_ship, EnemyShip *temp_ship);
 
 /**
 *@brief create_enemy_ship
@@ -29,8 +36,6 @@ static void init_enemy_ship(TextureData texture_data, EnemyShip **es, ShipDTT *s
 *@brief init_enemy_armada
 *@details az ellenseges hadsereget inicializalja a bemeneti parameterek alapjan.
 *<br>VIGYAZAT: a hadsereg es az azt alkoto hajok felszabaditasaert a hivo felel!
-*<br>MEGJEGYZES: ez a fuggveny es a segedfuggvenyei a vegleges verziohoz refaktoralason esnek majd at,
-*a fuggveny ajelenlegi verzioban mukodik ugyan, de nem azt a feladatot latja el, amit majd a vegleges verzioban kell.
 *@param [in] level_dtt az ellenseges hadsereg attributumait tartalmazo fajlbeolvasasbol szarmazo adatstruktura
 *@param [in] texture_data az egyes hajok textura adatai a kirajzolashoz (kozep koordinatak, textura szelesseg)
 *@param [in] game_attributes az osszes jatekattributumot tartlmazo adatstruktura
@@ -172,60 +177,122 @@ void move_enemy_armada(EnemyArmada *armada, GameAttributes *game_attributes){
 
 /**
 *@brief pop_enemy_ship
-*@details egy hajo torleset vegzi.
-*@param [] torpedo
+*@details Egy hajo torleset vegzi.
+*@param [in,out] enemy_ship
 *@return void
 */
 void pop_enemy_ship(EnemyShip **enemy_ship)
 {
-    EnemyShip *tmp = (*enemy_ship);
-    if(tmp != NULL)
-    {
-        if((*enemy_ship)->prev_ship == NULL && (*enemy_ship)->next_ship == NULL)
-        {
-            (*enemy_ship) = NULL;
-            free(tmp);
-        }
-        else if((*enemy_ship)->prev_ship == NULL)
-        {
+    EnemyShip *temp_ship = (*enemy_ship);
+    bool is_ship_null = temp_ship == NULL;
 
-            (*enemy_ship) = tmp->next_ship;
-            (*enemy_ship)->prev_ship = NULL;
-            free(tmp);
-        }
-        else if((*enemy_ship)->next_ship == NULL)
-        {
-            (*enemy_ship)->prev_ship->next_ship = NULL;
-            (*enemy_ship) = (*enemy_ship)->prev_ship;
-            free(tmp);
-        }
-        else
-        {
-            (*enemy_ship)->prev_ship->next_ship = (*enemy_ship)->next_ship;
-            (*enemy_ship)->next_ship->prev_ship = (*enemy_ship)->prev_ship;
-            (*enemy_ship) = (*enemy_ship)->next_ship;
-            free(tmp);
-        }
+    if(is_ship_null)
+    {
+        return;
+    }
+
+    bool is_first_ship = (*enemy_ship)->prev_ship == NULL;
+    bool is_last_ship = (*enemy_ship)->next_ship == NULL;
+    bool is_only_ship = is_first_ship && is_last_ship;
+    bool is_in_between_ship = !is_first_ship && !is_last_ship;
+
+    if(is_only_ship)
+    {
+        pop_only_ship(enemy_ship, temp_ship);
+        return;
+    }
+    if(is_first_ship)
+    {
+        pop_first_ship(enemy_ship, temp_ship);
+        return;
+    }
+    if(is_last_ship)
+    {
+        pop_last_ship(enemy_ship, temp_ship);
+        return;
+    }
+    if(is_in_between_ship)
+    {
+        pop_in_between_ship(enemy_ship, temp_ship);
+        return;
     }
 }
 
+/**
+*@brief pop_only_ship
+*@details Felszabaditja a felrobbant ellenséges hajot, ha az a hajo lista egyeduli eleme.
+*@param [in,out] enemy_ship Az ellenseges hajotkat tartalmazo lancolt lista aktualis elemenek pointere.
+*@param [in] temp_ship Az ellenseges hajot tartalmazo lancolt lista aktualis elemenek ideiglenes taroloja.
+*@return void
+*/
 
+static void pop_only_ship(EnemyShip **enemy_ship, EnemyShip *temp_ship)
+{
+    (*enemy_ship) = NULL;
+    free(temp_ship);
+}
+
+/**
+*@brief remove_first_ship
+*@details Felszabaditja a felrobbant ellenséges hajot, ha az a hajo lista head eleme.
+*@param [in,out] enemy_ship Az ellenseges hajotkat tartalmazo lancolt lista aktualis elemenek pointere.
+*@param [in] temp_ship Az ellenseges hajot tartalmazo lancolt lista aktualis elemenek ideiglenes taroloja.
+*@return void
+*/
+
+static void pop_first_ship(EnemyShip **enemy_ship, EnemyShip *temp_ship)
+{
+    (*enemy_ship) = temp_ship->next_ship;
+    (*enemy_ship)->prev_ship = NULL;
+    free(temp_ship);
+}
+
+/**
+*@brief pop_last_ship
+*@details Felszabaditja a felrobbant ellenséges hajot, ha az a hajo lista tail eleme.
+*@param [in,out] enemy_ship Az ellenseges hajotkat tartalmazo lancolt lista aktualis elemenek pointere.
+*@param [in] temp_ship Az ellenseges hajot tartalmazo lancolt lista aktualis elemenek ideiglenes taroloja.
+*@return void
+*/
+
+static void pop_last_ship(EnemyShip **enemy_ship, EnemyShip *temp_ship)
+{
+    (*enemy_ship)->prev_ship->next_ship = NULL;
+    (*enemy_ship) = (*enemy_ship)->prev_ship;
+    free(temp_ship);
+}
+
+/**
+*@brief pop_in_between_ship
+*@details Felszabaditja a felrobbant ellenséges hajot, ha az a hajo lista koztes eleme.
+*@param [in,out] enemy_ship Az ellenseges hajotkat tartalmazo lancolt lista aktualis elemenek pointere.
+*@param [in] temp_ship Az ellenseges hajot tartalmazo lancolt lista aktualis elemenek ideiglenes taroloja.
+*@return void
+*/
+
+static void pop_in_between_ship(EnemyShip **enemy_ship, EnemyShip *temp_ship)
+{
+        (*enemy_ship)->prev_ship->next_ship = (*enemy_ship)->next_ship;
+        (*enemy_ship)->next_ship->prev_ship = (*enemy_ship)->prev_ship;
+        (*enemy_ship) = (*enemy_ship)->next_ship;
+        free(temp_ship);
+}
 
 /**
 *@brief free_enemy_armada
-*@details az ellenseges hadsereg altal elfoglalt memoriaterulet felszabaditasaert felel
+*@details Az ellenseges hadsereg altal elfoglalt memoriaterulet felszabaditasaert felel
 *@param [] enemy_armada
 *@return void
 */
 void free_enemy_armada(EnemyShip *enemy_armada)
 {
-    EnemyShip *tmp = enemy_armada;
-    while(tmp != NULL){
-        tmp = enemy_armada->next_ship;
+    EnemyShip *temp_ship = enemy_armada;
+    while(temp_ship != NULL){
+        temp_ship = enemy_armada->next_ship;
         pop_enemy_ship(&enemy_armada);
-        enemy_armada = tmp;
+        enemy_armada = temp_ship;
     }
     enemy_armada = NULL;
-    tmp = NULL;
+    temp_ship = NULL;
 }
 

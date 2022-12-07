@@ -33,6 +33,13 @@ bool is_torpedo_out_of_bounds(TorpedoShot **torpedo, GameAttributes *game_attrib
 
 void explode_torpedo(TorpedoShot **player_torpedo, TorpedoShot **temp_torpedo)
 {
+    bool is_torpedo_null = (*player_torpedo) == NULL;
+
+    if(is_torpedo_null)
+    {
+        return;
+    }
+
     bool is_first_torpedo = (*player_torpedo)->prev_torpedo == NULL;
     bool is_last_torpedo = (*player_torpedo)->next_torpedo == NULL;
     bool is_only_torpedo = is_first_torpedo && is_last_torpedo;

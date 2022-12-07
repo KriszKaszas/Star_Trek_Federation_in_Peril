@@ -4,6 +4,14 @@
 
 #include "torpedo.h"
 
+static void pop_only_torpedo(TorpedoShot **torpedo, TorpedoShot *temp_torpedo);
+
+static void pop_first_torpedo(TorpedoShot **torpedo, TorpedoShot *temp_torpedo);
+
+static void pop_last_torpedo(TorpedoShot **torpedo, TorpedoShot *temp_torpedo);
+
+static void pop_in_between_torpedo(TorpedoShot **torpedo, TorpedoShot *temp_torpedo);
+
 /**
 *@brief init_torpedo_colors
 *@details inicializalja a torpedok szineit ado TorpedoColors structot
@@ -89,34 +97,98 @@ void move_torpedoes(TorpedoShot **torpedo){
 */
 void pop_torpedo_shot(TorpedoShot **torpedo)
 {
-    TorpedoShot *tmp = (*torpedo);
-    if(tmp != NULL)
+    TorpedoShot *temp_torpedo = (*torpedo);
+    bool is_torpedo_null = (*torpedo) == NULL;
+
+    if(is_torpedo_null)
     {
-        if((*torpedo)->prev_torpedo == NULL && (*torpedo)->next_torpedo == NULL)
-        {
-            (*torpedo) = NULL;
-            free(tmp);
-        }
-        else if((*torpedo)->prev_torpedo == NULL)
-        {
-            (*torpedo) = tmp->next_torpedo;
-            (*torpedo)->prev_torpedo = NULL;
-            free(tmp);
-        }
-        else if((*torpedo)->next_torpedo == NULL)
-        {
-            (*torpedo)->prev_torpedo->next_torpedo = NULL;
-            (*torpedo) = (*torpedo)->prev_torpedo;
-            free(tmp);
-        }
-        else
-        {
-            (*torpedo)->prev_torpedo->next_torpedo = (*torpedo)->next_torpedo;
-            (*torpedo)->next_torpedo->prev_torpedo = (*torpedo)->prev_torpedo;
-            (*torpedo) = (*torpedo)->next_torpedo;
-            free(tmp);
-        }
+        return;
     }
+
+    bool is_first_torpedo = (*torpedo)->prev_torpedo == NULL;
+    bool is_last_torpedo = (*torpedo)->next_torpedo == NULL;
+    bool is_only_torpedo = is_first_torpedo && is_last_torpedo;
+    bool is_in_between_torpedo = !is_first_torpedo && !is_last_torpedo;
+
+    if(is_only_torpedo)
+    {
+        pop_only_torpedo(torpedo, temp_torpedo);
+        return;
+    }
+    if(is_first_torpedo)
+    {
+        pop_first_torpedo(torpedo, temp_torpedo);
+        return;
+    }
+    if(is_last_torpedo)
+    {
+        pop_last_torpedo(torpedo, temp_torpedo);
+        return;    }
+    if(is_in_between_torpedo)
+    {
+        pop_in_between_torpedo(torpedo, temp_torpedo);
+        return;
+    }
+}
+
+/**
+*@brief pop_only_torpedo
+*@details Felszabaditja a jatekos felrobbant torpedojat, ha az a torpedo lista egyeduli eleme.
+*@param [in,out] **player_torpedo A jatekos altal kilott torpedokat tartalmazo lancolt lista aktualis elemenek pointere.
+*@param [in] *temp_torpedo A jatekos altal kilott torpedokat tartalmazo lancolt aktualis elemere mutato pointer ideiglenes taroloja.
+*@return void
+*/
+
+static void pop_only_torpedo(TorpedoShot **torpedo, TorpedoShot *temp_torpedo)
+{
+    (*torpedo) = NULL;
+    free(temp_torpedo);
+}
+
+/**
+*@brief pop_first_torpedo
+*@details Felszabaditja a jatekos felrobbant torpedojat, ha az a torpedo lista egyeduli eleme.
+*@param [in,out] **player_torpedo A jatekos altal kilott torpedokat tartalmazo lancolt lista aktualis elemenek pointere.
+*@param [in] *temp_torpedo A jatekos altal kilott torpedokat tartalmazo lancolt aktualis elemere mutato pointer ideiglenes taroloja.
+*@return void
+*/
+
+static void pop_first_torpedo(TorpedoShot **torpedo, TorpedoShot *temp_torpedo)
+{
+    (*torpedo) = temp_torpedo->next_torpedo;
+    (*torpedo)->prev_torpedo = NULL;
+    free(temp_torpedo);
+}
+
+/**
+*@brief pop_last_torpedo
+*@details Felszabaditja a jatekos felrobbant torpedojat, ha az a torpedo lista tail eleme.
+*@param [in,out] **player_torpedo A jatekos altal kilott torpedokat tartalmazo lancolt lista aktualis elemenek pointere.
+*@param [in] *temp_torpedo A jatekos altal kilott torpedokat tartalmazo lancolt aktualis elemere mutato pointer ideiglenes taroloja.
+*@return void
+*/
+
+static void pop_last_torpedo(TorpedoShot **torpedo, TorpedoShot *temp_torpedo)
+{
+    (*torpedo)->prev_torpedo->next_torpedo = NULL;
+    (*torpedo) = (*torpedo)->prev_torpedo;
+    free(temp_torpedo);
+}
+
+/**
+*@brief pop_in_between_torpedo
+*@details Felszabaditja a jatekos felrobbant torpedojat, ha az a torpedo lista koztes eleme.
+*@param [in,out] **player_torpedo A jatekos altal kilott torpedokat tartalmazo lancolt lista aktualis elemenek pointere.
+*@param [in] *temp_torpedo A jatekos altal kilott torpedokat tartalmazo lancolt aktualis elemere mutato pointer ideiglenes taroloja.
+*@return void
+*/
+
+static void pop_in_between_torpedo(TorpedoShot **torpedo, TorpedoShot *temp_torpedo)
+{
+    (*torpedo)->prev_torpedo->next_torpedo = (*torpedo)->next_torpedo;
+    (*torpedo)->next_torpedo->prev_torpedo = (*torpedo)->prev_torpedo;
+    (*torpedo) = (*torpedo)->next_torpedo;
+    free(temp_torpedo);
 }
 
 /**

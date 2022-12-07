@@ -604,7 +604,7 @@
 	<stdbool.h>
 	"debugmalloc.h"
 
-1670448220 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\hit_management.c
+1670453006 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\hit_management.c
 	"hit_management.h"
 
 1670448246 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\hit_management.h
@@ -678,13 +678,13 @@
 	<string.h>
 	"debugmalloc.h"
 
-1670282167 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\torpedo.c
+1670454729 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\torpedo.c
 	"torpedo.h"
 
 1668379289 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\ui_input.c
 	"ui_input.h"
 
-1670345632 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\enemy_ship.c
+1670453185 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\enemy_ship.c
 	"enemy_ship.h"
 
 1668375368 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\file_management.c
@@ -699,7 +699,7 @@
 1670437058 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\game_engine.c
 	"game_engine.h"
 
-1670440173 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\fire_managemet.c
+1670448442 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\fire_managemet.c
 	"fire_management.h"
 
 1670280554 c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\fire_management.h
@@ -718,9 +718,9 @@
 	<stdbool.h>
 	"debugmalloc.h"
 
-1670448306 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\enemy_hit_mananagement.c
+1670450827 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\enemy_hit_mananagement.c
 	"enemy_hit_management.h"
 
-1670447824 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\torpedo_hit_management.c
+1670454302 source:c:\users\krisz\desktop\nagy_hazi_2022\star_trek_federation_in_peril\star_trek_federation_in_peril\torpedo_hit_management.c
 	"torpedo_hit_management.h"
 

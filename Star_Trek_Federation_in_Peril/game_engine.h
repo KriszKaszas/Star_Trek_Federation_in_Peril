@@ -10,6 +10,7 @@
 #include "star_map.h"
 #include "player_ship.h"
 #include "enemy_ship.h"
+#include "fire_management.h"
 #include "hit_management.h"
 #include "data_transfer_types.h"
 #include "file_management.h"

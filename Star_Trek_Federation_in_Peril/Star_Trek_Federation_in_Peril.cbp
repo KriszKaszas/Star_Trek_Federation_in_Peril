@@ -56,6 +56,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="file_management.h" />
+		<Unit filename="fire_management.h" />
+		<Unit filename="fire_managemet.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="game_assets.h" />
 		<Unit filename="game_attributes.h" />
 		<Unit filename="game_engine.c">

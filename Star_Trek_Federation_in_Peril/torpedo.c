@@ -11,7 +11,7 @@
 *@param [] is_quantum_torpedo
 *@return TorpedoColors
 */
-TorpedoColors init_torpedo_colors(bool is_enemy_torpedo, bool is_quantum_torpedo){
+TorpedoColors init_torpedo_colors(bool is_enemy_torpedo){
     TorpedoColors colors;
     if(is_enemy_torpedo){
         ColorData outter_ring = {94, 195, 79, 100};
@@ -19,14 +19,6 @@ TorpedoColors init_torpedo_colors(bool is_enemy_torpedo, bool is_quantum_torpedo
         ColorData inner_ring = {62, 250, 85, 155};
         colors.inner_ring = inner_ring;
         ColorData center = {138, 254, 202, 255};
-        colors.center = center;
-    }
-    else if(is_quantum_torpedo){
-        ColorData outter_ring = {94, 195, 79, 100};
-        colors.outter_ring = outter_ring;
-        ColorData inner_ring = {65, 123, 237, 155};
-        colors.inner_ring = inner_ring;
-        ColorData center = {255, 255, 255, 255};
         colors.center = center;
     }
     else{
@@ -52,7 +44,7 @@ TorpedoColors init_torpedo_colors(bool is_enemy_torpedo, bool is_quantum_torpedo
 *@param [] is_quantum_torpedo
 *@return TorpedoShot
 */
-TorpedoShot *add_torpedo_shot(TorpedoShot *torpedoes, int damage, int speed, int x_coor, int y_coor, bool is_enemy_torpedo, bool is_quantum_torpedo){
+TorpedoShot *add_torpedo_shot(TorpedoShot *torpedoes, int damage, int speed, int x_coor, int y_coor, bool is_enemy_torpedo){
 
     TorpedoShot *torpedo = (TorpedoShot*) malloc(sizeof(TorpedoShot));
     torpedo->x_coor = x_coor;
@@ -65,7 +57,7 @@ TorpedoShot *add_torpedo_shot(TorpedoShot *torpedoes, int damage, int speed, int
     else{
         torpedo->dir = 1;
     }
-    torpedo->colors = init_torpedo_colors(is_enemy_torpedo, is_quantum_torpedo);
+    torpedo->colors = init_torpedo_colors(is_enemy_torpedo);
     torpedo->next_torpedo = torpedoes;
     if(torpedoes != NULL){
         torpedoes->prev_torpedo = torpedo;
@@ -81,7 +73,7 @@ TorpedoShot *add_torpedo_shot(TorpedoShot *torpedoes, int damage, int speed, int
 *@param [] game_attributes
 *@return void
 */
-void move_torpedoes(TorpedoShot **torpedo, GameAttributes *game_attributes){
+void move_torpedoes(TorpedoShot **torpedo){
     TorpedoShot *tmp = (*torpedo);
     while(tmp != NULL){
         tmp->y_coor += tmp->dir;

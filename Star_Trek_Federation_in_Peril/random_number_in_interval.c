@@ -12,5 +12,5 @@
 *@return int
 */
 int random_number_in_range(int lower, int upper){
-    return (rand() % (upper - lower + 1)) + lower;
+     return (rand() % (upper - lower + 1)) + lower;
 }

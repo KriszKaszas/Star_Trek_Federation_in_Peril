@@ -5,6 +5,7 @@
 #include "data_transfer_types.h"
 #include "random_number_in_interval.h"
 #include "texture_data.h"
+#include "torpedo.h"
 
 #include <stdlib.h>
 #include <stdbool.h>

@@ -51,6 +51,7 @@ GameAssets *init_game_assets(GameAttributes *game_attributes){
 GameAttributes *init_game_attributes(){
     GameAttributes *game_attributes = (GameAttributes*) malloc(sizeof(GameAttributes));
     MousePosition mouse = {0,0};
+    game_attributes->enemy_armada_size = 50;
     game_attributes->width = 1900;
     game_attributes->height = 900;
     game_attributes->isi.up = false;
@@ -139,13 +140,21 @@ void calculate_game_assets(GameAssets *game_assets, GameAttributes *game_attribu
     int static shot_time = 0;
     move_player_ship(game_assets->player_ship, &game_attributes->isi, game_attributes->width, game_attributes->height);
     advance_starmap_frame(game_assets->star_map, game_attributes->width, game_attributes->height);
+    if(game_assets->enemy_armada != NULL && enemy_ship_time > shot_time)
+    {
+        fire_enemy_torpedoes(game_attributes->enemy_armada_size, game_assets);
+        shot_time += 500;
+    }
+    if(game_assets->enemy_torpedo != NULL)
+    {
+        move_torpedoes(&game_assets->enemy_torpedo);
+        remove_torpedo_if_out_of_bounds(&game_assets->enemy_torpedo, game_attributes);
+    }
     if(game_attributes->isi.torpedo){
-        game_assets->player_torpedo = add_torpedo_shot(game_assets->player_torpedo, 5, 2,
-                         game_assets->player_ship->x_coor, game_assets->player_ship->y_coor, false, false);
-        game_attributes->isi.torpedo = false;
+        fire_player_torpedo(game_assets, game_attributes);
     }
     if(game_assets->player_torpedo != NULL){
-        move_torpedoes(&game_assets->player_torpedo, game_attributes);
+        move_torpedoes(&game_assets->player_torpedo);
         remove_torpedo_if_out_of_bounds(&game_assets->player_torpedo, game_attributes);
         manage_player_hits(&game_assets->enemy_armada, &game_assets->player_torpedo, game_attributes);
     }

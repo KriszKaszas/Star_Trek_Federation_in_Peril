@@ -11,6 +11,7 @@
 typedef struct gameattributes{
     int width; ///<
     int height; ///<
+    int enemy_armada_size; ///<
     InputStateInterface isi; ///<
     SDL_TimerID id; ///<
 }GameAttributes;

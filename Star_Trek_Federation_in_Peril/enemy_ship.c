@@ -23,7 +23,6 @@ static void init_enemy_ship(TextureData texture_data, EnemyShip **es, ShipDTT *s
     (*es)->speed = ship_dtt->speed;
     (*es)->health = ship_dtt->health;
     (*es)->damage = ship_dtt->damage;
-    //printf("%d\n", (*es)->hitbox_beg_coor);
 }
 
 /**
@@ -42,7 +41,7 @@ EnemyShip *init_enemy_armada(TextureData texture_data, ShipDTT *ship_dtt, GameAt
     int x_coor = game_attributes->width/20;
     int y_coor = game_attributes->height/50;
     EnemyShip *enemy_armada = NULL;
-    for(int i = 0; i < 50; i++)
+    for(int i = 0; i < game_attributes->enemy_armada_size; i++)
     {
         if(i % 10 ==0)
         {
@@ -57,12 +56,14 @@ EnemyShip *init_enemy_armada(TextureData texture_data, ShipDTT *ship_dtt, GameAt
             enemy_armada->prev_ship = new_ship;
         }
         new_ship->prev_ship = NULL;
+        new_ship->health = 10;
         enemy_armada = new_ship;
         x_coor += 100;
 
     }
     return enemy_armada;
 }
+
 
 
 /**
@@ -208,16 +209,7 @@ void pop_enemy_ship(EnemyShip **enemy_ship)
     }
 }
 
-/**
-*@brief free_enemy_ship
-*@details felszabadit egy ellenseges hajot
-*@param [] enemy_armada
-*@return void
-*/
-void free_enemy_ship(EnemyShip *enemy_ship)
-{
-    free(enemy_ship);
-}
+
 
 /**
 *@brief free_enemy_armada

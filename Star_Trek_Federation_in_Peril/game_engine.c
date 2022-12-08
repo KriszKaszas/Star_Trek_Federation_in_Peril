@@ -29,16 +29,16 @@ GameAssets *init_game_assets(GameAttributes *game_attributes){
 
     ///MOCK DATA TYPES
     ///TODO: read from file
-    ShipDTT ship_dtt = {5, 10, 1};
+    ShipDTT ship_dtt = {1, 10, 1};
     TextureData fed_texture_data = {46, 130};
     TextureData enemy_texture_data = {60, 60};
     ///
     GameAssets *game_assets = (GameAssets*) malloc(sizeof(GameAssets));
     game_assets->star_map = starmap_init(game_attributes->width, game_attributes->height);
-    game_assets->player_ship = init_player_ship(game_attributes->width, game_attributes->height, fed_texture_data, 100, 1);
-    game_assets->enemy_armada = init_enemy_armada(enemy_texture_data, ship_dtt, game_attributes);
-    game_assets->player_torpedo = NULL;
-    game_assets->enemy_torpedo = NULL;
+    game_assets->player_ship = init_player_ship(game_attributes->width, game_attributes->height, fed_texture_data, 10, 1);
+    game_assets->enemy_armada = init_enemy_armada(enemy_texture_data, &ship_dtt, game_attributes);
+    game_assets->player_torpedoes = NULL;
+    game_assets->enemy_torpedoes = NULL;
 
     return game_assets;
 }
@@ -50,7 +50,6 @@ GameAssets *init_game_assets(GameAttributes *game_attributes){
 */
 GameAttributes *init_game_attributes(){
     GameAttributes *game_attributes = (GameAttributes*) malloc(sizeof(GameAttributes));
-    MousePosition mouse = {0,0};
     game_attributes->enemy_armada_size = 50;
     game_attributes->width = 1900;
     game_attributes->height = 900;
@@ -60,12 +59,7 @@ GameAttributes *init_game_attributes(){
     game_attributes->isi.right = false;
     game_attributes->isi.torpedo = false;
     game_attributes->isi.torpedo_ready = true;
-    game_attributes->isi.left_mouse_button = false;
-    game_attributes->isi.right_mouse_button = false;
-    game_attributes->isi.mouse_position = mouse;
     game_attributes->isi.quit = false;
-    game_attributes->isi.phaser_ready = true;
-    game_attributes->isi.phaser_firing = false;
     create_window(game_attributes->width, game_attributes->height);
     create_textures("player_ship_sprites.png", "enemy_ship_sprites.png");
     SDL_ShowCursor(SDL_DISABLE);
@@ -109,22 +103,10 @@ void clear_graphics(GameAssets *game_assets){
 void draw_graphics(int player_ship_time, GameAssets *game_assets, GameAttributes *game_attributes)
 {
     draw_background(game_assets->star_map);
-    if(game_attributes->isi.left_mouse_button && game_attributes->isi.phaser_ready && !game_attributes->isi.phaser_firing){
-            fire_phaser(&game_attributes->isi, game_assets->player_ship, player_ship_time);
-    }
-    if(game_attributes->isi.phaser_firing && player_ship_time - game_assets->player_ship->phaser_timer < 1){
-        draw_phaser(game_assets->player_ship->phaser_blast);
-    }
-    if(player_ship_time - game_assets->player_ship->phaser_timer > 1){
-        game_attributes->isi.phaser_ready = true;
-        game_attributes->isi.phaser_firing = false;
-        game_attributes->isi.left_mouse_button  = false;
-    }
-    draw_torpedo(game_assets->player_torpedo);
-    draw_torpedo(game_assets->enemy_torpedo);
+    draw_torpedo(game_assets->player_torpedoes);
+    draw_torpedo(game_assets->enemy_torpedoes);
     draw_enemy_ships(game_assets->enemy_armada);
     draw_player_ship(game_assets->player_ship);
-    draw_crosshair(game_attributes->isi.mouse_position.mouse_x, game_attributes->isi.mouse_position.mouse_y);
 }
 
 /**
@@ -135,28 +117,37 @@ void draw_graphics(int player_ship_time, GameAssets *game_assets, GameAttributes
 *@param [in] enemy_ship_time
 *@return void
 */
-void calculate_game_assets(GameAssets *game_assets, GameAttributes *game_attributes, int enemy_ship_time){
+void calculate_game_assets(GameAssets **game_assets, GameAttributes *game_attributes, int enemy_ship_time){
     int static time = 0;
     int static shot_time = 0;
-    move_player_ship(game_assets->player_ship, &game_attributes->isi, game_attributes->width, game_attributes->height);
-    advance_starmap_frame(game_assets->star_map, game_attributes->width, game_attributes->height);
-    if(game_assets->enemy_armada != NULL && enemy_ship_time > shot_time)
+    if((*game_assets)->player_ship != NULL)
     {
-        fire_enemy_torpedoes(game_attributes->enemy_armada_size, game_assets);
+        move_player_ship((*game_assets)->player_ship, &game_attributes->isi, game_attributes->width, game_attributes->height);
+    }
+    advance_starmap_frame((*game_assets)->star_map, game_attributes->width, game_attributes->height);
+    if((*game_assets)->enemy_armada != NULL && enemy_ship_time*2 > time)
+    {
+        move_enemy_armada((*game_assets)->enemy_armada, game_attributes);
+        time = enemy_ship_time*2;
+    }
+    if((*game_assets)->enemy_armada != NULL && enemy_ship_time > shot_time)
+    {
+        fire_enemy_torpedoes(game_attributes->enemy_armada_size, (*game_assets));
         shot_time += 500;
     }
-    if(game_assets->enemy_torpedo != NULL)
+    if((*game_assets)->enemy_torpedoes != NULL)
     {
-        move_torpedoes(&game_assets->enemy_torpedo);
-        remove_torpedo_if_out_of_bounds(&game_assets->enemy_torpedo, game_attributes);
+        move_torpedoes(&(*game_assets)->enemy_torpedoes);
+        remove_torpedo_if_out_of_bounds(&(*game_assets)->enemy_torpedoes, game_attributes);
+        manage_player_hits(&(*game_assets)->player_ship, &(*game_assets)->enemy_torpedoes, game_assets);
     }
-    if(game_attributes->isi.torpedo){
-        fire_player_torpedo(game_assets, game_attributes);
+    if((*game_assets)->player_ship != NULL && game_attributes->isi.torpedo){
+        fire_player_torpedo((*game_assets), game_attributes);
     }
-    if(game_assets->player_torpedo != NULL){
-        move_torpedoes(&game_assets->player_torpedo);
-        remove_torpedo_if_out_of_bounds(&game_assets->player_torpedo, game_attributes);
-        manage_player_hits(&game_assets->enemy_armada, &game_assets->player_torpedo, game_attributes);
+    if((*game_assets)->player_torpedoes != NULL){
+        move_torpedoes(&(*game_assets)->player_torpedoes);
+        remove_torpedo_if_out_of_bounds(&(*game_assets)->player_torpedoes, game_attributes);
+        manage_enemy_hits(&(*game_assets)->enemy_armada, &(*game_assets)->player_torpedoes, game_assets, game_attributes);
     }
 }
 
@@ -166,16 +157,17 @@ void calculate_game_assets(GameAssets *game_assets, GameAttributes *game_attribu
 *@param [in] game_assets
 *@return void
 */
-void free_assets(GameAssets *game_assets){
-    free_starmap(game_assets->star_map);
-    free_player_ship(game_assets->player_ship);
-    game_assets->player_ship = NULL;
-    free_enemy_armada(game_assets->enemy_armada);
-    game_assets->enemy_armada = NULL;
-    free_torpedoes(game_assets->player_torpedo);
-    game_assets->player_torpedo = NULL;
-    free_torpedoes(game_assets->enemy_torpedo);
-    game_assets->enemy_torpedo = NULL;
+void free_assets(GameAssets **game_assets){
+    free_starmap((*game_assets)->star_map);
+    (*game_assets)->star_map = NULL;
+    free_player_ship((*game_assets)->player_ship);
+    (*game_assets)->player_ship = NULL;
+    free_enemy_armada((*game_assets)->enemy_armada);
+    (*game_assets)->enemy_armada = NULL;
+    free_torpedoes((*game_assets)->player_torpedoes);
+    (*game_assets)->player_torpedoes = NULL;
+    free_torpedoes((*game_assets)->enemy_torpedoes);
+    (*game_assets)->enemy_torpedoes = NULL;
 }
 
 /**
@@ -217,16 +209,16 @@ int keep_enemy_time(){
 *@param [] game_attributes
 *@return void
 */
-void game_loop(GameAssets *game_assets, KeyMap *key_map, GameAttributes *game_attributes){
+void game_loop(GameAssets **game_assets, KeyMap *key_map, GameAttributes *game_attributes){
     int player_ship_time = 0;
     int enemy_ship_time = 0;
     while(!game_attributes->isi.quit){
         player_ship_time = keep_player_time();
         enemy_ship_time = keep_enemy_time();
         user_input(&game_attributes->isi, key_map, game_attributes->id);
-        clear_graphics(game_assets);
+        clear_graphics((*game_assets));
         calculate_game_assets(game_assets, game_attributes, enemy_ship_time);
-        draw_graphics(player_ship_time, game_assets, game_attributes);
+        draw_graphics(player_ship_time, (*game_assets), game_attributes);
         render_screen();
     }
 }
@@ -242,9 +234,13 @@ void runtime(){
     GameAttributes *game_attributes = init_game_attributes();
     GameAssets *game_assets = init_game_assets(game_attributes);
     KeyMap *key_map = default_keymap_init();
-    game_loop(game_assets, key_map, game_attributes);
-
-    free_assets(game_assets);
+    game_loop(&game_assets, key_map, game_attributes);
+    free_assets(&game_assets);
+    printf("\nstarmap pointer: %p\n", game_assets->star_map);
+    printf("\nplayer ship pointer: %p\n", game_assets->player_ship);
+    printf("\nenemy armada pointer: %p\n", game_assets->enemy_armada);
+    printf("\nplayer torpedoes pointer: %p\n", game_assets->player_torpedoes);
+    printf("\nenemy torpedoes pointer: %p\n", game_assets->enemy_torpedoes);
     free_components(game_assets, game_attributes);
     free(key_map);
     SDL_Quit();

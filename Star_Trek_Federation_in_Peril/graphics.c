@@ -100,11 +100,16 @@ void draw_background(StarMap *sm){
 *@return void
 */
 void draw_player_ship(PlayerShip *ps){
-
+    if(ps == NULL)
+    {
+        return;
+    }
     if(fed_ship != NULL){
         SDL_Rect src = {128, 1, 46, 114};
         SDL_Rect dest = {ps->texture_data.texture_center_x, ps->texture_data.texture_center_y, ps->texture_data.width, ps->texture_data.height};
         SDL_RenderCopy(renderer, fed_ship, &src, &dest);
+        thickLineRGBA(renderer, ps->hitbox_beg_coor, ps->centerline_y_coor, ps->hitbox_end_coor, ps->centerline_y_coor, 5, 255, 0, 0, 255);
+        thickLineRGBA(renderer, ps->hitbox_beg_coor, ps->centerline_y_coor+50, ps->hitbox_end_coor, ps->centerline_y_coor+50, 5, 255, 0, 0, 255);
     }
     else{
         filledCircleRGBA(renderer, ps->x_coor, ps->y_coor, 30, 218, 223, 225, 255);
@@ -146,25 +151,10 @@ void draw_enemy_ships(EnemyShip *enemy_armada){
         {
             filledCircleRGBA(renderer, enemy_armada->x_coor,
                             enemy_armada->y_coor, 30, 46, 204, 113, 255);
+            thickLineRGBA(renderer, enemy_armada->hitbox_beg_coor, enemy_armada->centerline_y_coor, enemy_armada->hitbox_end_coor, enemy_armada->centerline_y_coor, 5, 255, 0, 0, 255);
             enemy_armada=enemy_armada->next_ship;
         }
 
-}
-
-
-/**
-*@brief draw_phaser
-*@details kirajzolja a fezer sugarat
-*@param [] phaser
-*@return void
-*/
-void draw_phaser(PhaserBeam *phaser){
-    thickLineRGBA(renderer, phaser->beg_x, phaser->beg_y, phaser->end_x, phaser->end_y, 12,
-                  phaser->beam_composition.falloff_color.a, phaser->beam_composition.falloff_color.g,
-                  phaser->beam_composition.falloff_color.b, phaser->beam_composition.falloff_color.a);
-    thickLineRGBA(renderer, phaser->beg_x, phaser->beg_y, phaser->end_x, phaser->end_y, 1,
-                  phaser->beam_composition.core_color.a, phaser->beam_composition.core_color.g,
-                  phaser->beam_composition.core_color.b, phaser->beam_composition.core_color.a);
 }
 
 /**
@@ -183,7 +173,7 @@ void draw_torpedo(TorpedoShot *torpedoes){
     while(tmp != NULL)
     {
         filledCircleRGBA(renderer, tmp->x_coor, tmp->y_coor, 15,
-                         tmp->colors.outter_ring.r, tmp->colors.outter_ring.g, tmp->colors.outter_ring.b, tmp->colors.outter_ring.a);
+                           tmp->colors.outter_ring.r, tmp->colors.outter_ring.g, tmp->colors.outter_ring.b, tmp->colors.outter_ring.a);
         filledCircleRGBA(renderer, tmp->x_coor, tmp->y_coor, 10,
                          tmp->colors.inner_ring.r, tmp->colors.inner_ring.g, tmp->colors.inner_ring.b, tmp->colors.inner_ring.a);
         filledCircleRGBA(renderer, tmp->x_coor, tmp->y_coor, 5,

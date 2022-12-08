@@ -83,10 +83,10 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="phaser.c">
+		<Unit filename="player_hit_management.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="phaser.h" />
+		<Unit filename="player_hit_management.h" />
 		<Unit filename="player_ship.c">
 			<Option compilerVar="CC" />
 		</Unit>

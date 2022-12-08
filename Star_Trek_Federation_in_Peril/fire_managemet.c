@@ -3,7 +3,7 @@
 
 void fire_player_torpedo(GameAssets *game_assets, GameAttributes *game_attributes)
 {
-    game_assets->player_torpedo = add_torpedo_shot(game_assets->player_torpedo, 5, 2,
+    game_assets->player_torpedoes = add_torpedo_shot(game_assets->player_torpedoes, 5, 2,
                                                     game_assets->player_ship->x_coor, game_assets->player_ship->y_coor, false);
     game_attributes->isi.torpedo = false;
 }
@@ -47,7 +47,7 @@ void fire_ship_torpedo_if_selected(int *ship_number,
 {
     if((*ship_number) % (*selector) == 0)
     {
-        game_assets->enemy_torpedo = add_torpedo_shot(game_assets->enemy_torpedo, 5, 2, temp_ship->x_coor, temp_ship->y_coor, true);
+        game_assets->enemy_torpedoes = add_torpedo_shot(game_assets->enemy_torpedoes, 5, 2, temp_ship->x_coor, temp_ship->y_coor, true);
     }
 }
 

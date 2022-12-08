@@ -23,6 +23,7 @@ static void init_enemy_ship(TextureData texture_data, EnemyShip **es, ShipDTT *s
 {
     (*es)->x_coor = x_coor;
     (*es)->y_coor = y_coor;
+    (*es)->movement_dir = 1;
     (*es)->texture_data = texture_data;
     (*es)->hitbox_beg_coor = (*es)->x_coor - (texture_data.width/2);
     (*es)->hitbox_end_coor = (*es)->x_coor + (texture_data.width/2);
@@ -43,18 +44,22 @@ static void init_enemy_ship(TextureData texture_data, EnemyShip **es, ShipDTT *s
 */
 EnemyShip *init_enemy_armada(TextureData texture_data, ShipDTT *ship_dtt, GameAttributes *game_attributes)
 {
-    int x_coor = game_attributes->width/20;
-    int y_coor = game_attributes->height/50;
+        printf("speed: %d\n", ship_dtt->speed);
+    int ships_per_row = 10;
+    int spacing = game_attributes->width/13;
+    int x_start_pos = spacing/2;
+    int x_coor = x_start_pos;
+    int y_coor = game_attributes->height/1200;
     EnemyShip *enemy_armada = NULL;
     for(int i = 0; i < game_attributes->enemy_armada_size; i++)
     {
-        if(i % 10 ==0)
+        if(i % ships_per_row ==0)
         {
             y_coor += 100;
-            x_coor = game_attributes->width/50;
+            x_coor = x_start_pos;
         }
         EnemyShip *new_ship = (EnemyShip*) malloc(sizeof(EnemyShip));
-        init_enemy_ship(texture_data, &new_ship, &ship_dtt, x_coor, y_coor);
+        init_enemy_ship(texture_data, &new_ship, ship_dtt, x_coor, y_coor);
         new_ship->next_ship = enemy_armada;
         if(enemy_armada != NULL)
         {
@@ -63,117 +68,110 @@ EnemyShip *init_enemy_armada(TextureData texture_data, ShipDTT *ship_dtt, GameAt
         new_ship->prev_ship = NULL;
         new_ship->health = 10;
         enemy_armada = new_ship;
-        x_coor += 100;
+        x_coor += spacing;
 
     }
     return enemy_armada;
 }
 
+void move_enemy_armada(EnemyShip *enemy_armada, GameAttributes *game_attributes)
+{
+    EnemyShip *temp_ship = enemy_armada;
+    int max_x_threshold = (game_attributes->width/26)*25;
+    int min_x_threshold = game_attributes->width/26;
+    int armada_max_x = find_max_enemy_armada_x_coor(enemy_armada);
+    int armada_min_x = find_min_enemy_armada_x_coor(enemy_armada);
+    while(temp_ship != NULL)
+    {
+        bool is_armada_past_max_x_threshold = armada_max_x > max_x_threshold;
+        bool is_armada_past_min_x_threshold = armada_min_x < min_x_threshold;
+        bool is_dir_right = temp_ship->movement_dir == 1;
+        bool is_dir_left = temp_ship->movement_dir == -1;
+        bool is_armada_at_max_edge = is_dir_right && is_armada_past_max_x_threshold;
+        bool is_armada_at_min_edge = is_dir_left && is_armada_past_min_x_threshold;
+        bool is_armada_at_threshold_edge = is_armada_at_max_edge || is_armada_at_min_edge;
 
-
-/**
-*@brief modify_enemy_dir
-*@details az ellenseges hajok mozgasi iranyat valtoztatja az ellenkezojere
-*@param [in out] armada az ellenseges hadsereget tartalmazo adatstruktura
-*@return void
-*//*
-void modify_enemy_dir(EnemyArmada *armada){
-    for(int i = 0; i < armada->number_of_squadrons; i++){
-        if(armada->squadron_dirs[i] == 2){
-            if(i != armada->number_of_squadrons){
-                armada->squadron_dirs[i] = armada->squadron_dirs[i+1]*(-1);
-            }
-            else if(i == armada->number_of_squadrons){
-                armada->squadron_dirs[i] = armada->squadron_dirs[i-1]*(-1);
-            }
+        if(is_dir_right)
+        {
+            move_right(temp_ship);
         }
-    }
-}
-
-/**
-*@brief calculate_enemy_movement_freedom
-*@details megadja, hogy az ellenseges hajok mennyit mozoghatnak x iranyba a jatek csata animacioja kozben
-*@param [in] game_attributes az osszes jatekattributumot tartlmazo adatstruktura
-*@param [in] squadron egy hajo-sort tartalmazo lancolt lista head pointer
-*@return int visszater az ellenseges urhajok mozgasi szabadsagaval
-*/
-/*
-int static calculate_enemy_movement_freedom(GameAttributes *game_attributes, EnemySquadronShip *squadron){
-    int squadron_size = 0;
-    EnemySquadronShip *tmp = squadron;
-    while(tmp != NULL){
-        squadron_size++;
-        tmp = tmp->next_ship;
-    }
-    return game_attributes->width/squadron_size/3;
-}
-
-/**
-*@brief manage_enemy_dirs
-*@details visszaforditja az ellenseges hajokat a jatek csata animacioja kozben, amennyiben azok elertek a mozgasi szabadsaguk veget
-*jelzo x koordinatat
-*@param [] armada
-*@param [] game_attributes
-*@return void
-*//*
-void manage_enemy_dirs(EnemyArmada *armada, GameAttributes *game_attributes){
-    int enemy_movement_freedom;
-    for(int i = 0; i < armada->number_of_squadrons; i++){
-        enemy_movement_freedom = calculate_enemy_movement_freedom(game_attributes, armada->enemy_armada[i]);
-        if(armada->enemy_armada[i]->ship.x_coor > game_attributes->width/2){
-            if(armada->squadron_dirs[i] > 0 &&
-               armada->enemy_armada[i]->ship.x_coor == game_attributes->width-enemy_movement_freedom){
-                   armada->squadron_dirs[i] *= -1;
+        if(is_dir_left)
+        {
+            move_left(temp_ship);
+        }
+        if(is_armada_at_threshold_edge)
+        {
+            for(int i = 0; i < 4; i++)
+            {
+                move_down(temp_ship);
             }
-            else if(armada->squadron_dirs[i] < 0 &&
-                    armada->enemy_armada[i]->ship.x_coor == game_attributes->width - (enemy_movement_freedom * 2)){
-                        armada->squadron_dirs[i] *= -1;
-                    }
+            reverse_movement_dir(temp_ship);
         }
-        else if(armada->enemy_armada[i]->ship.x_coor < game_attributes->width/2){
-                if(armada->squadron_dirs[i] > 0 &&
-                   armada->enemy_armada[i]->ship.x_coor == enemy_movement_freedom * 2){
-                        armada->squadron_dirs[i] *= -1;
-                }
-                else if(armada->squadron_dirs[i] < 0 &&
-                        armada->enemy_armada[i]->ship.x_coor == enemy_movement_freedom){
-                        armada->squadron_dirs[i] *= -1;
-                        }
-        }
+        temp_ship = temp_ship->next_ship;
+
     }
 }
 
-/**
-*@brief move_enemy_squadron
-*@details az ellenseges hajok egy soranak mozgatasaert felel
-*@param [] squadron
-*@param [] game_attributes
-*@param [] dir
-*@return void
-*//*
-void static move_enemy_squadron(EnemySquadronShip *squadron, GameAttributes *game_attributes, int dir){
-    EnemySquadronShip *tmp = squadron;
-    while(tmp != NULL){
-        tmp->ship.x_coor += tmp->ship.speed*dir;
-        tmp->ship.texture_data.texture_center_x += tmp->ship.speed*dir;
-        tmp = tmp->next_ship;
+int find_max_enemy_armada_x_coor(EnemyShip *enemy_armada)
+{
+    EnemyShip *temp_armada = enemy_armada;
+    int max_x_coor = 0;
+    while(temp_armada != NULL)
+    {
+        bool is_x_greater_than_max = temp_armada->x_coor >= max_x_coor;
+        if(is_x_greater_than_max)
+        {
+            max_x_coor = temp_armada->x_coor;
+        }
+        temp_armada = temp_armada->next_ship;
     }
+    return max_x_coor;
 }
 
-/**
-*@brief move_enemy_armada
-*@details az egesz ellenseges hadsereg mozgasaert felel
-*@param [] armada
-*@param [] game_attributes
-*@return void
-*//*
-void move_enemy_armada(EnemyArmada *armada, GameAttributes *game_attributes){
-    for(int i = 0; i < armada->number_of_squadrons; i++){
-        move_enemy_squadron(armada->enemy_armada[i], game_attributes, armada->squadron_dirs[i]);
+int find_min_enemy_armada_x_coor(EnemyShip *enemy_armada)
+{
+    EnemyShip *temp_armada = enemy_armada;
+    int min_x_coor = 1000;
+    while(temp_armada != NULL)
+    {
+        bool is_x_less_than_min = temp_armada->x_coor <= min_x_coor;
+        if(is_x_less_than_min)
+        {
+            min_x_coor = temp_armada->x_coor;
+        }
+        temp_armada = temp_armada->next_ship;
     }
-    manage_enemy_dirs(armada, game_attributes);
+    return min_x_coor;
 }
-*/
+
+
+void move_right(EnemyShip *enemy_ship)
+{
+    enemy_ship->x_coor += enemy_ship->speed;
+    enemy_ship->texture_data.texture_center_x += enemy_ship->speed;
+    enemy_ship->hitbox_beg_coor += enemy_ship->speed;
+    enemy_ship->hitbox_end_coor += enemy_ship->speed;
+}
+
+void move_left(EnemyShip *enemy_ship)
+{
+    enemy_ship->x_coor -= enemy_ship->speed;
+    enemy_ship->texture_data.texture_center_x -= enemy_ship->speed;
+    enemy_ship->hitbox_beg_coor -= enemy_ship->speed;
+    enemy_ship->hitbox_end_coor -= enemy_ship->speed;
+}
+
+void move_down(EnemyShip *enemy_ship)
+{
+    enemy_ship->y_coor += enemy_ship->speed;
+    enemy_ship->texture_data.texture_center_y += enemy_ship->speed;
+    enemy_ship->centerline_y_coor += enemy_ship->speed;
+}
+
+void reverse_movement_dir(EnemyShip *enemy_ship)
+{
+    enemy_ship->movement_dir *= -1;
+}
 
 /**
 *@brief pop_enemy_ship

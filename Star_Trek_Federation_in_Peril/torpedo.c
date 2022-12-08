@@ -84,7 +84,7 @@ TorpedoShot *add_torpedo_shot(TorpedoShot *torpedoes, int damage, int speed, int
 void move_torpedoes(TorpedoShot **torpedo){
     TorpedoShot *tmp = (*torpedo);
     while(tmp != NULL){
-        tmp->y_coor += tmp->dir;
+         tmp->y_coor += tmp->dir;
         tmp = tmp->next_torpedo;
     }
 }

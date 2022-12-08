@@ -20,6 +20,7 @@
 typedef struct enemyship{
     int y_coor; ///<
     int x_coor; ///<
+    int movement_dir;
     int hitbox_beg_coor; ///<
     int hitbox_end_coor; ///<
     int centerline_y_coor; ///<

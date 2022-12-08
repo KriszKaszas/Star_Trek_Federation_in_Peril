@@ -63,18 +63,6 @@ void user_input(InputStateInterface *isi, KeyMap *key_map, SDL_TimerID id){
             }
             break;
 
-        case SDL_MOUSEMOTION:
-            SDL_GetMouseState(&isi->mouse_position.mouse_x, &isi->mouse_position.mouse_y);
-
-            break;
-
-        case SDL_MOUSEBUTTONDOWN:
-            if(event.button.button == SDL_BUTTON_LEFT && isi->phaser_ready){
-                isi->left_mouse_button = true;
-            }
-
-            break;
-
         case SDL_QUIT:
             isi->quit = true;
             break;

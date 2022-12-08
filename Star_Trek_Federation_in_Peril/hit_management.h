@@ -15,6 +15,6 @@
 
 void remove_torpedo_if_out_of_bounds(TorpedoShot **torpedo, GameAttributes *game_attributes);;
 
-void manage_player_hits(EnemyShip **enemy_armada, TorpedoShot **player_torpedo, GameAttributes *game_attributes);
+void manage_enemy_hits(EnemyShip **enemy_armada, TorpedoShot **player_torpedo, GameAssets **game_assets, GameAttributes *game_attributes);
 
 #endif // HIT_MANAGEMENT_H_INCLUDED

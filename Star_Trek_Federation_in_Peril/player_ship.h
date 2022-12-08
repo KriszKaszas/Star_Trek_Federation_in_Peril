@@ -4,7 +4,6 @@
 #include "input_state_interface.h"
 #include "texture_data.h"
 #include "player_ship.h"
-#include "phaser.h"
 
 #include <stdbool.h>
 
@@ -21,7 +20,6 @@ typedef struct playership{
     int hitbox_end_coor; ///<
     int centerline_y_coor; ///<
     TextureData texture_data; ///<
-    PhaserBeam *phaser_blast; ///<
     int phaser_timer; ///<
     int health; ///<
     int speed; ///<

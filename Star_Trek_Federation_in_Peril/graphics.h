@@ -5,7 +5,6 @@
 #include "player_ship.h"
 #include "enemy_ship.h"
 #include "input_state_interface.h"
-#include "phaser.h"
 #include "torpedo.h"
 
 #include <SDL.h>

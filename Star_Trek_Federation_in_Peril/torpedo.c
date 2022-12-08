@@ -123,7 +123,8 @@ void pop_torpedo_shot(TorpedoShot **torpedo)
     if(is_last_torpedo)
     {
         pop_last_torpedo(torpedo, temp_torpedo);
-        return;    }
+        return;
+    }
     if(is_in_between_torpedo)
     {
         pop_in_between_torpedo(torpedo, temp_torpedo);

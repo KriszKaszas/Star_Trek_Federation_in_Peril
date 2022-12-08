@@ -48,6 +48,10 @@
 		</Linker>
 		<Unit filename="data_transfer_types.h" />
 		<Unit filename="debugmalloc.h" />
+		<Unit filename="enemy_hit_management.h" />
+		<Unit filename="enemy_hit_mananagement.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="enemy_ship.c">
 			<Option compilerVar="CC" />
 		</Unit>
@@ -104,6 +108,11 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="torpedo.h" />
+		<Unit filename="torpedo_hit_management.c">
+			<Option compilerVar="CC" />
+			<Option target="Debug" />
+		</Unit>
+		<Unit filename="torpedo_hit_management.h" />
 		<Unit filename="ui_input.c">
 			<Option compilerVar="CC" />
 		</Unit>

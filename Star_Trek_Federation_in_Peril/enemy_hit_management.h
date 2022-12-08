@@ -5,6 +5,8 @@
 #include "game_assets.h"
 #include "torpedo.h"
 
+#include "debugmalloc.h"
+
 void explode_enemy_ship_if_dead(EnemyShip **enemy_ship, EnemyShip **temp_ship, GameAttributes *game_attributes);
 
 #endif // ENEMY_HIT_MANAGEMENT_H_INCLUDED

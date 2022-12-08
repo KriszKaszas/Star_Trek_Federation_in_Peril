@@ -21,6 +21,7 @@ Uint32  input_timer(Uint32 ms, void *param) {
 /**
 *@brief init_game_assets
 *@details inicializalja az osszes jatekhoz szukseges assetet.
+*<br>VIGYAZAT: a game_assets pointereinek NULL-ra allitasaert a hivo felel a free fuggvenyek hivasa utan!
 *@param [in out] game_attributes
 *@return GameAssets
 */
@@ -37,7 +38,6 @@ GameAssets *init_game_assets(GameAttributes *game_attributes){
     game_assets->player_ship = init_player_ship(game_attributes->width, game_attributes->height, fed_texture_data, 100, 1);
     game_assets->enemy_armada = init_enemy_armada(enemy_texture_data, ship_dtt, game_attributes);
     game_assets->player_torpedo = NULL;
-    game_assets->quantum_torpedo = NULL;
     game_assets->enemy_torpedo = NULL;
 
     return game_assets;
@@ -169,10 +169,13 @@ void calculate_game_assets(GameAssets *game_assets, GameAttributes *game_attribu
 void free_assets(GameAssets *game_assets){
     free_starmap(game_assets->star_map);
     free_player_ship(game_assets->player_ship);
+    game_assets->player_ship = NULL;
     free_enemy_armada(game_assets->enemy_armada);
+    game_assets->enemy_armada = NULL;
     free_torpedoes(game_assets->player_torpedo);
+    game_assets->player_torpedo = NULL;
     free_torpedoes(game_assets->enemy_torpedo);
-    free_torpedoes(game_assets->quantum_torpedo);
+    game_assets->enemy_torpedo = NULL;
 }
 
 /**

@@ -7,6 +7,7 @@
 #include "enemy_ship.h"
 #include "torpedo_hit_management.h"
 #include "enemy_hit_management.h"
+#include "player_hit_management.h"
 
 #include <stdbool.h>
 

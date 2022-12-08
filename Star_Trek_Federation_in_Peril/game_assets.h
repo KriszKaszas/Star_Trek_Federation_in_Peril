@@ -15,7 +15,6 @@ typedef struct gameassets{
     PlayerShip *player_ship; ///<
     EnemyShip *enemy_armada; ///<
     TorpedoShot *player_torpedo; ///<
-    TorpedoShot *quantum_torpedo; ///<
     TorpedoShot *enemy_torpedo; ///<
 }GameAssets;
 

@@ -19,18 +19,22 @@ static void pop_in_between_ship(EnemyShip **enemy_ship, EnemyShip *temp_ship);
 *@param [in] y_coor az ellenseges hajo y koordinataja
 *@return [out] EnemyShip ellenseges urhajo tipusokkal ter vissza
 */
-static void init_enemy_ship(TextureData texture_data, EnemyShip **es, ShipDTT *ship_dtt, int x_coor, int y_coor)
+static void init_enemy_ship(TextureData texture_data, SpriteMapData sprite_map_data, EnemyShip **es, ShipDTT *ship_dtt, int x_coor, int y_coor)
 {
     (*es)->x_coor = x_coor;
     (*es)->y_coor = y_coor;
     (*es)->movement_dir = 1;
     (*es)->texture_data = texture_data;
+    (*es)->sprite_map_data = sprite_map_data;
+    (*es)->texture_data.texture_center_x = (*es)->x_coor - ((*es)->texture_data.width/2);
+    (*es)->texture_data.texture_center_y = (*es)->y_coor - ((*es)->texture_data.height/2);
     (*es)->hitbox_beg_coor = (*es)->x_coor - (texture_data.width/2);
     (*es)->hitbox_end_coor = (*es)->x_coor + (texture_data.width/2);
     (*es)->centerline_y_coor = (*es)->y_coor;
     (*es)->speed = ship_dtt->speed;
     (*es)->health = ship_dtt->health;
-    (*es)->damage = ship_dtt->damage;
+    (*es)->score_value = ship_dtt->score_value;
+
 }
 
 /**
@@ -42,34 +46,31 @@ static void init_enemy_ship(TextureData texture_data, EnemyShip **es, ShipDTT *s
 *@param [in] game_attributes az osszes jatekattributumot tartlmazo adatstruktura
 *@return [out] EnemyArmada az ellenseges hajokkal ter vissza
 */
-EnemyShip *init_enemy_armada(TextureData texture_data, ShipDTT *ship_dtt, GameAttributes *game_attributes)
+EnemyShip *init_enemy_armada(TextureData texture_data, SpriteMapData sprite_map_data, ShipDTT **ship_dtt, GameAttributes *game_attributes)
 {
-        printf("speed: %d\n", ship_dtt->speed);
-    int ships_per_row = 10;
+
     int spacing = game_attributes->width/13;
     int x_start_pos = spacing/2;
     int x_coor = x_start_pos;
-    int y_coor = game_attributes->height/1200;
+    int y_coor = game_attributes->height/12;
     EnemyShip *enemy_armada = NULL;
-    for(int i = 0; i < game_attributes->enemy_armada_size; i++)
+    for(int i = 0; i < game_attributes->num_of_rows; i++)
     {
-        if(i % ships_per_row ==0)
+        for(int j = 0; j < game_attributes->enemy_ships_per_row; j++)
         {
-            y_coor += 100;
-            x_coor = x_start_pos;
+            EnemyShip *new_ship = (EnemyShip*) malloc(sizeof(EnemyShip));
+            init_enemy_ship(texture_data, sprite_map_data, &new_ship, ship_dtt[i], x_coor, y_coor);
+            new_ship->next_ship = enemy_armada;
+            if(enemy_armada != NULL)
+            {
+                enemy_armada->prev_ship = new_ship;
+            }
+            new_ship->prev_ship = NULL;
+            enemy_armada = new_ship;
+            x_coor += spacing;
         }
-        EnemyShip *new_ship = (EnemyShip*) malloc(sizeof(EnemyShip));
-        init_enemy_ship(texture_data, &new_ship, ship_dtt, x_coor, y_coor);
-        new_ship->next_ship = enemy_armada;
-        if(enemy_armada != NULL)
-        {
-            enemy_armada->prev_ship = new_ship;
-        }
-        new_ship->prev_ship = NULL;
-        new_ship->health = 10;
-        enemy_armada = new_ship;
-        x_coor += spacing;
-
+        y_coor += 120;
+        x_coor = x_start_pos;
     }
     return enemy_armada;
 }

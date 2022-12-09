@@ -25,22 +25,42 @@ Uint32  input_timer(Uint32 ms, void *param) {
 *@param [in out] game_attributes
 *@return GameAssets
 */
-GameAssets *init_game_assets(GameAttributes *game_attributes){
+GameAssets *init_game_assets(GameAttributes *game_attributes)
+{
 
-    ///MOCK DATA TYPES
-    ///TODO: read from file
-    ShipDTT ship_dtt = {1, 10, 1};
-    TextureData fed_texture_data = {46, 130};
-    TextureData enemy_texture_data = {60, 60};
-    ///
+
+    ShipDTT **enemy_ship_dtt = import_ship_dtt("enemy_stats.txt", &game_attributes->num_of_rows);
+    ShipDTT **player_ship_dtt = import_ship_dtt("hero_stats.txt", NULL);
+    game_attributes->enemy_armada_size = (game_attributes->enemy_ships_per_row) * (game_attributes->num_of_rows);
+
+    TextureData fed_texture_data;
+    SpriteMapData fed_sprite_map_data;
+    TextureData enemy_texture_data;
+    SpriteMapData enemy_sprite_map_data;
+
+    read_texture_data("hero_vis_data.txt", &fed_texture_data, &fed_sprite_map_data);
+    read_texture_data("enemy_vis_data.txt", &enemy_texture_data, &enemy_sprite_map_data);
+
     GameAssets *game_assets = (GameAssets*) malloc(sizeof(GameAssets));
+
     game_assets->star_map = starmap_init(game_attributes->width, game_attributes->height);
-    game_assets->player_ship = init_player_ship(game_attributes->width, game_attributes->height, fed_texture_data, 10, 1);
-    game_assets->enemy_armada = init_enemy_armada(enemy_texture_data, &ship_dtt, game_attributes);
+    game_assets->player_ship = init_player_ship(game_attributes, player_ship_dtt[0], fed_texture_data, fed_sprite_map_data);
+    game_assets->enemy_armada = init_enemy_armada(enemy_texture_data, enemy_sprite_map_data, enemy_ship_dtt, game_attributes);
     game_assets->player_torpedoes = NULL;
     game_assets->enemy_torpedoes = NULL;
 
+    free_ship_dtt(enemy_ship_dtt, game_attributes->num_of_rows);
+    free_ship_dtt(player_ship_dtt, 1);
     return game_assets;
+}
+
+void free_ship_dtt(ShipDTT **ship_dtt, int num_of_ships)
+{
+    for(int i = 0; i < num_of_ships; i++)
+    {
+        free(ship_dtt[i]);
+    }
+    free(ship_dtt);
 }
 
 /**
@@ -48,9 +68,10 @@ GameAssets *init_game_assets(GameAttributes *game_attributes){
 *@details inicializalja a jatek attributumait, amelyeket aztan a vezerles hasznal
 *@return GameAttributes
 */
-GameAttributes *init_game_attributes(){
+GameAttributes *init_game_attributes()
+{
     GameAttributes *game_attributes = (GameAttributes*) malloc(sizeof(GameAttributes));
-    game_attributes->enemy_armada_size = 50;
+    game_attributes->enemy_ships_per_row = 10;
     game_attributes->width = 1900;
     game_attributes->height = 900;
     game_attributes->isi.up = false;
@@ -61,7 +82,7 @@ GameAttributes *init_game_attributes(){
     game_attributes->isi.torpedo_ready = true;
     game_attributes->isi.quit = false;
     create_window(game_attributes->width, game_attributes->height);
-    create_textures("player_ship_sprites.png", "enemy_ship_sprites.png");
+    create_textures("hero_sprites.png", "enemy_sprites.png");
     SDL_ShowCursor(SDL_DISABLE);
     game_attributes->id = SDL_AddTimer(3, input_timer, NULL);
     return game_attributes;
@@ -72,7 +93,8 @@ GameAttributes *init_game_attributes(){
 *@details az iranyitashoz hasznalt alapertelmezett billentyuket inicializalja egy KeyMap tipusba
 *@return KeyMap
 */
-KeyMap *default_keymap_init(){
+KeyMap *default_keymap_init()
+{
     KeyMap *key_map = malloc(sizeof(KeyMap));
     key_map->upkey = "W";
     key_map->downkey = "S";
@@ -88,7 +110,8 @@ KeyMap *default_keymap_init(){
 *@param [] game_assets
 *@return void
 */
-void clear_graphics(GameAssets *game_assets){
+void clear_graphics(GameAssets *game_assets)
+{
     clear_screen();
 }
 
@@ -117,7 +140,8 @@ void draw_graphics(int player_ship_time, GameAssets *game_assets, GameAttributes
 *@param [in] enemy_ship_time
 *@return void
 */
-void calculate_game_assets(GameAssets **game_assets, GameAttributes *game_attributes, int enemy_ship_time){
+void calculate_game_assets(GameAssets **game_assets, GameAttributes *game_attributes, int enemy_ship_time)
+{
     int static time = 0;
     int static shot_time = 0;
     if((*game_assets)->player_ship != NULL)
@@ -141,10 +165,12 @@ void calculate_game_assets(GameAssets **game_assets, GameAttributes *game_attrib
         remove_torpedo_if_out_of_bounds(&(*game_assets)->enemy_torpedoes, game_attributes);
         manage_player_hits(&(*game_assets)->player_ship, &(*game_assets)->enemy_torpedoes, game_assets);
     }
-    if((*game_assets)->player_ship != NULL && game_attributes->isi.torpedo){
+    if((*game_assets)->player_ship != NULL && game_attributes->isi.torpedo)
+    {
         fire_player_torpedo((*game_assets), game_attributes);
     }
-    if((*game_assets)->player_torpedoes != NULL){
+    if((*game_assets)->player_torpedoes != NULL)
+    {
         move_torpedoes(&(*game_assets)->player_torpedoes);
         remove_torpedo_if_out_of_bounds(&(*game_assets)->player_torpedoes, game_attributes);
         manage_enemy_hits(&(*game_assets)->enemy_armada, &(*game_assets)->player_torpedoes, game_assets, game_attributes);
@@ -157,7 +183,8 @@ void calculate_game_assets(GameAssets **game_assets, GameAttributes *game_attrib
 *@param [in] game_assets
 *@return void
 */
-void free_assets(GameAssets **game_assets){
+void free_assets(GameAssets **game_assets)
+{
     free_starmap((*game_assets)->star_map);
     (*game_assets)->star_map = NULL;
     free_player_ship((*game_assets)->player_ship);
@@ -177,7 +204,8 @@ void free_assets(GameAssets **game_assets){
 *@param [] game_attributes
 *@return void
 */
-void free_components(GameAssets *game_assets, GameAttributes *game_attributes){
+void free_components(GameAssets *game_assets, GameAttributes *game_attributes)
+{
     free(game_assets);
     free(game_attributes);
     destroy_textures();
@@ -188,7 +216,8 @@ void free_components(GameAssets *game_assets, GameAttributes *game_attributes){
 *@details a jatekos hajo idozitesehez szukseges szamitast vegzi el
 *@return int
 */
-int keep_player_time(){
+int keep_player_time()
+{
     return SDL_GetTicks()/50;
 }
 
@@ -197,7 +226,8 @@ int keep_player_time(){
 *@details az ellenseges hajok idozitesehez szukseges szamitast vegzi el
 *@return int
 */
-int keep_enemy_time(){
+int keep_enemy_time()
+{
     return SDL_GetTicks()/5;
 }
 
@@ -209,10 +239,12 @@ int keep_enemy_time(){
 *@param [] game_attributes
 *@return void
 */
-void game_loop(GameAssets **game_assets, KeyMap *key_map, GameAttributes *game_attributes){
+void game_loop(GameAssets **game_assets, KeyMap *key_map, GameAttributes *game_attributes)
+{
     int player_ship_time = 0;
     int enemy_ship_time = 0;
-    while(!game_attributes->isi.quit){
+    while(!game_attributes->isi.quit)
+    {
         player_ship_time = keep_player_time();
         enemy_ship_time = keep_enemy_time();
         user_input(&game_attributes->isi, key_map, game_attributes->id);
@@ -229,18 +261,14 @@ void game_loop(GameAssets **game_assets, KeyMap *key_map, GameAttributes *game_a
 *felszabadit mindent es kilep az SDL2bol.
 *@return void
 */
-void runtime(){
+void runtime()
+{
 
     GameAttributes *game_attributes = init_game_attributes();
     GameAssets *game_assets = init_game_assets(game_attributes);
     KeyMap *key_map = default_keymap_init();
     game_loop(&game_assets, key_map, game_attributes);
     free_assets(&game_assets);
-    printf("\nstarmap pointer: %p\n", game_assets->star_map);
-    printf("\nplayer ship pointer: %p\n", game_assets->player_ship);
-    printf("\nenemy armada pointer: %p\n", game_assets->enemy_armada);
-    printf("\nplayer torpedoes pointer: %p\n", game_assets->player_torpedoes);
-    printf("\nenemy torpedoes pointer: %p\n", game_assets->enemy_torpedoes);
     free_components(game_assets, game_attributes);
     free(key_map);
     SDL_Quit();

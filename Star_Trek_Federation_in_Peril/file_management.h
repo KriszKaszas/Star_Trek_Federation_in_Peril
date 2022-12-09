@@ -2,6 +2,7 @@
 #define FILE_MANAGEMENT_H_INCLUDED
 
 #include "data_transfer_types.h"
+#include "texture_data.h"
 
 #include <stdio.h>
 

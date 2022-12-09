@@ -12,7 +12,8 @@
 *@brief ColorData
 *@details
 */
-typedef struct colordata{
+typedef struct colordata
+{
     int r; ///<
     int g; ///<
     int b; ///<
@@ -23,7 +24,8 @@ typedef struct colordata{
 *@brief TorpedoColors
 *@details
 */
-typedef struct torpedocolors{
+typedef struct torpedocolors
+{
     ColorData outter_ring; ///<
     ColorData inner_ring; ///<
     ColorData center; ///<
@@ -33,7 +35,8 @@ typedef struct torpedocolors{
 *@brief TorpedoShot
 *@details
 */
-typedef struct torpedoshot{
+typedef struct torpedoshot
+{
     int x_coor; ///<
     int y_coor; ///<
     int damage; ///<

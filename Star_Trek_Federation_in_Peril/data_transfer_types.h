@@ -9,7 +9,7 @@
 typedef struct shipdtt{
     int speed; ///<
     int health; ///<
-    int damage; ///<
+    int score_value; ///<
 }ShipDTT;
 
 #endif // DATA_TRANSFER_TYPES_H_INCLUDED

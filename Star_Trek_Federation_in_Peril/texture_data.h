@@ -7,11 +7,12 @@
 *@brief SpriteMapData
 *@details
 */
-typedef struct spritemapdata{
+typedef struct spritemapdata
+{
     int x_coor; ///<
     int y_coor; ///<
     int width; ///<
-    int hight; ///<
+    int height; ///<
 }SpriteMapData;
 
 
@@ -19,7 +20,8 @@ typedef struct spritemapdata{
 *@brief TextureData
 *@details
 */
-typedef struct texturedata{
+typedef struct texturedata
+{
     int width; ///<
     int height; ///<
     int texture_center_x; ///<

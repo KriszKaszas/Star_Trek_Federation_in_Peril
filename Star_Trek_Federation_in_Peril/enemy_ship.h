@@ -25,9 +25,9 @@ typedef struct enemyship{
     int hitbox_end_coor; ///<
     int centerline_y_coor; ///<
     TextureData texture_data; ///<
+    SpriteMapData sprite_map_data;
     int speed; ///<
     int health; ///<
-    int damage; ///<
     int score_value;
     struct enemyship *next_ship; ///<
     struct enemyship *prev_ship; ///<

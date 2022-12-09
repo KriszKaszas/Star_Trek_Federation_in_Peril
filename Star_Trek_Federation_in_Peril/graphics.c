@@ -37,17 +37,17 @@ SDL_Texture *load_sdl_texture(char* img_name){
 */
 static void sdl_init(char const *title, int width, int height, SDL_Window **pwindow, SDL_Renderer **prenderer) {
     if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
-        SDL_Log("Nem indithato az SDL: %s", SDL_GetError());
+        SDL_Log("Cannot start SDL: %s", SDL_GetError());
         exit(1);
     }
     SDL_Window *window = SDL_CreateWindow(title, SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, width, height, 0);
     if (window == NULL) {
-        SDL_Log("Nem hozhato letre az ablak: %s", SDL_GetError());
+        SDL_Log("Cannot create window: %s", SDL_GetError());
         exit(1);
     }
-    SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_SOFTWARE);
+    SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_TARGETTEXTURE);
     if (renderer == NULL) {
-        SDL_Log("Nem hozhato letre a megjelenito: %s", SDL_GetError());
+        SDL_Log("Cannot create renderer: %s", SDL_GetError());
         exit(1);
     }
     SDL_RenderClear(renderer);
@@ -105,14 +105,13 @@ void draw_player_ship(PlayerShip *ps){
         return;
     }
     if(fed_ship != NULL){
-        SDL_Rect src = {128, 1, 46, 114};
+        SDL_Rect src = {ps->sprite_map_data.x_coor, ps->sprite_map_data.y_coor, ps->sprite_map_data.width, ps->sprite_map_data.height};
         SDL_Rect dest = {ps->texture_data.texture_center_x, ps->texture_data.texture_center_y, ps->texture_data.width, ps->texture_data.height};
         SDL_RenderCopy(renderer, fed_ship, &src, &dest);
-        thickLineRGBA(renderer, ps->hitbox_beg_coor, ps->centerline_y_coor, ps->hitbox_end_coor, ps->centerline_y_coor, 5, 255, 0, 0, 255);
-        thickLineRGBA(renderer, ps->hitbox_beg_coor, ps->centerline_y_coor+50, ps->hitbox_end_coor, ps->centerline_y_coor+50, 5, 255, 0, 0, 255);
     }
     else{
         filledCircleRGBA(renderer, ps->x_coor, ps->y_coor, 30, 218, 223, 225, 255);
+        thickLineRGBA(renderer, ps->hitbox_beg_coor, ps->centerline_y_coor, ps->hitbox_end_coor, ps->centerline_y_coor, 5, 255, 0, 0, 255);
     }
 }
 
@@ -134,26 +133,29 @@ void draw_crosshair(int x_coor, int y_coor){
 *@param [] armada
 *@return void
 */
-void draw_enemy_ships(EnemyShip *enemy_armada){
-    /*for(int i = 0; i < armada->number_of_squadrons; i++){
-        EnemySquadronShip *tmp = armada->enemy_armada[i];
-        while(tmp != NULL){
-            if(en_ship != NULL){
-                SDL_Rect src = {166, 1, 74, 80};
-                SDL_Rect dest = {tmp->ship.texture_data.texture_center_x, tmp->ship.texture_data.texture_center_y,
-                                    tmp->ship.texture_data.width, tmp->ship.texture_data.height};
-                SDL_RenderCopy(renderer, en_ship, &src, &dest);
-            }
-            else{*/
-
-
-        while(enemy_armada != NULL)
+void draw_enemy_ships(EnemyShip *enemy_armada)
+{
+    if(enemy_armada == NULL)
+    {
+        return;
+    }
+    while(enemy_armada != NULL)
+    {
+        if(en_ship != NULL)
+        {
+            SDL_Rect src = {166, 1, 74, 80};
+            SDL_Rect dest = {enemy_armada->texture_data.texture_center_x, enemy_armada->texture_data.texture_center_y,
+                                enemy_armada->texture_data.width, enemy_armada->texture_data.height};
+            SDL_RenderCopy(renderer, en_ship, &src, &dest);
+        }
+        else
         {
             filledCircleRGBA(renderer, enemy_armada->x_coor,
                             enemy_armada->y_coor, 30, 46, 204, 113, 255);
             thickLineRGBA(renderer, enemy_armada->hitbox_beg_coor, enemy_armada->centerline_y_coor, enemy_armada->hitbox_end_coor, enemy_armada->centerline_y_coor, 5, 255, 0, 0, 255);
-            enemy_armada=enemy_armada->next_ship;
         }
+        enemy_armada=enemy_armada->next_ship;
+    }
 
 }
 

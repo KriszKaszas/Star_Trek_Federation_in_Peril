@@ -71,21 +71,44 @@ void free_ship_dtt(ShipDTT **ship_dtt, int num_of_ships)
 GameAttributes *init_game_attributes()
 {
     GameAttributes *game_attributes = (GameAttributes*) malloc(sizeof(GameAttributes));
-    game_attributes->enemy_ships_per_row = 10;
     game_attributes->width = 1900;
     game_attributes->height = 900;
+    game_attributes->enemy_ships_per_row = 10;
+    game_attributes->game_score = 0;
     game_attributes->isi.up = false;
     game_attributes->isi.down = false;
     game_attributes->isi.left = false;
     game_attributes->isi.right = false;
+    game_attributes->isi.y = false;
+    game_attributes->isi.n = false;
     game_attributes->isi.torpedo = false;
     game_attributes->isi.torpedo_ready = true;
     game_attributes->isi.quit = false;
+    game_attributes->isi.restart = false;
+    game_attributes->isi.game_over = false;
     create_window(game_attributes->width, game_attributes->height);
     create_textures("hero_sprites.png", "enemy_sprites.png");
+    create_font();
     SDL_ShowCursor(SDL_DISABLE);
     game_attributes->id = SDL_AddTimer(3, input_timer, NULL);
     return game_attributes;
+}
+
+void reset_game_attributes(GameAttributes *game_attributes)
+{
+    SDL_RemoveTimer(game_attributes->id);
+    game_attributes->game_score = 0;
+    game_attributes->isi.up = false;
+    game_attributes->isi.down = false;
+    game_attributes->isi.left = false;
+    game_attributes->isi.right = false;
+    game_attributes->isi.y = false;
+    game_attributes->isi.n = false;
+    game_attributes->isi.torpedo = false;
+    game_attributes->isi.torpedo_ready = true;
+    game_attributes->isi.game_over = false;
+    game_attributes->isi.restart = false;
+    game_attributes->id = SDL_AddTimer(3, input_timer, NULL);
 }
 
 /**
@@ -130,6 +153,8 @@ void draw_graphics(int player_ship_time, GameAssets *game_assets, GameAttributes
     draw_torpedo(game_assets->enemy_torpedoes);
     draw_enemy_ships(game_assets->enemy_armada);
     draw_player_ship(game_assets->player_ship);
+    draw_LCARS_bacground();
+    draw_score(game_attributes->game_score);
 }
 
 /**
@@ -163,7 +188,7 @@ void calculate_game_assets(GameAssets **game_assets, GameAttributes *game_attrib
     {
         move_torpedoes(&(*game_assets)->enemy_torpedoes);
         remove_torpedo_if_out_of_bounds(&(*game_assets)->enemy_torpedoes, game_attributes);
-        manage_player_hits(&(*game_assets)->player_ship, &(*game_assets)->enemy_torpedoes, game_assets);
+        manage_player_hits(&(*game_assets)->player_ship, &(*game_assets)->enemy_torpedoes, game_assets, game_attributes);
     }
     if((*game_assets)->player_ship != NULL && game_attributes->isi.torpedo)
     {
@@ -197,6 +222,38 @@ void free_assets(GameAssets **game_assets)
     (*game_assets)->enemy_torpedoes = NULL;
 }
 
+void check_win(GameAssets **game_assets, GameAttributes *game_attributes)
+{
+    bool is_armada_dead = (*game_assets)->enemy_armada == NULL;
+    if(is_armada_dead)
+    {
+        game_attributes->isi.game_over = true;
+    }
+}
+
+void check_lose(GameAssets **game_assets, GameAttributes *game_attributes)
+{
+    bool is_enemy_at_max_y = find_max_enemy_armada_y_coor((*game_assets)->enemy_armada) > 830;
+    bool is_player_ship_dead = (*game_assets)->player_ship == NULL;
+    bool is_game_lost = is_enemy_at_max_y || is_player_ship_dead;
+    if(is_game_lost)
+    {
+        game_attributes->isi.game_over = true;
+    }
+}
+
+void choose_continue_or_quit(GameAttributes *game_attributes)
+{
+    if(game_attributes->isi.y)
+    {
+        game_attributes->isi.restart = true;
+    }
+    if(game_attributes->isi.n)
+    {
+        game_attributes->isi.quit = true;
+    }
+}
+
 /**
 *@brief free_components
 *@details az osszes jatekkomponens felszabaditasaert felel.
@@ -204,9 +261,8 @@ void free_assets(GameAssets **game_assets)
 *@param [] game_attributes
 *@return void
 */
-void free_components(GameAssets *game_assets, GameAttributes *game_attributes)
+void free_components(GameAttributes *game_attributes)
 {
-    free(game_assets);
     free(game_attributes);
     destroy_textures();
 }
@@ -243,7 +299,7 @@ void game_loop(GameAssets **game_assets, KeyMap *key_map, GameAttributes *game_a
 {
     int player_ship_time = 0;
     int enemy_ship_time = 0;
-    while(!game_attributes->isi.quit)
+    while((!game_attributes->isi.quit) && (!game_attributes->isi.restart))
     {
         player_ship_time = keep_player_time();
         enemy_ship_time = keep_enemy_time();
@@ -251,6 +307,13 @@ void game_loop(GameAssets **game_assets, KeyMap *key_map, GameAttributes *game_a
         clear_graphics((*game_assets));
         calculate_game_assets(game_assets, game_attributes, enemy_ship_time);
         draw_graphics(player_ship_time, (*game_assets), game_attributes);
+        check_win(game_assets, game_attributes);
+        check_lose(game_assets, game_attributes);
+        if(game_attributes->isi.game_over)
+        {
+            draw_end_screen();
+            choose_continue_or_quit(game_attributes);
+        }
         render_screen();
     }
 }
@@ -263,13 +326,18 @@ void game_loop(GameAssets **game_assets, KeyMap *key_map, GameAttributes *game_a
 */
 void runtime()
 {
-
     GameAttributes *game_attributes = init_game_attributes();
-    GameAssets *game_assets = init_game_assets(game_attributes);
+    GameAssets *game_assets;
     KeyMap *key_map = default_keymap_init();
-    game_loop(&game_assets, key_map, game_attributes);
-    free_assets(&game_assets);
-    free_components(game_assets, game_attributes);
+    while((!game_attributes->isi.quit))
+    {
+        game_assets = init_game_assets(game_attributes);
+        game_loop(&game_assets, key_map, game_attributes);
+        free_assets(&game_assets);
+        free(game_assets);
+        reset_game_attributes(game_attributes);
+    }
+    free_components(game_attributes);
     free(key_map);
     SDL_Quit();
 }

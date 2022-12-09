@@ -20,46 +20,73 @@ void user_input(InputStateInterface *isi, KeyMap *key_map, SDL_TimerID id){
     SDL_Event event;
     SDL_WaitEvent(&event);
     char *key = SDL_GetKeyName(event.key.keysym.sym);
-    switch (event.type) {
+    switch (event.type)
+    {
         /* felhasznaloi esemeny: ilyeneket general az idozito fuggveny */
         case SDL_USEREVENT:
             break;
         case SDL_KEYUP:
             key = SDL_GetKeyName(event.key.keysym.sym);
-            if(event.key.keysym.sym == SDL_GetKeyFromName(key_map->upkey)){
+            if(event.key.keysym.sym == SDL_GetKeyFromName(key_map->upkey))
+                {
                 isi->up = false;
             }
-            if(event.key.keysym.sym == SDL_GetKeyFromName(key_map->downkey)){
+            if(event.key.keysym.sym == SDL_GetKeyFromName(key_map->downkey))
+            {
                 isi->down = false;
             }
-            if(event.key.keysym.sym == SDL_GetKeyFromName(key_map->leftkey)){
+            if(event.key.keysym.sym == SDL_GetKeyFromName(key_map->leftkey))
+            {
                 isi->left = false;
             }
-            if(event.key.keysym.sym == SDL_GetKeyFromName(key_map->rightkey)){
+            if(event.key.keysym.sym == SDL_GetKeyFromName(key_map->rightkey))
+            {
                 isi->right = false;
             }
-            if(event.key.keysym.sym == SDL_GetKeyFromName(key_map->torpedokey)){
+            if(event.key.keysym.sym == SDL_GetKeyFromName(key_map->torpedokey))
+            {
                 isi->torpedo_ready = true;
+            }
+            if(event.key.keysym.sym == SDLK_y)
+            {
+                isi->y = false;
+            }
+            if(event.key.keysym.sym == SDLK_n)
+            {
+                isi->n = false;
             }
             break;
 
         case SDL_KEYDOWN:
             key = SDL_GetKeyName(event.key.keysym.sym);
-             if(event.key.keysym.sym == SDL_GetKeyFromName(key_map->upkey)){
+             if(event.key.keysym.sym == SDL_GetKeyFromName(key_map->upkey))
+                {
                 isi->up = true;
             }
-            if(event.key.keysym.sym == SDL_GetKeyFromName(key_map->downkey)){
+            if(event.key.keysym.sym == SDL_GetKeyFromName(key_map->downkey))
+                {
                 isi->down = true;
             }
-            if(event.key.keysym.sym == SDL_GetKeyFromName(key_map->leftkey)){
+            if(event.key.keysym.sym == SDL_GetKeyFromName(key_map->leftkey))
+            {
                 isi->left = true;
             }
-            if(event.key.keysym.sym == SDL_GetKeyFromName(key_map->rightkey)){
+            if(event.key.keysym.sym == SDL_GetKeyFromName(key_map->rightkey))
+            {
                 isi->right = true;
             }
-            if(event.key.keysym.sym == SDL_GetKeyFromName(key_map->torpedokey) && isi->torpedo_ready){
+            if(event.key.keysym.sym == SDL_GetKeyFromName(key_map->torpedokey) && isi->torpedo_ready)
+            {
                 isi->torpedo = true;
                 isi->torpedo_ready = false;
+            }
+            if(event.key.keysym.sym == SDLK_y)
+            {
+                isi->y = true;
+            }
+            if(event.key.keysym.sym == SDLK_n)
+            {
+                isi->n = true;
             }
             break;
 

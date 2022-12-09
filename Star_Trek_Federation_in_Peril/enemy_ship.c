@@ -145,6 +145,22 @@ int find_min_enemy_armada_x_coor(EnemyShip *enemy_armada)
     return min_x_coor;
 }
 
+int find_max_enemy_armada_y_coor(EnemyShip *enemy_armada)
+{
+    EnemyShip *temp_armada = enemy_armada;
+    int max_y_coor = 0;
+    while(temp_armada != NULL)
+    {
+        bool is_y_greater_than_max = temp_armada->y_coor >= max_y_coor;
+        if(is_y_greater_than_max)
+        {
+            max_y_coor = temp_armada->y_coor;
+        }
+        temp_armada = temp_armada->next_ship;
+    }
+    return max_y_coor;
+}
+
 
 void move_right(EnemyShip *enemy_ship)
 {

@@ -13,6 +13,8 @@ static void remove_first_ship(EnemyShip **enemy_ship, EnemyShip **temp_ship);
 
 static void remove_in_between_or_last_ship(EnemyShip **enemy_ship, EnemyShip **temp_ship);
 
+static void manage_score_on_enemy_death(EnemyShip **enemy_ship, GameAttributes *game_attributes);
+
 static void decrement_enemy_armada_size(GameAttributes *game_attributes);
 
 /**
@@ -28,9 +30,11 @@ void explode_enemy_ship_if_dead(EnemyShip **enemy_ship, EnemyShip **temp_ship, G
     bool is_enemy_dead = (*enemy_ship)->health <= 0;
     if(is_enemy_dead)
     {
+        manage_score_on_enemy_death(enemy_ship, game_attributes);
         explode_enemy_ship(enemy_ship, temp_ship, game_attributes);
     }
 }
+
 
 /**
 *@brief explode_enemy_ship
@@ -110,6 +114,15 @@ static void remove_in_between_or_last_ship(EnemyShip **enemy_ship, EnemyShip **t
 {
     pop_enemy_ship(enemy_ship);
     (*enemy_ship) = (*temp_ship);
+}
+
+
+
+
+
+static void manage_score_on_enemy_death(EnemyShip **enemy_ship, GameAttributes *game_attributes)
+{
+    game_attributes->game_score += (*enemy_ship)->score_value;
 }
 
 /**

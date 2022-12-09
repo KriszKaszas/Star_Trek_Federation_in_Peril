@@ -4,11 +4,25 @@
 
 #include "graphics.h"
 
-SDL_Window static *window;
-SDL_Renderer static *renderer;
+static SDL_Window *window;
+static SDL_Renderer *renderer;
 
-SDL_Texture static *fed_ship;
-SDL_Texture static *en_ship;
+static SDL_Texture *fed_ship;
+static SDL_Texture *en_ship;
+
+static TTF_Font *LCARS_font;
+static TTF_Font *LCARS_font_large;
+
+static SDL_Surface *LCARS_text;
+static SDL_Surface *LCARS_text_large;
+
+static SDL_Texture *LCARS_text_texture;
+static SDL_Texture *LCARS_text_texture_large;
+
+static SDL_Rect location = {70, 820, 0, 0};
+static SDL_Rect location_large = {500, 200, 0, 0};
+
+static SDL_Color white = {255, 255, 255};
 
 /**
 *@brief load_sdl_texture
@@ -23,6 +37,17 @@ SDL_Texture *load_sdl_texture(char* img_name){
         return NULL;
     }
     return texture;
+}
+
+TTF_Font *open_font(int size)
+{
+    TTF_Init();
+    TTF_Font *font = TTF_OpenFont("OkudaBold-qA72.ttf", size);
+    if (!font) {
+        SDL_Log("Cannot open font! %s\n", TTF_GetError());
+        exit(1);
+    }
+    return font;
 }
 
 /**
@@ -54,6 +79,12 @@ static void sdl_init(char const *title, int width, int height, SDL_Window **pwin
 
     *pwindow = window;
     *prenderer = renderer;
+}
+
+void create_font()
+{
+    LCARS_font = open_font(64);
+    LCARS_font_large = open_font(150);
 }
 
 /**
@@ -143,7 +174,8 @@ void draw_enemy_ships(EnemyShip *enemy_armada)
     {
         if(en_ship != NULL)
         {
-            SDL_Rect src = {166, 1, 74, 80};
+            SDL_Rect src = {enemy_armada->sprite_map_data.x_coor, enemy_armada->sprite_map_data.y_coor,
+                                enemy_armada->sprite_map_data.width, enemy_armada->sprite_map_data.height};
             SDL_Rect dest = {enemy_armada->texture_data.texture_center_x, enemy_armada->texture_data.texture_center_y,
                                 enemy_armada->texture_data.width, enemy_armada->texture_data.height};
             SDL_RenderCopy(renderer, en_ship, &src, &dest);
@@ -165,13 +197,9 @@ void draw_enemy_ships(EnemyShip *enemy_armada)
 *@param [] torpedoes
 *@return void
 */
-        /*if(tmp == 0x4B4B4B4B4B4B4B4Bull)
-        {
-            printf("megvagy geci");
-        }*/
+
 void draw_torpedo(TorpedoShot *torpedoes){
     TorpedoShot *tmp = torpedoes;
-        //printf("before while: %p\n", tmp);
     while(tmp != NULL)
     {
         filledCircleRGBA(renderer, tmp->x_coor, tmp->y_coor, 15,
@@ -181,9 +209,41 @@ void draw_torpedo(TorpedoShot *torpedoes){
         filledCircleRGBA(renderer, tmp->x_coor, tmp->y_coor, 5,
                          tmp->colors.center.r, tmp->colors.center.g, tmp->colors.center.b, tmp->colors.center.a);
         tmp = tmp->next_torpedo;
-        //printf("after while:  %p\n", tmp);
 
     }
+}
+
+void draw_end_screen()
+{
+    char end_message[60] = "GAME OVER    PLAY AGAIN?  PRESS Y OR N";
+    LCARS_text_large = TTF_RenderText_Blended_Wrapped(LCARS_font_large, end_message, white, 700);
+    LCARS_text_texture_large = SDL_CreateTextureFromSurface(renderer, LCARS_text_large);
+    location_large.w = LCARS_text_large->w;
+    location_large.h = LCARS_text_large->h;
+    SDL_RenderCopy(renderer, LCARS_text_texture_large, NULL, &location_large);
+}
+
+void draw_score(int game_score)
+{
+    char LCARS_score_str[27] = "SCORE ";
+    char score_str[20];
+    itoa(game_score, score_str, 10);
+    strcat(LCARS_score_str, score_str);
+
+    LCARS_text = TTF_RenderUTF8_Blended(LCARS_font, LCARS_score_str, white);
+
+    LCARS_text_texture = SDL_CreateTextureFromSurface(renderer, LCARS_text);
+    location.w = LCARS_text->w;
+    location.h = LCARS_text->h;
+    SDL_RenderCopy(renderer, LCARS_text_texture, NULL, &location);
+}
+
+void draw_LCARS_bacground()
+{
+    boxRGBA(renderer, 40, 830, 1860, 880, 216, 165, 112, 255);
+    filledCircleRGBA(renderer, 1860, 855, 25, 216, 165, 112, 255);
+    filledCircleRGBA(renderer, 40, 855, 25, 216, 165, 112, 255);
+    boxRGBA(renderer, 50, 830, 300, 880, 0, 0, 0, 255);
 }
 
 /**
@@ -213,4 +273,8 @@ void render_screen(){
 void destroy_textures(){
     SDL_DestroyTexture(fed_ship);
     SDL_DestroyTexture(en_ship);
+    SDL_FreeSurface(LCARS_text);
+    SDL_DestroyTexture(LCARS_text_texture);
+    TTF_CloseFont(LCARS_font);
+    TTF_CloseFont(LCARS_font_large);
 }

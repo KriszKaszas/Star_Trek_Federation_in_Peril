@@ -15,7 +15,8 @@ static void manage_enemy_ship_and_torpedo_if_hit_detected(EnemyShip **enemy_arma
 static void manage_player_ship_and_torpedo_if_hit_detected(PlayerShip **player_ship,
                                                            TorpedoShot **enemy_torpedo,
                                                            TorpedoShot **temp_torpedo,
-                                                           GameAssets **game_assets);
+                                                           GameAssets **game_assets,
+                                                           GameAttributes *game_attributes);
 
 ///-----------------------------------------Torpedo hitbox check------------------------------------------
 
@@ -112,12 +113,15 @@ void manage_enemy_hits(EnemyShip **enemy_armada, TorpedoShot **player_torpedoes,
 *@return void
 */
 
-void manage_player_hits(PlayerShip **player_ship, TorpedoShot **enemy_torpedoes, GameAssets **game_assets)
+void manage_player_hits(PlayerShip **player_ship,
+                        TorpedoShot **enemy_torpedoes,
+                        GameAssets **game_assets,
+                        GameAttributes *game_attributes)
 {
     TorpedoShot *temp_torpedo = (*enemy_torpedoes);
     while(((*player_ship) != NULL) && ((*enemy_torpedoes) != NULL))
     {
-        manage_player_ship_and_torpedo_if_hit_detected(player_ship, enemy_torpedoes, &temp_torpedo, game_assets);
+        manage_player_ship_and_torpedo_if_hit_detected(player_ship, enemy_torpedoes, &temp_torpedo, game_assets, game_attributes);
         advance_torpedo_list_if_not_NULL(enemy_torpedoes);
     }
     reset_torpedo_pointer(enemy_torpedoes, &temp_torpedo);
@@ -164,13 +168,14 @@ static void manage_enemy_ship_and_torpedo_if_hit_detected(EnemyShip **enemy_ship
 static void manage_player_ship_and_torpedo_if_hit_detected(PlayerShip **player_ship,
                                                     TorpedoShot **enemy_torpedo,
                                                     TorpedoShot **temp_torpedo,
-                                                    GameAssets **game_assets)
+                                                    GameAssets **game_assets,
+                                                    GameAttributes *game_attributes)
 {
     if(is_enemy_torpedo_in_player_ship_hitbox(player_ship, enemy_torpedo))
     {
 
         manage_player_ship_health(player_ship, enemy_torpedo);
-        explode_player_ship_if_dead(player_ship, game_assets);
+        explode_player_ship_if_dead(player_ship, game_assets, game_attributes);
         explode_torpedo(enemy_torpedo, temp_torpedo);
     }
 }

@@ -9,10 +9,14 @@
 */
 typedef struct inputstateinterface{
     bool quit; ///<
+    bool restart;
+    bool game_over;
     bool up; ///<
     bool down; ///<
     bool left; ///<
     bool right; ///<
+    bool y;
+    bool n;
     bool torpedo; ///<
     bool torpedo_ready; ///<
 } InputStateInterface;

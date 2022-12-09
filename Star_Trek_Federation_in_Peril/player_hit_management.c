@@ -6,6 +6,7 @@
 
 static void explode_player_ship(PlayerShip **player_ship, GameAssets **game_assets);
 
+static void manage_score_on_player_death(PlayerShip **player_ship, GameAttributes *game_attributes);
 
 /**
 *@brief explode_player_ship_if_dead
@@ -14,11 +15,12 @@ static void explode_player_ship(PlayerShip **player_ship, GameAssets **game_asse
 *@return void
 */
 
-void explode_player_ship_if_dead(PlayerShip **player_ship, GameAssets **game_assets)
+void explode_player_ship_if_dead(PlayerShip **player_ship, GameAssets **game_assets, GameAttributes *game_attributes)
 {
     bool is_player_dead = (*player_ship)->health <= 0;
     if(is_player_dead)
     {
+        manage_score_on_player_death(player_ship, game_attributes);
         explode_player_ship(player_ship, game_assets);
     }
 }
@@ -37,3 +39,7 @@ static void explode_player_ship(PlayerShip **player_ship, GameAssets **game_asse
     (*game_assets)->player_ship = NULL;
 }
 
+static void manage_score_on_player_death(PlayerShip **player_ship, GameAttributes *game_attributes)
+{
+    game_attributes->game_score += (*player_ship)->score_value;
+}

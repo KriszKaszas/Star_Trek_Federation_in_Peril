@@ -1,0 +1,127 @@
+\hypertarget{star__map_8h}{}\doxysection{star\+\_\+map.\+h File Reference}
+\label{star__map_8h}\index{star\_map.h@{star\_map.h}}
+{\ttfamily \#include \char`\"{}random\+\_\+number\+\_\+in\+\_\+interval.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}debugmalloc.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structstarcolor}{starcolor}}
+\begin{DoxyCompactList}\small\item\em Star\+Color. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structstar}{star}}
+\begin{DoxyCompactList}\small\item\em Star. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structstarmap}{starmap}}
+\begin{DoxyCompactList}\small\item\em Star\+Map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structstarcolor}{starcolor}} \mbox{\hyperlink{star__map_8h_a389448eb114ed75d67047418646ddcc9}{Star\+Color}}
+\begin{DoxyCompactList}\small\item\em Star\+Color. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structstar}{star}} \mbox{\hyperlink{star__map_8h_a1c068d1b6945b4bab968c05824b43584}{Star}}
+\begin{DoxyCompactList}\small\item\em Star. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structstarmap}{starmap}} \mbox{\hyperlink{star__map_8h_a3dad93d50adb0f98296e405699140dca}{Star\+Map}}
+\begin{DoxyCompactList}\small\item\em Star\+Map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{star__map_8h_a3dad93d50adb0f98296e405699140dca}{Star\+Map}} $\ast$ \mbox{\hyperlink{star__map_8h_a32b3a598cba5b55286a3b0314969fb9d}{starmap\+\_\+init}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em starmap\+\_\+init \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{star__map_8h_ae29c5329d8a51be3ddb8b1d2e666c643}{advance\+\_\+starmap\+\_\+frame}} (\mbox{\hyperlink{star__map_8h_a3dad93d50adb0f98296e405699140dca}{Star\+Map}} $\ast$sm, int width, int height)
+\begin{DoxyCompactList}\small\item\em advance\+\_\+starmap\+\_\+frame \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{star__map_8h_a56dd9145ac7a31a4afae9d2e81c07360}{free\+\_\+starmap}} (\mbox{\hyperlink{star__map_8h_a3dad93d50adb0f98296e405699140dca}{Star\+Map}} $\ast$sm)
+\begin{DoxyCompactList}\small\item\em free\+\_\+starmap \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{star__map_8h_a1c068d1b6945b4bab968c05824b43584}\label{star__map_8h_a1c068d1b6945b4bab968c05824b43584}} 
+\index{star\_map.h@{star\_map.h}!Star@{Star}}
+\index{Star@{Star}!star\_map.h@{star\_map.h}}
+\doxysubsubsection{\texorpdfstring{Star}{Star}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structstar}{star}} \mbox{\hyperlink{star__map_8h_a1c068d1b6945b4bab968c05824b43584}{Star}}}
+
+
+
+Star. 
+
+Ez az adatstruktura tarolja a hatter egy csillagat. Ertekei a csillag kirajzolasahoz szukseges koordinatak es sugar. Ez az adattarolo a fuggvenyhivaskor megadando parameterlistak leroviditeset, illetve az osszetartozo adatok egy helyen tartasat szolgalja. \mbox{\Hypertarget{star__map_8h_a389448eb114ed75d67047418646ddcc9}\label{star__map_8h_a389448eb114ed75d67047418646ddcc9}} 
+\index{star\_map.h@{star\_map.h}!StarColor@{StarColor}}
+\index{StarColor@{StarColor}!star\_map.h@{star\_map.h}}
+\doxysubsubsection{\texorpdfstring{StarColor}{StarColor}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structstarcolor}{starcolor}} \mbox{\hyperlink{star__map_8h_a389448eb114ed75d67047418646ddcc9}{Star\+Color}}}
+
+
+
+Star\+Color. 
+
+Ez az adatstruktura tarolja a hatter csillaganak szinet. Ertekei a csillag RGBA-\/ban meghatarozott szinertekei. Ez az adatterolo a fuggvenyhivaskor megadando parameterlistak leroviditeset szolgalja. \mbox{\Hypertarget{star__map_8h_a3dad93d50adb0f98296e405699140dca}\label{star__map_8h_a3dad93d50adb0f98296e405699140dca}} 
+\index{star\_map.h@{star\_map.h}!StarMap@{StarMap}}
+\index{StarMap@{StarMap}!star\_map.h@{star\_map.h}}
+\doxysubsubsection{\texorpdfstring{StarMap}{StarMap}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structstarmap}{starmap}} \mbox{\hyperlink{star__map_8h_a3dad93d50adb0f98296e405699140dca}{Star\+Map}}}
+
+
+
+Star\+Map. 
+
+Ez az adatstruktura tarolja a hatter osszes csillagat. Ertekei a lista hossza, a csillagokat tartalmazo lista, illetve azok szine. Ez az adattarolo a hatter csillagainak konnyu letrehozasat, tarolasat es felszabaditasat szolgalja. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{star__map_8h_ae29c5329d8a51be3ddb8b1d2e666c643}\label{star__map_8h_ae29c5329d8a51be3ddb8b1d2e666c643}} 
+\index{star\_map.h@{star\_map.h}!advance\_starmap\_frame@{advance\_starmap\_frame}}
+\index{advance\_starmap\_frame@{advance\_starmap\_frame}!star\_map.h@{star\_map.h}}
+\doxysubsubsection{\texorpdfstring{advance\_starmap\_frame()}{advance\_starmap\_frame()}}
+{\footnotesize\ttfamily void advance\+\_\+starmap\+\_\+frame (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{star__map_8h_a3dad93d50adb0f98296e405699140dca}{Star\+Map}} $\ast$}]{sm,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+advance\+\_\+starmap\+\_\+frame 
+
+A csillagterkepet eloremozditja egy kockaval. Vegigmegy a csillagokat tartalmazo dinamikus listan, es mindnek egyel noveli az y koordinatajat, amennyiben az nem 10-\/el nagyobb az ablak magassaganal. Amennyiben ennel az erteknel magasabb az adott csillag y erteke, ugy az y koordinatat 0-\/ra, az x koordinatat pedig egy, a kepernyo szelessegeben talalhato random ertekre allitja. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em $\ast$sm} & Egy Star\+Map tipusu pointer, a jatek Star\+Map tipusaban tarolt csillagok koordinatait tarolja. \\
+\hline
+\mbox{\texttt{ in}}  & {\em width} & A kepernyo szelessege. Erre a random szam generalasahoz van szukseg. \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & A kepernyo magassaga. Erre a csillag y koordinatajanak ellenorzesehez van szukseg. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{star__map_8h_a56dd9145ac7a31a4afae9d2e81c07360}\label{star__map_8h_a56dd9145ac7a31a4afae9d2e81c07360}} 
+\index{star\_map.h@{star\_map.h}!free\_starmap@{free\_starmap}}
+\index{free\_starmap@{free\_starmap}!star\_map.h@{star\_map.h}}
+\doxysubsubsection{\texorpdfstring{free\_starmap()}{free\_starmap()}}
+{\footnotesize\ttfamily void free\+\_\+starmap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{star__map_8h_a3dad93d50adb0f98296e405699140dca}{Star\+Map}} $\ast$}]{sm }\end{DoxyParamCaption})}
+
+
+
+free\+\_\+starmap 
+
+Ez a fuggveny a parameterkent kapott csillagterkep csillagainak listajat, majd magat a csillagterkepet szabaditja fel. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$sm} & A felszabaditando csillagterkep pointer. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{star__map_8h_a32b3a598cba5b55286a3b0314969fb9d}\label{star__map_8h_a32b3a598cba5b55286a3b0314969fb9d}} 
+\index{star\_map.h@{star\_map.h}!starmap\_init@{starmap\_init}}
+\index{starmap\_init@{starmap\_init}!star\_map.h@{star\_map.h}}
+\doxysubsubsection{\texorpdfstring{starmap\_init()}{starmap\_init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{star__map_8h_a3dad93d50adb0f98296e405699140dca}{Star\+Map}} $\ast$ starmap\+\_\+init (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+starmap\+\_\+init 
+
+Ez a fuggveny inicializalja a Star\+Map csillagterkep listajat. letrehoz egy, a csillagok vart szamanak megfelelo hosszusagu dinamikus tombot, majd abban elhelyezi a sorban generalt csillagokat. Visszateresi erteke egy csillagterkep. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em width} & A kepernyo szelessege. Erre a csillagok x koordinatajanak generalasahoz van szukseg. \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & A kepernyo magassaga. Erre a csillagok y koordinatajanak generalasahoz van szukseg. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Star\+Map 
+\end{DoxyReturn}

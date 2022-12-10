@@ -1,0 +1,99 @@
+\hypertarget{torpedo_8c}{}\doxysection{torpedo.\+c File Reference}
+\label{torpedo_8c}\index{torpedo.c@{torpedo.c}}
+{\ttfamily \#include \char`\"{}torpedo.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$ \mbox{\hyperlink{torpedo_8c_ad711f5d9130a6e95200c4689520006ad}{add\+\_\+torpedo\+\_\+shot}} (\mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$torpedoes, int damage, int speed, int x\+\_\+coor, int y\+\_\+coor, bool is\+\_\+enemy\+\_\+torpedo)
+\begin{DoxyCompactList}\small\item\em add\+\_\+torpedo\+\_\+shot \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{torpedo_8c_a3fccb9236797cf181587c659532a71e4}{move\+\_\+torpedoes}} (\mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$$\ast$torpedo)
+\begin{DoxyCompactList}\small\item\em move\+\_\+torpedoes \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{torpedo_8c_a92b7df9e3a599d45cbe5510bfea6ba1a}{pop\+\_\+torpedo\+\_\+shot}} (\mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$$\ast$torpedo)
+\begin{DoxyCompactList}\small\item\em pop\+\_\+torpedo\+\_\+shot \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{torpedo_8c_abcc0366cbb0d1c358036bcd6a2d97642}{free\+\_\+torpedoes}} (\mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$torpedoes)
+\begin{DoxyCompactList}\small\item\em free\+\_\+torpedoes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{torpedo_8c_ad711f5d9130a6e95200c4689520006ad}\label{torpedo_8c_ad711f5d9130a6e95200c4689520006ad}} 
+\index{torpedo.c@{torpedo.c}!add\_torpedo\_shot@{add\_torpedo\_shot}}
+\index{add\_torpedo\_shot@{add\_torpedo\_shot}!torpedo.c@{torpedo.c}}
+\doxysubsubsection{\texorpdfstring{add\_torpedo\_shot()}{add\_torpedo\_shot()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$ add\+\_\+torpedo\+\_\+shot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$}]{torpedoes,  }\item[{int}]{damage,  }\item[{int}]{speed,  }\item[{int}]{x\+\_\+coor,  }\item[{int}]{y\+\_\+coor,  }\item[{bool}]{is\+\_\+enemy\+\_\+torpedo }\end{DoxyParamCaption})}
+
+
+
+add\+\_\+torpedo\+\_\+shot 
+
+Hozzaad a kilott torpedok listajahoz egy ujabb elemet. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em torpedoes} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em damage} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em speed} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em x\+\_\+coor} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em y\+\_\+coor} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em is\+\_\+enemy\+\_\+torpedo} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Torpedo\+Shot 
+\end{DoxyReturn}
+\mbox{\Hypertarget{torpedo_8c_abcc0366cbb0d1c358036bcd6a2d97642}\label{torpedo_8c_abcc0366cbb0d1c358036bcd6a2d97642}} 
+\index{torpedo.c@{torpedo.c}!free\_torpedoes@{free\_torpedoes}}
+\index{free\_torpedoes@{free\_torpedoes}!torpedo.c@{torpedo.c}}
+\doxysubsubsection{\texorpdfstring{free\_torpedoes()}{free\_torpedoes()}}
+{\footnotesize\ttfamily void free\+\_\+torpedoes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$}]{torpedoes }\end{DoxyParamCaption})}
+
+
+
+free\+\_\+torpedoes 
+
+Felszabaditja a torpedok listajat. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em torpedoes} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{torpedo_8c_a3fccb9236797cf181587c659532a71e4}\label{torpedo_8c_a3fccb9236797cf181587c659532a71e4}} 
+\index{torpedo.c@{torpedo.c}!move\_torpedoes@{move\_torpedoes}}
+\index{move\_torpedoes@{move\_torpedoes}!torpedo.c@{torpedo.c}}
+\doxysubsubsection{\texorpdfstring{move\_torpedoes()}{move\_torpedoes()}}
+{\footnotesize\ttfamily void move\+\_\+torpedoes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$$\ast$}]{torpedo }\end{DoxyParamCaption})}
+
+
+
+move\+\_\+torpedoes 
+
+A torpedok mozgasahoz szukseges szamitasokat vegzi. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$$\ast$torpedo} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{torpedo_8c_a92b7df9e3a599d45cbe5510bfea6ba1a}\label{torpedo_8c_a92b7df9e3a599d45cbe5510bfea6ba1a}} 
+\index{torpedo.c@{torpedo.c}!pop\_torpedo\_shot@{pop\_torpedo\_shot}}
+\index{pop\_torpedo\_shot@{pop\_torpedo\_shot}!torpedo.c@{torpedo.c}}
+\doxysubsubsection{\texorpdfstring{pop\_torpedo\_shot()}{pop\_torpedo\_shot()}}
+{\footnotesize\ttfamily void pop\+\_\+torpedo\+\_\+shot (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$$\ast$}]{torpedo }\end{DoxyParamCaption})}
+
+
+
+pop\+\_\+torpedo\+\_\+shot 
+
+amennyiben a torpedo eltalal valamit, vagy kimegy a jatekterbol, torli azt. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$$\ast$torpedo} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

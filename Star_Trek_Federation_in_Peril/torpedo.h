@@ -47,4 +47,12 @@ typedef struct torpedoshot
     struct torpedoshot *prev_torpedo; ///<
 }TorpedoShot;
 
+TorpedoShot *add_torpedo_shot(TorpedoShot *torpedoes, int damage, int speed, int x_coor, int y_coor, bool is_enemy_torpedo);
+
+void move_torpedoes(TorpedoShot **torpedo);
+
+void pop_torpedo_shot(TorpedoShot **torpedo);
+
+void free_torpedoes(TorpedoShot *torpedoes);
+
 #endif // TORPEDO_H_INCLUDED

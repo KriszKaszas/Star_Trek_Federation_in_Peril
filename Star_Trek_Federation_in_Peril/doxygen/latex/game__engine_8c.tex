@@ -1,0 +1,68 @@
+\hypertarget{game__engine_8c}{}\doxysection{game\+\_\+engine.\+c File Reference}
+\label{game__engine_8c}\index{game\_engine.c@{game\_engine.c}}
+{\ttfamily \#include \char`\"{}game\+\_\+engine.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{game__engine_8c_af4bb061899c26423dbef1c08b5e0e149}{free\+\_\+ship\+\_\+dtt}} (\mbox{\hyperlink{data__transfer__types_8h_a89d2e48c0772818774d0db3df8059c03}{Ship\+DTT}} $\ast$$\ast$ship\+\_\+dtt, int num\+\_\+of\+\_\+ships)
+\begin{DoxyCompactList}\small\item\em free\+\_\+ship\+\_\+dtt \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game__engine_8c_ad6161d1d71502a1da8488badbacc057a}{runtime}} ()
+\begin{DoxyCompactList}\small\item\em runtime \end{DoxyCompactList}\item 
+Uint32 \mbox{\hyperlink{game__engine_8c_a39a9437444db494b69c1e31d38ae1e6e}{input\+\_\+timer}} (Uint32 ms, void $\ast$param)
+\begin{DoxyCompactList}\small\item\em input\+\_\+timer \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{game__engine_8c_af4bb061899c26423dbef1c08b5e0e149}\label{game__engine_8c_af4bb061899c26423dbef1c08b5e0e149}} 
+\index{game\_engine.c@{game\_engine.c}!free\_ship\_dtt@{free\_ship\_dtt}}
+\index{free\_ship\_dtt@{free\_ship\_dtt}!game\_engine.c@{game\_engine.c}}
+\doxysubsubsection{\texorpdfstring{free\_ship\_dtt()}{free\_ship\_dtt()}}
+{\footnotesize\ttfamily void free\+\_\+ship\+\_\+dtt (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{data__transfer__types_8h_a89d2e48c0772818774d0db3df8059c03}{Ship\+DTT}} $\ast$$\ast$}]{ship\+\_\+dtt,  }\item[{int}]{num\+\_\+of\+\_\+ships }\end{DoxyParamCaption})}
+
+
+
+free\+\_\+ship\+\_\+dtt 
+
+Hasznalat utan felszabaditja a Ship\+DTT ideiglenes tarolokat. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$$\ast$ship\+\_\+dtt} & A hajok inicializalasahoz szukseges fajlbol beolvasott adatok ideiglenes taroloja. \\
+\hline
+\mbox{\texttt{ in}}  & {\em num\+\_\+of\+\_\+ships} & A torlendo hajok szama. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__engine_8c_a39a9437444db494b69c1e31d38ae1e6e}\label{game__engine_8c_a39a9437444db494b69c1e31d38ae1e6e}} 
+\index{game\_engine.c@{game\_engine.c}!input\_timer@{input\_timer}}
+\index{input\_timer@{input\_timer}!game\_engine.c@{game\_engine.c}}
+\doxysubsubsection{\texorpdfstring{input\_timer()}{input\_timer()}}
+{\footnotesize\ttfamily Uint32 input\+\_\+timer (\begin{DoxyParamCaption}\item[{Uint32}]{ms,  }\item[{void $\ast$}]{param }\end{DoxyParamCaption})}
+
+
+
+input\+\_\+timer 
+
+Az inputok beolvasasanak idoziteseert felel. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ms} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em param} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Uint32 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__engine_8c_ad6161d1d71502a1da8488badbacc057a}\label{game__engine_8c_ad6161d1d71502a1da8488badbacc057a}} 
+\index{game\_engine.c@{game\_engine.c}!runtime@{runtime}}
+\index{runtime@{runtime}!game\_engine.c@{game\_engine.c}}
+\doxysubsubsection{\texorpdfstring{runtime()}{runtime()}}
+{\footnotesize\ttfamily void runtime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+runtime 
+
+Aggregalja az osszes jatek mukodesehez szukseges logikai fuggvenyt. Amikor a jatekos kilep a jatekbol, felszabadit mindent es kilep az SDL2bol. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

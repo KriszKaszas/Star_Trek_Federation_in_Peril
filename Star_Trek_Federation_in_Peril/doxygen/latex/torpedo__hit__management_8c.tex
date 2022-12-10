@@ -1,0 +1,53 @@
+\hypertarget{torpedo__hit__management_8c}{}\doxysection{torpedo\+\_\+hit\+\_\+management.\+c File Reference}
+\label{torpedo__hit__management_8c}\index{torpedo\_hit\_management.c@{torpedo\_hit\_management.c}}
+{\ttfamily \#include \char`\"{}torpedo\+\_\+hit\+\_\+management.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{torpedo__hit__management_8c_a0b143ee0e835fecb58ee594b72ac225d}{is\+\_\+torpedo\+\_\+out\+\_\+of\+\_\+bounds}} (\mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$$\ast$torpedo, \mbox{\hyperlink{game__attributes_8h_a85088783bcdb10b16d91805dfe7fe324}{Game\+Attributes}} $\ast$game\+\_\+attributes)
+\begin{DoxyCompactList}\small\item\em is\+\_\+torpedo\+\_\+out\+\_\+of\+\_\+bounds \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{torpedo__hit__management_8c_a85685e879b7efe7dd11ff7ae92e68f4c}{explode\+\_\+torpedo}} (\mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$$\ast$torpedo, \mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$$\ast$temp\+\_\+torpedo)
+\begin{DoxyCompactList}\small\item\em explode\+\_\+torpedo \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{torpedo__hit__management_8c_a85685e879b7efe7dd11ff7ae92e68f4c}\label{torpedo__hit__management_8c_a85685e879b7efe7dd11ff7ae92e68f4c}} 
+\index{torpedo\_hit\_management.c@{torpedo\_hit\_management.c}!explode\_torpedo@{explode\_torpedo}}
+\index{explode\_torpedo@{explode\_torpedo}!torpedo\_hit\_management.c@{torpedo\_hit\_management.c}}
+\doxysubsubsection{\texorpdfstring{explode\_torpedo()}{explode\_torpedo()}}
+{\footnotesize\ttfamily void explode\+\_\+torpedo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$$\ast$}]{torpedo,  }\item[{\mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$$\ast$}]{temp\+\_\+torpedo }\end{DoxyParamCaption})}
+
+
+
+explode\+\_\+torpedo 
+
+Felszabaditja a jatekos felrobbant torpedojat es kezeli az ahhoz tartozo pointereket. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$$\ast$torpedo} & A jatekos altal kilott torpedokat tartalmazo lancolt lista aktualis elemenek pointere. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em $\ast$$\ast$temp\+\_\+torpedo} & A jatekos altal kilott torpedokat tartalmazo lancolt lista head pointerenek ideiglenes taroloja. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{torpedo__hit__management_8c_a0b143ee0e835fecb58ee594b72ac225d}\label{torpedo__hit__management_8c_a0b143ee0e835fecb58ee594b72ac225d}} 
+\index{torpedo\_hit\_management.c@{torpedo\_hit\_management.c}!is\_torpedo\_out\_of\_bounds@{is\_torpedo\_out\_of\_bounds}}
+\index{is\_torpedo\_out\_of\_bounds@{is\_torpedo\_out\_of\_bounds}!torpedo\_hit\_management.c@{torpedo\_hit\_management.c}}
+\doxysubsubsection{\texorpdfstring{is\_torpedo\_out\_of\_bounds()}{is\_torpedo\_out\_of\_bounds()}}
+{\footnotesize\ttfamily bool is\+\_\+torpedo\+\_\+out\+\_\+of\+\_\+bounds (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$$\ast$}]{torpedo,  }\item[{\mbox{\hyperlink{game__attributes_8h_a85088783bcdb10b16d91805dfe7fe324}{Game\+Attributes}} $\ast$}]{game\+\_\+attributes }\end{DoxyParamCaption})}
+
+
+
+is\+\_\+torpedo\+\_\+out\+\_\+of\+\_\+bounds 
+
+Erzekeli, ha a torpedo kilepett a jatekterbol. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$$\ast$torpedo} & A torpedokat tartalmazo lancolt lista adott eleme. \\
+\hline
+\mbox{\texttt{ in}}  & {\em $\ast$game\+\_\+attributes} & A jatek attributumait tartalmazo adatszerkezet pointere. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool igaz erteket ad, ha az adott torpedo kilepett a jatekterbol, egyebkent hamis erteket ad. 
+\end{DoxyReturn}

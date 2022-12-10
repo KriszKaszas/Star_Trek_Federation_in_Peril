@@ -1,0 +1,149 @@
+\hypertarget{enemy__ship_8h}{}\doxysection{enemy\+\_\+ship.\+h File Reference}
+\label{enemy__ship_8h}\index{enemy\_ship.h@{enemy\_ship.h}}
+{\ttfamily \#include \char`\"{}game\+\_\+attributes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}data\+\_\+transfer\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}random\+\_\+number\+\_\+in\+\_\+interval.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}texture\+\_\+data.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}torpedo.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}debugmalloc.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structenemyship}{enemyship}}
+\begin{DoxyCompactList}\small\item\em Enemy\+Ship. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structenemyship}{enemyship}} \mbox{\hyperlink{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}{Enemy\+Ship}}
+\begin{DoxyCompactList}\small\item\em Enemy\+Ship. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}{Enemy\+Ship}} $\ast$ \mbox{\hyperlink{enemy__ship_8h_a87a0fe51107e7c1e0e8a8ae26a164e8b}{init\+\_\+enemy\+\_\+armada}} (\mbox{\hyperlink{texture__data_8h_aa12ea7860582af51523886453e0a017c}{Texture\+Data}} texture\+\_\+data, \mbox{\hyperlink{texture__data_8h_a9074fee131d757804093a24a0e471efe}{Sprite\+Map\+Data}} sprite\+\_\+map\+\_\+data, \mbox{\hyperlink{data__transfer__types_8h_a89d2e48c0772818774d0db3df8059c03}{Ship\+DTT}} $\ast$$\ast$ship\+\_\+dtt, \mbox{\hyperlink{game__attributes_8h_a85088783bcdb10b16d91805dfe7fe324}{Game\+Attributes}} $\ast$game\+\_\+attributes)
+\begin{DoxyCompactList}\small\item\em init\+\_\+enemy\+\_\+armada \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{enemy__ship_8h_ad6132464ee3219c29ad21a0de82e3991}{move\+\_\+enemy\+\_\+armada}} (\mbox{\hyperlink{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}{Enemy\+Ship}} $\ast$enemy\+\_\+armada, \mbox{\hyperlink{game__attributes_8h_a85088783bcdb10b16d91805dfe7fe324}{Game\+Attributes}} $\ast$game\+\_\+attributes)
+\begin{DoxyCompactList}\small\item\em move\+\_\+enemy\+\_\+armada \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{enemy__ship_8h_a19cf0f32f6e8bcc1f4db2f7b3df1f6cd}{find\+\_\+max\+\_\+enemy\+\_\+armada\+\_\+y\+\_\+coor}} (\mbox{\hyperlink{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}{Enemy\+Ship}} $\ast$enemy\+\_\+armada)
+\begin{DoxyCompactList}\small\item\em find\+\_\+max\+\_\+enemy\+\_\+armada\+\_\+y\+\_\+coor \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{enemy__ship_8h_a83ab080822016803fe1b0596553ebe7e}{pop\+\_\+enemy\+\_\+ship}} (\mbox{\hyperlink{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}{Enemy\+Ship}} $\ast$$\ast$enemy\+\_\+ship)
+\begin{DoxyCompactList}\small\item\em pop\+\_\+enemy\+\_\+ship \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{enemy__ship_8h_a7807746f73b7ee3c1cd20d26fa4a181b}{free\+\_\+enemy\+\_\+armada}} (\mbox{\hyperlink{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}{Enemy\+Ship}} $\ast$enemy\+\_\+armada)
+\begin{DoxyCompactList}\small\item\em free\+\_\+enemy\+\_\+armada \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}\label{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}} 
+\index{enemy\_ship.h@{enemy\_ship.h}!EnemyShip@{EnemyShip}}
+\index{EnemyShip@{EnemyShip}!enemy\_ship.h@{enemy\_ship.h}}
+\doxysubsubsection{\texorpdfstring{EnemyShip}{EnemyShip}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structenemyship}{enemyship}} \mbox{\hyperlink{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}{Enemy\+Ship}}}
+
+
+
+Enemy\+Ship. 
+
+Az ellenseges hajokat tarolo lancolt lista listaeleme 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{enemy__ship_8h_a19cf0f32f6e8bcc1f4db2f7b3df1f6cd}\label{enemy__ship_8h_a19cf0f32f6e8bcc1f4db2f7b3df1f6cd}} 
+\index{enemy\_ship.h@{enemy\_ship.h}!find\_max\_enemy\_armada\_y\_coor@{find\_max\_enemy\_armada\_y\_coor}}
+\index{find\_max\_enemy\_armada\_y\_coor@{find\_max\_enemy\_armada\_y\_coor}!enemy\_ship.h@{enemy\_ship.h}}
+\doxysubsubsection{\texorpdfstring{find\_max\_enemy\_armada\_y\_coor()}{find\_max\_enemy\_armada\_y\_coor()}}
+{\footnotesize\ttfamily int find\+\_\+max\+\_\+enemy\+\_\+armada\+\_\+y\+\_\+coor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}{Enemy\+Ship}} $\ast$}]{enemy\+\_\+armada }\end{DoxyParamCaption})}
+
+
+
+find\+\_\+max\+\_\+enemy\+\_\+armada\+\_\+y\+\_\+coor 
+
+Megkeresi a kepernyo also szelehez legkozelebb eso ellenseges hajo koordinatajat. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$enemy\+\_\+armada} & Az ellenseges hajokat tartalmazo lancolt lista. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}out\mbox{]} max\+\_\+y\+\_\+coor A kepernyo also szelehez legkozelebb eso ellenseges hajo koordinataja. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{enemy__ship_8h_a7807746f73b7ee3c1cd20d26fa4a181b}\label{enemy__ship_8h_a7807746f73b7ee3c1cd20d26fa4a181b}} 
+\index{enemy\_ship.h@{enemy\_ship.h}!free\_enemy\_armada@{free\_enemy\_armada}}
+\index{free\_enemy\_armada@{free\_enemy\_armada}!enemy\_ship.h@{enemy\_ship.h}}
+\doxysubsubsection{\texorpdfstring{free\_enemy\_armada()}{free\_enemy\_armada()}}
+{\footnotesize\ttfamily void free\+\_\+enemy\+\_\+armada (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}{Enemy\+Ship}} $\ast$}]{enemy\+\_\+armada }\end{DoxyParamCaption})}
+
+
+
+free\+\_\+enemy\+\_\+armada 
+
+Az ellenseges hadsereg altal elfoglalt memoriaterulet felszabaditasaert felel. 
+\begin{DoxyParams}{Parameters}
+{\em \mbox{[}$\,$\mbox{]}} & enemy\+\_\+armada Az ellenseges hajotkat tartalmazo lancolt lista head pointere. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{enemy__ship_8h_a87a0fe51107e7c1e0e8a8ae26a164e8b}\label{enemy__ship_8h_a87a0fe51107e7c1e0e8a8ae26a164e8b}} 
+\index{enemy\_ship.h@{enemy\_ship.h}!init\_enemy\_armada@{init\_enemy\_armada}}
+\index{init\_enemy\_armada@{init\_enemy\_armada}!enemy\_ship.h@{enemy\_ship.h}}
+\doxysubsubsection{\texorpdfstring{init\_enemy\_armada()}{init\_enemy\_armada()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}{Enemy\+Ship}} $\ast$ init\+\_\+enemy\+\_\+armada (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{texture__data_8h_aa12ea7860582af51523886453e0a017c}{Texture\+Data}}}]{texture\+\_\+data,  }\item[{\mbox{\hyperlink{texture__data_8h_a9074fee131d757804093a24a0e471efe}{Sprite\+Map\+Data}}}]{sprite\+\_\+map\+\_\+data,  }\item[{\mbox{\hyperlink{data__transfer__types_8h_a89d2e48c0772818774d0db3df8059c03}{Ship\+DTT}} $\ast$$\ast$}]{ship\+\_\+dtt,  }\item[{\mbox{\hyperlink{game__attributes_8h_a85088783bcdb10b16d91805dfe7fe324}{Game\+Attributes}} $\ast$}]{game\+\_\+attributes }\end{DoxyParamCaption})}
+
+
+
+init\+\_\+enemy\+\_\+armada 
+
+Az ellenseges hadsereget inicializalja a bemeneti parameterek alapjan. ~\newline
+VIGYAZAT\+: a hadsereg es az azt alkoto hajok felszabaditasaert a hivo felel! 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em texture\+\_\+data} & Az ellenseges hajo textura-\/koordinata adatait tartalmazo tarolo. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sprite\+\_\+map\+\_\+data} & Az ellenseges hajo spritemap koordinata adatait tartalmazo tarolo (az SDL2 igenyli). \\
+\hline
+\mbox{\texttt{ in}}  & {\em $\ast$$\ast$ship\+\_\+dtt} & Az ellenseges hajo attributumait tartalmazo fajlbeolvasasbol szarmazo adatstruktura. \\
+\hline
+\mbox{\texttt{ in}}  & {\em game\+\_\+attributes} & Az osszes jatekattributumot tartlmazo adatstruktura. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{[}out\mbox{]} enemy\+\_\+armada az ellenseges hajok lancolt listajaval ter vissza. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{enemy__ship_8h_ad6132464ee3219c29ad21a0de82e3991}\label{enemy__ship_8h_ad6132464ee3219c29ad21a0de82e3991}} 
+\index{enemy\_ship.h@{enemy\_ship.h}!move\_enemy\_armada@{move\_enemy\_armada}}
+\index{move\_enemy\_armada@{move\_enemy\_armada}!enemy\_ship.h@{enemy\_ship.h}}
+\doxysubsubsection{\texorpdfstring{move\_enemy\_armada()}{move\_enemy\_armada()}}
+{\footnotesize\ttfamily void move\+\_\+enemy\+\_\+armada (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}{Enemy\+Ship}} $\ast$}]{enemy\+\_\+armada,  }\item[{\mbox{\hyperlink{game__attributes_8h_a85088783bcdb10b16d91805dfe7fe324}{Game\+Attributes}} $\ast$}]{game\+\_\+attributes }\end{DoxyParamCaption})}
+
+
+
+move\+\_\+enemy\+\_\+armada 
+
+Az ellenseges hadsereg mozgasat vezerli. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$enemy\+\_\+armada} & Az ellenseges hajokat tartalmazo lancolt lista. \\
+\hline
+\mbox{\texttt{ in}}  & {\em game\+\_\+attributes} & Az osszes jatekattributumot tartlmazo adatstruktura. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{enemy__ship_8h_a83ab080822016803fe1b0596553ebe7e}\label{enemy__ship_8h_a83ab080822016803fe1b0596553ebe7e}} 
+\index{enemy\_ship.h@{enemy\_ship.h}!pop\_enemy\_ship@{pop\_enemy\_ship}}
+\index{pop\_enemy\_ship@{pop\_enemy\_ship}!enemy\_ship.h@{enemy\_ship.h}}
+\doxysubsubsection{\texorpdfstring{pop\_enemy\_ship()}{pop\_enemy\_ship()}}
+{\footnotesize\ttfamily void pop\+\_\+enemy\+\_\+ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}{Enemy\+Ship}} $\ast$$\ast$}]{enemy\+\_\+ship }\end{DoxyParamCaption})}
+
+
+
+pop\+\_\+enemy\+\_\+ship 
+
+Egy hajo torleset vegzi. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em enemy\+\_\+ship} & Az ellenseges hadsereg adott hajoja \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

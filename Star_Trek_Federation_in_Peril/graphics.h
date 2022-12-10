@@ -18,20 +18,30 @@
 
 #include "debugmalloc.h"
 
+void create_font();
+
+void create_textures(char* fed, char* enemy);
+
 void create_window(int width, int height);
 
 void draw_background(StarMap *sm);
 
-void clear_background(StarMap *sm);
-
 void draw_player_ship(PlayerShip *ps);
 
-void clear_player_ship(PlayerShip *ps);
-/*
-void draw_enemy_ship(EnemyArmada *armada);
+void draw_enemy_ships(EnemyShip *enemy_armada);
 
-void clear_enemy_ship(EnemyArmada *armad);
-*/
+void draw_torpedo(TorpedoShot *torpedoes);
+
+void draw_end_screen();
+
+void draw_score(int game_score);
+
+void draw_LCARS_bacground();
+
+void clear_screen();
+
 void render_screen();
+
+void destroy_textures();
 
 #endif // GRAPHICS_H_INCLUDED

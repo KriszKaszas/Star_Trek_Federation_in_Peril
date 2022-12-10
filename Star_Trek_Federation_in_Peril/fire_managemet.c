@@ -1,5 +1,27 @@
+/**
+*@file fire_management.c
+*/
 
 #include "fire_management.h"
+
+static void fire_ship_torpedo_if_selected(int *ship_number,
+                                   int *selector,
+                                   EnemyShip *temp_ship,
+                                   GameAssets *game_assets);
+
+static void increment_ship_number_if_ships_in_same_column(int *ship_number);
+
+static void increment_ship_number(int *ship_number);
+
+
+
+/**
+*@brief fire_player_torpedo
+*@details A jatekos torpedok kiloveseert felel.
+*@param [out] *game_assets A jatekhoz szukseges assetek taroloja.
+*@param [out] *game_attributes A jatek attributumainak taroloja.
+*@return void
+*/
 
 void fire_player_torpedo(GameAssets *game_assets, GameAttributes *game_attributes)
 {
@@ -12,7 +34,7 @@ void fire_player_torpedo(GameAssets *game_assets, GameAttributes *game_attribute
 *@brief fire_enemy_torpedoes
 *@details Az ellenseges torpedok kiloveseert felel.
 *@param [in] armada_size Az ellenseges hadseregmerete.
-*@param [in,out] *game_assets A jatek assetjeinek taroloja
+*@param [out] *game_assets A jatekhoz szukseges assetek taroloja.
 *@return void
 */
 
@@ -36,11 +58,11 @@ void fire_enemy_torpedoes(int armada_size, GameAssets *game_assets)
 *@param [in,out] *ship_number A kivalasztott hajo szama.
 *@param [in,out] *selector A kivalasztashoz hasznalt szam.
 *@param [in,out] *temp_ship Az adott hajora mutato pointer.
-*@param [in,out] *game_assets A jatek assetjeinek taroloja.
+*@param [in,out] *game_assets A jatekhoz szukseges assetek taroloja.
 *@return void
 */
 
-void fire_ship_torpedo_if_selected(int *ship_number,
+static void fire_ship_torpedo_if_selected(int *ship_number,
                                    int *selector,
                                    EnemyShip *temp_ship,
                                    GameAssets *game_assets)
@@ -58,9 +80,10 @@ void fire_ship_torpedo_if_selected(int *ship_number,
 *@return void
 */
 
-void increment_ship_number_if_ships_in_same_column(int *ship_number)
+static void increment_ship_number_if_ships_in_same_column(int *ship_number)
 {
-    if((*ship_number) % 5 == 0)
+    bool is_ship_num_divisible_by_5 = (*ship_number) % 5 == 0;
+    if(is_ship_num_divisible_by_5)
     {
         increment_ship_number(ship_number);
     }
@@ -68,10 +91,10 @@ void increment_ship_number_if_ships_in_same_column(int *ship_number)
 /**
 *@brief increment_ship_number
 *@details Egyel emeli a hajo szamat.
-*@param [in,out] *ship_number A kivalasztott hajo szama.
+*@param [out] *ship_number A kivalasztott hajo szama.
 *@return void
 */
-void increment_ship_number(int *ship_number)
+static void increment_ship_number(int *ship_number)
 {
     (*ship_number)++;
 }

@@ -1,0 +1,256 @@
+\hypertarget{graphics_8h}{}\doxysection{graphics.\+h File Reference}
+\label{graphics_8h}\index{graphics.h@{graphics.h}}
+{\ttfamily \#include \char`\"{}star\+\_\+map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}player\+\_\+ship.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}enemy\+\_\+ship.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}input\+\_\+state\+\_\+interface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}torpedo.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$SDL.\+h$>$}\newline
+{\ttfamily \#include $<$SDL\+\_\+image.\+h$>$}\newline
+{\ttfamily \#include $<$SDL\+\_\+ttf.\+h$>$}\newline
+{\ttfamily \#include $<$SDL2\+\_\+gfx\+Primitives.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}debugmalloc.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{graphics_8h_a99c903d14d68757ee53506ac573e0bc7}{create\+\_\+font}} ()
+\begin{DoxyCompactList}\small\item\em create\+\_\+font \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_ae8b9531256f3d46a906fe17756c97e1f}{create\+\_\+textures}} (char $\ast$fed, char $\ast$enemy)
+\begin{DoxyCompactList}\small\item\em create\+\_\+textures \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_ae6d34d621a77a361f39a82ad0ac088c5}{create\+\_\+window}} (int width, int height)
+\begin{DoxyCompactList}\small\item\em create\+\_\+window \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_ab3e8f9f85719ae564f2c1eba55cf0c94}{draw\+\_\+background}} (\mbox{\hyperlink{star__map_8h_a3dad93d50adb0f98296e405699140dca}{Star\+Map}} $\ast$sm)
+\begin{DoxyCompactList}\small\item\em draw\+\_\+background \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_acba6da1444148970c94e99db3c1f27a3}{draw\+\_\+player\+\_\+ship}} (\mbox{\hyperlink{player__ship_8h_ae80ac0734ac95e44ab8537e0dc298f95}{Player\+Ship}} $\ast$ps)
+\begin{DoxyCompactList}\small\item\em draw\+\_\+player\+\_\+ship \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_a2f823560f7e76a8f186e64e34cb2c687}{draw\+\_\+enemy\+\_\+ships}} (\mbox{\hyperlink{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}{Enemy\+Ship}} $\ast$enemy\+\_\+armada)
+\begin{DoxyCompactList}\small\item\em draw\+\_\+enemy\+\_\+ships \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_a126cb87763598aa7e12f0e1f545a3bc8}{draw\+\_\+torpedo}} (\mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$torpedoes)
+\begin{DoxyCompactList}\small\item\em draw\+\_\+torpedo \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_a8e846fdc79393705f939c88ba9e9bb31}{draw\+\_\+end\+\_\+screen}} ()
+\begin{DoxyCompactList}\small\item\em draw\+\_\+end\+\_\+screen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_a1103a41fc3c40fc9f77337dbcbc033c8}{draw\+\_\+score}} (int game\+\_\+score)
+\begin{DoxyCompactList}\small\item\em draw\+\_\+score \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_a5c3fe567a8c2eafa60a51494bbb02cce}{draw\+\_\+\+LCARS\+\_\+bacground}} ()
+\begin{DoxyCompactList}\small\item\em draw\+\_\+\+LCARS\+\_\+bacground \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_a4953d1edcbbfc7e420c423ded1d5621a}{clear\+\_\+screen}} ()
+\begin{DoxyCompactList}\small\item\em clear\+\_\+screen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_a1fe7644e8b3c5b2e7d630d2178935c3f}{render\+\_\+screen}} ()
+\begin{DoxyCompactList}\small\item\em render\+\_\+screen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{graphics_8h_aefc3616009f28f69b73e72738415971b}{destroy\+\_\+textures}} ()
+\begin{DoxyCompactList}\small\item\em destroy\+\_\+textures \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{graphics_8h_a4953d1edcbbfc7e420c423ded1d5621a}\label{graphics_8h_a4953d1edcbbfc7e420c423ded1d5621a}} 
+\index{graphics.h@{graphics.h}!clear\_screen@{clear\_screen}}
+\index{clear\_screen@{clear\_screen}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{clear\_screen()}{clear\_screen()}}
+{\footnotesize\ttfamily void clear\+\_\+screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+clear\+\_\+screen 
+
+Torol mindent a jatekablakbol. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphics_8h_a99c903d14d68757ee53506ac573e0bc7}\label{graphics_8h_a99c903d14d68757ee53506ac573e0bc7}} 
+\index{graphics.h@{graphics.h}!create\_font@{create\_font}}
+\index{create\_font@{create\_font}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{create\_font()}{create\_font()}}
+{\footnotesize\ttfamily void create\+\_\+font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+create\+\_\+font 
+
+Beolvassa a szukseges meretu fontokat. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphics_8h_ae8b9531256f3d46a906fe17756c97e1f}\label{graphics_8h_ae8b9531256f3d46a906fe17756c97e1f}} 
+\index{graphics.h@{graphics.h}!create\_textures@{create\_textures}}
+\index{create\_textures@{create\_textures}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{create\_textures()}{create\_textures()}}
+{\footnotesize\ttfamily void create\+\_\+textures (\begin{DoxyParamCaption}\item[{char $\ast$}]{fed,  }\item[{char $\ast$}]{enemy }\end{DoxyParamCaption})}
+
+
+
+create\+\_\+textures 
+
+felepiti a texturakat 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em fed} & A jatekos texturajat tartalmazo fajl neve. \\
+\hline
+\mbox{\texttt{ in}}  & {\em enemy} & A ellenseg texturajat tartalmazo fajl neve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphics_8h_ae6d34d621a77a361f39a82ad0ac088c5}\label{graphics_8h_ae6d34d621a77a361f39a82ad0ac088c5}} 
+\index{graphics.h@{graphics.h}!create\_window@{create\_window}}
+\index{create\_window@{create\_window}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{create\_window()}{create\_window()}}
+{\footnotesize\ttfamily void create\+\_\+window (\begin{DoxyParamCaption}\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+create\+\_\+window 
+
+Legeneralja a jatekablakot. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em width} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphics_8h_aefc3616009f28f69b73e72738415971b}\label{graphics_8h_aefc3616009f28f69b73e72738415971b}} 
+\index{graphics.h@{graphics.h}!destroy\_textures@{destroy\_textures}}
+\index{destroy\_textures@{destroy\_textures}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{destroy\_textures()}{destroy\_textures()}}
+{\footnotesize\ttfamily void destroy\+\_\+textures (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+destroy\+\_\+textures 
+
+Torli a texturakat. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphics_8h_ab3e8f9f85719ae564f2c1eba55cf0c94}\label{graphics_8h_ab3e8f9f85719ae564f2c1eba55cf0c94}} 
+\index{graphics.h@{graphics.h}!draw\_background@{draw\_background}}
+\index{draw\_background@{draw\_background}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_background()}{draw\_background()}}
+{\footnotesize\ttfamily void draw\+\_\+background (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{star__map_8h_a3dad93d50adb0f98296e405699140dca}{Star\+Map}} $\ast$}]{sm }\end{DoxyParamCaption})}
+
+
+
+draw\+\_\+background 
+
+kirajzolja a hatteret 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$sm} & A csillagterkep pointere. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphics_8h_a8e846fdc79393705f939c88ba9e9bb31}\label{graphics_8h_a8e846fdc79393705f939c88ba9e9bb31}} 
+\index{graphics.h@{graphics.h}!draw\_end\_screen@{draw\_end\_screen}}
+\index{draw\_end\_screen@{draw\_end\_screen}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_end\_screen()}{draw\_end\_screen()}}
+{\footnotesize\ttfamily void draw\+\_\+end\+\_\+screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+draw\+\_\+end\+\_\+screen 
+
+Kirajzolja a jatek vege kepernyot. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphics_8h_a2f823560f7e76a8f186e64e34cb2c687}\label{graphics_8h_a2f823560f7e76a8f186e64e34cb2c687}} 
+\index{graphics.h@{graphics.h}!draw\_enemy\_ships@{draw\_enemy\_ships}}
+\index{draw\_enemy\_ships@{draw\_enemy\_ships}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_enemy\_ships()}{draw\_enemy\_ships()}}
+{\footnotesize\ttfamily void draw\+\_\+enemy\+\_\+ships (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}{Enemy\+Ship}} $\ast$}]{enemy\+\_\+armada }\end{DoxyParamCaption})}
+
+
+
+draw\+\_\+enemy\+\_\+ships 
+
+Kirajzolja az ellenseges hajokat. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$armada} & Az ellenseges hajok listajanak head pointere. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphics_8h_a5c3fe567a8c2eafa60a51494bbb02cce}\label{graphics_8h_a5c3fe567a8c2eafa60a51494bbb02cce}} 
+\index{graphics.h@{graphics.h}!draw\_LCARS\_bacground@{draw\_LCARS\_bacground}}
+\index{draw\_LCARS\_bacground@{draw\_LCARS\_bacground}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_LCARS\_bacground()}{draw\_LCARS\_bacground()}}
+{\footnotesize\ttfamily void draw\+\_\+\+LCARS\+\_\+bacground (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+draw\+\_\+\+LCARS\+\_\+bacground 
+
+Kirajzolja a jatekos pontjainak hatteret. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphics_8h_acba6da1444148970c94e99db3c1f27a3}\label{graphics_8h_acba6da1444148970c94e99db3c1f27a3}} 
+\index{graphics.h@{graphics.h}!draw\_player\_ship@{draw\_player\_ship}}
+\index{draw\_player\_ship@{draw\_player\_ship}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_player\_ship()}{draw\_player\_ship()}}
+{\footnotesize\ttfamily void draw\+\_\+player\+\_\+ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player__ship_8h_ae80ac0734ac95e44ab8537e0dc298f95}{Player\+Ship}} $\ast$}]{ps }\end{DoxyParamCaption})}
+
+
+
+draw\+\_\+player\+\_\+ship 
+
+Kirajzolja a jatekos hajot. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$ps} & A jatekos hajojanak pointere. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphics_8h_a1103a41fc3c40fc9f77337dbcbc033c8}\label{graphics_8h_a1103a41fc3c40fc9f77337dbcbc033c8}} 
+\index{graphics.h@{graphics.h}!draw\_score@{draw\_score}}
+\index{draw\_score@{draw\_score}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_score()}{draw\_score()}}
+{\footnotesize\ttfamily void draw\+\_\+score (\begin{DoxyParamCaption}\item[{int}]{game\+\_\+score }\end{DoxyParamCaption})}
+
+
+
+draw\+\_\+score 
+
+Kirajzolja a jatekos pontjait kepernyot. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em game\+\_\+score} & a jatekos pontjai. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphics_8h_a126cb87763598aa7e12f0e1f545a3bc8}\label{graphics_8h_a126cb87763598aa7e12f0e1f545a3bc8}} 
+\index{graphics.h@{graphics.h}!draw\_torpedo@{draw\_torpedo}}
+\index{draw\_torpedo@{draw\_torpedo}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{draw\_torpedo()}{draw\_torpedo()}}
+{\footnotesize\ttfamily void draw\+\_\+torpedo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$}]{torpedoes }\end{DoxyParamCaption})}
+
+
+
+draw\+\_\+torpedo 
+
+Kirajzolja a kilott torpedot. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$torpedoes} & A torpedok listajanak head pointere. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{graphics_8h_a1fe7644e8b3c5b2e7d630d2178935c3f}\label{graphics_8h_a1fe7644e8b3c5b2e7d630d2178935c3f}} 
+\index{graphics.h@{graphics.h}!render\_screen@{render\_screen}}
+\index{render\_screen@{render\_screen}!graphics.h@{graphics.h}}
+\doxysubsubsection{\texorpdfstring{render\_screen()}{render\_screen()}}
+{\footnotesize\ttfamily void render\+\_\+screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+render\+\_\+screen 
+
+Rendereli a jatekablakot. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

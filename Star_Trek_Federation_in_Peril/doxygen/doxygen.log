@@ -1,0 +1,122 @@
+warning: source '..\phaser.h' is not a readable file or directory... skipping.
+warning: source '..\phaser.c' is not a readable file or directory... skipping.
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/data_transfer_types.h:2: warning: the name 'data_transfer_types.c' supplied as the argument in the \file statement is not an input file
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/enemy_hit_mananagement.c:2: warning: the name 'enemy_hit_management.c' supplied as the argument in the \file statement is not an input file
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/fire_managemet.c:2: warning: the name 'fire_management.c' supplied as the argument in the \file statement is not an input file
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/enemy_hit_mananagement.c:22: warning: found documented return type for explode_enemy_ship_if_dead that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/enemy_hit_mananagement.c:22: warning: found documented return type for explode_enemy_ship_if_dead that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/enemy_ship.c:374: warning: The following parameter of free_enemy_armada(EnemyShip *enemy_armada) is not documented:
+  parameter 'enemy_armada'
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/enemy_ship.c:374: warning: found documented return type for free_enemy_armada that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/enemy_ship.c:99: warning: found documented return type for move_enemy_armada that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/enemy_ship.c:271: warning: found documented return type for pop_enemy_ship that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/enemy_ship.c:374: warning: The following parameter of free_enemy_armada(EnemyShip *enemy_armada) is not documented:
+  parameter 'enemy_armada'
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/enemy_ship.c:374: warning: found documented return type for free_enemy_armada that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/enemy_ship.c:99: warning: found documented return type for move_enemy_armada that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/enemy_ship.c:271: warning: found documented return type for pop_enemy_ship that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/file_management.c:54: warning: argument 'SpriteMapData' of command @param is not found in the argument list of read_texture_data(char *filename, TextureData *texture_data, SpriteMapData *sprite_map_data)
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/file_management.c:54: warning: The following parameter of read_texture_data(char *filename, TextureData *texture_data, SpriteMapData *sprite_map_data) is not documented:
+  parameter 'sprite_map_data'
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/file_management.c:54: warning: found documented return type for read_texture_data that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/file_management.c:54: warning: argument 'SpriteMapData' of command @param is not found in the argument list of read_texture_data(char *filename, TextureData *texture_data, SpriteMapData *sprite_map_data)
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/file_management.c:54: warning: The following parameter of read_texture_data(char *filename, TextureData *texture_data, SpriteMapData *sprite_map_data) is not documented:
+  parameter 'sprite_map_data'
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/file_management.c:54: warning: found documented return type for read_texture_data that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/fire_managemet.c:35: warning: found documented return type for fire_enemy_torpedoes that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/fire_managemet.c:20: warning: found documented return type for fire_player_torpedo that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/fire_managemet.c:35: warning: found documented return type for fire_enemy_torpedoes that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/fire_managemet.c:20: warning: found documented return type for fire_player_torpedo that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/game_engine.c:126: warning: found documented return type for free_ship_dtt that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/game_engine.c:48: warning: found documented return type for runtime that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/game_engine.c:48: warning: found documented return type for runtime that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:285: warning: found documented return type for clear_screen that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:98: warning: found documented return type for create_font that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:110: warning: found documented return type for create_textures that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:124: warning: found documented return type for create_window that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:307: warning: found documented return type for destroy_textures that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:137: warning: found documented return type for draw_background that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:233: warning: found documented return type for draw_end_screen that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:176: warning: argument 'armada' of command @param is not found in the argument list of draw_enemy_ships(EnemyShip *enemy_armada)
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:176: warning: The following parameter of draw_enemy_ships(EnemyShip *enemy_armada) is not documented:
+  parameter 'enemy_armada'
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:176: warning: found documented return type for draw_enemy_ships that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:271: warning: found documented return type for draw_LCARS_bacground that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:153: warning: found documented return type for draw_player_ship that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:249: warning: found documented return type for draw_score that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:210: warning: found documented return type for draw_torpedo that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:297: warning: found documented return type for render_screen that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:65: warning: found documented return type for sdl_init that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:285: warning: found documented return type for clear_screen that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:98: warning: found documented return type for create_font that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:110: warning: found documented return type for create_textures that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:124: warning: found documented return type for create_window that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:307: warning: found documented return type for destroy_textures that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:137: warning: found documented return type for draw_background that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:233: warning: found documented return type for draw_end_screen that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:176: warning: argument 'armada' of command @param is not found in the argument list of draw_enemy_ships(EnemyShip *enemy_armada)
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:176: warning: The following parameter of draw_enemy_ships(EnemyShip *enemy_armada) is not documented:
+  parameter 'enemy_armada'
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:176: warning: found documented return type for draw_enemy_ships that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:271: warning: found documented return type for draw_LCARS_bacground that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:153: warning: found documented return type for draw_player_ship that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:249: warning: found documented return type for draw_score that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:210: warning: found documented return type for draw_torpedo that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/graphics.c:297: warning: found documented return type for render_screen that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/hit_management.c:82: warning: The following parameters of manage_enemy_hits(EnemyShip **enemy_armada, TorpedoShot **player_torpedoes, GameAssets **game_assets, GameAttributes *game_attributes) are not documented:
+  parameter 'game_assets'
+  parameter 'game_attributes'
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/hit_management.c:82: warning: found documented return type for manage_enemy_hits that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/hit_management.c:110: warning: argument 'enemy_armada' of command @param is not found in the argument list of manage_player_hits(PlayerShip **player_ship, TorpedoShot **enemy_torpedoes, GameAssets **game_assets, GameAttributes *game_attributes)
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/hit_management.c:110: warning: argument 'player_torpedoes' of command @param is not found in the argument list of manage_player_hits(PlayerShip **player_ship, TorpedoShot **enemy_torpedoes, GameAssets **game_assets, GameAttributes *game_attributes)
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/hit_management.c:110: warning: The following parameters of manage_player_hits(PlayerShip **player_ship, TorpedoShot **enemy_torpedoes, GameAssets **game_assets, GameAttributes *game_attributes) are not documented:
+  parameter 'player_ship'
+  parameter 'enemy_torpedoes'
+  parameter 'game_assets'
+  parameter 'game_attributes'
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/hit_management.c:110: warning: found documented return type for manage_player_hits that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/hit_management.c:59: warning: argument 'player_torpedoes' of command @param is not found in the argument list of remove_torpedo_if_out_of_bounds(TorpedoShot **torpedo, GameAttributes *game_attributes)
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/hit_management.c:59: warning: The following parameter of remove_torpedo_if_out_of_bounds(TorpedoShot **torpedo, GameAttributes *game_attributes) is not documented:
+  parameter 'torpedo'
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/hit_management.c:59: warning: found documented return type for remove_torpedo_if_out_of_bounds that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/hit_management.c:82: warning: The following parameters of manage_enemy_hits(EnemyShip **enemy_armada, TorpedoShot **player_torpedoes, GameAssets **game_assets, GameAttributes *game_attributes) are not documented:
+  parameter 'game_assets'
+  parameter 'game_attributes'
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/hit_management.c:82: warning: found documented return type for manage_enemy_hits that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/hit_management.c:59: warning: argument 'player_torpedoes' of command @param is not found in the argument list of remove_torpedo_if_out_of_bounds(TorpedoShot **torpedo, GameAttributes *game_attributes)
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/hit_management.c:59: warning: The following parameter of remove_torpedo_if_out_of_bounds(TorpedoShot **torpedo, GameAttributes *game_attributes) is not documented:
+  parameter 'torpedo'
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/hit_management.c:59: warning: found documented return type for remove_torpedo_if_out_of_bounds that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/player_hit_management.c:13: warning: found documented return type for explode_player_ship_if_dead that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/player_hit_management.c:13: warning: found documented return type for explode_player_ship_if_dead that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/player_ship.c:78: warning: found documented return type for free_player_ship that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/player_ship.c:42: warning: found documented return type for move_player_ship that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/player_ship.c:78: warning: found documented return type for free_player_ship that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/player_ship.c:42: warning: found documented return type for move_player_ship that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/random_number_in_interval.c:9: warning: argument 'Lower' of command @param is not found in the argument list of random_number_in_range(int lower, int upper)
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/random_number_in_interval.c:9: warning: argument 'Upper' of command @param is not found in the argument list of random_number_in_range(int lower, int upper)
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/random_number_in_interval.c:9: warning: The following parameters of random_number_in_range(int lower, int upper) are not documented:
+  parameter 'lower'
+  parameter 'upper'
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/random_number_in_interval.c:9: warning: argument 'Lower' of command @param is not found in the argument list of random_number_in_range(int lower, int upper)
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/random_number_in_interval.c:9: warning: argument 'Upper' of command @param is not found in the argument list of random_number_in_range(int lower, int upper)
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/random_number_in_interval.c:9: warning: The following parameters of random_number_in_range(int lower, int upper) are not documented:
+  parameter 'lower'
+  parameter 'upper'
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/star_map.c:53: warning: found documented return type for advance_starmap_frame that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/star_map.c:77: warning: found documented return type for free_starmap that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/star_map.c:53: warning: found documented return type for advance_starmap_frame that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/star_map.c:77: warning: found documented return type for free_starmap that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/string_operations.c:9: warning: The following parameters of dinstr_alloc(DinStr *str, int size) are not documented:
+  parameter 'str'
+  parameter 'size'
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/torpedo.c:199: warning: found documented return type for free_torpedoes that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/torpedo.c:81: warning: found documented return type for move_torpedoes that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/torpedo.c:96: warning: found documented return type for pop_torpedo_shot that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/torpedo.c:199: warning: found documented return type for free_torpedoes that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/torpedo.c:81: warning: found documented return type for move_torpedoes that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/torpedo.c:96: warning: found documented return type for pop_torpedo_shot that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/torpedo_hit_management.c:28: warning: found documented return type for explode_torpedo that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/torpedo_hit_management.c:28: warning: found documented return type for explode_torpedo that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/ui_input.c:11: warning: found documented return type for user_input that does not return anything
+C:/Users/krisz/Desktop/Nagy_Hazi_2022/Star_Trek_Federation_in_Peril/Star_Trek_Federation_in_Peril/ui_input.c:11: warning: found documented return type for user_input that does not return anything

@@ -19,9 +19,10 @@ static void decrement_enemy_armada_size(GameAttributes *game_attributes);
 
 /**
 *@brief explode_enemy_ship_if_dead
-*@details Felszabaditja a felrobbant ellenséges hajót ha annak HP-ja 0 (vagy kevesebb), es kezeli az ahhoz tartozo pointereket.
-*@param [in,out] enemy_ship Az ellenseges hajotkat tartalmazo lancolt lista aktualis elemenek pointere.
-*@param [in,out] temp_ship Az ellenseges hajot tartalmazo lancolt lista head pointerenek ideiglenes taroloja.
+*@details Felszabaditja a felrobbant ellenseges hajot ha annak HP-ja 0 (vagy kevesebb), es kezeli az ahhoz tartozo pointereket.
+*@param [in,out] **enemy_ship Az ellenseges hajotkat tartalmazo lancolt lista aktualis elemenek pointere.
+*@param [in,out] **temp_ship Az ellenseges hajot tartalmazo lancolt lista head pointerenek ideiglenes taroloja.
+*@param [in,out] *game_attributes A jatek attributumainak taroloja.
 *@return void
 */
 
@@ -38,9 +39,10 @@ void explode_enemy_ship_if_dead(EnemyShip **enemy_ship, EnemyShip **temp_ship, G
 
 /**
 *@brief explode_enemy_ship
-*@details Felszabaditja a felrobbant ellenséges hajót es kezeli az ahhoz tartozo pointereket.
-*@param [in,out] enemy_ship Az ellenseges hajotkat tartalmazo lancolt lista aktualis elemenek pointere.
-*@param [in,out] temp_ship Az ellenseges hajot tartalmazo lancolt lista head pointerenek ideiglenes taroloja.
+*@details Felszabaditja a felrobbant ellenseges hajot es kezeli az ahhoz tartozo pointereket.
+*@param [in,out] **enemy_ship Az ellenseges hajotkat tartalmazo lancolt lista aktualis elemenek pointere.
+*@param [in,out] **temp_ship Az ellenseges hajot tartalmazo lancolt lista head pointerenek ideiglenes taroloja.
+*@param [in,out] *game_attributes A jatek attributumainak taroloja.
 *@return void
 */
 
@@ -75,7 +77,7 @@ static void explode_enemy_ship(EnemyShip **enemy_ship, EnemyShip **temp_ship, Ga
 
 /**
 *@brief remove_only_ship
-*@details Felszabaditja a felrobbant ellenséges hajot, ha az a hajo lista egyeduli eleme.
+*@details Felszabaditja a felrobbant ellenseges hajot, ha az a hajo lista egyeduli eleme.
 *@param [in,out] enemy_ship Az ellenseges hajotkat tartalmazo lancolt lista aktualis elemenek pointere.
 *@param [in,out] temp_ship Az ellenseges hajot tartalmazo lancolt lista head pointerenek ideiglenes taroloja.
 *@return void
@@ -90,7 +92,7 @@ static void remove_only_ship(EnemyShip **enemy_ship, EnemyShip **temp_ship)
 
 /**
 *@brief remove_first_ship
-*@details Felszabaditja a felrobbant ellenséges hajot, ha az a hajo lista head eleme.
+*@details Felszabaditja a felrobbant ellenseges hajot, ha az a hajo lista head eleme.
 *@param [in,out] enemy_ship Az ellenseges hajotkat tartalmazo lancolt lista aktualis elemenek pointere.
 *@param [in,out] temp_ship Az ellenseges hajot tartalmazo lancolt lista head pointerenek ideiglenes taroloja.
 *@return void
@@ -104,7 +106,7 @@ static void remove_first_ship(EnemyShip **enemy_ship, EnemyShip **temp_ship)
 
 /**
 *@brief remove_in_between_or_last_ship
-*@details Felszabaditja a felrobbant ellenséges hajot, ha az a hajo lista köztes vagy tail eleme.
+*@details Felszabaditja a felrobbant ellenseges hajot, ha az a hajo lista koztes vagy tail eleme.
 *@param [in,out] enemy_ship Az ellenseges hajotkat tartalmazo lancolt lista aktualis elemenek pointere.
 *@param [in,out] temp_ship Az ellenseges hajot tartalmazo lancolt lista head pointerenek ideiglenes taroloja.
 *@return void
@@ -116,9 +118,13 @@ static void remove_in_between_or_last_ship(EnemyShip **enemy_ship, EnemyShip **t
     (*enemy_ship) = (*temp_ship);
 }
 
-
-
-
+/**
+*@brief manage_score_on_enemy_death
+*@details Az ellenseges hajok pusztulasakor emeli a jatekos pontszamat.
+*@param [in,out] enemy_ship Az ellenseges hajotkat tartalmazo lancolt lista aktualis elemenek pointere.
+*@param [in,out] *game_attributes A jatek attributumainak taroloja.
+*@return void
+*/
 
 static void manage_score_on_enemy_death(EnemyShip **enemy_ship, GameAttributes *game_attributes)
 {
@@ -128,7 +134,7 @@ static void manage_score_on_enemy_death(EnemyShip **enemy_ship, GameAttributes *
 /**
 *@brief decrement_enemy_armada_size
 *@details Csokkenti a game attributes taroloban az ellenseges hajoflotta szamat jelolo valtozot
-*@param [in,out] game_attributes A jatek attributumainak a taroloja.
+*@param [in,out] game_attributes A jatek attributumainak taroloja.
 *@return void
 */
 

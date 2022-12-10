@@ -1,0 +1,183 @@
+\hypertarget{structenemyship}{}\doxysection{enemyship Struct Reference}
+\label{structenemyship}\index{enemyship@{enemyship}}
+
+
+Enemy\+Ship.  
+
+
+
+
+{\ttfamily \#include $<$enemy\+\_\+ship.\+h$>$}
+
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{structenemyship_ac5288a3009909038af51b30a261f7396}{y\+\_\+coor}}
+\begin{DoxyCompactList}\small\item\em Az ellenseges hajo y koordinataja. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structenemyship_aaf04fdedfb74eb280d6bc5aeffc3b654}{x\+\_\+coor}}
+\begin{DoxyCompactList}\small\item\em Az ellenseges hajo x koordinataja. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structenemyship_aae13aa4f43330c0a340fd01001b1a14a}{movement\+\_\+dir}}
+\begin{DoxyCompactList}\small\item\em Az ellenseges hajo mozgasi iranya. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structenemyship_a443113378a847cc0144730333118361b}{hitbox\+\_\+beg\+\_\+coor}}
+\begin{DoxyCompactList}\small\item\em A hitbox bal szele. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structenemyship_a595f9d7997d979474e33b2fe4695e950}{hitbox\+\_\+end\+\_\+coor}}
+\begin{DoxyCompactList}\small\item\em A hitbox jobb szele. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structenemyship_a37146316bc28a634e1130dfac8410403}{centerline\+\_\+y\+\_\+coor}}
+\begin{DoxyCompactList}\small\item\em A hitbox also hatara (ahonnan mar erzekeli a sprite a talalatot) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{texture__data_8h_aa12ea7860582af51523886453e0a017c}{Texture\+Data}} \mbox{\hyperlink{structenemyship_a7ab5556525392852f31612eff93bb64c}{texture\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Az ellenseges hajo textura adatai (meretek) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{texture__data_8h_a9074fee131d757804093a24a0e471efe}{Sprite\+Map\+Data}} \mbox{\hyperlink{structenemyship_a5112953a36cedb3c3bb3ae6bf2d831d9}{sprite\+\_\+map\+\_\+data}}
+\begin{DoxyCompactList}\small\item\em Az ellenseges hajo spritemap meretei (SDL2 igenyli) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structenemyship_a218b4f7c6cc2681a99c23a3b089d68b1}{speed}}
+\begin{DoxyCompactList}\small\item\em Az ellenseges hajo mozgasi sebessege. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structenemyship_ae448fb16f537982185a0c5e8db56bdc6}{health}}
+\begin{DoxyCompactList}\small\item\em Az ellenseges hajo HP-\/ja. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{structenemyship_a6112f1cfa65b8115d1279c848e490d1e}{score\+\_\+value}}
+\begin{DoxyCompactList}\small\item\em Az ellenseges hajo lelovesevel megszerezheto pont. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structenemyship}{enemyship}} $\ast$ \mbox{\hyperlink{structenemyship_ad197b922c79c0061c34cdce22224f58c}{next\+\_\+ship}}
+\begin{DoxyCompactList}\small\item\em Az ellenseges hajokat tartalmazo lancolt lista kovetkezo eleme. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structenemyship}{enemyship}} $\ast$ \mbox{\hyperlink{structenemyship_ac284912b54f160a8df134dd688c2e8c5}{prev\+\_\+ship}}
+\begin{DoxyCompactList}\small\item\em Az ellenseges hajokat tartalmazo lancolt lista elozo eleme. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Enemy\+Ship. 
+
+Az ellenseges hajokat tarolo lancolt lista listaeleme 
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structenemyship_a37146316bc28a634e1130dfac8410403}\label{structenemyship_a37146316bc28a634e1130dfac8410403}} 
+\index{enemyship@{enemyship}!centerline\_y\_coor@{centerline\_y\_coor}}
+\index{centerline\_y\_coor@{centerline\_y\_coor}!enemyship@{enemyship}}
+\doxysubsubsection{\texorpdfstring{centerline\_y\_coor}{centerline\_y\_coor}}
+{\footnotesize\ttfamily int centerline\+\_\+y\+\_\+coor}
+
+
+
+A hitbox also hatara (ahonnan mar erzekeli a sprite a talalatot) 
+
+\mbox{\Hypertarget{structenemyship_ae448fb16f537982185a0c5e8db56bdc6}\label{structenemyship_ae448fb16f537982185a0c5e8db56bdc6}} 
+\index{enemyship@{enemyship}!health@{health}}
+\index{health@{health}!enemyship@{enemyship}}
+\doxysubsubsection{\texorpdfstring{health}{health}}
+{\footnotesize\ttfamily int health}
+
+
+
+Az ellenseges hajo HP-\/ja. 
+
+\mbox{\Hypertarget{structenemyship_a443113378a847cc0144730333118361b}\label{structenemyship_a443113378a847cc0144730333118361b}} 
+\index{enemyship@{enemyship}!hitbox\_beg\_coor@{hitbox\_beg\_coor}}
+\index{hitbox\_beg\_coor@{hitbox\_beg\_coor}!enemyship@{enemyship}}
+\doxysubsubsection{\texorpdfstring{hitbox\_beg\_coor}{hitbox\_beg\_coor}}
+{\footnotesize\ttfamily int hitbox\+\_\+beg\+\_\+coor}
+
+
+
+A hitbox bal szele. 
+
+\mbox{\Hypertarget{structenemyship_a595f9d7997d979474e33b2fe4695e950}\label{structenemyship_a595f9d7997d979474e33b2fe4695e950}} 
+\index{enemyship@{enemyship}!hitbox\_end\_coor@{hitbox\_end\_coor}}
+\index{hitbox\_end\_coor@{hitbox\_end\_coor}!enemyship@{enemyship}}
+\doxysubsubsection{\texorpdfstring{hitbox\_end\_coor}{hitbox\_end\_coor}}
+{\footnotesize\ttfamily int hitbox\+\_\+end\+\_\+coor}
+
+
+
+A hitbox jobb szele. 
+
+\mbox{\Hypertarget{structenemyship_aae13aa4f43330c0a340fd01001b1a14a}\label{structenemyship_aae13aa4f43330c0a340fd01001b1a14a}} 
+\index{enemyship@{enemyship}!movement\_dir@{movement\_dir}}
+\index{movement\_dir@{movement\_dir}!enemyship@{enemyship}}
+\doxysubsubsection{\texorpdfstring{movement\_dir}{movement\_dir}}
+{\footnotesize\ttfamily int movement\+\_\+dir}
+
+
+
+Az ellenseges hajo mozgasi iranya. 
+
+\mbox{\Hypertarget{structenemyship_ad197b922c79c0061c34cdce22224f58c}\label{structenemyship_ad197b922c79c0061c34cdce22224f58c}} 
+\index{enemyship@{enemyship}!next\_ship@{next\_ship}}
+\index{next\_ship@{next\_ship}!enemyship@{enemyship}}
+\doxysubsubsection{\texorpdfstring{next\_ship}{next\_ship}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structenemyship}{enemyship}}$\ast$ next\+\_\+ship}
+
+
+
+Az ellenseges hajokat tartalmazo lancolt lista kovetkezo eleme. 
+
+\mbox{\Hypertarget{structenemyship_ac284912b54f160a8df134dd688c2e8c5}\label{structenemyship_ac284912b54f160a8df134dd688c2e8c5}} 
+\index{enemyship@{enemyship}!prev\_ship@{prev\_ship}}
+\index{prev\_ship@{prev\_ship}!enemyship@{enemyship}}
+\doxysubsubsection{\texorpdfstring{prev\_ship}{prev\_ship}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structenemyship}{enemyship}}$\ast$ prev\+\_\+ship}
+
+
+
+Az ellenseges hajokat tartalmazo lancolt lista elozo eleme. 
+
+\mbox{\Hypertarget{structenemyship_a6112f1cfa65b8115d1279c848e490d1e}\label{structenemyship_a6112f1cfa65b8115d1279c848e490d1e}} 
+\index{enemyship@{enemyship}!score\_value@{score\_value}}
+\index{score\_value@{score\_value}!enemyship@{enemyship}}
+\doxysubsubsection{\texorpdfstring{score\_value}{score\_value}}
+{\footnotesize\ttfamily int score\+\_\+value}
+
+
+
+Az ellenseges hajo lelovesevel megszerezheto pont. 
+
+\mbox{\Hypertarget{structenemyship_a218b4f7c6cc2681a99c23a3b089d68b1}\label{structenemyship_a218b4f7c6cc2681a99c23a3b089d68b1}} 
+\index{enemyship@{enemyship}!speed@{speed}}
+\index{speed@{speed}!enemyship@{enemyship}}
+\doxysubsubsection{\texorpdfstring{speed}{speed}}
+{\footnotesize\ttfamily int speed}
+
+
+
+Az ellenseges hajo mozgasi sebessege. 
+
+\mbox{\Hypertarget{structenemyship_a5112953a36cedb3c3bb3ae6bf2d831d9}\label{structenemyship_a5112953a36cedb3c3bb3ae6bf2d831d9}} 
+\index{enemyship@{enemyship}!sprite\_map\_data@{sprite\_map\_data}}
+\index{sprite\_map\_data@{sprite\_map\_data}!enemyship@{enemyship}}
+\doxysubsubsection{\texorpdfstring{sprite\_map\_data}{sprite\_map\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{texture__data_8h_a9074fee131d757804093a24a0e471efe}{Sprite\+Map\+Data}} sprite\+\_\+map\+\_\+data}
+
+
+
+Az ellenseges hajo spritemap meretei (SDL2 igenyli) 
+
+\mbox{\Hypertarget{structenemyship_a7ab5556525392852f31612eff93bb64c}\label{structenemyship_a7ab5556525392852f31612eff93bb64c}} 
+\index{enemyship@{enemyship}!texture\_data@{texture\_data}}
+\index{texture\_data@{texture\_data}!enemyship@{enemyship}}
+\doxysubsubsection{\texorpdfstring{texture\_data}{texture\_data}}
+{\footnotesize\ttfamily \mbox{\hyperlink{texture__data_8h_aa12ea7860582af51523886453e0a017c}{Texture\+Data}} texture\+\_\+data}
+
+
+
+Az ellenseges hajo textura adatai (meretek) 
+
+\mbox{\Hypertarget{structenemyship_aaf04fdedfb74eb280d6bc5aeffc3b654}\label{structenemyship_aaf04fdedfb74eb280d6bc5aeffc3b654}} 
+\index{enemyship@{enemyship}!x\_coor@{x\_coor}}
+\index{x\_coor@{x\_coor}!enemyship@{enemyship}}
+\doxysubsubsection{\texorpdfstring{x\_coor}{x\_coor}}
+{\footnotesize\ttfamily int x\+\_\+coor}
+
+
+
+Az ellenseges hajo x koordinataja. 
+
+\mbox{\Hypertarget{structenemyship_ac5288a3009909038af51b30a261f7396}\label{structenemyship_ac5288a3009909038af51b30a261f7396}} 
+\index{enemyship@{enemyship}!y\_coor@{y\_coor}}
+\index{y\_coor@{y\_coor}!enemyship@{enemyship}}
+\doxysubsubsection{\texorpdfstring{y\_coor}{y\_coor}}
+{\footnotesize\ttfamily int y\+\_\+coor}
+
+
+
+Az ellenseges hajo y koordinataja. 
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{enemy__ship_8h}{enemy\+\_\+ship.\+h}}\end{DoxyCompactItemize}

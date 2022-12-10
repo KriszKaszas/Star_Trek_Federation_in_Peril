@@ -10,8 +10,8 @@
 *@brief user_input
 *@details A felhasznalotol erkezo billentyuparancsokat ertelmezi, es egy interface-n keresztel adja
 at a program tobbi reszenek
-*@param [in out] isi a jatek InputStateInterface-re mutato pointer. Ezen keresztul kommunikalnak egymassal a vezerlomodulok.
-*@param [in] key_map ez a vezerlo KeyMap interfacen keresztul hasonlitja ossze a bejovo billentyuparancsokat a valid vezerlo gombokkal.
+*@param [in out] *isi a jatek InputStateInterface-re mutato pointer. Ezen keresztul kommunikalnak egymassal a vezerlomodulok.
+*@param [in] *key_map ez a vezerlo KeyMap interfacen keresztul hasonlitja ossze a bejovo billentyuparancsokat a valid vezerlo gombokkal.
 *@param [in] id egy SDL_TimerID tipusu idozito. Feladata, hogy general egy SDL_USEREVENTet, amennyiben az idozito lejartaval nincs beerkezo esemeny/parancs
 (enelkul a vezerlo blokkolna a program futasat, nem mukodne a hatter animacio, es semmi nem tortenne, amig nincs felhasznaloi interakcio).
 *@return void

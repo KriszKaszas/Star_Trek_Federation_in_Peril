@@ -1,0 +1,384 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Data Structure Index}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Data Structures}{1}{section.1.1}%
+\contentsline {chapter}{\numberline {2}File Index}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}File List}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Data Structure Documentation}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}colordata Struct Reference}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Detailed Description}{5}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Field Documentation}{5}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}a}{5}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}b}{5}{subsubsection.3.1.2.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.3}g}{6}{subsubsection.3.1.2.3}%
+\contentsline {subsubsection}{\numberline {3.1.2.4}r}{6}{subsubsection.3.1.2.4}%
+\contentsline {section}{\numberline {3.2}Debugmalloc\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Data Struct Reference}{6}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Field Documentation}{6}{subsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.1}all\_alloc\_bytes}{6}{subsubsection.3.2.1.1}%
+\contentsline {subsubsection}{\numberline {3.2.1.2}all\_alloc\_count}{6}{subsubsection.3.2.1.2}%
+\contentsline {subsubsection}{\numberline {3.2.1.3}alloc\_bytes}{7}{subsubsection.3.2.1.3}%
+\contentsline {subsubsection}{\numberline {3.2.1.4}alloc\_count}{7}{subsubsection.3.2.1.4}%
+\contentsline {subsubsection}{\numberline {3.2.1.5}head}{7}{subsubsection.3.2.1.5}%
+\contentsline {subsubsection}{\numberline {3.2.1.6}logfile}{7}{subsubsection.3.2.1.6}%
+\contentsline {subsubsection}{\numberline {3.2.1.7}max\_block\_size}{7}{subsubsection.3.2.1.7}%
+\contentsline {subsubsection}{\numberline {3.2.1.8}tail}{7}{subsubsection.3.2.1.8}%
+\contentsline {section}{\numberline {3.3}Debugmalloc\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entry Struct Reference}{7}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Field Documentation}{8}{subsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.1.1}expr}{8}{subsubsection.3.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.3.1.2}file}{8}{subsubsection.3.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.3.1.3}func}{8}{subsubsection.3.3.1.3}%
+\contentsline {subsubsection}{\numberline {3.3.1.4}line}{8}{subsubsection.3.3.1.4}%
+\contentsline {subsubsection}{\numberline {3.3.1.5}next}{8}{subsubsection.3.3.1.5}%
+\contentsline {subsubsection}{\numberline {3.3.1.6}prev}{9}{subsubsection.3.3.1.6}%
+\contentsline {subsubsection}{\numberline {3.3.1.7}real\_mem}{9}{subsubsection.3.3.1.7}%
+\contentsline {subsubsection}{\numberline {3.3.1.8}size}{9}{subsubsection.3.3.1.8}%
+\contentsline {subsubsection}{\numberline {3.3.1.9}user\_mem}{9}{subsubsection.3.3.1.9}%
+\contentsline {section}{\numberline {3.4}Din\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Str Struct Reference}{9}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Field Documentation}{9}{subsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.1.1}size}{9}{subsubsection.3.4.1.1}%
+\contentsline {subsubsection}{\numberline {3.4.1.2}str}{10}{subsubsection.3.4.1.2}%
+\contentsline {section}{\numberline {3.5}enemyship Struct Reference}{10}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Detailed Description}{10}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Field Documentation}{11}{subsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.1}centerline\_y\_coor}{11}{subsubsection.3.5.2.1}%
+\contentsline {subsubsection}{\numberline {3.5.2.2}health}{11}{subsubsection.3.5.2.2}%
+\contentsline {subsubsection}{\numberline {3.5.2.3}hitbox\_beg\_coor}{11}{subsubsection.3.5.2.3}%
+\contentsline {subsubsection}{\numberline {3.5.2.4}hitbox\_end\_coor}{11}{subsubsection.3.5.2.4}%
+\contentsline {subsubsection}{\numberline {3.5.2.5}movement\_dir}{11}{subsubsection.3.5.2.5}%
+\contentsline {subsubsection}{\numberline {3.5.2.6}next\_ship}{12}{subsubsection.3.5.2.6}%
+\contentsline {subsubsection}{\numberline {3.5.2.7}prev\_ship}{12}{subsubsection.3.5.2.7}%
+\contentsline {subsubsection}{\numberline {3.5.2.8}score\_value}{12}{subsubsection.3.5.2.8}%
+\contentsline {subsubsection}{\numberline {3.5.2.9}speed}{12}{subsubsection.3.5.2.9}%
+\contentsline {subsubsection}{\numberline {3.5.2.10}sprite\_map\_data}{12}{subsubsection.3.5.2.10}%
+\contentsline {subsubsection}{\numberline {3.5.2.11}texture\_data}{12}{subsubsection.3.5.2.11}%
+\contentsline {subsubsection}{\numberline {3.5.2.12}x\_coor}{13}{subsubsection.3.5.2.12}%
+\contentsline {subsubsection}{\numberline {3.5.2.13}y\_coor}{13}{subsubsection.3.5.2.13}%
+\contentsline {section}{\numberline {3.6}gameassets Struct Reference}{13}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Detailed Description}{13}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Field Documentation}{13}{subsection.3.6.2}%
+\contentsline {subsubsection}{\numberline {3.6.2.1}enemy\_armada}{13}{subsubsection.3.6.2.1}%
+\contentsline {subsubsection}{\numberline {3.6.2.2}enemy\_torpedoes}{14}{subsubsection.3.6.2.2}%
+\contentsline {subsubsection}{\numberline {3.6.2.3}player\_ship}{14}{subsubsection.3.6.2.3}%
+\contentsline {subsubsection}{\numberline {3.6.2.4}player\_torpedoes}{14}{subsubsection.3.6.2.4}%
+\contentsline {subsubsection}{\numberline {3.6.2.5}star\_map}{14}{subsubsection.3.6.2.5}%
+\contentsline {section}{\numberline {3.7}gameattributes Struct Reference}{14}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Detailed Description}{14}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Field Documentation}{15}{subsection.3.7.2}%
+\contentsline {subsubsection}{\numberline {3.7.2.1}enemy\_armada\_size}{15}{subsubsection.3.7.2.1}%
+\contentsline {subsubsection}{\numberline {3.7.2.2}enemy\_ships\_per\_row}{15}{subsubsection.3.7.2.2}%
+\contentsline {subsubsection}{\numberline {3.7.2.3}game\_score}{15}{subsubsection.3.7.2.3}%
+\contentsline {subsubsection}{\numberline {3.7.2.4}height}{15}{subsubsection.3.7.2.4}%
+\contentsline {subsubsection}{\numberline {3.7.2.5}id}{15}{subsubsection.3.7.2.5}%
+\contentsline {subsubsection}{\numberline {3.7.2.6}isi}{15}{subsubsection.3.7.2.6}%
+\contentsline {subsubsection}{\numberline {3.7.2.7}num\_of\_rows}{15}{subsubsection.3.7.2.7}%
+\contentsline {subsubsection}{\numberline {3.7.2.8}width}{16}{subsubsection.3.7.2.8}%
+\contentsline {section}{\numberline {3.8}inputstateinterface Struct Reference}{16}{section.3.8}%
+\contentsline {subsection}{\numberline {3.8.1}Detailed Description}{16}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Field Documentation}{16}{subsection.3.8.2}%
+\contentsline {subsubsection}{\numberline {3.8.2.1}down}{16}{subsubsection.3.8.2.1}%
+\contentsline {subsubsection}{\numberline {3.8.2.2}game\_over}{16}{subsubsection.3.8.2.2}%
+\contentsline {subsubsection}{\numberline {3.8.2.3}left}{17}{subsubsection.3.8.2.3}%
+\contentsline {subsubsection}{\numberline {3.8.2.4}n}{17}{subsubsection.3.8.2.4}%
+\contentsline {subsubsection}{\numberline {3.8.2.5}quit}{17}{subsubsection.3.8.2.5}%
+\contentsline {subsubsection}{\numberline {3.8.2.6}restart}{17}{subsubsection.3.8.2.6}%
+\contentsline {subsubsection}{\numberline {3.8.2.7}right}{17}{subsubsection.3.8.2.7}%
+\contentsline {subsubsection}{\numberline {3.8.2.8}torpedo}{17}{subsubsection.3.8.2.8}%
+\contentsline {subsubsection}{\numberline {3.8.2.9}torpedo\_ready}{17}{subsubsection.3.8.2.9}%
+\contentsline {subsubsection}{\numberline {3.8.2.10}up}{17}{subsubsection.3.8.2.10}%
+\contentsline {subsubsection}{\numberline {3.8.2.11}y}{18}{subsubsection.3.8.2.11}%
+\contentsline {section}{\numberline {3.9}keymap Struct Reference}{18}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}Detailed Description}{18}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.2}Field Documentation}{18}{subsection.3.9.2}%
+\contentsline {subsubsection}{\numberline {3.9.2.1}downkey}{18}{subsubsection.3.9.2.1}%
+\contentsline {subsubsection}{\numberline {3.9.2.2}leftkey}{18}{subsubsection.3.9.2.2}%
+\contentsline {subsubsection}{\numberline {3.9.2.3}rightkey}{19}{subsubsection.3.9.2.3}%
+\contentsline {subsubsection}{\numberline {3.9.2.4}torpedokey}{19}{subsubsection.3.9.2.4}%
+\contentsline {subsubsection}{\numberline {3.9.2.5}upkey}{19}{subsubsection.3.9.2.5}%
+\contentsline {section}{\numberline {3.10}playership Struct Reference}{19}{section.3.10}%
+\contentsline {subsection}{\numberline {3.10.1}Detailed Description}{20}{subsection.3.10.1}%
+\contentsline {subsection}{\numberline {3.10.2}Field Documentation}{20}{subsection.3.10.2}%
+\contentsline {subsubsection}{\numberline {3.10.2.1}centerline\_y\_coor}{20}{subsubsection.3.10.2.1}%
+\contentsline {subsubsection}{\numberline {3.10.2.2}health}{20}{subsubsection.3.10.2.2}%
+\contentsline {subsubsection}{\numberline {3.10.2.3}hitbox\_beg\_coor}{20}{subsubsection.3.10.2.3}%
+\contentsline {subsubsection}{\numberline {3.10.2.4}hitbox\_end\_coor}{20}{subsubsection.3.10.2.4}%
+\contentsline {subsubsection}{\numberline {3.10.2.5}score\_value}{20}{subsubsection.3.10.2.5}%
+\contentsline {subsubsection}{\numberline {3.10.2.6}speed}{21}{subsubsection.3.10.2.6}%
+\contentsline {subsubsection}{\numberline {3.10.2.7}sprite\_map\_data}{21}{subsubsection.3.10.2.7}%
+\contentsline {subsubsection}{\numberline {3.10.2.8}texture\_data}{21}{subsubsection.3.10.2.8}%
+\contentsline {subsubsection}{\numberline {3.10.2.9}x\_coor}{21}{subsubsection.3.10.2.9}%
+\contentsline {subsubsection}{\numberline {3.10.2.10}y\_coor}{21}{subsubsection.3.10.2.10}%
+\contentsline {section}{\numberline {3.11}shipdtt Struct Reference}{21}{section.3.11}%
+\contentsline {subsection}{\numberline {3.11.1}Detailed Description}{22}{subsection.3.11.1}%
+\contentsline {subsection}{\numberline {3.11.2}Field Documentation}{22}{subsection.3.11.2}%
+\contentsline {subsubsection}{\numberline {3.11.2.1}health}{22}{subsubsection.3.11.2.1}%
+\contentsline {subsubsection}{\numberline {3.11.2.2}score\_value}{22}{subsubsection.3.11.2.2}%
+\contentsline {subsubsection}{\numberline {3.11.2.3}speed}{22}{subsubsection.3.11.2.3}%
+\contentsline {section}{\numberline {3.12}spritemapdata Struct Reference}{23}{section.3.12}%
+\contentsline {subsection}{\numberline {3.12.1}Detailed Description}{23}{subsection.3.12.1}%
+\contentsline {subsection}{\numberline {3.12.2}Field Documentation}{23}{subsection.3.12.2}%
+\contentsline {subsubsection}{\numberline {3.12.2.1}height}{23}{subsubsection.3.12.2.1}%
+\contentsline {subsubsection}{\numberline {3.12.2.2}width}{23}{subsubsection.3.12.2.2}%
+\contentsline {subsubsection}{\numberline {3.12.2.3}x\_coor}{23}{subsubsection.3.12.2.3}%
+\contentsline {subsubsection}{\numberline {3.12.2.4}y\_coor}{23}{subsubsection.3.12.2.4}%
+\contentsline {section}{\numberline {3.13}star Struct Reference}{24}{section.3.13}%
+\contentsline {subsection}{\numberline {3.13.1}Detailed Description}{24}{subsection.3.13.1}%
+\contentsline {subsection}{\numberline {3.13.2}Field Documentation}{24}{subsection.3.13.2}%
+\contentsline {subsubsection}{\numberline {3.13.2.1}radius}{24}{subsubsection.3.13.2.1}%
+\contentsline {subsubsection}{\numberline {3.13.2.2}x\_coor}{24}{subsubsection.3.13.2.2}%
+\contentsline {subsubsection}{\numberline {3.13.2.3}y\_coor}{25}{subsubsection.3.13.2.3}%
+\contentsline {section}{\numberline {3.14}starcolor Struct Reference}{25}{section.3.14}%
+\contentsline {subsection}{\numberline {3.14.1}Detailed Description}{25}{subsection.3.14.1}%
+\contentsline {subsection}{\numberline {3.14.2}Field Documentation}{25}{subsection.3.14.2}%
+\contentsline {subsubsection}{\numberline {3.14.2.1}a}{25}{subsubsection.3.14.2.1}%
+\contentsline {subsubsection}{\numberline {3.14.2.2}b}{26}{subsubsection.3.14.2.2}%
+\contentsline {subsubsection}{\numberline {3.14.2.3}g}{26}{subsubsection.3.14.2.3}%
+\contentsline {subsubsection}{\numberline {3.14.2.4}r}{26}{subsubsection.3.14.2.4}%
+\contentsline {section}{\numberline {3.15}starmap Struct Reference}{26}{section.3.15}%
+\contentsline {subsection}{\numberline {3.15.1}Detailed Description}{26}{subsection.3.15.1}%
+\contentsline {subsection}{\numberline {3.15.2}Field Documentation}{27}{subsection.3.15.2}%
+\contentsline {subsubsection}{\numberline {3.15.2.1}color}{27}{subsubsection.3.15.2.1}%
+\contentsline {subsubsection}{\numberline {3.15.2.2}length}{27}{subsubsection.3.15.2.2}%
+\contentsline {subsubsection}{\numberline {3.15.2.3}stars}{27}{subsubsection.3.15.2.3}%
+\contentsline {section}{\numberline {3.16}texturedata Struct Reference}{27}{section.3.16}%
+\contentsline {subsection}{\numberline {3.16.1}Detailed Description}{27}{subsection.3.16.1}%
+\contentsline {subsection}{\numberline {3.16.2}Field Documentation}{28}{subsection.3.16.2}%
+\contentsline {subsubsection}{\numberline {3.16.2.1}height}{28}{subsubsection.3.16.2.1}%
+\contentsline {subsubsection}{\numberline {3.16.2.2}texture\_center\_x}{28}{subsubsection.3.16.2.2}%
+\contentsline {subsubsection}{\numberline {3.16.2.3}texture\_center\_y}{28}{subsubsection.3.16.2.3}%
+\contentsline {subsubsection}{\numberline {3.16.2.4}width}{28}{subsubsection.3.16.2.4}%
+\contentsline {section}{\numberline {3.17}torpedocolors Struct Reference}{28}{section.3.17}%
+\contentsline {subsection}{\numberline {3.17.1}Detailed Description}{28}{subsection.3.17.1}%
+\contentsline {subsection}{\numberline {3.17.2}Field Documentation}{29}{subsection.3.17.2}%
+\contentsline {subsubsection}{\numberline {3.17.2.1}center}{29}{subsubsection.3.17.2.1}%
+\contentsline {subsubsection}{\numberline {3.17.2.2}inner\_ring}{29}{subsubsection.3.17.2.2}%
+\contentsline {subsubsection}{\numberline {3.17.2.3}outter\_ring}{29}{subsubsection.3.17.2.3}%
+\contentsline {section}{\numberline {3.18}torpedoshot Struct Reference}{29}{section.3.18}%
+\contentsline {subsection}{\numberline {3.18.1}Detailed Description}{29}{subsection.3.18.1}%
+\contentsline {subsection}{\numberline {3.18.2}Field Documentation}{30}{subsection.3.18.2}%
+\contentsline {subsubsection}{\numberline {3.18.2.1}colors}{30}{subsubsection.3.18.2.1}%
+\contentsline {subsubsection}{\numberline {3.18.2.2}damage}{30}{subsubsection.3.18.2.2}%
+\contentsline {subsubsection}{\numberline {3.18.2.3}dir}{30}{subsubsection.3.18.2.3}%
+\contentsline {subsubsection}{\numberline {3.18.2.4}next\_torpedo}{30}{subsubsection.3.18.2.4}%
+\contentsline {subsubsection}{\numberline {3.18.2.5}prev\_torpedo}{30}{subsubsection.3.18.2.5}%
+\contentsline {subsubsection}{\numberline {3.18.2.6}speed}{30}{subsubsection.3.18.2.6}%
+\contentsline {subsubsection}{\numberline {3.18.2.7}x\_coor}{30}{subsubsection.3.18.2.7}%
+\contentsline {subsubsection}{\numberline {3.18.2.8}y\_coor}{30}{subsubsection.3.18.2.8}%
+\contentsline {chapter}{\numberline {4}File Documentation}{31}{chapter.4}%
+\contentsline {section}{\numberline {4.1}data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}transfer\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}types.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{31}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Typedef Documentation}{31}{subsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.1.1}ShipDTT}{31}{subsubsection.4.1.1.1}%
+\contentsline {section}{\numberline {4.2}data\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}transfer\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}types.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{31}{section.4.2}%
+\contentsline {section}{\numberline {4.3}debugmalloc.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{32}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Macro Definition Documentation}{32}{subsection.4.3.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.1}calloc}{32}{subsubsection.4.3.1.1}%
+\contentsline {subsubsection}{\numberline {4.3.1.2}free}{33}{subsubsection.4.3.1.2}%
+\contentsline {subsubsection}{\numberline {4.3.1.3}malloc}{33}{subsubsection.4.3.1.3}%
+\contentsline {subsubsection}{\numberline {4.3.1.4}realloc}{33}{subsubsection.4.3.1.4}%
+\contentsline {subsection}{\numberline {4.3.2}Typedef Documentation}{33}{subsection.4.3.2}%
+\contentsline {subsubsection}{\numberline {4.3.2.1}DebugmallocData}{33}{subsubsection.4.3.2.1}%
+\contentsline {subsubsection}{\numberline {4.3.2.2}DebugmallocEntry}{33}{subsubsection.4.3.2.2}%
+\contentsline {subsection}{\numberline {4.3.3}Enumeration Type Documentation}{33}{subsection.4.3.3}%
+\contentsline {subsubsection}{\numberline {4.3.3.1}anonymous enum}{33}{subsubsection.4.3.3.1}%
+\contentsline {section}{\numberline {4.4}debugmalloc.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{34}{section.4.4}%
+\contentsline {section}{\numberline {4.5}enemy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}management.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{40}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Function Documentation}{40}{subsection.4.5.1}%
+\contentsline {subsubsection}{\numberline {4.5.1.1}explode\_enemy\_ship\_if\_dead()}{40}{subsubsection.4.5.1.1}%
+\contentsline {section}{\numberline {4.6}enemy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}management.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{41}{section.4.6}%
+\contentsline {section}{\numberline {4.7}enemy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}mananagement.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{41}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Function Documentation}{41}{subsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.7.1.1}explode\_enemy\_ship\_if\_dead()}{41}{subsubsection.4.7.1.1}%
+\contentsline {section}{\numberline {4.8}enemy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ship.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{42}{section.4.8}%
+\contentsline {subsection}{\numberline {4.8.1}Function Documentation}{42}{subsection.4.8.1}%
+\contentsline {subsubsection}{\numberline {4.8.1.1}find\_max\_enemy\_armada\_y\_coor()}{42}{subsubsection.4.8.1.1}%
+\contentsline {subsubsection}{\numberline {4.8.1.2}free\_enemy\_armada()}{43}{subsubsection.4.8.1.2}%
+\contentsline {subsubsection}{\numberline {4.8.1.3}init\_enemy\_armada()}{43}{subsubsection.4.8.1.3}%
+\contentsline {subsubsection}{\numberline {4.8.1.4}move\_enemy\_armada()}{43}{subsubsection.4.8.1.4}%
+\contentsline {subsubsection}{\numberline {4.8.1.5}pop\_enemy\_ship()}{44}{subsubsection.4.8.1.5}%
+\contentsline {section}{\numberline {4.9}enemy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ship.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{44}{section.4.9}%
+\contentsline {subsection}{\numberline {4.9.1}Typedef Documentation}{45}{subsection.4.9.1}%
+\contentsline {subsubsection}{\numberline {4.9.1.1}EnemyShip}{45}{subsubsection.4.9.1.1}%
+\contentsline {subsection}{\numberline {4.9.2}Function Documentation}{45}{subsection.4.9.2}%
+\contentsline {subsubsection}{\numberline {4.9.2.1}find\_max\_enemy\_armada\_y\_coor()}{45}{subsubsection.4.9.2.1}%
+\contentsline {subsubsection}{\numberline {4.9.2.2}free\_enemy\_armada()}{46}{subsubsection.4.9.2.2}%
+\contentsline {subsubsection}{\numberline {4.9.2.3}init\_enemy\_armada()}{46}{subsubsection.4.9.2.3}%
+\contentsline {subsubsection}{\numberline {4.9.2.4}move\_enemy\_armada()}{47}{subsubsection.4.9.2.4}%
+\contentsline {subsubsection}{\numberline {4.9.2.5}pop\_enemy\_ship()}{47}{subsubsection.4.9.2.5}%
+\contentsline {section}{\numberline {4.10}enemy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ship.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{47}{section.4.10}%
+\contentsline {section}{\numberline {4.11}file\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}management.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{48}{section.4.11}%
+\contentsline {subsection}{\numberline {4.11.1}Function Documentation}{48}{subsection.4.11.1}%
+\contentsline {subsubsection}{\numberline {4.11.1.1}import\_ship\_dtt()}{48}{subsubsection.4.11.1.1}%
+\contentsline {subsubsection}{\numberline {4.11.1.2}read\_texture\_data()}{49}{subsubsection.4.11.1.2}%
+\contentsline {section}{\numberline {4.12}file\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}management.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{49}{section.4.12}%
+\contentsline {subsection}{\numberline {4.12.1}Function Documentation}{50}{subsection.4.12.1}%
+\contentsline {subsubsection}{\numberline {4.12.1.1}import\_ship\_dtt()}{50}{subsubsection.4.12.1.1}%
+\contentsline {subsubsection}{\numberline {4.12.1.2}read\_texture\_data()}{50}{subsubsection.4.12.1.2}%
+\contentsline {section}{\numberline {4.13}file\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}management.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{51}{section.4.13}%
+\contentsline {section}{\numberline {4.14}fire\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}management.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{51}{section.4.14}%
+\contentsline {subsection}{\numberline {4.14.1}Function Documentation}{51}{subsection.4.14.1}%
+\contentsline {subsubsection}{\numberline {4.14.1.1}fire\_enemy\_torpedoes()}{51}{subsubsection.4.14.1.1}%
+\contentsline {subsubsection}{\numberline {4.14.1.2}fire\_player\_torpedo()}{52}{subsubsection.4.14.1.2}%
+\contentsline {section}{\numberline {4.15}fire\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}management.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{52}{section.4.15}%
+\contentsline {section}{\numberline {4.16}fire\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}managemet.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{52}{section.4.16}%
+\contentsline {subsection}{\numberline {4.16.1}Function Documentation}{53}{subsection.4.16.1}%
+\contentsline {subsubsection}{\numberline {4.16.1.1}fire\_enemy\_torpedoes()}{53}{subsubsection.4.16.1.1}%
+\contentsline {subsubsection}{\numberline {4.16.1.2}fire\_player\_torpedo()}{53}{subsubsection.4.16.1.2}%
+\contentsline {section}{\numberline {4.17}game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}assets.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{54}{section.4.17}%
+\contentsline {subsection}{\numberline {4.17.1}Typedef Documentation}{54}{subsection.4.17.1}%
+\contentsline {subsubsection}{\numberline {4.17.1.1}GameAssets}{54}{subsubsection.4.17.1.1}%
+\contentsline {section}{\numberline {4.18}game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}assets.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{54}{section.4.18}%
+\contentsline {section}{\numberline {4.19}game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}attributes.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{55}{section.4.19}%
+\contentsline {subsection}{\numberline {4.19.1}Typedef Documentation}{55}{subsection.4.19.1}%
+\contentsline {subsubsection}{\numberline {4.19.1.1}GameAttributes}{55}{subsubsection.4.19.1.1}%
+\contentsline {section}{\numberline {4.20}game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}attributes.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{55}{section.4.20}%
+\contentsline {section}{\numberline {4.21}game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}engine.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{55}{section.4.21}%
+\contentsline {subsection}{\numberline {4.21.1}Function Documentation}{56}{subsection.4.21.1}%
+\contentsline {subsubsection}{\numberline {4.21.1.1}free\_ship\_dtt()}{56}{subsubsection.4.21.1.1}%
+\contentsline {subsubsection}{\numberline {4.21.1.2}input\_timer()}{56}{subsubsection.4.21.1.2}%
+\contentsline {subsubsection}{\numberline {4.21.1.3}runtime()}{57}{subsubsection.4.21.1.3}%
+\contentsline {section}{\numberline {4.22}game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}engine.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{57}{section.4.22}%
+\contentsline {subsection}{\numberline {4.22.1}Function Documentation}{58}{subsection.4.22.1}%
+\contentsline {subsubsection}{\numberline {4.22.1.1}input\_timer()}{58}{subsubsection.4.22.1.1}%
+\contentsline {subsubsection}{\numberline {4.22.1.2}runtime()}{58}{subsubsection.4.22.1.2}%
+\contentsline {section}{\numberline {4.23}game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}engine.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{58}{section.4.23}%
+\contentsline {section}{\numberline {4.24}graphics.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{59}{section.4.24}%
+\contentsline {subsection}{\numberline {4.24.1}Function Documentation}{60}{subsection.4.24.1}%
+\contentsline {subsubsection}{\numberline {4.24.1.1}clear\_screen()}{60}{subsubsection.4.24.1.1}%
+\contentsline {subsubsection}{\numberline {4.24.1.2}create\_font()}{60}{subsubsection.4.24.1.2}%
+\contentsline {subsubsection}{\numberline {4.24.1.3}create\_textures()}{60}{subsubsection.4.24.1.3}%
+\contentsline {subsubsection}{\numberline {4.24.1.4}create\_window()}{61}{subsubsection.4.24.1.4}%
+\contentsline {subsubsection}{\numberline {4.24.1.5}destroy\_textures()}{61}{subsubsection.4.24.1.5}%
+\contentsline {subsubsection}{\numberline {4.24.1.6}draw\_background()}{61}{subsubsection.4.24.1.6}%
+\contentsline {subsubsection}{\numberline {4.24.1.7}draw\_end\_screen()}{62}{subsubsection.4.24.1.7}%
+\contentsline {subsubsection}{\numberline {4.24.1.8}draw\_enemy\_ships()}{62}{subsubsection.4.24.1.8}%
+\contentsline {subsubsection}{\numberline {4.24.1.9}draw\_LCARS\_bacground()}{62}{subsubsection.4.24.1.9}%
+\contentsline {subsubsection}{\numberline {4.24.1.10}draw\_player\_ship()}{63}{subsubsection.4.24.1.10}%
+\contentsline {subsubsection}{\numberline {4.24.1.11}draw\_score()}{63}{subsubsection.4.24.1.11}%
+\contentsline {subsubsection}{\numberline {4.24.1.12}draw\_torpedo()}{63}{subsubsection.4.24.1.12}%
+\contentsline {subsubsection}{\numberline {4.24.1.13}load\_sdl\_texture()}{64}{subsubsection.4.24.1.13}%
+\contentsline {subsubsection}{\numberline {4.24.1.14}open\_font()}{64}{subsubsection.4.24.1.14}%
+\contentsline {subsubsection}{\numberline {4.24.1.15}render\_screen()}{65}{subsubsection.4.24.1.15}%
+\contentsline {subsubsection}{\numberline {4.24.1.16}sdl\_init()}{65}{subsubsection.4.24.1.16}%
+\contentsline {section}{\numberline {4.25}graphics.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{65}{section.4.25}%
+\contentsline {subsection}{\numberline {4.25.1}Function Documentation}{66}{subsection.4.25.1}%
+\contentsline {subsubsection}{\numberline {4.25.1.1}clear\_screen()}{66}{subsubsection.4.25.1.1}%
+\contentsline {subsubsection}{\numberline {4.25.1.2}create\_font()}{67}{subsubsection.4.25.1.2}%
+\contentsline {subsubsection}{\numberline {4.25.1.3}create\_textures()}{67}{subsubsection.4.25.1.3}%
+\contentsline {subsubsection}{\numberline {4.25.1.4}create\_window()}{67}{subsubsection.4.25.1.4}%
+\contentsline {subsubsection}{\numberline {4.25.1.5}destroy\_textures()}{68}{subsubsection.4.25.1.5}%
+\contentsline {subsubsection}{\numberline {4.25.1.6}draw\_background()}{68}{subsubsection.4.25.1.6}%
+\contentsline {subsubsection}{\numberline {4.25.1.7}draw\_end\_screen()}{68}{subsubsection.4.25.1.7}%
+\contentsline {subsubsection}{\numberline {4.25.1.8}draw\_enemy\_ships()}{69}{subsubsection.4.25.1.8}%
+\contentsline {subsubsection}{\numberline {4.25.1.9}draw\_LCARS\_bacground()}{69}{subsubsection.4.25.1.9}%
+\contentsline {subsubsection}{\numberline {4.25.1.10}draw\_player\_ship()}{69}{subsubsection.4.25.1.10}%
+\contentsline {subsubsection}{\numberline {4.25.1.11}draw\_score()}{70}{subsubsection.4.25.1.11}%
+\contentsline {subsubsection}{\numberline {4.25.1.12}draw\_torpedo()}{70}{subsubsection.4.25.1.12}%
+\contentsline {subsubsection}{\numberline {4.25.1.13}render\_screen()}{70}{subsubsection.4.25.1.13}%
+\contentsline {section}{\numberline {4.26}graphics.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{71}{section.4.26}%
+\contentsline {section}{\numberline {4.27}hit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}management.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{71}{section.4.27}%
+\contentsline {subsection}{\numberline {4.27.1}Function Documentation}{72}{subsection.4.27.1}%
+\contentsline {subsubsection}{\numberline {4.27.1.1}manage\_enemy\_hits()}{72}{subsubsection.4.27.1.1}%
+\contentsline {subsubsection}{\numberline {4.27.1.2}manage\_player\_hits()}{72}{subsubsection.4.27.1.2}%
+\contentsline {subsubsection}{\numberline {4.27.1.3}remove\_torpedo\_if\_out\_of\_bounds()}{73}{subsubsection.4.27.1.3}%
+\contentsline {section}{\numberline {4.28}hit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}management.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{73}{section.4.28}%
+\contentsline {subsection}{\numberline {4.28.1}Function Documentation}{73}{subsection.4.28.1}%
+\contentsline {subsubsection}{\numberline {4.28.1.1}manage\_enemy\_hits()}{74}{subsubsection.4.28.1.1}%
+\contentsline {subsubsection}{\numberline {4.28.1.2}remove\_torpedo\_if\_out\_of\_bounds()}{74}{subsubsection.4.28.1.2}%
+\contentsline {section}{\numberline {4.29}hit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}management.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{74}{section.4.29}%
+\contentsline {section}{\numberline {4.30}input\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}state\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interface.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{75}{section.4.30}%
+\contentsline {subsection}{\numberline {4.30.1}Typedef Documentation}{75}{subsection.4.30.1}%
+\contentsline {subsubsection}{\numberline {4.30.1.1}InputStateInterface}{75}{subsubsection.4.30.1.1}%
+\contentsline {section}{\numberline {4.31}input\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}state\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interface.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{75}{section.4.31}%
+\contentsline {section}{\numberline {4.32}keymap.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{76}{section.4.32}%
+\contentsline {subsection}{\numberline {4.32.1}Typedef Documentation}{76}{subsection.4.32.1}%
+\contentsline {subsubsection}{\numberline {4.32.1.1}KeyMap}{76}{subsubsection.4.32.1.1}%
+\contentsline {section}{\numberline {4.33}keymap.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{76}{section.4.33}%
+\contentsline {section}{\numberline {4.34}main.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{76}{section.4.34}%
+\contentsline {subsection}{\numberline {4.34.1}Function Documentation}{77}{subsection.4.34.1}%
+\contentsline {subsubsection}{\numberline {4.34.1.1}main()}{77}{subsubsection.4.34.1.1}%
+\contentsline {section}{\numberline {4.35}player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}management.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{77}{section.4.35}%
+\contentsline {subsection}{\numberline {4.35.1}Function Documentation}{77}{subsection.4.35.1}%
+\contentsline {subsubsection}{\numberline {4.35.1.1}explode\_player\_ship\_if\_dead()}{77}{subsubsection.4.35.1.1}%
+\contentsline {section}{\numberline {4.36}player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}management.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{78}{section.4.36}%
+\contentsline {subsection}{\numberline {4.36.1}Function Documentation}{78}{subsection.4.36.1}%
+\contentsline {subsubsection}{\numberline {4.36.1.1}explode\_player\_ship\_if\_dead()}{78}{subsubsection.4.36.1.1}%
+\contentsline {section}{\numberline {4.37}player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}management.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{78}{section.4.37}%
+\contentsline {section}{\numberline {4.38}player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ship.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{79}{section.4.38}%
+\contentsline {subsection}{\numberline {4.38.1}Function Documentation}{79}{subsection.4.38.1}%
+\contentsline {subsubsection}{\numberline {4.38.1.1}free\_player\_ship()}{79}{subsubsection.4.38.1.1}%
+\contentsline {subsubsection}{\numberline {4.38.1.2}init\_player\_ship()}{79}{subsubsection.4.38.1.2}%
+\contentsline {subsubsection}{\numberline {4.38.1.3}move\_player\_ship()}{80}{subsubsection.4.38.1.3}%
+\contentsline {section}{\numberline {4.39}player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ship.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{80}{section.4.39}%
+\contentsline {subsection}{\numberline {4.39.1}Typedef Documentation}{81}{subsection.4.39.1}%
+\contentsline {subsubsection}{\numberline {4.39.1.1}PlayerShip}{81}{subsubsection.4.39.1.1}%
+\contentsline {subsection}{\numberline {4.39.2}Function Documentation}{81}{subsection.4.39.2}%
+\contentsline {subsubsection}{\numberline {4.39.2.1}free\_player\_ship()}{81}{subsubsection.4.39.2.1}%
+\contentsline {subsubsection}{\numberline {4.39.2.2}init\_player\_ship()}{82}{subsubsection.4.39.2.2}%
+\contentsline {subsubsection}{\numberline {4.39.2.3}move\_player\_ship()}{82}{subsubsection.4.39.2.3}%
+\contentsline {section}{\numberline {4.40}player\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}ship.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{83}{section.4.40}%
+\contentsline {section}{\numberline {4.41}random\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}number\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}in\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interval.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{83}{section.4.41}%
+\contentsline {subsection}{\numberline {4.41.1}Function Documentation}{83}{subsection.4.41.1}%
+\contentsline {subsubsection}{\numberline {4.41.1.1}random\_number\_in\_range()}{84}{subsubsection.4.41.1.1}%
+\contentsline {section}{\numberline {4.42}random\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}number\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}in\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interval.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{84}{section.4.42}%
+\contentsline {subsection}{\numberline {4.42.1}Function Documentation}{84}{subsection.4.42.1}%
+\contentsline {subsubsection}{\numberline {4.42.1.1}random\_number\_in\_range()}{84}{subsubsection.4.42.1.1}%
+\contentsline {section}{\numberline {4.43}random\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}number\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}in\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interval.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{85}{section.4.43}%
+\contentsline {section}{\numberline {4.44}star\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}map.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{85}{section.4.44}%
+\contentsline {subsection}{\numberline {4.44.1}Function Documentation}{85}{subsection.4.44.1}%
+\contentsline {subsubsection}{\numberline {4.44.1.1}advance\_starmap\_frame()}{85}{subsubsection.4.44.1.1}%
+\contentsline {subsubsection}{\numberline {4.44.1.2}free\_starmap()}{86}{subsubsection.4.44.1.2}%
+\contentsline {subsubsection}{\numberline {4.44.1.3}starmap\_init()}{86}{subsubsection.4.44.1.3}%
+\contentsline {section}{\numberline {4.45}star\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}map.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{87}{section.4.45}%
+\contentsline {subsection}{\numberline {4.45.1}Typedef Documentation}{87}{subsection.4.45.1}%
+\contentsline {subsubsection}{\numberline {4.45.1.1}Star}{87}{subsubsection.4.45.1.1}%
+\contentsline {subsubsection}{\numberline {4.45.1.2}StarColor}{88}{subsubsection.4.45.1.2}%
+\contentsline {subsubsection}{\numberline {4.45.1.3}StarMap}{88}{subsubsection.4.45.1.3}%
+\contentsline {subsection}{\numberline {4.45.2}Function Documentation}{88}{subsection.4.45.2}%
+\contentsline {subsubsection}{\numberline {4.45.2.1}advance\_starmap\_frame()}{88}{subsubsection.4.45.2.1}%
+\contentsline {subsubsection}{\numberline {4.45.2.2}free\_starmap()}{89}{subsubsection.4.45.2.2}%
+\contentsline {subsubsection}{\numberline {4.45.2.3}starmap\_init()}{89}{subsubsection.4.45.2.3}%
+\contentsline {section}{\numberline {4.46}star\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}map.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{89}{section.4.46}%
+\contentsline {section}{\numberline {4.47}string\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}operations.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{90}{section.4.47}%
+\contentsline {subsection}{\numberline {4.47.1}Function Documentation}{90}{subsection.4.47.1}%
+\contentsline {subsubsection}{\numberline {4.47.1.1}dinstr\_alloc()}{90}{subsubsection.4.47.1.1}%
+\contentsline {section}{\numberline {4.48}string\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}operations.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{91}{section.4.48}%
+\contentsline {subsection}{\numberline {4.48.1}Typedef Documentation}{91}{subsection.4.48.1}%
+\contentsline {subsubsection}{\numberline {4.48.1.1}DinStr}{91}{subsubsection.4.48.1.1}%
+\contentsline {section}{\numberline {4.49}string\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}operations.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{91}{section.4.49}%
+\contentsline {section}{\numberline {4.50}texture\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{91}{section.4.50}%
+\contentsline {subsection}{\numberline {4.50.1}Typedef Documentation}{92}{subsection.4.50.1}%
+\contentsline {subsubsection}{\numberline {4.50.1.1}SpriteMapData}{92}{subsubsection.4.50.1.1}%
+\contentsline {subsubsection}{\numberline {4.50.1.2}TextureData}{92}{subsubsection.4.50.1.2}%
+\contentsline {section}{\numberline {4.51}texture\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}data.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{92}{section.4.51}%
+\contentsline {section}{\numberline {4.52}torpedo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{93}{section.4.52}%
+\contentsline {subsection}{\numberline {4.52.1}Function Documentation}{93}{subsection.4.52.1}%
+\contentsline {subsubsection}{\numberline {4.52.1.1}add\_torpedo\_shot()}{93}{subsubsection.4.52.1.1}%
+\contentsline {subsubsection}{\numberline {4.52.1.2}free\_torpedoes()}{94}{subsubsection.4.52.1.2}%
+\contentsline {subsubsection}{\numberline {4.52.1.3}move\_torpedoes()}{94}{subsubsection.4.52.1.3}%
+\contentsline {subsubsection}{\numberline {4.52.1.4}pop\_torpedo\_shot()}{94}{subsubsection.4.52.1.4}%
+\contentsline {section}{\numberline {4.53}torpedo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{95}{section.4.53}%
+\contentsline {subsection}{\numberline {4.53.1}Typedef Documentation}{96}{subsection.4.53.1}%
+\contentsline {subsubsection}{\numberline {4.53.1.1}ColorData}{96}{subsubsection.4.53.1.1}%
+\contentsline {subsubsection}{\numberline {4.53.1.2}TorpedoColors}{96}{subsubsection.4.53.1.2}%
+\contentsline {subsubsection}{\numberline {4.53.1.3}TorpedoShot}{96}{subsubsection.4.53.1.3}%
+\contentsline {subsection}{\numberline {4.53.2}Function Documentation}{96}{subsection.4.53.2}%
+\contentsline {subsubsection}{\numberline {4.53.2.1}add\_torpedo\_shot()}{96}{subsubsection.4.53.2.1}%
+\contentsline {subsubsection}{\numberline {4.53.2.2}free\_torpedoes()}{97}{subsubsection.4.53.2.2}%
+\contentsline {subsubsection}{\numberline {4.53.2.3}move\_torpedoes()}{97}{subsubsection.4.53.2.3}%
+\contentsline {subsubsection}{\numberline {4.53.2.4}pop\_torpedo\_shot()}{97}{subsubsection.4.53.2.4}%
+\contentsline {section}{\numberline {4.54}torpedo.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{98}{section.4.54}%
+\contentsline {section}{\numberline {4.55}torpedo\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}management.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{98}{section.4.55}%
+\contentsline {subsection}{\numberline {4.55.1}Function Documentation}{99}{subsection.4.55.1}%
+\contentsline {subsubsection}{\numberline {4.55.1.1}explode\_torpedo()}{99}{subsubsection.4.55.1.1}%
+\contentsline {subsubsection}{\numberline {4.55.1.2}is\_torpedo\_out\_of\_bounds()}{99}{subsubsection.4.55.1.2}%
+\contentsline {section}{\numberline {4.56}torpedo\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}management.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{99}{section.4.56}%
+\contentsline {subsection}{\numberline {4.56.1}Function Documentation}{100}{subsection.4.56.1}%
+\contentsline {subsubsection}{\numberline {4.56.1.1}explode\_torpedo()}{100}{subsubsection.4.56.1.1}%
+\contentsline {subsubsection}{\numberline {4.56.1.2}is\_torpedo\_out\_of\_bounds()}{100}{subsubsection.4.56.1.2}%
+\contentsline {section}{\numberline {4.57}torpedo\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hit\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}management.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{101}{section.4.57}%
+\contentsline {section}{\numberline {4.58}ui\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}input.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{101}{section.4.58}%
+\contentsline {subsection}{\numberline {4.58.1}Function Documentation}{101}{subsection.4.58.1}%
+\contentsline {subsubsection}{\numberline {4.58.1.1}user\_input()}{101}{subsubsection.4.58.1.1}%
+\contentsline {section}{\numberline {4.59}ui\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}input.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{102}{section.4.59}%
+\contentsline {subsection}{\numberline {4.59.1}Function Documentation}{102}{subsection.4.59.1}%
+\contentsline {subsubsection}{\numberline {4.59.1.1}user\_input()}{102}{subsubsection.4.59.1.1}%
+\contentsline {section}{\numberline {4.60}ui\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}input.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{103}{section.4.60}%
+\contentsline {chapter}{Index}{105}{section*.75}%

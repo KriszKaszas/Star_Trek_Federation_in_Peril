@@ -6,14 +6,14 @@
 
 /**
 *@brief init_player_ship
-*@details inicializalja a jatekos hajojat
-*@param [] width
-*@param [] height
-*@param [] texture_data
-*@param [] health
-*@param [] speed
-*@return PlayerShip
+*@details Inicializalja a jatekos hajojat.
+*@param [in] *game_attributes A jatek attributumainak taroloja.
+*@param [in] *ship_dtt A hajo adatainak ideiglenes taroloja.
+*@param [in] texture_data A textura megjelenitesehez szukseges adatok.
+*@param [in] sprite_map_data A spritemap beolvasasahoz szukseges adatok.
+*@return *ps A jatekos hajojanak pointere.
 */
+
 PlayerShip *init_player_ship(GameAttributes *game_attributes,
                              ShipDTT *ship_dtt,
                              TextureData texture_data,
@@ -39,14 +39,16 @@ PlayerShip *init_player_ship(GameAttributes *game_attributes,
 
 /**
 *@brief move_player_ship
-*@details a jatekos hajojanak mozgasaert felelos szamitasokat vegzi
-*@param [] ps
-*@param [] isi
-*@param [] width
-*@param [] height
+*@details A jatekos hajojanak mozgasaert felelos szamitasokat vegzi.
+*@param [in,out] *ps A jatekos hajojanak pointere.
+*@param [in] *isi A jatek belso allapotainak taroloja.
+*@param [in] width Jatekablak szelessege.
+*@param [in] height Jatekablak magassaga.
 *@return void
 */
-void move_player_ship(PlayerShip *ps, InputStateInterface *isi, int width, int height){
+
+void move_player_ship(PlayerShip *ps, InputStateInterface *isi, int width, int height)
+{
     if(isi->up && ps->y_coor > 0){
         ps->y_coor -= ps->speed;
         ps->texture_data.texture_center_y  -= ps->speed;
@@ -73,10 +75,11 @@ void move_player_ship(PlayerShip *ps, InputStateInterface *isi, int width, int h
 
 /**
 *@brief move_player_ship
-*@details felszabaditja a jatekos hajojat
-*@param [] ps
+*@details Felszabaditja a jatekos hajojat.
+*@param [in] *ps A jatekos hajojanak pointere.
 *@return void
 */
+
 void free_player_ship(PlayerShip *ps){
     free(ps);
     ps = NULL;

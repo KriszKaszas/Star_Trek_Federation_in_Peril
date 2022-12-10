@@ -6,14 +6,15 @@
 
 /**
 *@brief import_ship_dtt
-*@details beimportalja az urhajok alapveto attributumainak listait egy adott forrasfajlbol,
-*majd azokbol egy listak dinamikus tombje pointerrel ter vissza.
-*@param [] filepath
-*@return ShipDTT
+*@details Beolvassa az urhajok alapveto attributumainak listait egy adott forrasfajlbol,
+*majd azokbol egy ShipDTT tagokbol allo dinamikus tomb pointerevel ter vissza.
+*@param [in] filename A megnyitando file neve.
+*@param [out] num_of_rows Az urhajok listajaban talalhato sorok szamaval ter vissza.
+*@return enemy_armada ShipDTT-ket tartalmazo lista pointere.
 */
-ShipDTT **import_ship_dtt(char *filepath, int *num_of_rows)
+ShipDTT **import_ship_dtt(char *filename, int *num_of_rows)
 {
-    FILE *ship_data = fopen(filepath, "rt");
+    FILE *ship_data = fopen(filename, "rt");
     if (ship_data == NULL)
     {
         perror("The file cannot be opened");
@@ -48,9 +49,20 @@ ShipDTT **import_ship_dtt(char *filepath, int *num_of_rows)
     return enemy_armada;
 }
 
-void read_texture_data(char *filepath, TextureData *texture_data, SpriteMapData *sprite_map_data)
+/**
+*@brief read_texture_data
+*@details Beolvassa az urhajok texturaihoz szukseges adatokat.
+*majd azokbol egy ShipDTT tagokbol allo dinamikus tomb pointerevel ter vissza.
+*@param [in] filename A megnyitando file neve.
+*@param [out] texture_data Az urhajok megjelenitesehez szukseges textura adatok.
+*@param [out] SpriteMapData Az urhajok texturainak beolvasasahoz szukseges meretek.
+
+*@return void
+*/
+
+void read_texture_data(char *filename, TextureData *texture_data, SpriteMapData *sprite_map_data)
 {
-    FILE *ship_sprite_data = fopen(filepath, "rt");
+    FILE *ship_sprite_data = fopen(filename, "rt");
     if (ship_sprite_data == NULL)
     {
         perror("The file cannot be opened");
@@ -62,6 +74,5 @@ void read_texture_data(char *filepath, TextureData *texture_data, SpriteMapData 
                                                &sprite_map_data->width,
                                                &sprite_map_data->height);
     fscanf(ship_sprite_data, "%d %d", &texture_data->width, &texture_data->height);
+    fclose(ship_sprite_data);
 }
-
-

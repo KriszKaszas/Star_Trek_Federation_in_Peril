@@ -24,12 +24,15 @@ static SDL_Rect location_large = {500, 200, 0, 0};
 
 static SDL_Color white = {255, 255, 255};
 
+
+
 /**
 *@brief load_sdl_texture
-*@details betolti az SDL altal hasznalt texturakat
-*@param [] img_name
-*@return SDL_Texture
+*@details Betolti az SDL2 altal hasznalt texturakat.
+*@param [in] img_name A betoltendo kepfajl neve.
+*@return fontokat A betoltott textura.
 */
+
 SDL_Texture *load_sdl_texture(char* img_name){
     SDL_Texture *texture = IMG_LoadTexture(renderer, img_name);
     if (texture == NULL) {
@@ -38,6 +41,13 @@ SDL_Texture *load_sdl_texture(char* img_name){
     }
     return texture;
 }
+
+/**
+*@brief open_font
+*@details Betolti az SDL2 altal hasznalt fontokat.
+*@param [in] size A betoltendo font merete.
+*@return font A betoltott font.
+*/
 
 TTF_Font *open_font(int size)
 {
@@ -52,15 +62,17 @@ TTF_Font *open_font(int size)
 
 /**
 *@brief sdl_init
-*@details inicializalja az SDLt
-*@param [] title
-*@param [] width
-*@param [] height
-*@param [] pwindow
-*@param [] prenderer
+*@details Inicializalja az SDL2-t.
+*@param [in] title
+*@param [in] width
+*@param [in] height
+*@param [in] pwindow
+*@param [in] prenderer
 *@return void
 */
-static void sdl_init(char const *title, int width, int height, SDL_Window **pwindow, SDL_Renderer **prenderer) {
+
+void sdl_init(char const *title, int width, int height, SDL_Window **pwindow, SDL_Renderer **prenderer)
+{
     if (SDL_Init(SDL_INIT_EVERYTHING) < 0) {
         SDL_Log("Cannot start SDL: %s", SDL_GetError());
         exit(1);
@@ -81,6 +93,12 @@ static void sdl_init(char const *title, int width, int height, SDL_Window **pwin
     *prenderer = renderer;
 }
 
+/**
+*@brief create_font
+*@details Beolvassa a szukseges meretu fontokat.
+*@return void
+*/
+
 void create_font()
 {
     LCARS_font = open_font(64);
@@ -90,33 +108,39 @@ void create_font()
 /**
 *@brief create_textures
 *@details felepiti a texturakat
-*@param [] fed
-*@param [] enemy
+*@param [in] fed A jatekos texturajat tartalmazo fajl neve.
+*@param [in] enemy A ellenseg texturajat tartalmazo fajl neve.
 *@return void
 */
-void create_textures(char* fed, char* enemy){
+
+void create_textures(char* fed, char* enemy)
+{
     fed_ship = load_sdl_texture(fed);
     en_ship = load_sdl_texture(enemy);
 }
 
 /**
 *@brief create_window
-*@details legeneralja a jatekablakot
-*@param [] width
-*@param [] height
+*@details Legeneralja a jatekablakot.
+*@param [in] width
+*@param [in] height
 *@return void
 */
-void create_window(int width, int height){
+
+void create_window(int width, int height)
+{
     sdl_init("Star Trek: Federation in Peril", width, height, &window, &renderer);
 }
 
 /**
 *@brief draw_background
 *@details kirajzolja a hatteret
-*@param [] sm
+*@param [in] *sm A csillagterkep pointere.
 *@return void
 */
-void draw_background(StarMap *sm){
+
+void draw_background(StarMap *sm)
+{
     for(int i = 0; i < sm->length; i++){
         filledCircleRGBA(renderer, sm->stars[i].x_coor, sm->stars[i].y_coor, sm->stars[i].radius,
                          sm->color.r, sm->color.g, sm->color.b, sm->color.a);
@@ -126,11 +150,12 @@ void draw_background(StarMap *sm){
 
 /**
 *@brief draw_player_ship
-*@details kirajzolja a jatekos hajot
-*@param [] ps
+*@details Kirajzolja a jatekos hajot.
+*@param [in] *ps A jatekos hajojanak pointere.
 *@return void
 */
-void draw_player_ship(PlayerShip *ps){
+void draw_player_ship(PlayerShip *ps)
+{
     if(ps == NULL)
     {
         return;
@@ -147,23 +172,12 @@ void draw_player_ship(PlayerShip *ps){
 }
 
 /**
-*@brief draw_crosshair
-*@details kirajzolja a celkeresztet
-*@param [] x_coor
-*@param [] y_coor
-*@return void
-*/
-void draw_crosshair(int x_coor, int y_coor){
-    lineRGBA(renderer, x_coor-20, y_coor, x_coor+20, y_coor, 255, 50, 50, 255);
-    lineRGBA(renderer, x_coor, y_coor-20, x_coor, y_coor+20, 255, 50, 50, 255);
-}
-
-/**
 *@brief draw_enemy_ships
-*@details kirajzolja az ellenseges hajokat
-*@param [] armada
+*@details Kirajzolja az ellenseges hajokat.
+*@param [in] *armada Az ellenseges hajok listajanak head pointere.
 *@return void
 */
+
 void draw_enemy_ships(EnemyShip *enemy_armada)
 {
     if(enemy_armada == NULL)
@@ -193,12 +207,13 @@ void draw_enemy_ships(EnemyShip *enemy_armada)
 
 /**
 *@brief draw_torpedo
-*@details kirajzolja a kilott torpedot
-*@param [] torpedoes
+*@details Kirajzolja a kilott torpedot.
+*@param [in] *torpedoes A torpedok listajanak head pointere.
 *@return void
 */
 
-void draw_torpedo(TorpedoShot *torpedoes){
+void draw_torpedo(TorpedoShot *torpedoes)
+{
     TorpedoShot *tmp = torpedoes;
     while(tmp != NULL)
     {
@@ -213,15 +228,28 @@ void draw_torpedo(TorpedoShot *torpedoes){
     }
 }
 
+/**
+*@brief draw_end_screen
+*@details Kirajzolja a jatek vege kepernyot.
+*@return void
+*/
+
 void draw_end_screen()
 {
-    char end_message[60] = "GAME OVER    PLAY AGAIN?  PRESS Y OR N";
+    char end_message[41] = "GAME OVER    PLAY AGAIN?  PRESS Y OR N";
     LCARS_text_large = TTF_RenderText_Blended_Wrapped(LCARS_font_large, end_message, white, 700);
     LCARS_text_texture_large = SDL_CreateTextureFromSurface(renderer, LCARS_text_large);
     location_large.w = LCARS_text_large->w;
     location_large.h = LCARS_text_large->h;
     SDL_RenderCopy(renderer, LCARS_text_texture_large, NULL, &location_large);
 }
+
+/**
+*@brief draw_score
+*@details Kirajzolja a jatekos pontjait kepernyot.
+*@param [in] game_score a jatekos pontjai.
+*@return void
+*/
 
 void draw_score(int game_score)
 {
@@ -238,6 +266,12 @@ void draw_score(int game_score)
     SDL_RenderCopy(renderer, LCARS_text_texture, NULL, &location);
 }
 
+/**
+*@brief draw_LCARS_bacground
+*@details Kirajzolja a jatekos pontjainak hatteret.
+*@return void
+*/
+
 void draw_LCARS_bacground()
 {
     boxRGBA(renderer, 40, 830, 1860, 880, 216, 165, 112, 255);
@@ -248,29 +282,33 @@ void draw_LCARS_bacground()
 
 /**
 *@brief clear_screen
-*@details torol mindent a jatekablakbol
+*@details Torol mindent a jatekablakbol.
 *@return void
 */
-void clear_screen(){
+
+void clear_screen()
+{
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
     SDL_RenderClear(renderer);
 }
 
 /**
 *@brief render_screen
-*@details rendereli a jatekablakot
+*@details Rendereli a jatekablakot.
 *@return void
 */
-void render_screen(){
+void render_screen()
+{
     SDL_RenderPresent(renderer);
 }
 
 /**
 *@brief destroy_textures
-*@details torli a texturakat
+*@details Torli a texturakat.
 *@return void
 */
-void destroy_textures(){
+void destroy_textures()
+{
     SDL_DestroyTexture(fed_ship);
     SDL_DestroyTexture(en_ship);
     SDL_FreeSurface(LCARS_text);

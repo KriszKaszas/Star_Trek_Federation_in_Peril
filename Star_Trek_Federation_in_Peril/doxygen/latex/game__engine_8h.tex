@@ -1,0 +1,65 @@
+\hypertarget{game__engine_8h}{}\doxysection{game\+\_\+engine.\+h File Reference}
+\label{game__engine_8h}\index{game\_engine.h@{game\_engine.h}}
+{\ttfamily \#include \char`\"{}input\+\_\+state\+\_\+interface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}keymap.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}graphics.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ui\+\_\+input.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game\+\_\+assets.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game\+\_\+attributes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}star\+\_\+map.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}player\+\_\+ship.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}enemy\+\_\+ship.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fire\+\_\+management.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}hit\+\_\+management.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}data\+\_\+transfer\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}file\+\_\+management.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}random\+\_\+number\+\_\+in\+\_\+interval.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}texture\+\_\+data.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$SDL.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}debugmalloc.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{game__engine_8h_ad6161d1d71502a1da8488badbacc057a}{runtime}} ()
+\begin{DoxyCompactList}\small\item\em runtime \end{DoxyCompactList}\item 
+Uint32 \mbox{\hyperlink{game__engine_8h_a39a9437444db494b69c1e31d38ae1e6e}{input\+\_\+timer}} (Uint32 ms, void $\ast$param)
+\begin{DoxyCompactList}\small\item\em input\+\_\+timer \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{game__engine_8h_a39a9437444db494b69c1e31d38ae1e6e}\label{game__engine_8h_a39a9437444db494b69c1e31d38ae1e6e}} 
+\index{game\_engine.h@{game\_engine.h}!input\_timer@{input\_timer}}
+\index{input\_timer@{input\_timer}!game\_engine.h@{game\_engine.h}}
+\doxysubsubsection{\texorpdfstring{input\_timer()}{input\_timer()}}
+{\footnotesize\ttfamily Uint32 input\+\_\+timer (\begin{DoxyParamCaption}\item[{Uint32}]{ms,  }\item[{void $\ast$}]{param }\end{DoxyParamCaption})}
+
+
+
+input\+\_\+timer 
+
+Az inputok beolvasasanak idoziteseert felel. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em ms} & \\
+\hline
+\mbox{\texttt{ in}}  & {\em param} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Uint32 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game__engine_8h_ad6161d1d71502a1da8488badbacc057a}\label{game__engine_8h_ad6161d1d71502a1da8488badbacc057a}} 
+\index{game\_engine.h@{game\_engine.h}!runtime@{runtime}}
+\index{runtime@{runtime}!game\_engine.h@{game\_engine.h}}
+\doxysubsubsection{\texorpdfstring{runtime()}{runtime()}}
+{\footnotesize\ttfamily void runtime (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+runtime 
+
+Aggregalja az osszes jatek mukodesehez szukseges logikai fuggvenyt. Amikor a jatekos kilep a jatekbol, felszabadit mindent es kilep az SDL2bol. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

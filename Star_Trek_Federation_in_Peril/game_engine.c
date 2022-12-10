@@ -4,14 +4,80 @@
 
 #include "game_engine.h"
 
+static GameAssets *init_game_assets(GameAttributes *game_attributes);
+
+void free_ship_dtt(ShipDTT **ship_dtt, int num_of_ships);
+
+static GameAttributes *init_game_attributes();
+
+static void reset_game_attributes(GameAttributes *game_attributes);
+
+static KeyMap *init_default_keymap();
+
+static void clear_graphics(GameAssets *game_assets);
+
+static void draw_graphics(int player_ship_time,
+                          GameAssets *game_assets,
+                          GameAttributes *game_attributes);
+
+static void calculate_game_assets(GameAssets **game_assets,
+                                  GameAttributes *game_attributes,
+                                  int enemy_ship_time);
+
+static void free_assets(GameAssets **game_assets);
+
+static void check_win(GameAssets **game_assets, GameAttributes *game_attributes);
+
+static void check_lose(GameAssets **game_assets, GameAttributes *game_attributes);
+
+static void choose_continue_or_quit(GameAttributes *game_attributes);
+
+static void free_components(GameAttributes *game_attributes);
+
+static int keep_player_time();
+
+static int keep_enemy_time();
+
+static void game_loop(GameAssets **game_assets,
+                      KeyMap *key_map,
+                      GameAttributes *game_attributes);
+
+
+/**
+*@brief runtime
+*@details Aggregalja az osszes jatek mukodesehez szukseges logikai fuggvenyt. Amikor a jatekos kilep a jatekbol,
+*felszabadit mindent es kilep az SDL2bol.
+*@return void
+*/
+
+void runtime()
+{
+    GameAttributes *game_attributes = init_game_attributes();
+    GameAssets *game_assets;
+    KeyMap *key_map = init_default_keymap();
+    while((!game_attributes->isi.quit))
+    {
+        game_assets = init_game_assets(game_attributes);
+        game_loop(&game_assets, key_map, game_attributes);
+        free_assets(&game_assets);
+        free(game_assets);
+        reset_game_attributes(game_attributes);
+    }
+    free_components(game_attributes);
+    free(key_map);
+    SDL_Quit();
+}
+
 /**
 *@brief input_timer
-*@details az inputok beolvasasanak idoziteseert felel
+*@details Az inputok beolvasasanak idoziteseert felel.
 *@param [in] ms
 *@param [in] param
 *@return Uint32
 */
-Uint32  input_timer(Uint32 ms, void *param) {
+
+Uint32  input_timer(Uint32 ms, void *param)
+{
     SDL_Event ev;
     ev.type = SDL_USEREVENT;
     SDL_PushEvent(&ev);
@@ -22,10 +88,11 @@ Uint32  input_timer(Uint32 ms, void *param) {
 *@brief init_game_assets
 *@details inicializalja az osszes jatekhoz szukseges assetet.
 *<br>VIGYAZAT: a game_assets pointereinek NULL-ra allitasaert a hivo felel a free fuggvenyek hivasa utan!
-*@param [in out] game_attributes
-*@return GameAssets
+*@param [in] *game_attributes A jatek attributumainak taroloja.
+*@return *game_assets A jatekhoz szukseges assetek taroloja.
 */
-GameAssets *init_game_assets(GameAttributes *game_attributes)
+
+static GameAssets *init_game_assets(GameAttributes *game_attributes)
 {
 
 
@@ -54,6 +121,14 @@ GameAssets *init_game_assets(GameAttributes *game_attributes)
     return game_assets;
 }
 
+/**
+*@brief free_ship_dtt
+*@details Hasznalat utan felszabaditja a ShipDTT ideiglenes tarolokat.
+*@param [in] **ship_dtt A hajok inicializalasahoz szukseges fajlbol beolvasott adatok ideiglenes taroloja.
+*@param [in] num_of_ships A torlendo hajok szama.
+*@return void
+*/
+
 void free_ship_dtt(ShipDTT **ship_dtt, int num_of_ships)
 {
     for(int i = 0; i < num_of_ships; i++)
@@ -65,10 +140,10 @@ void free_ship_dtt(ShipDTT **ship_dtt, int num_of_ships)
 
 /**
 *@brief init_game_attributes
-*@details inicializalja a jatek attributumait, amelyeket aztan a vezerles hasznal
-*@return GameAttributes
+*@details Inicializalja a jatek attributumait, amelyeket aztan a vezerles hasznal.
+*@return *game_attributes A jatek attributumainak taroloja.
 */
-GameAttributes *init_game_attributes()
+static GameAttributes *init_game_attributes()
 {
     GameAttributes *game_attributes = (GameAttributes*) malloc(sizeof(GameAttributes));
     game_attributes->width = 1900;
@@ -94,7 +169,14 @@ GameAttributes *init_game_attributes()
     return game_attributes;
 }
 
-void reset_game_attributes(GameAttributes *game_attributes)
+/**
+*@brief reset_game_attributes
+*@details Ujrakezdesnel alapertelmezettre allitja a jatek attributumait, amelyeket aztan a vezerles hasznal.
+*@param [out] *game_attributes A jatek attributumainak taroloja.
+*@return void
+*/
+
+static void reset_game_attributes(GameAttributes *game_attributes)
 {
     SDL_RemoveTimer(game_attributes->id);
     game_attributes->game_score = 0;
@@ -112,11 +194,12 @@ void reset_game_attributes(GameAttributes *game_attributes)
 }
 
 /**
-*@brief default_keymap_init
-*@details az iranyitashoz hasznalt alapertelmezett billentyuket inicializalja egy KeyMap tipusba
-*@return KeyMap
+*@brief init_default_keymap
+*@details Az iranyitashoz hasznalt alapertelmezett billentyuket inicializalja egy KeyMap tipusba.
+*@return key_map Az iranyitashoz hasznalt billentyuk taroloja.
 */
-KeyMap *default_keymap_init()
+
+static KeyMap *init_default_keymap()
 {
     KeyMap *key_map = malloc(sizeof(KeyMap));
     key_map->upkey = "W";
@@ -129,24 +212,28 @@ KeyMap *default_keymap_init()
 
 /**
 *@brief clear_graphics
-*@details kirajzoltatas elott mindent torol a kepernyorol.
-*@param [] game_assets
+*@details Kirajzoltatas elott mindent torol a kepernyorol.
+*@param [out] *game_assets A jatekhoz szukseges assetek taroloja.
 *@return void
 */
-void clear_graphics(GameAssets *game_assets)
+
+static void clear_graphics(GameAssets *game_assets)
 {
     clear_screen();
 }
 
 /**
 *@brief draw_graphics
-*@details az osszes asset kirajzolasaert felel
-*@param [in] player_ship_time
-*@param [in] game_assets
-*@param [in] game_attributes
+*@details Az osszes asset kirajzolasaert felel.
+*@param [in] player_ship_time A jatekos hajojanak idozitoje.
+*@param [in] *game_assets A jatekhoz szukseges assetek taroloja.
+*@param [in] *game_attributes A jatek attributumainak taroloja.
 *@return void
 */
-void draw_graphics(int player_ship_time, GameAssets *game_assets, GameAttributes *game_attributes)
+
+static void draw_graphics(int player_ship_time,
+                          GameAssets *game_assets,
+                          GameAttributes *game_attributes)
 {
     draw_background(game_assets->star_map);
     draw_torpedo(game_assets->player_torpedoes);
@@ -159,13 +246,14 @@ void draw_graphics(int player_ship_time, GameAssets *game_assets, GameAttributes
 
 /**
 *@brief calculate_game_assets
-*@details a jatek assetek mozgasat es mukodeset vezerlo szamitasok aggregalo fuggvenye
-*@param [in] game_assets
-*@param [in] game_attributes
-*@param [in] enemy_ship_time
+*@details A jatek assetek mozgasat es mukodeset vezerlo szamitasok aggregalo fuggvenye.
+*@param [in] **game_assets A jatekhoz szukseges assetek taroloja.
+*@param [in] *game_attributes A jatek attributumainak taroloja.
+*@param [in] enemy_ship_time Az ellenseges hajok idozitoje.
 *@return void
 */
-void calculate_game_assets(GameAssets **game_assets, GameAttributes *game_attributes, int enemy_ship_time)
+
+static void calculate_game_assets(GameAssets **game_assets, GameAttributes *game_attributes, int enemy_ship_time)
 {
     int static time = 0;
     int static shot_time = 0;
@@ -204,11 +292,11 @@ void calculate_game_assets(GameAssets **game_assets, GameAttributes *game_attrib
 
 /**
 *@brief free_assets
-*@details felszabaditja a jatek asseteket a jatek bezarasa elott.
-*@param [in] game_assets
+*@details Felszabaditja a jatek asseteket a jatek bezarasa elott.
+*@param [in,out] **game_assets A jatekhoz szukseges assetek taroloja.
 *@return void
 */
-void free_assets(GameAssets **game_assets)
+static void free_assets(GameAssets **game_assets)
 {
     free_starmap((*game_assets)->star_map);
     (*game_assets)->star_map = NULL;
@@ -222,7 +310,15 @@ void free_assets(GameAssets **game_assets)
     (*game_assets)->enemy_torpedoes = NULL;
 }
 
-void check_win(GameAssets **game_assets, GameAttributes *game_attributes)
+/**
+*@brief check_win
+*@details Ellenorzi, hogy a jatekos gyozelmehez szukseges kondicio (ellenseges tarolo ures) teljesult-e.
+*@param [in] **game_assets A jatekhoz szukseges assetek taroloja.
+*@param [out] *game_attributes A jatek attributumainak taroloja.
+*@return void
+*/
+
+static void check_win(GameAssets **game_assets, GameAttributes *game_attributes)
 {
     bool is_armada_dead = (*game_assets)->enemy_armada == NULL;
     if(is_armada_dead)
@@ -231,7 +327,15 @@ void check_win(GameAssets **game_assets, GameAttributes *game_attributes)
     }
 }
 
-void check_lose(GameAssets **game_assets, GameAttributes *game_attributes)
+/**
+*@brief check_lose
+*@details Ellenorzi, hogy a jatekos veresegehez szukseges kondiciok (jatekos hajo-taroloja ures-e, ellenseg elerte-e a jatekter aljat) teljesultek-e.
+*@param [in] **game_assets A jatekhoz szukseges assetek taroloja.
+*@param [out] *game_attributes A jatek attributumainak taroloja.
+*@return void
+*/
+
+static void check_lose(GameAssets **game_assets, GameAttributes *game_attributes)
 {
     bool is_enemy_at_max_y = find_max_enemy_armada_y_coor((*game_assets)->enemy_armada) > 830;
     bool is_player_ship_dead = (*game_assets)->player_ship == NULL;
@@ -242,7 +346,14 @@ void check_lose(GameAssets **game_assets, GameAttributes *game_attributes)
     }
 }
 
-void choose_continue_or_quit(GameAttributes *game_attributes)
+/**
+*@brief choose_continue_or_quit
+*@details Game Over kondicional vezerli, hogy a jatekos ujrakezdi-e a jatekot, vagy bezarja azt.
+*@param [out] *game_attributes A jatek attributumainak taroloja.
+*@return void
+*/
+
+static void choose_continue_or_quit(GameAttributes *game_attributes)
 {
     if(game_attributes->isi.y)
     {
@@ -256,12 +367,12 @@ void choose_continue_or_quit(GameAttributes *game_attributes)
 
 /**
 *@brief free_components
-*@details az osszes jatekkomponens felszabaditasaert felel.
-*@param [] game_assets
-*@param [] game_attributes
+*@details Az osszes jatekkomponens felszabaditasaert felel.
+*@param [in] *game_attributes A jatek attributumainak taroloja.
 *@return void
 */
-void free_components(GameAttributes *game_attributes)
+
+static void free_components(GameAttributes *game_attributes)
 {
     free(game_attributes);
     destroy_textures();
@@ -269,33 +380,35 @@ void free_components(GameAttributes *game_attributes)
 
 /**
 *@brief keep_player_time
-*@details a jatekos hajo idozitesehez szukseges szamitast vegzi el
-*@return int
+*@details A jatekos hajo idozitesehez szukseges szamitast vegzi el.
+*@return int A jatekos hajo vezerlesenek idoegysege
 */
-int keep_player_time()
+
+static int keep_player_time()
 {
     return SDL_GetTicks()/50;
 }
 
 /**
 *@brief keep_enemy_time
-*@details az ellenseges hajok idozitesehez szukseges szamitast vegzi el
-*@return int
+*@details Az ellenseges hajok idozitesehez szukseges szamitast vegzi el.
+*@return int A ellenseges hajok vezerlesenek idoegysege
 */
-int keep_enemy_time()
+
+static int keep_enemy_time()
 {
     return SDL_GetTicks()/5;
 }
 
 /**
 *@brief game_loop
-*@details a jatek fo vezerlesi logikaja
-*@param [] game_assets
-*@param [] key_map
-*@param [] game_attributes
+*@details A jatek fo vezerlesi logikaja.
+*@param [in,out] **game_assets A jatekhoz szukseges assetek taroloja.
+*@param [in] *key_map Az iranyitashoz hasznalt billentyuk taroloja.
+*@param [in,out] *game_attributes A jatek attributumainak taroloja.
 *@return void
 */
-void game_loop(GameAssets **game_assets, KeyMap *key_map, GameAttributes *game_attributes)
+static void game_loop(GameAssets **game_assets, KeyMap *key_map, GameAttributes *game_attributes)
 {
     int player_ship_time = 0;
     int enemy_ship_time = 0;
@@ -316,28 +429,4 @@ void game_loop(GameAssets **game_assets, KeyMap *key_map, GameAttributes *game_a
         }
         render_screen();
     }
-}
-
-/**
-*@brief game
-*@details aggregalja az osszes jatek mukodesehez szukseges logikai fuggvenyt. Amikor a game_loop kilep a ciklusabol
-*felszabadit mindent es kilep az SDL2bol.
-*@return void
-*/
-void runtime()
-{
-    GameAttributes *game_attributes = init_game_attributes();
-    GameAssets *game_assets;
-    KeyMap *key_map = default_keymap_init();
-    while((!game_attributes->isi.quit))
-    {
-        game_assets = init_game_assets(game_attributes);
-        game_loop(&game_assets, key_map, game_attributes);
-        free_assets(&game_assets);
-        free(game_assets);
-        reset_game_attributes(game_attributes);
-    }
-    free_components(game_attributes);
-    free(key_map);
-    SDL_Quit();
 }

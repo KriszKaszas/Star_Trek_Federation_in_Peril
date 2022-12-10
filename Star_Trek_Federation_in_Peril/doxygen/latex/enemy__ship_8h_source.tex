@@ -1,0 +1,51 @@
+\hypertarget{enemy__ship_8h_source}{}\doxysection{enemy\+\_\+ship.\+h}
+\mbox{\hyperlink{enemy__ship_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef ENEMY\_SHIP\_H\_INCLUDED}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define ENEMY\_SHIP\_H\_INCLUDED}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{game__attributes_8h}{game\_attributes.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{data__transfer__types_8h}{data\_transfer\_types.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{random__number__in__interval_8h}{random\_number\_in\_interval.h}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{texture__data_8h}{texture\_data.h}}"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{torpedo_8h}{torpedo.h}}"{}}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{debugmalloc_8h}{debugmalloc.h}}"{}}}
+\DoxyCodeLine{19 }
+\DoxyCodeLine{24 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structenemyship}{enemyship}}\{}
+\DoxyCodeLine{25     \textcolor{keywordtype}{int} \mbox{\hyperlink{structenemyship_ac5288a3009909038af51b30a261f7396}{y\_coor}}; }
+\DoxyCodeLine{26     \textcolor{keywordtype}{int} \mbox{\hyperlink{structenemyship_aaf04fdedfb74eb280d6bc5aeffc3b654}{x\_coor}}; }
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} \mbox{\hyperlink{structenemyship_aae13aa4f43330c0a340fd01001b1a14a}{movement\_dir}}; }
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} \mbox{\hyperlink{structenemyship_a443113378a847cc0144730333118361b}{hitbox\_beg\_coor}}; }
+\DoxyCodeLine{29     \textcolor{keywordtype}{int} \mbox{\hyperlink{structenemyship_a595f9d7997d979474e33b2fe4695e950}{hitbox\_end\_coor}}; }
+\DoxyCodeLine{30     \textcolor{keywordtype}{int} \mbox{\hyperlink{structenemyship_a37146316bc28a634e1130dfac8410403}{centerline\_y\_coor}}; }
+\DoxyCodeLine{31     \mbox{\hyperlink{structtexturedata}{TextureData}} \mbox{\hyperlink{structenemyship_a7ab5556525392852f31612eff93bb64c}{texture\_data}}; }
+\DoxyCodeLine{32     \mbox{\hyperlink{structspritemapdata}{SpriteMapData}} \mbox{\hyperlink{structenemyship_a5112953a36cedb3c3bb3ae6bf2d831d9}{sprite\_map\_data}}; }
+\DoxyCodeLine{33     \textcolor{keywordtype}{int} \mbox{\hyperlink{structenemyship_a218b4f7c6cc2681a99c23a3b089d68b1}{speed}}; }
+\DoxyCodeLine{34     \textcolor{keywordtype}{int} \mbox{\hyperlink{structenemyship_ae448fb16f537982185a0c5e8db56bdc6}{health}}; }
+\DoxyCodeLine{35     \textcolor{keywordtype}{int} \mbox{\hyperlink{structenemyship_a6112f1cfa65b8115d1279c848e490d1e}{score\_value}}; }
+\DoxyCodeLine{36     \textcolor{keyword}{struct }\mbox{\hyperlink{structenemyship}{enemyship}} *\mbox{\hyperlink{structenemyship_ad197b922c79c0061c34cdce22224f58c}{next\_ship}}; }
+\DoxyCodeLine{37     \textcolor{keyword}{struct }\mbox{\hyperlink{structenemyship}{enemyship}} *\mbox{\hyperlink{structenemyship_ac284912b54f160a8df134dd688c2e8c5}{prev\_ship}}; }
+\DoxyCodeLine{38 \}\mbox{\hyperlink{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}{EnemyShip}};}
+\DoxyCodeLine{39 }
+\DoxyCodeLine{40 \mbox{\hyperlink{structenemyship}{EnemyShip}} *\mbox{\hyperlink{enemy__ship_8h_a87a0fe51107e7c1e0e8a8ae26a164e8b}{init\_enemy\_armada}}(\mbox{\hyperlink{structtexturedata}{TextureData}} \mbox{\hyperlink{structenemyship_a7ab5556525392852f31612eff93bb64c}{texture\_data}},}
+\DoxyCodeLine{41                              \mbox{\hyperlink{structspritemapdata}{SpriteMapData}} \mbox{\hyperlink{structenemyship_a5112953a36cedb3c3bb3ae6bf2d831d9}{sprite\_map\_data}},}
+\DoxyCodeLine{42                              \mbox{\hyperlink{structshipdtt}{ShipDTT}} **ship\_dtt,}
+\DoxyCodeLine{43                              \mbox{\hyperlink{structgameattributes}{GameAttributes}} *game\_attributes);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{keywordtype}{void} \mbox{\hyperlink{enemy__ship_8h_ad6132464ee3219c29ad21a0de82e3991}{move\_enemy\_armada}}(\mbox{\hyperlink{structenemyship}{EnemyShip}} *enemy\_armada, \mbox{\hyperlink{structgameattributes}{GameAttributes}} *game\_attributes);}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{keywordtype}{int} \mbox{\hyperlink{enemy__ship_8h_a19cf0f32f6e8bcc1f4db2f7b3df1f6cd}{find\_max\_enemy\_armada\_y\_coor}}(\mbox{\hyperlink{structenemyship}{EnemyShip}} *enemy\_armada);}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \textcolor{keywordtype}{void} \mbox{\hyperlink{enemy__ship_8h_a83ab080822016803fe1b0596553ebe7e}{pop\_enemy\_ship}}(\mbox{\hyperlink{structenemyship}{EnemyShip}} **enemy\_ship);}
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51 \textcolor{keywordtype}{void} \mbox{\hyperlink{enemy__ship_8h_a7807746f73b7ee3c1cd20d26fa4a181b}{free\_enemy\_armada}}(\mbox{\hyperlink{structenemyship}{EnemyShip}} *enemy\_armada);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// ENEMY\_SHIP\_H\_INCLUDED}}
+
+\end{DoxyCode}

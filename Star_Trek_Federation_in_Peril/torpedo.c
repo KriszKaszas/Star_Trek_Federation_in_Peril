@@ -4,6 +4,8 @@
 
 #include "torpedo.h"
 
+static TorpedoColors init_torpedo_colors(bool is_enemy_torpedo);
+
 static void pop_only_torpedo(TorpedoShot **torpedo, TorpedoShot *temp_torpedo);
 
 static void pop_first_torpedo(TorpedoShot **torpedo, TorpedoShot *temp_torpedo);
@@ -14,12 +16,12 @@ static void pop_in_between_torpedo(TorpedoShot **torpedo, TorpedoShot *temp_torp
 
 /**
 *@brief init_torpedo_colors
-*@details inicializalja a torpedok szineit ado TorpedoColors structot
-*@param [] is_enemy_torpedo
-*@param [] is_quantum_torpedo
+*@details Inicializalja a torpedok szineit ado TorpedoColors structot.
+*@param [in] is_enemy_torpedo Ellenorzi, hogy ellenseges torpedo-e
 *@return TorpedoColors
 */
-TorpedoColors init_torpedo_colors(bool is_enemy_torpedo){
+static TorpedoColors init_torpedo_colors(bool is_enemy_torpedo)
+{
     TorpedoColors colors;
     if(is_enemy_torpedo){
         ColorData outter_ring = {94, 195, 79, 100};
@@ -42,17 +44,17 @@ TorpedoColors init_torpedo_colors(bool is_enemy_torpedo){
 
 /**
 *@brief add_torpedo_shot
-*@details hozzaad a kilott torpedok listajahoz egy ujabb elemet
-*@param [] torpedoes
-*@param [] damage
-*@param [] speed
-*@param [] x_coor
-*@param [] y_coor
-*@param [] is_enemy_torpedo
-*@param [] is_quantum_torpedo
+*@details Hozzaad a kilott torpedok listajahoz egy ujabb elemet.
+*@param [in] torpedoes
+*@param [in] damage
+*@param [in] speed
+*@param [in] x_coor
+*@param [in] y_coor
+*@param [in] is_enemy_torpedo
 *@return TorpedoShot
 */
-TorpedoShot *add_torpedo_shot(TorpedoShot *torpedoes, int damage, int speed, int x_coor, int y_coor, bool is_enemy_torpedo){
+TorpedoShot *add_torpedo_shot(TorpedoShot *torpedoes, int damage, int speed, int x_coor, int y_coor, bool is_enemy_torpedo)
+{
 
     TorpedoShot *torpedo = (TorpedoShot*) malloc(sizeof(TorpedoShot));
     torpedo->x_coor = x_coor;
@@ -76,12 +78,12 @@ TorpedoShot *add_torpedo_shot(TorpedoShot *torpedoes, int damage, int speed, int
 
 /**
 *@brief move_torpedoes
-*@details a torpedok mozgasahoz szukseges szamitasokat vegzi
-*@param [] torpedo
-*@param [] game_attributes
+*@details A torpedok mozgasahoz szukseges szamitasokat vegzi.
+*@param [in,out] **torpedo
 *@return void
 */
-void move_torpedoes(TorpedoShot **torpedo){
+void move_torpedoes(TorpedoShot **torpedo)
+{
     TorpedoShot *tmp = (*torpedo);
     while(tmp != NULL){
          tmp->y_coor += tmp->dir;
@@ -92,7 +94,7 @@ void move_torpedoes(TorpedoShot **torpedo){
 /**
 *@brief pop_torpedo_shot
 *@details amennyiben a torpedo eltalal valamit, vagy kimegy a jatekterbol, torli azt.
-*@param [] torpedo
+*@param [in,out] **torpedo
 *@return void
 */
 void pop_torpedo_shot(TorpedoShot **torpedo)
@@ -194,11 +196,12 @@ static void pop_in_between_torpedo(TorpedoShot **torpedo, TorpedoShot *temp_torp
 
 /**
 *@brief free_torpedoes
-*@details felszabaditja a torpedok listajat
-*@param [] torpedoes
+*@details Felszabaditja a torpedok listajat.
+*@param [in] torpedoes
 *@return void
 */
-void free_torpedoes(TorpedoShot *torpedoes){
+void free_torpedoes(TorpedoShot *torpedoes)
+{
     TorpedoShot *tmp = torpedoes;
     while(tmp != NULL){
         tmp = torpedoes->next_torpedo;

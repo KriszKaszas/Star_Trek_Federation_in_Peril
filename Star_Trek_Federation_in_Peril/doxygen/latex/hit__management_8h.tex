@@ -1,0 +1,63 @@
+\hypertarget{hit__management_8h}{}\doxysection{hit\+\_\+management.\+h File Reference}
+\label{hit__management_8h}\index{hit\_management.h@{hit\_management.h}}
+{\ttfamily \#include \char`\"{}game\+\_\+attributes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game\+\_\+assets.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}torpedo.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}enemy\+\_\+ship.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}torpedo\+\_\+hit\+\_\+management.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}enemy\+\_\+hit\+\_\+management.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}player\+\_\+hit\+\_\+management.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}debugmalloc.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{hit__management_8h_a92b1ceffbe17dfadb48d0e3ab116fae8}{remove\+\_\+torpedo\+\_\+if\+\_\+out\+\_\+of\+\_\+bounds}} (\mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$$\ast$torpedo, \mbox{\hyperlink{game__attributes_8h_a85088783bcdb10b16d91805dfe7fe324}{Game\+Attributes}} $\ast$game\+\_\+attributes)
+\begin{DoxyCompactList}\small\item\em -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---Externally callable hit managers-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{hit__management_8h_aa55c3f26a188cf8d6ba6493a5334e99f}{manage\+\_\+enemy\+\_\+hits}} (\mbox{\hyperlink{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}{Enemy\+Ship}} $\ast$$\ast$enemy\+\_\+armada, \mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$$\ast$player\+\_\+torpedo, \mbox{\hyperlink{game__assets_8h_a7e34b4f57ca3849522084c542d222a4c}{Game\+Assets}} $\ast$$\ast$game\+\_\+assets, \mbox{\hyperlink{game__attributes_8h_a85088783bcdb10b16d91805dfe7fe324}{Game\+Attributes}} $\ast$game\+\_\+attributes)
+\begin{DoxyCompactList}\small\item\em manage\+\_\+enemy\+\_\+hits \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{hit__management_8h_aa55c3f26a188cf8d6ba6493a5334e99f}\label{hit__management_8h_aa55c3f26a188cf8d6ba6493a5334e99f}} 
+\index{hit\_management.h@{hit\_management.h}!manage\_enemy\_hits@{manage\_enemy\_hits}}
+\index{manage\_enemy\_hits@{manage\_enemy\_hits}!hit\_management.h@{hit\_management.h}}
+\doxysubsubsection{\texorpdfstring{manage\_enemy\_hits()}{manage\_enemy\_hits()}}
+{\footnotesize\ttfamily void manage\+\_\+enemy\+\_\+hits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}{Enemy\+Ship}} $\ast$$\ast$}]{enemy\+\_\+armada,  }\item[{\mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$$\ast$}]{player\+\_\+torpedoes,  }\item[{\mbox{\hyperlink{game__assets_8h_a7e34b4f57ca3849522084c542d222a4c}{Game\+Assets}} $\ast$$\ast$}]{game\+\_\+assets,  }\item[{\mbox{\hyperlink{game__attributes_8h_a85088783bcdb10b16d91805dfe7fe324}{Game\+Attributes}} $\ast$}]{game\+\_\+attributes }\end{DoxyParamCaption})}
+
+
+
+manage\+\_\+enemy\+\_\+hits 
+
+Menedzseli a jatekos altal bevitt torpedo talalatokat. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em enemy\+\_\+armada} & Az osszes ellenseges hajot tartalmazo lancolt lista head pointere. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em player\+\_\+torpedoes} & A jatekos altal kilott torpedokat tartalmazo lancolt lista head pointere. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{hit__management_8h_a92b1ceffbe17dfadb48d0e3ab116fae8}\label{hit__management_8h_a92b1ceffbe17dfadb48d0e3ab116fae8}} 
+\index{hit\_management.h@{hit\_management.h}!remove\_torpedo\_if\_out\_of\_bounds@{remove\_torpedo\_if\_out\_of\_bounds}}
+\index{remove\_torpedo\_if\_out\_of\_bounds@{remove\_torpedo\_if\_out\_of\_bounds}!hit\_management.h@{hit\_management.h}}
+\doxysubsubsection{\texorpdfstring{remove\_torpedo\_if\_out\_of\_bounds()}{remove\_torpedo\_if\_out\_of\_bounds()}}
+{\footnotesize\ttfamily void remove\+\_\+torpedo\+\_\+if\+\_\+out\+\_\+of\+\_\+bounds (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{Torpedo\+Shot}} $\ast$$\ast$}]{torpedo,  }\item[{\mbox{\hyperlink{game__attributes_8h_a85088783bcdb10b16d91805dfe7fe324}{Game\+Attributes}} $\ast$}]{game\+\_\+attributes }\end{DoxyParamCaption})}
+
+
+
+-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/---Externally callable hit managers-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/--- 
+
+remove\+\_\+torpedo\+\_\+if\+\_\+out\+\_\+of\+\_\+bounds
+
+Kitorli a torpedot, ha az elhagyta a jatekteret. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em player\+\_\+torpedoes} & A jatekos altal kilott torpedokat tartalmazo lancolt lista head pointere. \\
+\hline
+\mbox{\texttt{ in}}  & {\em game\+\_\+attributes} & A jatek attributumait tartalmazo adatszerkezet pointere. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

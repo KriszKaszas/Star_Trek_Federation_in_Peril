@@ -5,5 +5,10 @@
 #include "game_assets.h"
 #include "enemy_ship.h"
 
+#include "debugmalloc.h"
+
+void fire_player_torpedo(GameAssets *game_assets, GameAttributes *game_attributes);
+
+void fire_enemy_torpedoes(int armada_size, GameAssets *game_assets);
 
 #endif // FIRE_MANAGEMENT_H_INCLUDED

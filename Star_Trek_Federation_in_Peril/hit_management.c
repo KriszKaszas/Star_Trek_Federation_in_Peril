@@ -92,7 +92,7 @@ void manage_enemy_hits(EnemyShip **enemy_armada, TorpedoShot **player_torpedoes,
     //Vegigiteral az ellenseges hajokon, ha maradt ellenseges hajo es van kilott jatekos torpedo.
     while(((*enemy_armada) != NULL) && ((*player_torpedoes) != NULL))
     {
-        //Vegigiteral a jatekos torpedoin, ha van kilott jatekos torpedo es maradt ellenséges hajo.
+        //Vegigiteral a jatekos torpedoin, ha van kilott jatekos torpedo es maradt ellenseges hajo.
         while(((*player_torpedoes) != NULL) && ((*enemy_armada) != NULL))
         {
             manage_enemy_ship_and_torpedo_if_hit_detected(enemy_armada, &temp_ship, player_torpedoes, &temp_torpedo, game_attributes);

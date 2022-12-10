@@ -1,0 +1,36 @@
+\hypertarget{enemy__hit__management_8h}{}\doxysection{enemy\+\_\+hit\+\_\+management.\+h File Reference}
+\label{enemy__hit__management_8h}\index{enemy\_hit\_management.h@{enemy\_hit\_management.h}}
+{\ttfamily \#include \char`\"{}game\+\_\+attributes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game\+\_\+assets.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}torpedo.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}debugmalloc.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{enemy__hit__management_8h_a2845e3c91738f28f73ecc94bd333aedf}{explode\+\_\+enemy\+\_\+ship\+\_\+if\+\_\+dead}} (\mbox{\hyperlink{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}{Enemy\+Ship}} $\ast$$\ast$enemy\+\_\+ship, \mbox{\hyperlink{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}{Enemy\+Ship}} $\ast$$\ast$temp\+\_\+ship, \mbox{\hyperlink{game__attributes_8h_a85088783bcdb10b16d91805dfe7fe324}{Game\+Attributes}} $\ast$game\+\_\+attributes)
+\begin{DoxyCompactList}\small\item\em explode\+\_\+enemy\+\_\+ship\+\_\+if\+\_\+dead \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{enemy__hit__management_8h_a2845e3c91738f28f73ecc94bd333aedf}\label{enemy__hit__management_8h_a2845e3c91738f28f73ecc94bd333aedf}} 
+\index{enemy\_hit\_management.h@{enemy\_hit\_management.h}!explode\_enemy\_ship\_if\_dead@{explode\_enemy\_ship\_if\_dead}}
+\index{explode\_enemy\_ship\_if\_dead@{explode\_enemy\_ship\_if\_dead}!enemy\_hit\_management.h@{enemy\_hit\_management.h}}
+\doxysubsubsection{\texorpdfstring{explode\_enemy\_ship\_if\_dead()}{explode\_enemy\_ship\_if\_dead()}}
+{\footnotesize\ttfamily void explode\+\_\+enemy\+\_\+ship\+\_\+if\+\_\+dead (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}{Enemy\+Ship}} $\ast$$\ast$}]{enemy\+\_\+ship,  }\item[{\mbox{\hyperlink{enemy__ship_8h_ac37df3ec980382742c9b5ce39b4fc46d}{Enemy\+Ship}} $\ast$$\ast$}]{temp\+\_\+ship,  }\item[{\mbox{\hyperlink{game__attributes_8h_a85088783bcdb10b16d91805dfe7fe324}{Game\+Attributes}} $\ast$}]{game\+\_\+attributes }\end{DoxyParamCaption})}
+
+
+
+explode\+\_\+enemy\+\_\+ship\+\_\+if\+\_\+dead 
+
+Felszabaditja a felrobbant ellenseges hajot ha annak HP-\/ja 0 (vagy kevesebb), es kezeli az ahhoz tartozo pointereket. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$$\ast$enemy\+\_\+ship} & Az ellenseges hajotkat tartalmazo lancolt lista aktualis elemenek pointere. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em $\ast$$\ast$temp\+\_\+ship} & Az ellenseges hajot tartalmazo lancolt lista head pointerenek ideiglenes taroloja. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em $\ast$game\+\_\+attributes} & A jatek attributumainak taroloja. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

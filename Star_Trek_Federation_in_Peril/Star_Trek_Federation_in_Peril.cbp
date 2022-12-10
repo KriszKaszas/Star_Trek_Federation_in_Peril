@@ -99,10 +99,6 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="star_map.h" />
-		<Unit filename="string_operations.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="string_operations.h" />
 		<Unit filename="texture_data.h" />
 		<Unit filename="torpedo.c">
 			<Option compilerVar="CC" />

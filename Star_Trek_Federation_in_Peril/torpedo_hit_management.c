@@ -90,7 +90,7 @@ static void remove_first_torpedo(TorpedoShot **torpedo, TorpedoShot **temp_torpe
 
 /**
 *@brief remove_in_between_or_last_torpedo
-*@details Felszabaditja a jatekos felrobbant torpedojat, ha az a torpedo lista köztes vagy tail eleme.
+*@details Felszabaditja a jatekos felrobbant torpedojat, ha az a torpedo lista koztes vagy tail eleme.
 *@param [in,out] **torpedo A jatekos altal kilott torpedokat tartalmazo lancolt lista aktualis elemenek pointere.
 *@param [in,out] **temp_torpedo A jatekos altal kilott torpedokat tartalmazo lancolt lista head pointerenek ideiglenes taroloja.
 *@return void

@@ -1,0 +1,53 @@
+\hypertarget{fire__managemet_8c}{}\doxysection{fire\+\_\+managemet.\+c File Reference}
+\label{fire__managemet_8c}\index{fire\_managemet.c@{fire\_managemet.c}}
+{\ttfamily \#include \char`\"{}fire\+\_\+management.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{fire__managemet_8c_a4a2b84c3d9c1d6c01d87089f42251848}{fire\+\_\+player\+\_\+torpedo}} (\mbox{\hyperlink{game__assets_8h_a7e34b4f57ca3849522084c542d222a4c}{Game\+Assets}} $\ast$game\+\_\+assets, \mbox{\hyperlink{game__attributes_8h_a85088783bcdb10b16d91805dfe7fe324}{Game\+Attributes}} $\ast$game\+\_\+attributes)
+\begin{DoxyCompactList}\small\item\em fire\+\_\+player\+\_\+torpedo \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{fire__managemet_8c_a1f5958c7e61c576a3cb9666e3537a742}{fire\+\_\+enemy\+\_\+torpedoes}} (int armada\+\_\+size, \mbox{\hyperlink{game__assets_8h_a7e34b4f57ca3849522084c542d222a4c}{Game\+Assets}} $\ast$game\+\_\+assets)
+\begin{DoxyCompactList}\small\item\em fire\+\_\+enemy\+\_\+torpedoes \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{fire__managemet_8c_a1f5958c7e61c576a3cb9666e3537a742}\label{fire__managemet_8c_a1f5958c7e61c576a3cb9666e3537a742}} 
+\index{fire\_managemet.c@{fire\_managemet.c}!fire\_enemy\_torpedoes@{fire\_enemy\_torpedoes}}
+\index{fire\_enemy\_torpedoes@{fire\_enemy\_torpedoes}!fire\_managemet.c@{fire\_managemet.c}}
+\doxysubsubsection{\texorpdfstring{fire\_enemy\_torpedoes()}{fire\_enemy\_torpedoes()}}
+{\footnotesize\ttfamily void fire\+\_\+enemy\+\_\+torpedoes (\begin{DoxyParamCaption}\item[{int}]{armada\+\_\+size,  }\item[{\mbox{\hyperlink{game__assets_8h_a7e34b4f57ca3849522084c542d222a4c}{Game\+Assets}} $\ast$}]{game\+\_\+assets }\end{DoxyParamCaption})}
+
+
+
+fire\+\_\+enemy\+\_\+torpedoes 
+
+Az ellenseges torpedok kiloveseert felel. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em armada\+\_\+size} & Az ellenseges hadseregmerete. \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$game\+\_\+assets} & A jatekhoz szukseges assetek taroloja. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{fire__managemet_8c_a4a2b84c3d9c1d6c01d87089f42251848}\label{fire__managemet_8c_a4a2b84c3d9c1d6c01d87089f42251848}} 
+\index{fire\_managemet.c@{fire\_managemet.c}!fire\_player\_torpedo@{fire\_player\_torpedo}}
+\index{fire\_player\_torpedo@{fire\_player\_torpedo}!fire\_managemet.c@{fire\_managemet.c}}
+\doxysubsubsection{\texorpdfstring{fire\_player\_torpedo()}{fire\_player\_torpedo()}}
+{\footnotesize\ttfamily void fire\+\_\+player\+\_\+torpedo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game__assets_8h_a7e34b4f57ca3849522084c542d222a4c}{Game\+Assets}} $\ast$}]{game\+\_\+assets,  }\item[{\mbox{\hyperlink{game__attributes_8h_a85088783bcdb10b16d91805dfe7fe324}{Game\+Attributes}} $\ast$}]{game\+\_\+attributes }\end{DoxyParamCaption})}
+
+
+
+fire\+\_\+player\+\_\+torpedo 
+
+A jatekos torpedok kiloveseert felel. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em $\ast$game\+\_\+assets} & A jatekhoz szukseges assetek taroloja. \\
+\hline
+\mbox{\texttt{ out}}  & {\em $\ast$game\+\_\+attributes} & A jatek attributumainak taroloja. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

@@ -9,6 +9,8 @@
 #include <SDL.h>
 #include <SDL2_gfxPrimitives.h>
 
+#include <stdio.h>
+
 #include "debugmalloc.h"
 
 void user_input(InputStateInterface *isi, KeyMap *key_map, SDL_TimerID id);

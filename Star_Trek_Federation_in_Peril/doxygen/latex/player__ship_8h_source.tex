@@ -1,0 +1,46 @@
+\hypertarget{player__ship_8h_source}{}\doxysection{player\+\_\+ship.\+h}
+\mbox{\hyperlink{player__ship_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#ifndef PLAYER\_SHIP\_H\_INCLUDED}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#define PLAYER\_SHIP\_H\_INCLUDED}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{game__attributes_8h}{game\_attributes.h}}"{}}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{input__state__interface_8h}{input\_state\_interface.h}}"{}}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{data__transfer__types_8h}{data\_transfer\_types.h}}"{}}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{texture__data_8h}{texture\_data.h}}"{}}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{player__ship_8h}{player\_ship.h}}"{}}}
+\DoxyCodeLine{13 }
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{debugmalloc_8h}{debugmalloc.h}}"{}}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{23 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structplayership}{playership}}\{}
+\DoxyCodeLine{24     \textcolor{keywordtype}{int} \mbox{\hyperlink{structplayership_ac5288a3009909038af51b30a261f7396}{y\_coor}}; }
+\DoxyCodeLine{25     \textcolor{keywordtype}{int} \mbox{\hyperlink{structplayership_aaf04fdedfb74eb280d6bc5aeffc3b654}{x\_coor}}; }
+\DoxyCodeLine{26     \textcolor{keywordtype}{int} \mbox{\hyperlink{structplayership_a443113378a847cc0144730333118361b}{hitbox\_beg\_coor}}; }
+\DoxyCodeLine{27     \textcolor{keywordtype}{int} \mbox{\hyperlink{structplayership_a595f9d7997d979474e33b2fe4695e950}{hitbox\_end\_coor}}; }
+\DoxyCodeLine{28     \textcolor{keywordtype}{int} \mbox{\hyperlink{structplayership_a37146316bc28a634e1130dfac8410403}{centerline\_y\_coor}}; }
+\DoxyCodeLine{29     \mbox{\hyperlink{structtexturedata}{TextureData}} \mbox{\hyperlink{structplayership_a7ab5556525392852f31612eff93bb64c}{texture\_data}}; }
+\DoxyCodeLine{30     \mbox{\hyperlink{structspritemapdata}{SpriteMapData}} \mbox{\hyperlink{structplayership_a5112953a36cedb3c3bb3ae6bf2d831d9}{sprite\_map\_data}}; }
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} \mbox{\hyperlink{structplayership_a218b4f7c6cc2681a99c23a3b089d68b1}{speed}}; }
+\DoxyCodeLine{32     \textcolor{keywordtype}{int} \mbox{\hyperlink{structplayership_ae448fb16f537982185a0c5e8db56bdc6}{health}}; }
+\DoxyCodeLine{33     \textcolor{keywordtype}{int} \mbox{\hyperlink{structplayership_a6112f1cfa65b8115d1279c848e490d1e}{score\_value}}; }
+\DoxyCodeLine{34 \}\mbox{\hyperlink{player__ship_8h_ae80ac0734ac95e44ab8537e0dc298f95}{PlayerShip}};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 \mbox{\hyperlink{structplayership}{PlayerShip}} *\mbox{\hyperlink{player__ship_8h_a3c3be91c58334de1218b567a272a59cf}{init\_player\_ship}}(\mbox{\hyperlink{structgameattributes}{GameAttributes}} *game\_attributes,}
+\DoxyCodeLine{37                              \mbox{\hyperlink{structshipdtt}{ShipDTT}} *ship\_dtt,}
+\DoxyCodeLine{38                              \mbox{\hyperlink{structtexturedata}{TextureData}} texture\_data,}
+\DoxyCodeLine{39                              \mbox{\hyperlink{structspritemapdata}{SpriteMapData}} sprite\_map\_data);}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{keywordtype}{void} \mbox{\hyperlink{player__ship_8h_a0ed16d153d51417395057b6c7771d476}{move\_player\_ship}}(\mbox{\hyperlink{structplayership}{PlayerShip}} *ps,}
+\DoxyCodeLine{42                       \mbox{\hyperlink{structinputstateinterface}{InputStateInterface}} *isi,}
+\DoxyCodeLine{43                       \textcolor{keywordtype}{int} width,}
+\DoxyCodeLine{44                       \textcolor{keywordtype}{int} height);}
+\DoxyCodeLine{45 }
+\DoxyCodeLine{46 \textcolor{keywordtype}{void} \mbox{\hyperlink{player__ship_8h_ad44ea45b686653f44ace99ee89011e75}{free\_player\_ship}}(\mbox{\hyperlink{structplayership}{PlayerShip}} *ps);}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// PLAYER\_SHIP\_H\_INCLUDED}}
+
+\end{DoxyCode}

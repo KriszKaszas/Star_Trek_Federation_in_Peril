@@ -1,0 +1,724 @@
+\begin{theindex}
+
+  \item {a}
+    \subitem {colordata}, \hyperpage{5}
+    \subitem {starcolor}, \hyperpage{25}
+  \item {add\_torpedo\_shot}
+    \subitem {torpedo.c}, \hyperpage{93}
+    \subitem {torpedo.h}, \hyperpage{96}
+  \item {advance\_starmap\_frame}
+    \subitem {star\_map.c}, \hyperpage{85}
+    \subitem {star\_map.h}, \hyperpage{88}
+  \item {all\_alloc\_bytes}
+    \subitem {DebugmallocData}, \hyperpage{6}
+  \item {all\_alloc\_count}
+    \subitem {DebugmallocData}, \hyperpage{6}
+  \item {alloc\_bytes}
+    \subitem {DebugmallocData}, \hyperpage{6}
+  \item {alloc\_count}
+    \subitem {DebugmallocData}, \hyperpage{7}
+
+  \indexspace
+
+  \item {b}
+    \subitem {colordata}, \hyperpage{5}
+    \subitem {starcolor}, \hyperpage{25}
+
+  \indexspace
+
+  \item {calloc}
+    \subitem {debugmalloc.h}, \hyperpage{32}
+  \item {center}
+    \subitem {torpedocolors}, \hyperpage{29}
+  \item {centerline\_y\_coor}
+    \subitem {enemyship}, \hyperpage{11}
+    \subitem {playership}, \hyperpage{20}
+  \item {clear\_screen}
+    \subitem {graphics.c}, \hyperpage{60}
+    \subitem {graphics.h}, \hyperpage{66}
+  \item {color}
+    \subitem {starmap}, \hyperpage{27}
+  \item {ColorData}
+    \subitem {torpedo.h}, \hyperpage{96}
+  \item {colordata}, \hyperpage{5}
+    \subitem {a}, \hyperpage{5}
+    \subitem {b}, \hyperpage{5}
+    \subitem {g}, \hyperpage{5}
+    \subitem {r}, \hyperpage{6}
+  \item {colors}
+    \subitem {torpedoshot}, \hyperpage{30}
+  \item {create\_font}
+    \subitem {graphics.c}, \hyperpage{60}
+    \subitem {graphics.h}, \hyperpage{66}
+  \item {create\_textures}
+    \subitem {graphics.c}, \hyperpage{60}
+    \subitem {graphics.h}, \hyperpage{67}
+  \item {create\_window}
+    \subitem {graphics.c}, \hyperpage{61}
+    \subitem {graphics.h}, \hyperpage{67}
+
+  \indexspace
+
+  \item {damage}
+    \subitem {torpedoshot}, \hyperpage{30}
+  \item {data\_transfer\_types.h}, \hyperpage{31}
+    \subitem {ShipDTT}, \hyperpage{31}
+  \item {debugmalloc.h}, \hyperpage{32}
+    \subitem {calloc}, \hyperpage{32}
+    \subitem {debugmalloc\_canary\_char}, \hyperpage{34}
+    \subitem {debugmalloc\_canary\_size}, \hyperpage{34}
+    \subitem {debugmalloc\_max\_block\_size\_default}, \hyperpage{34}
+    \subitem {debugmalloc\_tablesize}, \hyperpage{34}
+    \subitem {DebugmallocData}, \hyperpage{33}
+    \subitem {DebugmallocEntry}, \hyperpage{33}
+    \subitem {free}, \hyperpage{32}
+    \subitem {malloc}, \hyperpage{33}
+    \subitem {realloc}, \hyperpage{33}
+  \item {debugmalloc\_canary\_char}
+    \subitem {debugmalloc.h}, \hyperpage{34}
+  \item {debugmalloc\_canary\_size}
+    \subitem {debugmalloc.h}, \hyperpage{34}
+  \item {debugmalloc\_max\_block\_size\_default}
+    \subitem {debugmalloc.h}, \hyperpage{34}
+  \item {debugmalloc\_tablesize}
+    \subitem {debugmalloc.h}, \hyperpage{34}
+  \item {DebugmallocData}, \hyperpage{6}
+    \subitem {all\_alloc\_bytes}, \hyperpage{6}
+    \subitem {all\_alloc\_count}, \hyperpage{6}
+    \subitem {alloc\_bytes}, \hyperpage{6}
+    \subitem {alloc\_count}, \hyperpage{7}
+    \subitem {debugmalloc.h}, \hyperpage{33}
+    \subitem {head}, \hyperpage{7}
+    \subitem {logfile}, \hyperpage{7}
+    \subitem {max\_block\_size}, \hyperpage{7}
+    \subitem {tail}, \hyperpage{7}
+  \item {DebugmallocEntry}, \hyperpage{7}
+    \subitem {debugmalloc.h}, \hyperpage{33}
+    \subitem {expr}, \hyperpage{8}
+    \subitem {file}, \hyperpage{8}
+    \subitem {func}, \hyperpage{8}
+    \subitem {line}, \hyperpage{8}
+    \subitem {next}, \hyperpage{8}
+    \subitem {prev}, \hyperpage{8}
+    \subitem {real\_mem}, \hyperpage{9}
+    \subitem {size}, \hyperpage{9}
+    \subitem {user\_mem}, \hyperpage{9}
+  \item {destroy\_textures}
+    \subitem {graphics.c}, \hyperpage{61}
+    \subitem {graphics.h}, \hyperpage{68}
+  \item {DinStr}, \hyperpage{9}
+    \subitem {size}, \hyperpage{9}
+    \subitem {str}, \hyperpage{9}
+    \subitem {string\_operations.h}, \hyperpage{91}
+  \item {dinstr\_alloc}
+    \subitem {string\_operations.c}, \hyperpage{90}
+  \item {dir}
+    \subitem {torpedoshot}, \hyperpage{30}
+  \item {down}
+    \subitem {inputstateinterface}, \hyperpage{16}
+  \item {downkey}
+    \subitem {keymap}, \hyperpage{18}
+  \item {draw\_background}
+    \subitem {graphics.c}, \hyperpage{61}
+    \subitem {graphics.h}, \hyperpage{68}
+  \item {draw\_end\_screen}
+    \subitem {graphics.c}, \hyperpage{62}
+    \subitem {graphics.h}, \hyperpage{68}
+  \item {draw\_enemy\_ships}
+    \subitem {graphics.c}, \hyperpage{62}
+    \subitem {graphics.h}, \hyperpage{68}
+  \item {draw\_LCARS\_bacground}
+    \subitem {graphics.c}, \hyperpage{62}
+    \subitem {graphics.h}, \hyperpage{69}
+  \item {draw\_player\_ship}
+    \subitem {graphics.c}, \hyperpage{63}
+    \subitem {graphics.h}, \hyperpage{69}
+  \item {draw\_score}
+    \subitem {graphics.c}, \hyperpage{63}
+    \subitem {graphics.h}, \hyperpage{70}
+  \item {draw\_torpedo}
+    \subitem {graphics.c}, \hyperpage{63}
+    \subitem {graphics.h}, \hyperpage{70}
+
+  \indexspace
+
+  \item {enemy\_armada}
+    \subitem {gameassets}, \hyperpage{13}
+  \item {enemy\_armada\_size}
+    \subitem {gameattributes}, \hyperpage{15}
+  \item {enemy\_hit\_management.h}, \hyperpage{40}
+    \subitem {explode\_enemy\_ship\_if\_dead}, \hyperpage{40}
+  \item {enemy\_hit\_mananagement.c}, \hyperpage{41}
+    \subitem {explode\_enemy\_ship\_if\_dead}, \hyperpage{41}
+  \item {enemy\_ship.c}, \hyperpage{42}
+    \subitem {find\_max\_enemy\_armada\_y\_coor}, \hyperpage{42}
+    \subitem {free\_enemy\_armada}, \hyperpage{42}
+    \subitem {init\_enemy\_armada}, \hyperpage{43}
+    \subitem {move\_enemy\_armada}, \hyperpage{43}
+    \subitem {pop\_enemy\_ship}, \hyperpage{44}
+  \item {enemy\_ship.h}, \hyperpage{44}
+    \subitem {EnemyShip}, \hyperpage{45}
+    \subitem {find\_max\_enemy\_armada\_y\_coor}, \hyperpage{45}
+    \subitem {free\_enemy\_armada}, \hyperpage{46}
+    \subitem {init\_enemy\_armada}, \hyperpage{46}
+    \subitem {move\_enemy\_armada}, \hyperpage{46}
+    \subitem {pop\_enemy\_ship}, \hyperpage{47}
+  \item {enemy\_ships\_per\_row}
+    \subitem {gameattributes}, \hyperpage{15}
+  \item {enemy\_torpedoes}
+    \subitem {gameassets}, \hyperpage{13}
+  \item {EnemyShip}
+    \subitem {enemy\_ship.h}, \hyperpage{45}
+  \item {enemyship}, \hyperpage{10}
+    \subitem {centerline\_y\_coor}, \hyperpage{11}
+    \subitem {health}, \hyperpage{11}
+    \subitem {hitbox\_beg\_coor}, \hyperpage{11}
+    \subitem {hitbox\_end\_coor}, \hyperpage{11}
+    \subitem {movement\_dir}, \hyperpage{11}
+    \subitem {next\_ship}, \hyperpage{11}
+    \subitem {prev\_ship}, \hyperpage{12}
+    \subitem {score\_value}, \hyperpage{12}
+    \subitem {speed}, \hyperpage{12}
+    \subitem {sprite\_map\_data}, \hyperpage{12}
+    \subitem {texture\_data}, \hyperpage{12}
+    \subitem {x\_coor}, \hyperpage{12}
+    \subitem {y\_coor}, \hyperpage{13}
+  \item {explode\_enemy\_ship\_if\_dead}
+    \subitem {enemy\_hit\_management.h}, \hyperpage{40}
+    \subitem {enemy\_hit\_mananagement.c}, \hyperpage{41}
+  \item {explode\_player\_ship\_if\_dead}
+    \subitem {player\_hit\_management.c}, \hyperpage{77}
+    \subitem {player\_hit\_management.h}, \hyperpage{78}
+  \item {explode\_torpedo}
+    \subitem {torpedo\_hit\_management.c}, \hyperpage{99}
+    \subitem {torpedo\_hit\_management.h}, \hyperpage{100}
+  \item {expr}
+    \subitem {DebugmallocEntry}, \hyperpage{8}
+
+  \indexspace
+
+  \item {file}
+    \subitem {DebugmallocEntry}, \hyperpage{8}
+  \item {file\_management.c}, \hyperpage{48}
+    \subitem {import\_ship\_dtt}, \hyperpage{48}
+    \subitem {read\_texture\_data}, \hyperpage{49}
+  \item {file\_management.h}, \hyperpage{49}
+    \subitem {import\_ship\_dtt}, \hyperpage{50}
+    \subitem {read\_texture\_data}, \hyperpage{50}
+  \item {find\_max\_enemy\_armada\_y\_coor}
+    \subitem {enemy\_ship.c}, \hyperpage{42}
+    \subitem {enemy\_ship.h}, \hyperpage{45}
+  \item {fire\_enemy\_torpedoes}
+    \subitem {fire\_management.h}, \hyperpage{51}
+    \subitem {fire\_managemet.c}, \hyperpage{53}
+  \item {fire\_management.h}, \hyperpage{51}
+    \subitem {fire\_enemy\_torpedoes}, \hyperpage{51}
+    \subitem {fire\_player\_torpedo}, \hyperpage{52}
+  \item {fire\_managemet.c}, \hyperpage{52}
+    \subitem {fire\_enemy\_torpedoes}, \hyperpage{53}
+    \subitem {fire\_player\_torpedo}, \hyperpage{53}
+  \item {fire\_player\_torpedo}
+    \subitem {fire\_management.h}, \hyperpage{52}
+    \subitem {fire\_managemet.c}, \hyperpage{53}
+  \item {free}
+    \subitem {debugmalloc.h}, \hyperpage{32}
+  \item {free\_enemy\_armada}
+    \subitem {enemy\_ship.c}, \hyperpage{42}
+    \subitem {enemy\_ship.h}, \hyperpage{46}
+  \item {free\_player\_ship}
+    \subitem {player\_ship.c}, \hyperpage{79}
+    \subitem {player\_ship.h}, \hyperpage{81}
+  \item {free\_ship\_dtt}
+    \subitem {game\_engine.c}, \hyperpage{56}
+  \item {free\_starmap}
+    \subitem {star\_map.c}, \hyperpage{86}
+    \subitem {star\_map.h}, \hyperpage{88}
+  \item {free\_torpedoes}
+    \subitem {torpedo.c}, \hyperpage{93}
+    \subitem {torpedo.h}, \hyperpage{97}
+  \item {func}
+    \subitem {DebugmallocEntry}, \hyperpage{8}
+
+  \indexspace
+
+  \item {g}
+    \subitem {colordata}, \hyperpage{5}
+    \subitem {starcolor}, \hyperpage{26}
+  \item {game\_assets.h}, \hyperpage{54}
+    \subitem {GameAssets}, \hyperpage{54}
+  \item {game\_attributes.h}, \hyperpage{55}
+    \subitem {GameAttributes}, \hyperpage{55}
+  \item {game\_engine.c}, \hyperpage{55}
+    \subitem {free\_ship\_dtt}, \hyperpage{56}
+    \subitem {input\_timer}, \hyperpage{56}
+    \subitem {runtime}, \hyperpage{57}
+  \item {game\_engine.h}, \hyperpage{57}
+    \subitem {input\_timer}, \hyperpage{58}
+    \subitem {runtime}, \hyperpage{58}
+  \item {game\_over}
+    \subitem {inputstateinterface}, \hyperpage{16}
+  \item {game\_score}
+    \subitem {gameattributes}, \hyperpage{15}
+  \item {GameAssets}
+    \subitem {game\_assets.h}, \hyperpage{54}
+  \item {gameassets}, \hyperpage{13}
+    \subitem {enemy\_armada}, \hyperpage{13}
+    \subitem {enemy\_torpedoes}, \hyperpage{13}
+    \subitem {player\_ship}, \hyperpage{14}
+    \subitem {player\_torpedoes}, \hyperpage{14}
+    \subitem {star\_map}, \hyperpage{14}
+  \item {GameAttributes}
+    \subitem {game\_attributes.h}, \hyperpage{55}
+  \item {gameattributes}, \hyperpage{14}
+    \subitem {enemy\_armada\_size}, \hyperpage{15}
+    \subitem {enemy\_ships\_per\_row}, \hyperpage{15}
+    \subitem {game\_score}, \hyperpage{15}
+    \subitem {height}, \hyperpage{15}
+    \subitem {id}, \hyperpage{15}
+    \subitem {isi}, \hyperpage{15}
+    \subitem {num\_of\_rows}, \hyperpage{15}
+    \subitem {width}, \hyperpage{15}
+  \item {graphics.c}, \hyperpage{59}
+    \subitem {clear\_screen}, \hyperpage{60}
+    \subitem {create\_font}, \hyperpage{60}
+    \subitem {create\_textures}, \hyperpage{60}
+    \subitem {create\_window}, \hyperpage{61}
+    \subitem {destroy\_textures}, \hyperpage{61}
+    \subitem {draw\_background}, \hyperpage{61}
+    \subitem {draw\_end\_screen}, \hyperpage{62}
+    \subitem {draw\_enemy\_ships}, \hyperpage{62}
+    \subitem {draw\_LCARS\_bacground}, \hyperpage{62}
+    \subitem {draw\_player\_ship}, \hyperpage{63}
+    \subitem {draw\_score}, \hyperpage{63}
+    \subitem {draw\_torpedo}, \hyperpage{63}
+    \subitem {load\_sdl\_texture}, \hyperpage{64}
+    \subitem {open\_font}, \hyperpage{64}
+    \subitem {render\_screen}, \hyperpage{64}
+    \subitem {sdl\_init}, \hyperpage{65}
+  \item {graphics.h}, \hyperpage{65}
+    \subitem {clear\_screen}, \hyperpage{66}
+    \subitem {create\_font}, \hyperpage{66}
+    \subitem {create\_textures}, \hyperpage{67}
+    \subitem {create\_window}, \hyperpage{67}
+    \subitem {destroy\_textures}, \hyperpage{68}
+    \subitem {draw\_background}, \hyperpage{68}
+    \subitem {draw\_end\_screen}, \hyperpage{68}
+    \subitem {draw\_enemy\_ships}, \hyperpage{68}
+    \subitem {draw\_LCARS\_bacground}, \hyperpage{69}
+    \subitem {draw\_player\_ship}, \hyperpage{69}
+    \subitem {draw\_score}, \hyperpage{70}
+    \subitem {draw\_torpedo}, \hyperpage{70}
+    \subitem {render\_screen}, \hyperpage{70}
+
+  \indexspace
+
+  \item {head}
+    \subitem {DebugmallocData}, \hyperpage{7}
+  \item {health}
+    \subitem {enemyship}, \hyperpage{11}
+    \subitem {playership}, \hyperpage{20}
+    \subitem {shipdtt}, \hyperpage{22}
+  \item {height}
+    \subitem {gameattributes}, \hyperpage{15}
+    \subitem {spritemapdata}, \hyperpage{23}
+    \subitem {texturedata}, \hyperpage{28}
+  \item {hit\_management.c}, \hyperpage{71}
+    \subitem {manage\_enemy\_hits}, \hyperpage{72}
+    \subitem {manage\_player\_hits}, \hyperpage{72}
+    \subitem {remove\_torpedo\_if\_out\_of\_bounds}, \hyperpage{72}
+  \item {hit\_management.h}, \hyperpage{73}
+    \subitem {manage\_enemy\_hits}, \hyperpage{73}
+    \subitem {remove\_torpedo\_if\_out\_of\_bounds}, \hyperpage{74}
+  \item {hitbox\_beg\_coor}
+    \subitem {enemyship}, \hyperpage{11}
+    \subitem {playership}, \hyperpage{20}
+  \item {hitbox\_end\_coor}
+    \subitem {enemyship}, \hyperpage{11}
+    \subitem {playership}, \hyperpage{20}
+
+  \indexspace
+
+  \item {id}
+    \subitem {gameattributes}, \hyperpage{15}
+  \item {import\_ship\_dtt}
+    \subitem {file\_management.c}, \hyperpage{48}
+    \subitem {file\_management.h}, \hyperpage{50}
+  \item {init\_enemy\_armada}
+    \subitem {enemy\_ship.c}, \hyperpage{43}
+    \subitem {enemy\_ship.h}, \hyperpage{46}
+  \item {init\_player\_ship}
+    \subitem {player\_ship.c}, \hyperpage{79}
+    \subitem {player\_ship.h}, \hyperpage{82}
+  \item {inner\_ring}
+    \subitem {torpedocolors}, \hyperpage{29}
+  \item {input\_state\_interface.h}, \hyperpage{75}
+    \subitem {InputStateInterface}, \hyperpage{75}
+  \item {input\_timer}
+    \subitem {game\_engine.c}, \hyperpage{56}
+    \subitem {game\_engine.h}, \hyperpage{58}
+  \item {InputStateInterface}
+    \subitem {input\_state\_interface.h}, \hyperpage{75}
+  \item {inputstateinterface}, \hyperpage{16}
+    \subitem {down}, \hyperpage{16}
+    \subitem {game\_over}, \hyperpage{16}
+    \subitem {left}, \hyperpage{16}
+    \subitem {n}, \hyperpage{17}
+    \subitem {quit}, \hyperpage{17}
+    \subitem {restart}, \hyperpage{17}
+    \subitem {right}, \hyperpage{17}
+    \subitem {torpedo}, \hyperpage{17}
+    \subitem {torpedo\_ready}, \hyperpage{17}
+    \subitem {up}, \hyperpage{17}
+    \subitem {y}, \hyperpage{17}
+  \item {is\_torpedo\_out\_of\_bounds}
+    \subitem {torpedo\_hit\_management.c}, \hyperpage{99}
+    \subitem {torpedo\_hit\_management.h}, \hyperpage{100}
+  \item {isi}
+    \subitem {gameattributes}, \hyperpage{15}
+
+  \indexspace
+
+  \item {KeyMap}
+    \subitem {keymap.h}, \hyperpage{76}
+  \item {keymap}, \hyperpage{18}
+    \subitem {downkey}, \hyperpage{18}
+    \subitem {leftkey}, \hyperpage{18}
+    \subitem {rightkey}, \hyperpage{18}
+    \subitem {torpedokey}, \hyperpage{19}
+    \subitem {upkey}, \hyperpage{19}
+  \item {keymap.h}, \hyperpage{76}
+    \subitem {KeyMap}, \hyperpage{76}
+
+  \indexspace
+
+  \item {left}
+    \subitem {inputstateinterface}, \hyperpage{16}
+  \item {leftkey}
+    \subitem {keymap}, \hyperpage{18}
+  \item {length}
+    \subitem {starmap}, \hyperpage{27}
+  \item {line}
+    \subitem {DebugmallocEntry}, \hyperpage{8}
+  \item {load\_sdl\_texture}
+    \subitem {graphics.c}, \hyperpage{64}
+  \item {logfile}
+    \subitem {DebugmallocData}, \hyperpage{7}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.c}, \hyperpage{77}
+  \item {main.c}, \hyperpage{76}
+    \subitem {main}, \hyperpage{77}
+  \item {malloc}
+    \subitem {debugmalloc.h}, \hyperpage{33}
+  \item {manage\_enemy\_hits}
+    \subitem {hit\_management.c}, \hyperpage{72}
+    \subitem {hit\_management.h}, \hyperpage{73}
+  \item {manage\_player\_hits}
+    \subitem {hit\_management.c}, \hyperpage{72}
+  \item {max\_block\_size}
+    \subitem {DebugmallocData}, \hyperpage{7}
+  \item {move\_enemy\_armada}
+    \subitem {enemy\_ship.c}, \hyperpage{43}
+    \subitem {enemy\_ship.h}, \hyperpage{46}
+  \item {move\_player\_ship}
+    \subitem {player\_ship.c}, \hyperpage{80}
+    \subitem {player\_ship.h}, \hyperpage{82}
+  \item {move\_torpedoes}
+    \subitem {torpedo.c}, \hyperpage{94}
+    \subitem {torpedo.h}, \hyperpage{97}
+  \item {movement\_dir}
+    \subitem {enemyship}, \hyperpage{11}
+
+  \indexspace
+
+  \item {n}
+    \subitem {inputstateinterface}, \hyperpage{17}
+  \item {next}
+    \subitem {DebugmallocEntry}, \hyperpage{8}
+  \item {next\_ship}
+    \subitem {enemyship}, \hyperpage{11}
+  \item {next\_torpedo}
+    \subitem {torpedoshot}, \hyperpage{30}
+  \item {num\_of\_rows}
+    \subitem {gameattributes}, \hyperpage{15}
+
+  \indexspace
+
+  \item {open\_font}
+    \subitem {graphics.c}, \hyperpage{64}
+  \item {outter\_ring}
+    \subitem {torpedocolors}, \hyperpage{29}
+
+  \indexspace
+
+  \item {player\_hit\_management.c}, \hyperpage{77}
+    \subitem {explode\_player\_ship\_if\_dead}, \hyperpage{77}
+  \item {player\_hit\_management.h}, \hyperpage{78}
+    \subitem {explode\_player\_ship\_if\_dead}, \hyperpage{78}
+  \item {player\_ship}
+    \subitem {gameassets}, \hyperpage{14}
+  \item {player\_ship.c}, \hyperpage{79}
+    \subitem {free\_player\_ship}, \hyperpage{79}
+    \subitem {init\_player\_ship}, \hyperpage{79}
+    \subitem {move\_player\_ship}, \hyperpage{80}
+  \item {player\_ship.h}, \hyperpage{80}
+    \subitem {free\_player\_ship}, \hyperpage{81}
+    \subitem {init\_player\_ship}, \hyperpage{82}
+    \subitem {move\_player\_ship}, \hyperpage{82}
+    \subitem {PlayerShip}, \hyperpage{81}
+  \item {player\_torpedoes}
+    \subitem {gameassets}, \hyperpage{14}
+  \item {PlayerShip}
+    \subitem {player\_ship.h}, \hyperpage{81}
+  \item {playership}, \hyperpage{19}
+    \subitem {centerline\_y\_coor}, \hyperpage{20}
+    \subitem {health}, \hyperpage{20}
+    \subitem {hitbox\_beg\_coor}, \hyperpage{20}
+    \subitem {hitbox\_end\_coor}, \hyperpage{20}
+    \subitem {score\_value}, \hyperpage{20}
+    \subitem {speed}, \hyperpage{20}
+    \subitem {sprite\_map\_data}, \hyperpage{21}
+    \subitem {texture\_data}, \hyperpage{21}
+    \subitem {x\_coor}, \hyperpage{21}
+    \subitem {y\_coor}, \hyperpage{21}
+  \item {pop\_enemy\_ship}
+    \subitem {enemy\_ship.c}, \hyperpage{44}
+    \subitem {enemy\_ship.h}, \hyperpage{47}
+  \item {pop\_torpedo\_shot}
+    \subitem {torpedo.c}, \hyperpage{94}
+    \subitem {torpedo.h}, \hyperpage{97}
+  \item {prev}
+    \subitem {DebugmallocEntry}, \hyperpage{8}
+  \item {prev\_ship}
+    \subitem {enemyship}, \hyperpage{12}
+  \item {prev\_torpedo}
+    \subitem {torpedoshot}, \hyperpage{30}
+
+  \indexspace
+
+  \item {quit}
+    \subitem {inputstateinterface}, \hyperpage{17}
+
+  \indexspace
+
+  \item {r}
+    \subitem {colordata}, \hyperpage{6}
+    \subitem {starcolor}, \hyperpage{26}
+  \item {radius}
+    \subitem {star}, \hyperpage{24}
+  \item {random\_number\_in\_interval.c}, \hyperpage{83}
+    \subitem {random\_number\_in\_range}, \hyperpage{83}
+  \item {random\_number\_in\_interval.h}, \hyperpage{84}
+    \subitem {random\_number\_in\_range}, \hyperpage{84}
+  \item {random\_number\_in\_range}
+    \subitem {random\_number\_in\_interval.c}, \hyperpage{83}
+    \subitem {random\_number\_in\_interval.h}, \hyperpage{84}
+  \item {read\_texture\_data}
+    \subitem {file\_management.c}, \hyperpage{49}
+    \subitem {file\_management.h}, \hyperpage{50}
+  \item {real\_mem}
+    \subitem {DebugmallocEntry}, \hyperpage{9}
+  \item {realloc}
+    \subitem {debugmalloc.h}, \hyperpage{33}
+  \item {remove\_torpedo\_if\_out\_of\_bounds}
+    \subitem {hit\_management.c}, \hyperpage{72}
+    \subitem {hit\_management.h}, \hyperpage{74}
+  \item {render\_screen}
+    \subitem {graphics.c}, \hyperpage{64}
+    \subitem {graphics.h}, \hyperpage{70}
+  \item {restart}
+    \subitem {inputstateinterface}, \hyperpage{17}
+  \item {right}
+    \subitem {inputstateinterface}, \hyperpage{17}
+  \item {rightkey}
+    \subitem {keymap}, \hyperpage{18}
+  \item {runtime}
+    \subitem {game\_engine.c}, \hyperpage{57}
+    \subitem {game\_engine.h}, \hyperpage{58}
+
+  \indexspace
+
+  \item {score\_value}
+    \subitem {enemyship}, \hyperpage{12}
+    \subitem {playership}, \hyperpage{20}
+    \subitem {shipdtt}, \hyperpage{22}
+  \item {sdl\_init}
+    \subitem {graphics.c}, \hyperpage{65}
+  \item {ShipDTT}
+    \subitem {data\_transfer\_types.h}, \hyperpage{31}
+  \item {shipdtt}, \hyperpage{21}
+    \subitem {health}, \hyperpage{22}
+    \subitem {score\_value}, \hyperpage{22}
+    \subitem {speed}, \hyperpage{22}
+  \item {size}
+    \subitem {DebugmallocEntry}, \hyperpage{9}
+    \subitem {DinStr}, \hyperpage{9}
+  \item {speed}
+    \subitem {enemyship}, \hyperpage{12}
+    \subitem {playership}, \hyperpage{20}
+    \subitem {shipdtt}, \hyperpage{22}
+    \subitem {torpedoshot}, \hyperpage{30}
+  \item {sprite\_map\_data}
+    \subitem {enemyship}, \hyperpage{12}
+    \subitem {playership}, \hyperpage{21}
+  \item {SpriteMapData}
+    \subitem {texture\_data.h}, \hyperpage{92}
+  \item {spritemapdata}, \hyperpage{23}
+    \subitem {height}, \hyperpage{23}
+    \subitem {width}, \hyperpage{23}
+    \subitem {x\_coor}, \hyperpage{23}
+    \subitem {y\_coor}, \hyperpage{23}
+  \item {Star}
+    \subitem {star\_map.h}, \hyperpage{87}
+  \item {star}, \hyperpage{24}
+    \subitem {radius}, \hyperpage{24}
+    \subitem {x\_coor}, \hyperpage{24}
+    \subitem {y\_coor}, \hyperpage{24}
+  \item {star\_map}
+    \subitem {gameassets}, \hyperpage{14}
+  \item {star\_map.c}, \hyperpage{85}
+    \subitem {advance\_starmap\_frame}, \hyperpage{85}
+    \subitem {free\_starmap}, \hyperpage{86}
+    \subitem {starmap\_init}, \hyperpage{86}
+  \item {star\_map.h}, \hyperpage{87}
+    \subitem {advance\_starmap\_frame}, \hyperpage{88}
+    \subitem {free\_starmap}, \hyperpage{88}
+    \subitem {Star}, \hyperpage{87}
+    \subitem {StarColor}, \hyperpage{87}
+    \subitem {StarMap}, \hyperpage{88}
+    \subitem {starmap\_init}, \hyperpage{89}
+  \item {StarColor}
+    \subitem {star\_map.h}, \hyperpage{87}
+  \item {starcolor}, \hyperpage{25}
+    \subitem {a}, \hyperpage{25}
+    \subitem {b}, \hyperpage{25}
+    \subitem {g}, \hyperpage{26}
+    \subitem {r}, \hyperpage{26}
+  \item {StarMap}
+    \subitem {star\_map.h}, \hyperpage{88}
+  \item {starmap}, \hyperpage{26}
+    \subitem {color}, \hyperpage{27}
+    \subitem {length}, \hyperpage{27}
+    \subitem {stars}, \hyperpage{27}
+  \item {starmap\_init}
+    \subitem {star\_map.c}, \hyperpage{86}
+    \subitem {star\_map.h}, \hyperpage{89}
+  \item {stars}
+    \subitem {starmap}, \hyperpage{27}
+  \item {str}
+    \subitem {DinStr}, \hyperpage{9}
+  \item {string\_operations.c}, \hyperpage{90}
+    \subitem {dinstr\_alloc}, \hyperpage{90}
+  \item {string\_operations.h}, \hyperpage{91}
+    \subitem {DinStr}, \hyperpage{91}
+
+  \indexspace
+
+  \item {tail}
+    \subitem {DebugmallocData}, \hyperpage{7}
+  \item {texture\_center\_x}
+    \subitem {texturedata}, \hyperpage{28}
+  \item {texture\_center\_y}
+    \subitem {texturedata}, \hyperpage{28}
+  \item {texture\_data}
+    \subitem {enemyship}, \hyperpage{12}
+    \subitem {playership}, \hyperpage{21}
+  \item {texture\_data.h}, \hyperpage{91}
+    \subitem {SpriteMapData}, \hyperpage{92}
+    \subitem {TextureData}, \hyperpage{92}
+  \item {TextureData}
+    \subitem {texture\_data.h}, \hyperpage{92}
+  \item {texturedata}, \hyperpage{27}
+    \subitem {height}, \hyperpage{28}
+    \subitem {texture\_center\_x}, \hyperpage{28}
+    \subitem {texture\_center\_y}, \hyperpage{28}
+    \subitem {width}, \hyperpage{28}
+  \item {torpedo}
+    \subitem {inputstateinterface}, \hyperpage{17}
+  \item {torpedo.c}, \hyperpage{93}
+    \subitem {add\_torpedo\_shot}, \hyperpage{93}
+    \subitem {free\_torpedoes}, \hyperpage{93}
+    \subitem {move\_torpedoes}, \hyperpage{94}
+    \subitem {pop\_torpedo\_shot}, \hyperpage{94}
+  \item {torpedo.h}, \hyperpage{95}
+    \subitem {add\_torpedo\_shot}, \hyperpage{96}
+    \subitem {ColorData}, \hyperpage{96}
+    \subitem {free\_torpedoes}, \hyperpage{97}
+    \subitem {move\_torpedoes}, \hyperpage{97}
+    \subitem {pop\_torpedo\_shot}, \hyperpage{97}
+    \subitem {TorpedoColors}, \hyperpage{96}
+    \subitem {TorpedoShot}, \hyperpage{96}
+  \item {torpedo\_hit\_management.c}, \hyperpage{98}
+    \subitem {explode\_torpedo}, \hyperpage{99}
+    \subitem {is\_torpedo\_out\_of\_bounds}, \hyperpage{99}
+  \item {torpedo\_hit\_management.h}, \hyperpage{99}
+    \subitem {explode\_torpedo}, \hyperpage{100}
+    \subitem {is\_torpedo\_out\_of\_bounds}, \hyperpage{100}
+  \item {torpedo\_ready}
+    \subitem {inputstateinterface}, \hyperpage{17}
+  \item {TorpedoColors}
+    \subitem {torpedo.h}, \hyperpage{96}
+  \item {torpedocolors}, \hyperpage{28}
+    \subitem {center}, \hyperpage{29}
+    \subitem {inner\_ring}, \hyperpage{29}
+    \subitem {outter\_ring}, \hyperpage{29}
+  \item {torpedokey}
+    \subitem {keymap}, \hyperpage{19}
+  \item {TorpedoShot}
+    \subitem {torpedo.h}, \hyperpage{96}
+  \item {torpedoshot}, \hyperpage{29}
+    \subitem {colors}, \hyperpage{30}
+    \subitem {damage}, \hyperpage{30}
+    \subitem {dir}, \hyperpage{30}
+    \subitem {next\_torpedo}, \hyperpage{30}
+    \subitem {prev\_torpedo}, \hyperpage{30}
+    \subitem {speed}, \hyperpage{30}
+    \subitem {x\_coor}, \hyperpage{30}
+    \subitem {y\_coor}, \hyperpage{30}
+
+  \indexspace
+
+  \item {ui\_input.c}, \hyperpage{101}
+    \subitem {user\_input}, \hyperpage{101}
+  \item {ui\_input.h}, \hyperpage{102}
+    \subitem {user\_input}, \hyperpage{102}
+  \item {up}
+    \subitem {inputstateinterface}, \hyperpage{17}
+  \item {upkey}
+    \subitem {keymap}, \hyperpage{19}
+  \item {user\_input}
+    \subitem {ui\_input.c}, \hyperpage{101}
+    \subitem {ui\_input.h}, \hyperpage{102}
+  \item {user\_mem}
+    \subitem {DebugmallocEntry}, \hyperpage{9}
+
+  \indexspace
+
+  \item {width}
+    \subitem {gameattributes}, \hyperpage{15}
+    \subitem {spritemapdata}, \hyperpage{23}
+    \subitem {texturedata}, \hyperpage{28}
+
+  \indexspace
+
+  \item {x\_coor}
+    \subitem {enemyship}, \hyperpage{12}
+    \subitem {playership}, \hyperpage{21}
+    \subitem {spritemapdata}, \hyperpage{23}
+    \subitem {star}, \hyperpage{24}
+    \subitem {torpedoshot}, \hyperpage{30}
+
+  \indexspace
+
+  \item {y}
+    \subitem {inputstateinterface}, \hyperpage{17}
+  \item {y\_coor}
+    \subitem {enemyship}, \hyperpage{13}
+    \subitem {playership}, \hyperpage{21}
+    \subitem {spritemapdata}, \hyperpage{23}
+    \subitem {star}, \hyperpage{24}
+    \subitem {torpedoshot}, \hyperpage{30}
+
+\end{theindex}

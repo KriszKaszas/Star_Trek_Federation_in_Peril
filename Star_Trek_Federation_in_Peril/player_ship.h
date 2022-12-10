@@ -1,3 +1,7 @@
+/**
+*@file player_ship.h
+*/
+
 #ifndef PLAYER_SHIP_H_INCLUDED
 #define PLAYER_SHIP_H_INCLUDED
 
@@ -14,19 +18,19 @@
 
 /**
 *@brief PlayerShip
-*@details
+*@details A jatekos hajojat tarolo adatstruktura.
 */
 typedef struct playership{
-    int y_coor; ///<
-    int x_coor; ///<
-    int hitbox_beg_coor; ///<
-    int hitbox_end_coor; ///<
-    int centerline_y_coor; ///<
-    TextureData texture_data; ///<
-    SpriteMapData sprite_map_data;
-    int speed; ///<
-    int health; ///<
-    int score_value; ///<
+    int y_coor; ///< A hajo y koordinataja
+    int x_coor; ///< A hajo x koordinataja
+    int hitbox_beg_coor; ///< A hitbox bal szele
+    int hitbox_end_coor; ///< A hitbox jobb szele
+    int centerline_y_coor; ///< A hitbox also hatara (ahonnan mar erzekeli a sprite a talalatot)
+    TextureData texture_data; ///< A hajo textura adatai (meretek)
+    SpriteMapData sprite_map_data; ///< A hajo spritemap meretei (SDL2 igenyli)
+    int speed; ///< A hajo mozgasi sebessege
+    int health; ///< A hajo HP-ja
+    int score_value; ///< A hajo elpusztulasanal elveszitett pont
 }PlayerShip;
 
 PlayerShip *init_player_ship(GameAttributes *game_attributes,
@@ -34,7 +38,10 @@ PlayerShip *init_player_ship(GameAttributes *game_attributes,
                              TextureData texture_data,
                              SpriteMapData sprite_map_data);
 
-void move_player_ship(PlayerShip *ps, InputStateInterface *isi, int width, int height);
+void move_player_ship(PlayerShip *ps,
+                      InputStateInterface *isi,
+                      int width,
+                      int height);
 
 void free_player_ship(PlayerShip *ps);
 

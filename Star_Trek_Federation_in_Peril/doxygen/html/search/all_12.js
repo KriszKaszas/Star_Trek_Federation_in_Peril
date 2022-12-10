@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['tail_0',['tail',['../struct_debugmalloc_data.html#a6a489bd48f708358b171a68acf75de9f',1,'DebugmallocData']]],
+  ['texture_5fcenter_5fx_1',['texture_center_x',['../structtexturedata.html#a6ada0015adc2276121b764388e6c385d',1,'texturedata']]],
+  ['texture_5fcenter_5fy_2',['texture_center_y',['../structtexturedata.html#a7cd4d7363b810df30b8d400ee61a7450',1,'texturedata']]],
+  ['texture_5fdata_3',['texture_data',['../structenemyship.html#a7ab5556525392852f31612eff93bb64c',1,'enemyship::texture_data()'],['../structplayership.html#a7ab5556525392852f31612eff93bb64c',1,'playership::texture_data()']]],
+  ['texture_5fdata_2eh_4',['texture_data.h',['../texture__data_8h.html',1,'']]],
+  ['texturedata_5',['texturedata',['../structtexturedata.html',1,'']]],
+  ['texturedata_6',['TextureData',['../texture__data_8h.html#aa12ea7860582af51523886453e0a017c',1,'texture_data.h']]],
+  ['torpedo_7',['torpedo',['../structinputstateinterface.html#aebe2f1d05f513d2f880bdd39741ebdac',1,'inputstateinterface']]],
+  ['torpedo_2ec_8',['torpedo.c',['../torpedo_8c.html',1,'']]],
+  ['torpedo_2eh_9',['torpedo.h',['../torpedo_8h.html',1,'']]],
+  ['torpedo_5fhit_5fmanagement_2ec_10',['torpedo_hit_management.c',['../torpedo__hit__management_8c.html',1,'']]],
+  ['torpedo_5fhit_5fmanagement_2eh_11',['torpedo_hit_management.h',['../torpedo__hit__management_8h.html',1,'']]],
+  ['torpedo_5fready_12',['torpedo_ready',['../structinputstateinterface.html#aaaafae980fd94a42b841ab0fb11e5a07',1,'inputstateinterface']]],
+  ['torpedocolors_13',['torpedocolors',['../structtorpedocolors.html',1,'']]],
+  ['torpedocolors_14',['TorpedoColors',['../torpedo_8h.html#a64bc9949fb7a99a5c280dd7e6a2cb63b',1,'torpedo.h']]],
+  ['torpedokey_15',['torpedokey',['../structkeymap.html#a85b3ef8141db46680da3f854ce4de188',1,'keymap']]],
+  ['torpedoshot_16',['torpedoshot',['../structtorpedoshot.html',1,'']]],
+  ['torpedoshot_17',['TorpedoShot',['../torpedo_8h.html#a146205614f4043bc7c075f927a011264',1,'torpedo.h']]]
+];

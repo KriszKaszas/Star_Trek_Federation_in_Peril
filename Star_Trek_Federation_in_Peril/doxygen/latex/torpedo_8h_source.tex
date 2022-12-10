@@ -1,0 +1,51 @@
+\hypertarget{torpedo_8h_source}{}\doxysection{torpedo.\+h}
+\mbox{\hyperlink{torpedo_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef TORPEDO\_H\_INCLUDED}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define TORPEDO\_H\_INCLUDED}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{game__attributes_8h}{game\_attributes.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <stdio.h>}}
+\DoxyCodeLine{6 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{debugmalloc_8h}{debugmalloc.h}}"{}}}
+\DoxyCodeLine{10 }
+\DoxyCodeLine{15 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structcolordata}{colordata}}}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} \mbox{\hyperlink{structcolordata_acab531abaa74a7e664e3986f2522b33a}{r}}; }
+\DoxyCodeLine{18     \textcolor{keywordtype}{int} \mbox{\hyperlink{structcolordata_a71867e609034d4dbd6d0ad8d84540e59}{g}}; }
+\DoxyCodeLine{19     \textcolor{keywordtype}{int} \mbox{\hyperlink{structcolordata_a148e3876077787926724625411d6e7a9}{b}}; }
+\DoxyCodeLine{20     \textcolor{keywordtype}{int} \mbox{\hyperlink{structcolordata_aa4c2a5552e9bc49b1816ff532f558c74}{a}}; }
+\DoxyCodeLine{21 \}\mbox{\hyperlink{torpedo_8h_a42359b9d24d366198eda60608df97fb9}{ColorData}};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{27 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structtorpedocolors}{torpedocolors}}}
+\DoxyCodeLine{28 \{}
+\DoxyCodeLine{29     \mbox{\hyperlink{structcolordata}{ColorData}} \mbox{\hyperlink{structtorpedocolors_ad7c9140321d3f0f3995005cd3ea74a50}{outter\_ring}}; }
+\DoxyCodeLine{30     \mbox{\hyperlink{structcolordata}{ColorData}} \mbox{\hyperlink{structtorpedocolors_a20140a613845b7154d284c499c38aa72}{inner\_ring}}; }
+\DoxyCodeLine{31     \mbox{\hyperlink{structcolordata}{ColorData}} \mbox{\hyperlink{structtorpedocolors_af31bf0c7a88280f242239ba43ec35022}{center}}; }
+\DoxyCodeLine{32 \}\mbox{\hyperlink{torpedo_8h_a64bc9949fb7a99a5c280dd7e6a2cb63b}{TorpedoColors}};}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{38 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structtorpedoshot}{torpedoshot}}}
+\DoxyCodeLine{39 \{}
+\DoxyCodeLine{40     \textcolor{keywordtype}{int} \mbox{\hyperlink{structtorpedoshot_aaf04fdedfb74eb280d6bc5aeffc3b654}{x\_coor}}; }
+\DoxyCodeLine{41     \textcolor{keywordtype}{int} \mbox{\hyperlink{structtorpedoshot_ac5288a3009909038af51b30a261f7396}{y\_coor}}; }
+\DoxyCodeLine{42     \textcolor{keywordtype}{int} \mbox{\hyperlink{structtorpedoshot_a9b39867abc3f09243fcdc739bd9e6c90}{damage}}; }
+\DoxyCodeLine{43     \textcolor{keywordtype}{int} \mbox{\hyperlink{structtorpedoshot_a218b4f7c6cc2681a99c23a3b089d68b1}{speed}}; }
+\DoxyCodeLine{44     \textcolor{keywordtype}{int} \mbox{\hyperlink{structtorpedoshot_a851cf68c8f607573c1a5e987784c83f6}{dir}}; }
+\DoxyCodeLine{45     \mbox{\hyperlink{structtorpedocolors}{TorpedoColors}} \mbox{\hyperlink{structtorpedoshot_a5d9dd9c3b2aaa9729f53266d3f229fce}{colors}}; }
+\DoxyCodeLine{46     \textcolor{keyword}{struct }\mbox{\hyperlink{structtorpedoshot}{torpedoshot}} *\mbox{\hyperlink{structtorpedoshot_a2b84ec44357e79c1ddf1e3162c0882b3}{next\_torpedo}}; }
+\DoxyCodeLine{47     \textcolor{keyword}{struct }\mbox{\hyperlink{structtorpedoshot}{torpedoshot}} *\mbox{\hyperlink{structtorpedoshot_a4fd267eb01a6ada751967b961162004b}{prev\_torpedo}}; }
+\DoxyCodeLine{48 \}\mbox{\hyperlink{torpedo_8h_a146205614f4043bc7c075f927a011264}{TorpedoShot}};}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{50 \mbox{\hyperlink{structtorpedoshot}{TorpedoShot}} *\mbox{\hyperlink{torpedo_8h_ad711f5d9130a6e95200c4689520006ad}{add\_torpedo\_shot}}(\mbox{\hyperlink{structtorpedoshot}{TorpedoShot}} *torpedoes, \textcolor{keywordtype}{int} \mbox{\hyperlink{structtorpedoshot_a9b39867abc3f09243fcdc739bd9e6c90}{damage}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{structtorpedoshot_a218b4f7c6cc2681a99c23a3b089d68b1}{speed}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{structtorpedoshot_aaf04fdedfb74eb280d6bc5aeffc3b654}{x\_coor}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{structtorpedoshot_ac5288a3009909038af51b30a261f7396}{y\_coor}}, \textcolor{keywordtype}{bool} is\_enemy\_torpedo);}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52 \textcolor{keywordtype}{void} \mbox{\hyperlink{torpedo_8h_a3fccb9236797cf181587c659532a71e4}{move\_torpedoes}}(\mbox{\hyperlink{structtorpedoshot}{TorpedoShot}} **torpedo);}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 \textcolor{keywordtype}{void} \mbox{\hyperlink{torpedo_8h_a92b7df9e3a599d45cbe5510bfea6ba1a}{pop\_torpedo\_shot}}(\mbox{\hyperlink{structtorpedoshot}{TorpedoShot}} **torpedo);}
+\DoxyCodeLine{55 }
+\DoxyCodeLine{56 \textcolor{keywordtype}{void} \mbox{\hyperlink{torpedo_8h_abcc0366cbb0d1c358036bcd6a2d97642}{free\_torpedoes}}(\mbox{\hyperlink{structtorpedoshot}{TorpedoShot}} *torpedoes);}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// TORPEDO\_H\_INCLUDED}}
+
+\end{DoxyCode}

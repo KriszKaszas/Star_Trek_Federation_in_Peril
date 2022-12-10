@@ -1,0 +1,111 @@
+\hypertarget{player__ship_8h}{}\doxysection{player\+\_\+ship.\+h File Reference}
+\label{player__ship_8h}\index{player\_ship.h@{player\_ship.h}}
+{\ttfamily \#include \char`\"{}game\+\_\+attributes.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}input\+\_\+state\+\_\+interface.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}data\+\_\+transfer\+\_\+types.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}texture\+\_\+data.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}player\+\_\+ship.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}debugmalloc.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structplayership}{playership}}
+\begin{DoxyCompactList}\small\item\em Player\+Ship. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structplayership}{playership}} \mbox{\hyperlink{player__ship_8h_ae80ac0734ac95e44ab8537e0dc298f95}{Player\+Ship}}
+\begin{DoxyCompactList}\small\item\em Player\+Ship. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{player__ship_8h_ae80ac0734ac95e44ab8537e0dc298f95}{Player\+Ship}} $\ast$ \mbox{\hyperlink{player__ship_8h_a3c3be91c58334de1218b567a272a59cf}{init\+\_\+player\+\_\+ship}} (\mbox{\hyperlink{game__attributes_8h_a85088783bcdb10b16d91805dfe7fe324}{Game\+Attributes}} $\ast$game\+\_\+attributes, \mbox{\hyperlink{data__transfer__types_8h_a89d2e48c0772818774d0db3df8059c03}{Ship\+DTT}} $\ast$ship\+\_\+dtt, \mbox{\hyperlink{texture__data_8h_aa12ea7860582af51523886453e0a017c}{Texture\+Data}} texture\+\_\+data, \mbox{\hyperlink{texture__data_8h_a9074fee131d757804093a24a0e471efe}{Sprite\+Map\+Data}} sprite\+\_\+map\+\_\+data)
+\begin{DoxyCompactList}\small\item\em init\+\_\+player\+\_\+ship \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{player__ship_8h_a0ed16d153d51417395057b6c7771d476}{move\+\_\+player\+\_\+ship}} (\mbox{\hyperlink{player__ship_8h_ae80ac0734ac95e44ab8537e0dc298f95}{Player\+Ship}} $\ast$ps, \mbox{\hyperlink{input__state__interface_8h_a0a026e1c12a075aa7c96342ea8e09599}{Input\+State\+Interface}} $\ast$isi, int width, int height)
+\begin{DoxyCompactList}\small\item\em move\+\_\+player\+\_\+ship \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{player__ship_8h_ad44ea45b686653f44ace99ee89011e75}{free\+\_\+player\+\_\+ship}} (\mbox{\hyperlink{player__ship_8h_ae80ac0734ac95e44ab8537e0dc298f95}{Player\+Ship}} $\ast$ps)
+\begin{DoxyCompactList}\small\item\em move\+\_\+player\+\_\+ship \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{player__ship_8h_ae80ac0734ac95e44ab8537e0dc298f95}\label{player__ship_8h_ae80ac0734ac95e44ab8537e0dc298f95}} 
+\index{player\_ship.h@{player\_ship.h}!PlayerShip@{PlayerShip}}
+\index{PlayerShip@{PlayerShip}!player\_ship.h@{player\_ship.h}}
+\doxysubsubsection{\texorpdfstring{PlayerShip}{PlayerShip}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structplayership}{playership}} \mbox{\hyperlink{player__ship_8h_ae80ac0734ac95e44ab8537e0dc298f95}{Player\+Ship}}}
+
+
+
+Player\+Ship. 
+
+A jatekos hajojat tarolo adatstruktura. 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{player__ship_8h_ad44ea45b686653f44ace99ee89011e75}\label{player__ship_8h_ad44ea45b686653f44ace99ee89011e75}} 
+\index{player\_ship.h@{player\_ship.h}!free\_player\_ship@{free\_player\_ship}}
+\index{free\_player\_ship@{free\_player\_ship}!player\_ship.h@{player\_ship.h}}
+\doxysubsubsection{\texorpdfstring{free\_player\_ship()}{free\_player\_ship()}}
+{\footnotesize\ttfamily void free\+\_\+player\+\_\+ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player__ship_8h_ae80ac0734ac95e44ab8537e0dc298f95}{Player\+Ship}} $\ast$}]{ps }\end{DoxyParamCaption})}
+
+
+
+move\+\_\+player\+\_\+ship 
+
+Felszabaditja a jatekos hajojat. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$ps} & A jatekos hajojanak pointere. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player__ship_8h_a3c3be91c58334de1218b567a272a59cf}\label{player__ship_8h_a3c3be91c58334de1218b567a272a59cf}} 
+\index{player\_ship.h@{player\_ship.h}!init\_player\_ship@{init\_player\_ship}}
+\index{init\_player\_ship@{init\_player\_ship}!player\_ship.h@{player\_ship.h}}
+\doxysubsubsection{\texorpdfstring{init\_player\_ship()}{init\_player\_ship()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{player__ship_8h_ae80ac0734ac95e44ab8537e0dc298f95}{Player\+Ship}} $\ast$ init\+\_\+player\+\_\+ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{game__attributes_8h_a85088783bcdb10b16d91805dfe7fe324}{Game\+Attributes}} $\ast$}]{game\+\_\+attributes,  }\item[{\mbox{\hyperlink{data__transfer__types_8h_a89d2e48c0772818774d0db3df8059c03}{Ship\+DTT}} $\ast$}]{ship\+\_\+dtt,  }\item[{\mbox{\hyperlink{texture__data_8h_aa12ea7860582af51523886453e0a017c}{Texture\+Data}}}]{texture\+\_\+data,  }\item[{\mbox{\hyperlink{texture__data_8h_a9074fee131d757804093a24a0e471efe}{Sprite\+Map\+Data}}}]{sprite\+\_\+map\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+init\+\_\+player\+\_\+ship 
+
+Inicializalja a jatekos hajojat. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em $\ast$game\+\_\+attributes} & A jatek attributumainak taroloja. \\
+\hline
+\mbox{\texttt{ in}}  & {\em $\ast$ship\+\_\+dtt} & A hajo adatainak ideiglenes taroloja. \\
+\hline
+\mbox{\texttt{ in}}  & {\em texture\+\_\+data} & A textura megjelenitesehez szukseges adatok. \\
+\hline
+\mbox{\texttt{ in}}  & {\em sprite\+\_\+map\+\_\+data} & A spritemap beolvasasahoz szukseges adatok. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+$\ast$ps A jatekos hajojanak pointere. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{player__ship_8h_a0ed16d153d51417395057b6c7771d476}\label{player__ship_8h_a0ed16d153d51417395057b6c7771d476}} 
+\index{player\_ship.h@{player\_ship.h}!move\_player\_ship@{move\_player\_ship}}
+\index{move\_player\_ship@{move\_player\_ship}!player\_ship.h@{player\_ship.h}}
+\doxysubsubsection{\texorpdfstring{move\_player\_ship()}{move\_player\_ship()}}
+{\footnotesize\ttfamily void move\+\_\+player\+\_\+ship (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player__ship_8h_ae80ac0734ac95e44ab8537e0dc298f95}{Player\+Ship}} $\ast$}]{ps,  }\item[{\mbox{\hyperlink{input__state__interface_8h_a0a026e1c12a075aa7c96342ea8e09599}{Input\+State\+Interface}} $\ast$}]{isi,  }\item[{int}]{width,  }\item[{int}]{height }\end{DoxyParamCaption})}
+
+
+
+move\+\_\+player\+\_\+ship 
+
+A jatekos hajojanak mozgasaert felelos szamitasokat vegzi. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$ps} & A jatekos hajojanak pointere. \\
+\hline
+\mbox{\texttt{ in}}  & {\em $\ast$isi} & A jatek belso allapotainak taroloja. \\
+\hline
+\mbox{\texttt{ in}}  & {\em width} & Jatekablak szelessege. \\
+\hline
+\mbox{\texttt{ in}}  & {\em height} & Jatekablak magassaga. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

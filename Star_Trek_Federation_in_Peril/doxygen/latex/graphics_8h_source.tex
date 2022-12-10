@@ -1,0 +1,52 @@
+\hypertarget{graphics_8h_source}{}\doxysection{graphics.\+h}
+\mbox{\hyperlink{graphics_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef GRAPHICS\_H\_INCLUDED}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define GRAPHICS\_H\_INCLUDED}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{star__map_8h}{star\_map.h}}"{}}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{player__ship_8h}{player\_ship.h}}"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{enemy__ship_8h}{enemy\_ship.h}}"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{input__state__interface_8h}{input\_state\_interface.h}}"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{torpedo_8h}{torpedo.h}}"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#include <SDL.h>}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <SDL\_image.h>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#include <SDL\_ttf.h>}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#include <SDL2\_gfxPrimitives.h>}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <math.h>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include <stdlib.h>}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include <string.h>}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{debugmalloc_8h}{debugmalloc.h}}"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 \textcolor{keywordtype}{void} \mbox{\hyperlink{graphics_8h_a99c903d14d68757ee53506ac573e0bc7}{create\_font}}();}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 \textcolor{keywordtype}{void} \mbox{\hyperlink{graphics_8h_ae8b9531256f3d46a906fe17756c97e1f}{create\_textures}}(\textcolor{keywordtype}{char}* fed, \textcolor{keywordtype}{char}* enemy);}
+\DoxyCodeLine{24 }
+\DoxyCodeLine{25 \textcolor{keywordtype}{void} \mbox{\hyperlink{graphics_8h_ae6d34d621a77a361f39a82ad0ac088c5}{create\_window}}(\textcolor{keywordtype}{int} width, \textcolor{keywordtype}{int} height);}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27 \textcolor{keywordtype}{void} \mbox{\hyperlink{graphics_8h_ab3e8f9f85719ae564f2c1eba55cf0c94}{draw\_background}}(\mbox{\hyperlink{structstarmap}{StarMap}} *sm);}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 \textcolor{keywordtype}{void} \mbox{\hyperlink{graphics_8h_acba6da1444148970c94e99db3c1f27a3}{draw\_player\_ship}}(\mbox{\hyperlink{structplayership}{PlayerShip}} *ps);}
+\DoxyCodeLine{30 }
+\DoxyCodeLine{31 \textcolor{keywordtype}{void} \mbox{\hyperlink{graphics_8h_a2f823560f7e76a8f186e64e34cb2c687}{draw\_enemy\_ships}}(\mbox{\hyperlink{structenemyship}{EnemyShip}} *enemy\_armada);}
+\DoxyCodeLine{32 }
+\DoxyCodeLine{33 \textcolor{keywordtype}{void} \mbox{\hyperlink{graphics_8h_a126cb87763598aa7e12f0e1f545a3bc8}{draw\_torpedo}}(\mbox{\hyperlink{structtorpedoshot}{TorpedoShot}} *torpedoes);}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{keywordtype}{void} \mbox{\hyperlink{graphics_8h_a8e846fdc79393705f939c88ba9e9bb31}{draw\_end\_screen}}();}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{keywordtype}{void} \mbox{\hyperlink{graphics_8h_a1103a41fc3c40fc9f77337dbcbc033c8}{draw\_score}}(\textcolor{keywordtype}{int} game\_score);}
+\DoxyCodeLine{38 }
+\DoxyCodeLine{39 \textcolor{keywordtype}{void} \mbox{\hyperlink{graphics_8h_a5c3fe567a8c2eafa60a51494bbb02cce}{draw\_LCARS\_bacground}}();}
+\DoxyCodeLine{40 }
+\DoxyCodeLine{41 \textcolor{keywordtype}{void} \mbox{\hyperlink{graphics_8h_a4953d1edcbbfc7e420c423ded1d5621a}{clear\_screen}}();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{43 \textcolor{keywordtype}{void} \mbox{\hyperlink{graphics_8h_a1fe7644e8b3c5b2e7d630d2178935c3f}{render\_screen}}();}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45 \textcolor{keywordtype}{void} \mbox{\hyperlink{graphics_8h_aefc3616009f28f69b73e72738415971b}{destroy\_textures}}();}
+\DoxyCodeLine{46 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// GRAPHICS\_H\_INCLUDED}}
+
+\end{DoxyCode}

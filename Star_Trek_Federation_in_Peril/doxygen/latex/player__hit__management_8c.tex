@@ -1,0 +1,33 @@
+\hypertarget{player__hit__management_8c}{}\doxysection{player\+\_\+hit\+\_\+management.\+c File Reference}
+\label{player__hit__management_8c}\index{player\_hit\_management.c@{player\_hit\_management.c}}
+{\ttfamily \#include \char`\"{}player\+\_\+hit\+\_\+management.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{player__hit__management_8c_abbc0a47ff1f0e5971141cd2f3cce3a62}{explode\+\_\+player\+\_\+ship\+\_\+if\+\_\+dead}} (\mbox{\hyperlink{player__ship_8h_ae80ac0734ac95e44ab8537e0dc298f95}{Player\+Ship}} $\ast$$\ast$player\+\_\+ship, \mbox{\hyperlink{game__assets_8h_a7e34b4f57ca3849522084c542d222a4c}{Game\+Assets}} $\ast$$\ast$game\+\_\+assets, \mbox{\hyperlink{game__attributes_8h_a85088783bcdb10b16d91805dfe7fe324}{Game\+Attributes}} $\ast$game\+\_\+attributes)
+\begin{DoxyCompactList}\small\item\em explode\+\_\+player\+\_\+ship\+\_\+if\+\_\+dead \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{player__hit__management_8c_abbc0a47ff1f0e5971141cd2f3cce3a62}\label{player__hit__management_8c_abbc0a47ff1f0e5971141cd2f3cce3a62}} 
+\index{player\_hit\_management.c@{player\_hit\_management.c}!explode\_player\_ship\_if\_dead@{explode\_player\_ship\_if\_dead}}
+\index{explode\_player\_ship\_if\_dead@{explode\_player\_ship\_if\_dead}!player\_hit\_management.c@{player\_hit\_management.c}}
+\doxysubsubsection{\texorpdfstring{explode\_player\_ship\_if\_dead()}{explode\_player\_ship\_if\_dead()}}
+{\footnotesize\ttfamily void explode\+\_\+player\+\_\+ship\+\_\+if\+\_\+dead (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{player__ship_8h_ae80ac0734ac95e44ab8537e0dc298f95}{Player\+Ship}} $\ast$$\ast$}]{player\+\_\+ship,  }\item[{\mbox{\hyperlink{game__assets_8h_a7e34b4f57ca3849522084c542d222a4c}{Game\+Assets}} $\ast$$\ast$}]{game\+\_\+assets,  }\item[{\mbox{\hyperlink{game__attributes_8h_a85088783bcdb10b16d91805dfe7fe324}{Game\+Attributes}} $\ast$}]{game\+\_\+attributes }\end{DoxyParamCaption})}
+
+
+
+explode\+\_\+player\+\_\+ship\+\_\+if\+\_\+dead 
+
+Felszabaditja a jatekos hajojat, ha annak HP-\/ja 0 (vagy kevesebb), es kezeli az ahhoz tartozo pointereket. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em $\ast$$\ast$player\+\_\+ship} & A jatekos hajojat tartalmazo adatstruktura pointere. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em $\ast$$\ast$game\+\_\+assets} & A jatekhoz szukseges assetek taroloja. \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em $\ast$game\+\_\+attributes} & A jatek attributumainak taroloja. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

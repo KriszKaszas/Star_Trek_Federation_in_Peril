@@ -26,4 +26,6 @@
 
 void runtime();
 
+Uint32  input_timer(Uint32 ms, void *param);
+
 #endif // GAME_ENGINE_H_INCLUDED

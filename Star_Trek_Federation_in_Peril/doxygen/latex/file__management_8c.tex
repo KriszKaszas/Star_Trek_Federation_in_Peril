@@ -1,0 +1,55 @@
+\hypertarget{file__management_8c}{}\doxysection{file\+\_\+management.\+c File Reference}
+\label{file__management_8c}\index{file\_management.c@{file\_management.c}}
+{\ttfamily \#include \char`\"{}file\+\_\+management.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{data__transfer__types_8h_a89d2e48c0772818774d0db3df8059c03}{Ship\+DTT}} $\ast$$\ast$ \mbox{\hyperlink{file__management_8c_a3fcc2596489423489103a44a189434ed}{import\+\_\+ship\+\_\+dtt}} (char $\ast$filename, int $\ast$num\+\_\+of\+\_\+rows)
+\begin{DoxyCompactList}\small\item\em import\+\_\+ship\+\_\+dtt \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{file__management_8c_af220907c45d89b0a386744f5eb2acee3}{read\+\_\+texture\+\_\+data}} (char $\ast$filename, \mbox{\hyperlink{texture__data_8h_aa12ea7860582af51523886453e0a017c}{Texture\+Data}} $\ast$texture\+\_\+data, \mbox{\hyperlink{texture__data_8h_a9074fee131d757804093a24a0e471efe}{Sprite\+Map\+Data}} $\ast$sprite\+\_\+map\+\_\+data)
+\begin{DoxyCompactList}\small\item\em read\+\_\+texture\+\_\+data \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{file__management_8c_a3fcc2596489423489103a44a189434ed}\label{file__management_8c_a3fcc2596489423489103a44a189434ed}} 
+\index{file\_management.c@{file\_management.c}!import\_ship\_dtt@{import\_ship\_dtt}}
+\index{import\_ship\_dtt@{import\_ship\_dtt}!file\_management.c@{file\_management.c}}
+\doxysubsubsection{\texorpdfstring{import\_ship\_dtt()}{import\_ship\_dtt()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{data__transfer__types_8h_a89d2e48c0772818774d0db3df8059c03}{Ship\+DTT}} $\ast$$\ast$ import\+\_\+ship\+\_\+dtt (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename,  }\item[{int $\ast$}]{num\+\_\+of\+\_\+rows }\end{DoxyParamCaption})}
+
+
+
+import\+\_\+ship\+\_\+dtt 
+
+Beolvassa az urhajok alapveto attributumainak listait egy adott forrasfajlbol, majd azokbol egy Ship\+DTT tagokbol allo dinamikus tomb pointerevel ter vissza. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filename} & A megnyitando file neve. \\
+\hline
+\mbox{\texttt{ out}}  & {\em num\+\_\+of\+\_\+rows} & Az urhajok listajaban talalhato sorok szamaval ter vissza. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+enemy\+\_\+armada Ship\+DTT-\/ket tartalmazo lista pointere. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{file__management_8c_af220907c45d89b0a386744f5eb2acee3}\label{file__management_8c_af220907c45d89b0a386744f5eb2acee3}} 
+\index{file\_management.c@{file\_management.c}!read\_texture\_data@{read\_texture\_data}}
+\index{read\_texture\_data@{read\_texture\_data}!file\_management.c@{file\_management.c}}
+\doxysubsubsection{\texorpdfstring{read\_texture\_data()}{read\_texture\_data()}}
+{\footnotesize\ttfamily void read\+\_\+texture\+\_\+data (\begin{DoxyParamCaption}\item[{char $\ast$}]{filename,  }\item[{\mbox{\hyperlink{texture__data_8h_aa12ea7860582af51523886453e0a017c}{Texture\+Data}} $\ast$}]{texture\+\_\+data,  }\item[{\mbox{\hyperlink{texture__data_8h_a9074fee131d757804093a24a0e471efe}{Sprite\+Map\+Data}} $\ast$}]{sprite\+\_\+map\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+read\+\_\+texture\+\_\+data 
+
+Beolvassa az urhajok texturaihoz szukseges adatokat. majd azokbol egy Ship\+DTT tagokbol allo dinamikus tomb pointerevel ter vissza. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filename} & A megnyitando file neve. \\
+\hline
+\mbox{\texttt{ out}}  & {\em texture\+\_\+data} & Az urhajok megjelenitesehez szukseges textura adatok. \\
+\hline
+\mbox{\texttt{ out}}  & {\em Sprite\+Map\+Data} & Az urhajok texturainak beolvasasahoz szukseges meretek.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}

@@ -1,3 +1,7 @@
+/**
+*@file star_map.h
+*/
+
 #ifndef STAR_MAP_H_INCLUDED
 #define STAR_MAP_H_INCLUDED
 
